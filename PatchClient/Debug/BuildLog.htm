@@ -1,0 +1,95 @@
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=Windows-1252">
+</head>
+<body>
+<pre>
+<table width=100% bgcolor=#CFCFE5><tr> <td> <font face=arial size=+3>
+Build Log
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>
+<h3>------- Build started: Project: BetaPatchClient, Configuration: Debug|Win32 -------
+</h3>
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Command Lines
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>Creating temporary file "c:\Offi SRC_real\Offi src!\PatchClient\Debug\RSP000005.rsp" with contents
+[
+/Od /I "..\DX_SDK" /I "..\boost_1_34_1\boost_1_34_1" /I "..\_Common" /I "..\_network" /I "..\_network\mcl\include" /D "_DEBUG" /D "WIN32" /D "_WINDOWS" /D "__PATCHCLIENT" /D "_MBCS" /FD /EHsc /RTC1 /MTd /Yc"stdafx.h" /Fp".\Debug/BetaPatchClient.pch" /Fo".\Debug/" /Fd".\Debug/" /FR".\Debug/" /W3 /c /ZI
+".\StdAfx.cpp"
+]
+Creating command line "cl.exe @"c:\Offi SRC_real\Offi src!\PatchClient\Debug\RSP000005.rsp" /nologo"
+Creating temporary file "c:\Offi SRC_real\Offi src!\PatchClient\Debug\RSP000006.rsp" with contents
+[
+/Od /I "..\DX_SDK" /I "..\boost_1_34_1\boost_1_34_1" /I "..\_Common" /I "..\_network" /I "..\_network\mcl\include" /D "_DEBUG" /D "WIN32" /D "_WINDOWS" /D "__PATCHCLIENT" /D "_MBCS" /FD /EHsc /RTC1 /MTd /Yu"stdafx.h" /Fp".\Debug/BetaPatchClient.pch" /Fo".\Debug/" /Fd".\Debug/" /FR".\Debug/" /W3 /c /ZI
+".\Picture.cpp"
+".\Label.cpp"
+".\HyperLink.cpp"
+".\BtnST.cpp"
+".\xUtil.cpp"
+"\Offi SRC_real\Offi src!\_Common\vutil.cpp"
+".\scanner.cpp"
+".\patchmanager.cpp"
+"\Offi SRC_real\Offi src!\_Common\HwOption.cpp"
+".\httpdownload.cpp"
+"\Offi SRC_real\Offi src!\_Common\file.cpp"
+".\DlgOption.cpp"
+"\Offi SRC_real\Offi src!\_Common\debug.cpp"
+".\BetaPatchClientDlg.cpp"
+".\BetaPatchClient.cpp"
+]
+Creating command line "cl.exe @"c:\Offi SRC_real\Offi src!\PatchClient\Debug\RSP000006.rsp" /nologo"
+Creating command line "rc.exe /d "_DEBUG" /l 0x412 /fo".\Debug/BetaPatchClient.res" ".\BetaPatchClient.rc""
+Creating temporary file "c:\Offi SRC_real\Offi src!\PatchClient\Debug\RSP000007.rsp" with contents
+[
+/OUT:"Debug/Flyff.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:".\zlib" /NODEFAULTLIB:"msvcrt.lib nafxcwd.lib" /DELAYLOAD:"OleAcc.dll" /DEBUG /PDB:".\Debug/Flyff.pdb" /SUBSYSTEM:WINDOWS /MACHINE:X86 winmm.lib Dsetup.lib zlib.lib DelayImp.lib "\Offi SRC_real\Offi src!\Lib\dsetup.lib" ".\zlib.lib" DelayImp.lib
+".\Debug\BetaPatchClient.obj"
+".\Debug\BetaPatchClient.res"
+".\Debug\BetaPatchClientDlg.obj"
+".\Debug\debug.obj"
+".\Debug\DlgOption.obj"
+".\Debug\file.obj"
+".\Debug\httpdownload.obj"
+".\Debug\HwOption.obj"
+".\Debug\patchmanager.obj"
+".\Debug\scanner.obj"
+".\Debug\StdAfx.obj"
+".\Debug\vutil.obj"
+".\Debug\xUtil.obj"
+".\Debug\BtnST.obj"
+".\Debug\HyperLink.obj"
+".\Debug\Label.obj"
+".\Debug\Picture.obj"
+]
+Creating command line "link.exe @"c:\Offi SRC_real\Offi src!\PatchClient\Debug\RSP000007.rsp""
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Output Window
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>Compiling...
+StdAfx.cpp
+Compiling...
+Picture.cpp
+Label.cpp
+HyperLink.cpp
+BtnST.cpp
+xUtil.cpp
+vutil.cpp
+scanner.cpp
+patchmanager.cpp
+HwOption.cpp
+httpdownload.cpp
+file.cpp
+DlgOption.cpp
+debug.cpp
+BetaPatchClientDlg.cpp
+BetaPatchClient.cpp
+c:\Offi SRC_real\OFFI SRC!\PatchClient\BetaPatchClient.cpp(143) : warning C4996: 'CWinApp::Enable3dControlsStatic' was declared deprecated
+        c:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\atlmfc\include\afxwin.h(4371) : see declaration of 'CWinApp::Enable3dControlsStatic'
+Generating Code...
+Compiling resources...
+Linking...
+LINK : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
+LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Results
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>
+Build log was saved at "file://c:\Offi SRC_real\Offi src!\PatchClient\Debug\BuildLog.htm"
+BetaPatchClient - 0 error(s), 3 warning(s)</pre></table><table   width=100% height=20 bgcolor=#CFCFE5><tr><td><font face=arial size=+2>
+</font></table></body></html>

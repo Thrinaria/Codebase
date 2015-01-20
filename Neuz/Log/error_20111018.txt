@@ -1,0 +1,1828 @@
+2011/10/18   14:06:21   ::LoadTextureFromRes : Weather\Moon.dds not found
+
+2011/10/18   14:06:21   Sfx\DmgEffect.inc not found
+
+2011/10/18   14:06:21   LoadObject : Shadow.o3d 읽기 실패
+
+2011/10/18   14:06:21   Model\Shadow.o3d : 찾을 수 없음
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\GauMagChargeBG.TGA
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\GauMagChargeBG.TGA read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\GauMagChargeHead.TGA
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\GauMagChargeHead.TGA read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\GauMagChargeBody.TGA
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\GauMagChargeBody.TGA read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\GauMagChargeBody2.tga
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\GauMagChargeBody2.tga read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\GauMagChargeTail.TGA
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\GauMagChargeTail.TGA read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\GauPartyHpBG.TGA
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\GauPartyHpBG.TGA read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\GauPartyHp.TGA
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\GauPartyHp.TGA read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\GauPartyHp_Dbf.TGA
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\GauPartyHp_Dbf.TGA read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\GauAccelBG.TGA
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\GauAccelBG.TGA read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\GauAccelInner.TGA
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\GauAccelInner.TGA read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\GauAccelBG.TGA
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\GauAccelBG.TGA read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\GauAccelInner.TGA
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\GauAccelInner.TGA read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\icon_Expert1.dds not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\icon_Expert1.dds read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\icon_Expert2.dds not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\icon_Expert2.dds read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\icon_Expert3.dds not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\icon_Expert3.dds read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\icon_Expert4.dds not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\icon_Expert4.dds read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\icon_Expert5.dds not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\icon_Expert5.dds read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\icon_Expert6.dds not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\icon_Expert6.dds read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\icon_Hero.dds not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\icon_Hero.dds read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\GauAccelBG.TGA
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\GauAccelBG.TGA read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\GauAccelInner.TGA
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\GauAccelInner.TGA read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\GauAngelExpBG.TGA
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\GauAngelExpBG.TGA read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\GauAngelExp.TGA
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\GauAngelExp.TGA read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\WndTooltipTile00.tga
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\WndTooltipTile00.tga read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\WndTooltipTile01.tga
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\WndTooltipTile01.tga read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\WndTooltipTile02.tga
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\WndTooltipTile02.tga read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\WndTooltipTile03.tga
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\WndTooltipTile03.tga read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\WndTooltipTile04.tga
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\WndTooltipTile04.tga read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\WndTooltipTile05.tga
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\WndTooltipTile05.tga read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\WndTooltipTile06.tga
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\WndTooltipTile06.tga read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\WndTooltipTile07.tga
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\WndTooltipTile07.tga read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\WndTooltipTile08.tga
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\WndTooltipTile08.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_Ultimate.dds not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_Ultimate.dds read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\icon_Baruna01.dds not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\icon_Baruna01.dds read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Theme\Default\WndChgElemItem.bmp not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\WndChgElemItem.bmp read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\WndTooltipTile00.tga
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\WndTooltipTile00.tga read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\WndTooltipTile01.tga
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\WndTooltipTile01.tga read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\WndTooltipTile02.tga
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\WndTooltipTile02.tga read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\WndTooltipTile03.tga
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\WndTooltipTile03.tga read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\WndTooltipTile04.tga
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\WndTooltipTile04.tga read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\WndTooltipTile05.tga
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\WndTooltipTile05.tga read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\WndTooltipTile06.tga
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\WndTooltipTile06.tga read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\WndTooltipTile07.tga
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\WndTooltipTile07.tga read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\WndTooltipTile08.tga
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\WndTooltipTile08.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_Ultimate.dds not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_Ultimate.dds read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\icon_Baruna01.dds not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\icon_Baruna01.dds read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Theme\Default\WndChgElemItem.bmp not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\WndChgElemItem.bmp read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\WndTooltipTile00.tga
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\WndTooltipTile00.tga read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\WndTooltipTile01.tga
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\WndTooltipTile01.tga read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\WndTooltipTile02.tga
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\WndTooltipTile02.tga read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\WndTooltipTile03.tga
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\WndTooltipTile03.tga read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\WndTooltipTile04.tga
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\WndTooltipTile04.tga read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\WndTooltipTile05.tga
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\WndTooltipTile05.tga read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\WndTooltipTile06.tga
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\WndTooltipTile06.tga read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\WndTooltipTile07.tga
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\WndTooltipTile07.tga read error
+
+2011/10/18   14:06:21   CTarga::Load Failed = Theme\Default\WndTooltipTile08.tga
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\WndTooltipTile08.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_Ultimate.dds not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_Ultimate.dds read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\icon_Baruna01.dds not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\icon_Baruna01.dds read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Theme\Default\WndChgElemItem.bmp not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\WndChgElemItem.bmp read error
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:201
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:202
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:3343
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:3729
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:3729
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:4035
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:4035
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:204
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:203
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:331
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:206
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:205
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:210
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:213
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:211
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:221
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:222
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:3608
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:332
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:221
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:221
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:230
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:231
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:251
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:254
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:257
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:153
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:270
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:280
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:281
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:282
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:310
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:311
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:3101
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:322
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:324
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:321
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:322
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:322
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:323
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:323
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:323
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:4060
+
+2011/10/18   14:06:21   GetText range_error min:0, max:100, index:4293
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_000.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_000.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_001.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_001.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_002.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_002.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_003.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_003.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_004.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_004.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_005.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_005.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_006.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_006.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_007.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_007.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_008.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_008.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_009.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_009.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_010.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_010.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_011.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_011.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_012.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_012.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_013.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_013.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_014.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_014.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_015.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_015.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_016.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_016.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_017.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_017.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_018.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_018.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_019.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_019.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_020.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_020.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_021.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_021.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_022.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_022.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_023.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_023.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_024.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_024.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_025.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_025.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_026.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_026.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_027.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_027.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_028.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_028.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_029.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_029.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_030.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_030.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_031.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_031.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_032.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_032.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_033.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_033.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_034.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_034.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_035.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_035.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_036.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_036.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_037.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_037.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_038.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_038.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_039.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_039.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_040.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_040.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_041.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_041.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_042.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_042.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_043.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_043.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_044.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_044.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_045.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_045.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_046.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_046.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_047.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_047.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_048.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_048.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_049.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_049.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_050.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_050.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_051.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_051.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_052.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_052.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_053.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_053.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_054.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_054.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_055.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_055.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_056.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_056.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_057.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_057.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_058.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_058.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_059.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_059.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_060.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_060.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_061.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_061.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_062.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_062.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_063.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_063.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_064.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_064.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_065.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_065.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_066.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_066.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_067.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_067.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_068.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_068.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_069.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_069.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_070.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_070.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_071.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_071.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_072.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_072.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_073.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_073.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_074.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_074.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_075.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_075.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_076.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_076.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_077.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_077.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_078.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_078.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_079.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_079.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_080.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_080.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_081.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_081.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_082.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_082.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_083.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_083.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_084.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_084.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_085.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_085.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_086.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_086.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_087.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_087.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_088.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_088.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_089.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_089.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_090.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_090.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_091.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_091.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_092.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_092.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_093.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_093.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_094.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_094.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_095.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_095.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_096.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_096.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_097.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_097.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_098.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_098.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_099.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_099.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_100.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_100.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_101.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_101.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_102.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_102.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_103.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_103.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_104.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_104.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_105.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_105.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_106.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_106.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_107.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_107.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_108.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_108.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_109.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_109.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_110.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_110.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_111.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_111.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_112.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_112.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_113.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_113.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_114.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_114.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_115.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_115.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_116.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_116.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_117.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_117.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_118.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_118.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_119.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_119.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_120.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_120.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_121.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_121.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_122.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_122.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_123.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_123.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_124.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_124.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_125.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_125.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_126.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_126.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_CoolTime_127.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_CoolTime_127.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_ImgIncAni_00.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_ImgIncAni_00.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_ImgIncAni_01.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_ImgIncAni_01.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_ImgIncAni_02.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_ImgIncAni_02.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_ImgIncAni_03.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_ImgIncAni_03.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_ImgIncAni_04.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_ImgIncAni_04.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_ImgIncAni_05.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_ImgIncAni_05.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_ImgIncAni_06.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_ImgIncAni_06.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_ImgIncAni_07.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_ImgIncAni_07.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_ImgIncAni_08.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_ImgIncAni_08.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_ImgIncAni_09.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_ImgIncAni_09.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\Icon_ImgIncAni_10.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\Icon_ImgIncAni_10.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Icon\icon_forbid.dds not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Icon\icon_forbid.dds read error
+
+2011/10/18   14:06:21   Theme\Default\texDialogBox.inc not found
+
+2011/10/18   14:06:21   Theme\Default\texDialogBoxParty.inc not found
+
+2011/10/18   14:06:21   Theme\Default\texDialogBoxGuild.inc not found
+
+2011/10/18   14:06:21   Theme\Default\texDialogEmoticon.inc not found
+
+2011/10/18   14:06:21   Theme\Default\texChatEmoticon.inc not found
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Theme\Default\texDialogBox_left.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\texDialogBox_left.tga read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Theme\Default\texDialogBox_center.TGA not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\texDialogBox_center.TGA read error
+
+2011/10/18   14:06:21   ::LoadTextureFromRes : Theme\Default\texDialogBox_right.tga not found
+
+2011/10/18   14:06:21   CTexture::LoadTexture : Theme\Default\texDialogBox_right.tga read error
+
+2011/10/18   15:29:12   ::LoadTextureFromRes : Weather\Moon.dds not found
+
+2011/10/18   15:29:12   Sfx\DmgEffect.inc not found
+
+2011/10/18   15:29:12   LoadObject : Shadow.o3d 읽기 실패
+
+2011/10/18   15:29:12   Model\Shadow.o3d : 찾을 수 없음
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\GauMagChargeBG.TGA
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\GauMagChargeBG.TGA read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\GauMagChargeHead.TGA
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\GauMagChargeHead.TGA read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\GauMagChargeBody.TGA
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\GauMagChargeBody.TGA read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\GauMagChargeBody2.tga
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\GauMagChargeBody2.tga read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\GauMagChargeTail.TGA
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\GauMagChargeTail.TGA read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\GauPartyHpBG.TGA
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\GauPartyHpBG.TGA read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\GauPartyHp.TGA
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\GauPartyHp.TGA read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\GauPartyHp_Dbf.TGA
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\GauPartyHp_Dbf.TGA read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\GauAccelBG.TGA
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\GauAccelBG.TGA read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\GauAccelInner.TGA
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\GauAccelInner.TGA read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\GauAccelBG.TGA
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\GauAccelBG.TGA read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\GauAccelInner.TGA
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\GauAccelInner.TGA read error
+
+2011/10/18   15:29:12   ::LoadTextureFromRes : Icon\icon_Expert1.dds not found
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Icon\icon_Expert1.dds read error
+
+2011/10/18   15:29:12   ::LoadTextureFromRes : Icon\icon_Expert2.dds not found
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Icon\icon_Expert2.dds read error
+
+2011/10/18   15:29:12   ::LoadTextureFromRes : Icon\icon_Expert3.dds not found
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Icon\icon_Expert3.dds read error
+
+2011/10/18   15:29:12   ::LoadTextureFromRes : Icon\icon_Expert4.dds not found
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Icon\icon_Expert4.dds read error
+
+2011/10/18   15:29:12   ::LoadTextureFromRes : Icon\icon_Expert5.dds not found
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Icon\icon_Expert5.dds read error
+
+2011/10/18   15:29:12   ::LoadTextureFromRes : Icon\icon_Expert6.dds not found
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Icon\icon_Expert6.dds read error
+
+2011/10/18   15:29:12   ::LoadTextureFromRes : Icon\icon_Hero.dds not found
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Icon\icon_Hero.dds read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\GauAccelBG.TGA
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\GauAccelBG.TGA read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\GauAccelInner.TGA
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\GauAccelInner.TGA read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\GauAngelExpBG.TGA
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\GauAngelExpBG.TGA read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\GauAngelExp.TGA
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\GauAngelExp.TGA read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\WndTooltipTile00.tga
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\WndTooltipTile00.tga read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\WndTooltipTile01.tga
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\WndTooltipTile01.tga read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\WndTooltipTile02.tga
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\WndTooltipTile02.tga read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\WndTooltipTile03.tga
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\WndTooltipTile03.tga read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\WndTooltipTile04.tga
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\WndTooltipTile04.tga read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\WndTooltipTile05.tga
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\WndTooltipTile05.tga read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\WndTooltipTile06.tga
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\WndTooltipTile06.tga read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\WndTooltipTile07.tga
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\WndTooltipTile07.tga read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\WndTooltipTile08.tga
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\WndTooltipTile08.tga read error
+
+2011/10/18   15:29:12   ::LoadTextureFromRes : Icon\Icon_Ultimate.dds not found
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Icon\Icon_Ultimate.dds read error
+
+2011/10/18   15:29:12   ::LoadTextureFromRes : Icon\icon_Baruna01.dds not found
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Icon\icon_Baruna01.dds read error
+
+2011/10/18   15:29:12   ::LoadTextureFromRes : Theme\Default\WndChgElemItem.bmp not found
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\WndChgElemItem.bmp read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\WndTooltipTile00.tga
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\WndTooltipTile00.tga read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\WndTooltipTile01.tga
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\WndTooltipTile01.tga read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\WndTooltipTile02.tga
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\WndTooltipTile02.tga read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\WndTooltipTile03.tga
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\WndTooltipTile03.tga read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\WndTooltipTile04.tga
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\WndTooltipTile04.tga read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\WndTooltipTile05.tga
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\WndTooltipTile05.tga read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\WndTooltipTile06.tga
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\WndTooltipTile06.tga read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\WndTooltipTile07.tga
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\WndTooltipTile07.tga read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\WndTooltipTile08.tga
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\WndTooltipTile08.tga read error
+
+2011/10/18   15:29:12   ::LoadTextureFromRes : Icon\Icon_Ultimate.dds not found
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Icon\Icon_Ultimate.dds read error
+
+2011/10/18   15:29:12   ::LoadTextureFromRes : Icon\icon_Baruna01.dds not found
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Icon\icon_Baruna01.dds read error
+
+2011/10/18   15:29:12   ::LoadTextureFromRes : Theme\Default\WndChgElemItem.bmp not found
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\WndChgElemItem.bmp read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\WndTooltipTile00.tga
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\WndTooltipTile00.tga read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\WndTooltipTile01.tga
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\WndTooltipTile01.tga read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\WndTooltipTile02.tga
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\WndTooltipTile02.tga read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\WndTooltipTile03.tga
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\WndTooltipTile03.tga read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\WndTooltipTile04.tga
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\WndTooltipTile04.tga read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\WndTooltipTile05.tga
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\WndTooltipTile05.tga read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\WndTooltipTile06.tga
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\WndTooltipTile06.tga read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\WndTooltipTile07.tga
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\WndTooltipTile07.tga read error
+
+2011/10/18   15:29:12   CTarga::Load Failed = Theme\Default\WndTooltipTile08.tga
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\WndTooltipTile08.tga read error
+
+2011/10/18   15:29:12   ::LoadTextureFromRes : Icon\Icon_Ultimate.dds not found
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Icon\Icon_Ultimate.dds read error
+
+2011/10/18   15:29:12   ::LoadTextureFromRes : Icon\icon_Baruna01.dds not found
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Icon\icon_Baruna01.dds read error
+
+2011/10/18   15:29:12   ::LoadTextureFromRes : Theme\Default\WndChgElemItem.bmp not found
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Theme\Default\WndChgElemItem.bmp read error
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:201
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:202
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:3343
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:3729
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:3729
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:4035
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:4035
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:204
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:203
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:331
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:206
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:205
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:210
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:213
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:211
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:221
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:222
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:3608
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:332
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:221
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:221
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:230
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:231
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:251
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:254
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:257
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:153
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:270
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:280
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:281
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:282
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:310
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:311
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:3101
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:322
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:324
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:321
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:322
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:322
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:323
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:323
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:323
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:4060
+
+2011/10/18   15:29:12   GetText range_error min:0, max:100, index:4293
+
+2011/10/18   15:29:12   ::LoadTextureFromRes : Icon\Icon_CoolTime_000.tga not found
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Icon\Icon_CoolTime_000.tga read error
+
+2011/10/18   15:29:12   ::LoadTextureFromRes : Icon\Icon_CoolTime_001.tga not found
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Icon\Icon_CoolTime_001.tga read error
+
+2011/10/18   15:29:12   ::LoadTextureFromRes : Icon\Icon_CoolTime_002.tga not found
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Icon\Icon_CoolTime_002.tga read error
+
+2011/10/18   15:29:12   ::LoadTextureFromRes : Icon\Icon_CoolTime_003.tga not found
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Icon\Icon_CoolTime_003.tga read error
+
+2011/10/18   15:29:12   ::LoadTextureFromRes : Icon\Icon_CoolTime_004.tga not found
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Icon\Icon_CoolTime_004.tga read error
+
+2011/10/18   15:29:12   ::LoadTextureFromRes : Icon\Icon_CoolTime_005.tga not found
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Icon\Icon_CoolTime_005.tga read error
+
+2011/10/18   15:29:12   ::LoadTextureFromRes : Icon\Icon_CoolTime_006.tga not found
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Icon\Icon_CoolTime_006.tga read error
+
+2011/10/18   15:29:12   ::LoadTextureFromRes : Icon\Icon_CoolTime_007.tga not found
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Icon\Icon_CoolTime_007.tga read error
+
+2011/10/18   15:29:12   ::LoadTextureFromRes : Icon\Icon_CoolTime_008.tga not found
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Icon\Icon_CoolTime_008.tga read error
+
+2011/10/18   15:29:12   ::LoadTextureFromRes : Icon\Icon_CoolTime_009.tga not found
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Icon\Icon_CoolTime_009.tga read error
+
+2011/10/18   15:29:12   ::LoadTextureFromRes : Icon\Icon_CoolTime_010.tga not found
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Icon\Icon_CoolTime_010.tga read error
+
+2011/10/18   15:29:12   ::LoadTextureFromRes : Icon\Icon_CoolTime_011.tga not found
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Icon\Icon_CoolTime_011.tga read error
+
+2011/10/18   15:29:12   ::LoadTextureFromRes : Icon\Icon_CoolTime_012.tga not found
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Icon\Icon_CoolTime_012.tga read error
+
+2011/10/18   15:29:12   ::LoadTextureFromRes : Icon\Icon_CoolTime_013.tga not found
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Icon\Icon_CoolTime_013.tga read error
+
+2011/10/18   15:29:12   ::LoadTextureFromRes : Icon\Icon_CoolTime_014.tga not found
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Icon\Icon_CoolTime_014.tga read error
+
+2011/10/18   15:29:12   ::LoadTextureFromRes : Icon\Icon_CoolTime_015.tga not found
+
+2011/10/18   15:29:12   CTexture::LoadTexture : Icon\Icon_CoolTime_015.tga read error
+
+2011/10/18   15:29:12   ::LoadTextureFromRes : Icon\Icon_CoolTime_016.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_016.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_017.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_017.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_018.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_018.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_019.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_019.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_020.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_020.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_021.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_021.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_022.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_022.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_023.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_023.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_024.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_024.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_025.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_025.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_026.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_026.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_027.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_027.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_028.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_028.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_029.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_029.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_030.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_030.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_031.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_031.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_032.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_032.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_033.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_033.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_034.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_034.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_035.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_035.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_036.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_036.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_037.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_037.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_038.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_038.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_039.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_039.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_040.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_040.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_041.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_041.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_042.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_042.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_043.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_043.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_044.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_044.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_045.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_045.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_046.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_046.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_047.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_047.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_048.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_048.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_049.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_049.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_050.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_050.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_051.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_051.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_052.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_052.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_053.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_053.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_054.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_054.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_055.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_055.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_056.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_056.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_057.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_057.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_058.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_058.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_059.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_059.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_060.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_060.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_061.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_061.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_062.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_062.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_063.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_063.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_064.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_064.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_065.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_065.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_066.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_066.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_067.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_067.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_068.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_068.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_069.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_069.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_070.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_070.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_071.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_071.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_072.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_072.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_073.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_073.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_074.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_074.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_075.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_075.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_076.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_076.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_077.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_077.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_078.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_078.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_079.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_079.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_080.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_080.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_081.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_081.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_082.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_082.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_083.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_083.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_084.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_084.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_085.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_085.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_086.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_086.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_087.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_087.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_088.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_088.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_089.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_089.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_090.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_090.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_091.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_091.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_092.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_092.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_093.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_093.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_094.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_094.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_095.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_095.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_096.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_096.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_097.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_097.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_098.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_098.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_099.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_099.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_100.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_100.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_101.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_101.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_102.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_102.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_103.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_103.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_104.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_104.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_105.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_105.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_106.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_106.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_107.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_107.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_108.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_108.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_109.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_109.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_110.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_110.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_111.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_111.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_112.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_112.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_113.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_113.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_114.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_114.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_115.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_115.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_116.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_116.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_117.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_117.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_118.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_118.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_119.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_119.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_120.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_120.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_121.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_121.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_122.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_122.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_123.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_123.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_124.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_124.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_125.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_125.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_126.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_126.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_CoolTime_127.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_CoolTime_127.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_ImgIncAni_00.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_ImgIncAni_00.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_ImgIncAni_01.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_ImgIncAni_01.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_ImgIncAni_02.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_ImgIncAni_02.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_ImgIncAni_03.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_ImgIncAni_03.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_ImgIncAni_04.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_ImgIncAni_04.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_ImgIncAni_05.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_ImgIncAni_05.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_ImgIncAni_06.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_ImgIncAni_06.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_ImgIncAni_07.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_ImgIncAni_07.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_ImgIncAni_08.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_ImgIncAni_08.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_ImgIncAni_09.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_ImgIncAni_09.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\Icon_ImgIncAni_10.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\Icon_ImgIncAni_10.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Icon\icon_forbid.dds not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Icon\icon_forbid.dds read error
+
+2011/10/18   15:29:13   Theme\Default\texDialogBox.inc not found
+
+2011/10/18   15:29:13   Theme\Default\texDialogBoxParty.inc not found
+
+2011/10/18   15:29:13   Theme\Default\texDialogBoxGuild.inc not found
+
+2011/10/18   15:29:13   Theme\Default\texDialogEmoticon.inc not found
+
+2011/10/18   15:29:13   Theme\Default\texChatEmoticon.inc not found
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Theme\Default\texDialogBox_left.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Theme\Default\texDialogBox_left.tga read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Theme\Default\texDialogBox_center.TGA not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Theme\Default\texDialogBox_center.TGA read error
+
+2011/10/18   15:29:13   ::LoadTextureFromRes : Theme\Default\texDialogBox_right.tga not found
+
+2011/10/18   15:29:13   CTexture::LoadTexture : Theme\Default\texDialogBox_right.tga read error
+
