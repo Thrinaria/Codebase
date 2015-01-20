@@ -29,7 +29,7 @@ private:
 };
 
 #define	MAX_POCKET	3
-#define	POCKET_SLOT_SIZE_0	6
+#define	POCKET_SLOT_SIZE_0	18
 #define	POCKET_SLOT_SIZE_1_2	24
 
 typedef	struct	_PocketController_Result
