@@ -16,7 +16,7 @@
 #endif	// __RT_1025
 #include "WndWorld.h"
 #include "WndBank.h"
-#include "WndRepairItem.h"	 // ¼ö¸®Ã¢
+#include "WndRepairItem.h"	 // ìˆ˜ë¦¬ì°½
 #include "WndGuildWarPeaceConfirm.h"
 #include "WndGuildWarRequest.h"
 #include "WndUpgradebase.h"
@@ -66,6 +66,8 @@
 #include "WndHelp.h"
 #endif //__HELP_BUG_FIX
 
+#include "WndChangeJobEx.h"
+
 #if __VER >= 13 // __RAINBOW_RACE
 #include "WndRainbowRace.h"
 #endif //__RAINBOW_RACE
@@ -108,7 +110,7 @@ class CWndPartyLeaveConfirm;
 class CWndFriendConFirm;
 class CWndDuelConfirm;
 
-#if __VER >= 8     // 8Â÷ µà¾óÁ¸¿¡ °ü°è¾øÀÌ PVP°¡´ÉÇÏ°ÔÇÔ   Neuz, World
+#if __VER >= 8     // 8ì°¨ ë“€ì–¼ì¡´ì— ê´€ê³„ì—†ì´ PVPê°€ëŠ¥í•˜ê²Œí•¨   Neuz, World
 class CWndDuelResult;
 #endif	// __VER >= 8  
 
@@ -131,9 +133,9 @@ class CWndSelectVillage;
 
 #include "WndChangeName.h"
 
-#if __VER >= 11 // __MA_VER11_05	// ÄÉ¸¯ÅÍ ºÀÀÎ °Å·¡ ±â´É world,database,neuz
+#if __VER >= 11 // __MA_VER11_05	// ì¼€ë¦­í„° ë´‰ì¸ ê±°ë˜ ê¸°ëŠ¥ world,database,neuz
 #include "WndSealChar.h"
-#endif // __MA_VER11_05	// ÄÉ¸¯ÅÍ ºÀÀÎ °Å·¡ ±â´É world,database,neuz
+#endif // __MA_VER11_05	// ì¼€ë¦­í„° ë´‰ì¸ ê±°ë˜ ê¸°ëŠ¥ world,database,neuz
 
 #define MAX_SKILL		  16
 
@@ -181,52 +183,52 @@ struct AppletFunc
 
 struct ToolTipItemTextColor
 {
-	DWORD dwName0;				// ÀÌ¸§ 0´Ü°è
-	DWORD dwName1;				// ÀÌ¸§ 1´Ü°è
-	DWORD dwName2;				// ÀÌ¸§ 2´Ü°è
-	DWORD dwName3;				// ÀÌ¸§ 3´Ü°è
-	DWORD dwName4;				// ÀÌ¸§ 4´Ü°è
-	DWORD dwName5;				// ÀÌ¸§ 5´Ü°è
-	DWORD dwGeneral;			// ÀÏ¹İ
-	DWORD dwPiercing;			// ÇÇ¾î½Ì
-	DWORD dwPlusOption;			// ÇÃ·¯½º ¿É¼Ç
-	DWORD dwResist;				// ¼Ó¼º ÀÏ¹İ
-	DWORD dwResistFire;			// ¼Ó¼º ºÒ
-	DWORD dwResistWater;		// ¼Ó¼º ¹°
-	DWORD dwResistEarth;		// ¼Ó¼º ¶¥
-	DWORD dwResistElectricity;	// ¼Ó¼º Àü±â
-	DWORD dwResistWind;			// ¼Ó¼º ¹Ù¶÷
-	DWORD dwResistSM;			// ¼Ó¼º »ó¿ëÈ­ ¹«±â
-	DWORD dwResistSM1;			// ¼Ó¼º »ó¿ëÈ­ ¹æ¾î±¸
-	DWORD dwTime;				// ½Ã°£ ¹× È¿°ú
-	DWORD dwEffective0;			// ¾ÆÀÌÅÛ È¿´É
-	DWORD dwEffective1;			// ¾ÆÀÌÅÛ È¿´É1
-	DWORD dwEffective2;			// ¾ÆÀÌÅÛ È¿´É2
-	DWORD dwEffective3;			// ¾ÆÀÌÅÛ È¿´É3
-	DWORD dwRandomOption;		// ·£´ı ¿É¼Ç
-	DWORD dwEnchantOption;		// ÀÎÃ¾Æ® ¿É¼Ç
-	DWORD dwSetName;			// ¼¼Æ® ÀÌ¸§
-	DWORD dwSetItem0;			// ¼¼Æ® ¸ñ·Ï(ºñÂø¿ë½Ã)
-	DWORD dwSetItem1;			// ¼¼Æ® ¸ñ·Ï(Âø¿ë½Ã)
-	DWORD dwSetEffect;			// ¼¼Æ® È¿°ú
-	DWORD dwGold;				// °¡°İ
-	DWORD dwCommand;			// ¼³¸í
-	DWORD dwNotUse;				// »ç¿ë¸øÇÔ
+	DWORD dwName0;				// ì´ë¦„ 0ë‹¨ê³„
+	DWORD dwName1;				// ì´ë¦„ 1ë‹¨ê³„
+	DWORD dwName2;				// ì´ë¦„ 2ë‹¨ê³„
+	DWORD dwName3;				// ì´ë¦„ 3ë‹¨ê³„
+	DWORD dwName4;				// ì´ë¦„ 4ë‹¨ê³„
+	DWORD dwName5;				// ì´ë¦„ 5ë‹¨ê³„
+	DWORD dwGeneral;			// ì¼ë°˜
+	DWORD dwPiercing;			// í”¼ì–´ì‹±
+	DWORD dwPlusOption;			// í”ŒëŸ¬ìŠ¤ ì˜µì…˜
+	DWORD dwResist;				// ì†ì„± ì¼ë°˜
+	DWORD dwResistFire;			// ì†ì„± ë¶ˆ
+	DWORD dwResistWater;		// ì†ì„± ë¬¼
+	DWORD dwResistEarth;		// ì†ì„± ë•…
+	DWORD dwResistElectricity;	// ì†ì„± ì „ê¸°
+	DWORD dwResistWind;			// ì†ì„± ë°”ëŒ
+	DWORD dwResistSM;			// ì†ì„± ìƒìš©í™” ë¬´ê¸°
+	DWORD dwResistSM1;			// ì†ì„± ìƒìš©í™” ë°©ì–´êµ¬
+	DWORD dwTime;				// ì‹œê°„ ë° íš¨ê³¼
+	DWORD dwEffective0;			// ì•„ì´í…œ íš¨ëŠ¥
+	DWORD dwEffective1;			// ì•„ì´í…œ íš¨ëŠ¥1
+	DWORD dwEffective2;			// ì•„ì´í…œ íš¨ëŠ¥2
+	DWORD dwEffective3;			// ì•„ì´í…œ íš¨ëŠ¥3
+	DWORD dwRandomOption;		// ëœë¤ ì˜µì…˜
+	DWORD dwEnchantOption;		// ì¸ì²¸íŠ¸ ì˜µì…˜
+	DWORD dwSetName;			// ì„¸íŠ¸ ì´ë¦„
+	DWORD dwSetItem0;			// ì„¸íŠ¸ ëª©ë¡(ë¹„ì°©ìš©ì‹œ)
+	DWORD dwSetItem1;			// ì„¸íŠ¸ ëª©ë¡(ì°©ìš©ì‹œ)
+	DWORD dwSetEffect;			// ì„¸íŠ¸ íš¨ê³¼
+	DWORD dwGold;				// ê°€ê²©
+	DWORD dwCommand;			// ì„¤ëª…
+	DWORD dwNotUse;				// ì‚¬ìš©ëª»í•¨
 #if __VER >= 9 // __CSC_VER9_1
-	DWORD dwAddedOpt1;		//¹«±âÃß°¡¿É¼Ç1
-	DWORD dwAddedOpt2;		//¹«±âÃß°¡¿É¼Ç2
-	DWORD dwAddedOpt3;		//¹«±âÃß°¡¿É¼Ç3
-	DWORD dwAddedOpt4;		//¹«±âÃß°¡¿É¼Ç4
-	DWORD dwAddedOpt5;		//¹«±âÃß°¡¿É¼Ç5
-	DWORD dwAddedOpt6;		//¹«±âÃß°¡¿É¼Ç6
-	DWORD dwAddedOpt7;		//¹«±âÃß°¡¿É¼Ç7
-	DWORD dwAddedOpt8;		//¹«±âÃß°¡¿É¼Ç8
-	DWORD dwAddedOpt9;		//¹«±âÃß°¡¿É¼Ç9
+	DWORD dwAddedOpt1;		//ë¬´ê¸°ì¶”ê°€ì˜µì…˜1
+	DWORD dwAddedOpt2;		//ë¬´ê¸°ì¶”ê°€ì˜µì…˜2
+	DWORD dwAddedOpt3;		//ë¬´ê¸°ì¶”ê°€ì˜µì…˜3
+	DWORD dwAddedOpt4;		//ë¬´ê¸°ì¶”ê°€ì˜µì…˜4
+	DWORD dwAddedOpt5;		//ë¬´ê¸°ì¶”ê°€ì˜µì…˜5
+	DWORD dwAddedOpt6;		//ë¬´ê¸°ì¶”ê°€ì˜µì…˜6
+	DWORD dwAddedOpt7;		//ë¬´ê¸°ì¶”ê°€ì˜µì…˜7
+	DWORD dwAddedOpt8;		//ë¬´ê¸°ì¶”ê°€ì˜µì…˜8
+	DWORD dwAddedOpt9;		//ë¬´ê¸°ì¶”ê°€ì˜µì…˜9
 #endif //__CSC_VER9_1
 #if __VER >= 11 // __SYS_IDENTIFY
-	DWORD dwAwakening;	// ¾ÆÀÌÅÛ °¢¼º
-	DWORD dwBlessing;	// ¿©½ÅÀÇ Ãàº¹
-	DWORD dwBlessingWarning;	// ¿©½ÅÀÇ Ãàº¹ °æ°í
+	DWORD dwAwakening;	// ì•„ì´í…œ ê°ì„±
+	DWORD dwBlessing;	// ì—¬ì‹ ì˜ ì¶•ë³µ
+	DWORD dwBlessingWarning;	// ì—¬ì‹ ì˜ ì¶•ë³µ ê²½ê³ 
 #endif	// __SYS_IDENTIFY
 };
 
@@ -406,12 +408,12 @@ public:
 	CWndUpgradeBase*  m_pWndUpgradeBase;
 	CWndPiercing*	  m_pWndPiercing;
 
-#if __VER >= 11 // __MA_VER11_05	// ÄÉ¸¯ÅÍ ºÀÀÎ °Å·¡ ±â´É world,database,neuz
+#if __VER >= 11 // __MA_VER11_05	// ì¼€ë¦­í„° ë´‰ì¸ ê±°ë˜ ê¸°ëŠ¥ world,database,neuz
 	CWndSealChar*		m_pWndSealChar;
 	CWndSealCharSelect*		m_pWndSealCharSelect;
 	CWndSealCharSend*		m_pWndSealCharSend;
 	CWndSealCharSet*		m_pWndSealCharSet;
-#endif // __MA_VER11_05	// ÄÉ¸¯ÅÍ ºÀÀÎ °Å·¡ ±â´É world,database,neuz
+#endif // __MA_VER11_05	// ì¼€ë¦­í„° ë´‰ì¸ ê±°ë˜ ê¸°ëŠ¥ world,database,neuz
 
 	CWndInvenRemoveItem* m_pWndInvenRemoveItem;
 
@@ -515,6 +517,7 @@ public:
 #endif //__EXT_ENCHANT
 
 	CWndReSkillWarning*			  m_pWndReSkillWarning;	
+	CWndJobChangeEx*			m_pJobChangeEx;
 	CWndFontEdit*				  m_pWndFontEdit;
 
 	CWndPartyChangeName* m_pWndPartyChangeName;
@@ -527,7 +530,7 @@ public:
 	CWndFriendConFirm* m_pWndFriendConfirm;
 	CWndDuelConfirm* m_pWndDuelConfirm;
 
-#if __VER >= 8     // 8Â÷ µà¾óÁ¸¿¡ °ü°è¾øÀÌ PVP°¡´ÉÇÏ°ÔÇÔ   Neuz, World
+#if __VER >= 8     // 8ì°¨ ë“€ì–¼ì¡´ì— ê´€ê³„ì—†ì´ PVPê°€ëŠ¥í•˜ê²Œí•¨   Neuz, World
 	CWndDuelResult* m_pWndDuelResult;
 #endif	// __VER >= 8  
 
@@ -618,17 +621,17 @@ public:
 	CWndFashionCombine* m_pWndFashionCombine;
 #endif // __FASHION_COMBINE
 
-	// ÀÎÅÍÆäÀÌ½º ÅØ½ºÃç
+	// ì¸í„°í˜ì´ìŠ¤ í…ìŠ¤ì¶°
 	CTexturePack  m_texture;
 	CTexturePack  m_texCommand;
 	CTexturePack  m_texIcon;
 	CTexturePack  m_texWnd;
 
-	// ¸ŞÁö½Ã À©µµ
+	// ë©”ì§€ì‹œ ìœˆë„
 	CWndMessageBox*		m_pWndMessageBox;
 	CWndMessageBoxUpper*		m_pWndMessageBoxUpper;
 
-	//	Äù½ºÆ® ¾ÆÀÌÅÛ Á¤º¸
+	//	í€˜ìŠ¤íŠ¸ ì•„ì´í…œ ì •ë³´
 	CWndQuestItemInfo*	m_pQuestItemInfo;
 
 #ifdef	__COLOSSEUM
@@ -756,9 +759,9 @@ public:
 	void PutPetFeedPocket( CItemElem* pItemElem, CEditString* pEdit );
 #endif //__CSC_VER9_1
 
-#if __VER >= 11 // __MA_VER11_05	// ÄÉ¸¯ÅÍ ºÀÀÎ °Å·¡ ±â´É world,database,neuz
+#if __VER >= 11 // __MA_VER11_05	// ì¼€ë¦­í„° ë´‰ì¸ ê±°ë˜ ê¸°ëŠ¥ world,database,neuz
 	void	PutSealChar( CItemElem* pItemElem, CEditString* pEdit );
-#endif // __MA_VER11_05	// ÄÉ¸¯ÅÍ ºÀÀÎ °Å·¡ ±â´É world,database,neuz
+#endif // __MA_VER11_05	// ì¼€ë¦­í„° ë´‰ì¸ ê±°ë˜ ê¸°ëŠ¥ world,database,neuz
 
 #if __VER >= 15 // __PETVIS
 	void PutNeededVis( CItemElem* pItemElem, CEditString* pEdit );
@@ -823,7 +826,7 @@ public:
 #endif //__CSC_VER12_4
 
 #ifdef __WINDOW_INTERFACE_BUG
-	void CloseBoundWindow(void); // ¾ÆÀÌÅÛÀÌ °É·Á ÀÖ°Å³ª, ¾ÆÀÌÅÛÀ» Á¶ÀÛÇÒ °¡´É¼ºÀÌ ÀÖ´Â ¸ğµç Ã¢À» °­Á¦·Î ´İ´Â´Ù.
+	void CloseBoundWindow(void); // ì•„ì´í…œì´ ê±¸ë ¤ ìˆê±°ë‚˜, ì•„ì´í…œì„ ì¡°ì‘í•  ê°€ëŠ¥ì„±ì´ ìˆëŠ” ëª¨ë“  ì°½ì„ ê°•ì œë¡œ ë‹«ëŠ”ë‹¤.
 #endif // __WINDOW_INTERFACE_BUG
 
 	friend CWndApplet;
@@ -837,7 +840,7 @@ protected:
 extern CPtrArray      m_wndOrder;
 #endif
 
-extern CWndMgr          g_WndMng; // À©µµ ¸Å´ÏÀú Å¬·¡½º 
+extern CWndMgr          g_WndMng; // ìœˆë„ ë§¤ë‹ˆì € í´ë˜ìŠ¤ 
 
 extern void RenderEnchant( C2DRender* p2DRender, CPoint pt );
 extern void RenderRadar( C2DRender* p2DRender, CPoint pt, DWORD dwValue, DWORD dwDivisor );
