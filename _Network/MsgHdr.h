@@ -89,11 +89,11 @@
 #define PACKETTYPE_SEND_TO_SERVER_REQUIRE_FILE_LIST (DWORD)0x00000f0c
 #define PACKETTYPE_SEND_TO_CLIENT_CDN			(DWORD)0x00000f0d
 
-#define PACKETTYPE_SEND_TO_SERVER_EXP			(DWORD)0x00000f31  // seghope ¼­¹ö¿¡ °æÇèÄ¡¸¦ º¸³¿(¼Ó¼ºÀ¸·Î ·¾¾÷ÀÌ °¡´ÉÇÏ°ÔÇÏ´Â ÆÐÅ¶)
-#define PACKETTYPE_SEND_TO_SERVER_CHANGEJOB		(DWORD)0x00000f32  // ÀüÁ÷( ¼Ó¼ºÀ¸·Î ÀüÁ÷ ¹øÈ£¸¦ ÁÜ )
-#define PACKETTYPE_SEND_TO_SERVER_AP			(DWORD)0x00000f33  // ¾×¼Ç Æ÷ÀÎÆ® º¸³¿.
-#define PACKETTYPE_CHANGEJOB					(DWORD)0x00000f34  // ¾×¼Ç Æ÷ÀÎÆ® º¸³¿.
-#define PACKETTYPE_ITEM_TBL_UPDATE				(DWORD)0x00000f35  // ¾ÆÀÌÅÛ ¾÷µ¥ÀÌÆ®
+#define PACKETTYPE_SEND_TO_SERVER_EXP			(DWORD)0x00000f31  // seghope ì„œë²„ì— ê²½í—˜ì¹˜ë¥¼ ë³´ëƒ„(ì†ì„±ìœ¼ë¡œ ë ™ì—…ì´ ê°€ëŠ¥í•˜ê²Œí•˜ëŠ” íŒ¨í‚·)
+#define PACKETTYPE_SEND_TO_SERVER_CHANGEJOB		(DWORD)0x00000f32  // ì „ì§( ì†ì„±ìœ¼ë¡œ ì „ì§ ë²ˆí˜¸ë¥¼ ì¤Œ )
+#define PACKETTYPE_SEND_TO_SERVER_AP			(DWORD)0x00000f33  // ì•¡ì…˜ í¬ì¸íŠ¸ ë³´ëƒ„.
+#define PACKETTYPE_CHANGEJOB					(DWORD)0x00000f34  // ì•¡ì…˜ í¬ì¸íŠ¸ ë³´ëƒ„.
+#define PACKETTYPE_ITEM_TBL_UPDATE				(DWORD)0x00000f35  // ì•„ì´í…œ ì—…ë°ì´íŠ¸
 
 #define PACKETTYPE_JOIN		(DWORD)0x0000ff00
 #define PACKETTYPE_LEAVE	(DWORD)0x0000ff01
@@ -209,27 +209,27 @@
 #define	PACKETTYPE_SYSTEM	(DWORD)0x00ff00ea
 #define	PACKETTYPE_MODIFYMODE		(DWORD)0x00ff00eb
 #define	PACKETTYPE_DEFINEDTEXT	(DWORD)0x00ff00ec
-#define PACKETTYPE_GMSAY	(DWORD)0x00ff00ed               // °×¸¶¿¡°Ô ±Ó¼Ó¸»
+#define PACKETTYPE_GMSAY	(DWORD)0x00ff00ed               // ê²œë§ˆì—ê²Œ ê·“ì†ë§
 
 
-#define PACKETTYPE_CHANGEFACE				(DWORD)0x00ff00ee	// ¾ó±¼¹Ù²Ù±â
-#define PACKETTYPE_NW_WANTED_GOLD			(DWORD)0x00ff00ef	// Çö»ó±Ý °É±â ÆÐÅ¶ 
-#define PACKETTYPE_NW_WANTED_LIST			(DWORD)0x00ff00f0   // Çö»ó±Ý ¸®½ºÆ® ¿äÃ» ÆÐÅ¶
-#define PACKETTYPE_WN_WANTED_LIST			(DWORD)0x00ff00f1   // Çö»ó±Ý ¸®½ºÆ® ÀÀ´ä ÆÐÅ¶
-#define PACKETTYPE_NW_WANTED_INFO			(DWORD)0x00ff00f2   // Çö»ó¹ü ÀÚ¼¼ÇÑÁ¤º¸ ¿äÃ» ÆÐÅ¶ 
-#define PACKETTYPE_WN_WANTED_INFO			(DWORD)0x00ff00f3   // Çö»ó¹ü ÀÚ¼¼ÇÑÁ¤º¸ ÆÐÅ¶ 
+#define PACKETTYPE_CHANGEFACE				(DWORD)0x00ff00ee	// ì–¼êµ´ë°”ê¾¸ê¸°
+#define PACKETTYPE_NW_WANTED_GOLD			(DWORD)0x00ff00ef	// í˜„ìƒê¸ˆ ê±¸ê¸° íŒ¨í‚· 
+#define PACKETTYPE_NW_WANTED_LIST			(DWORD)0x00ff00f0   // í˜„ìƒê¸ˆ ë¦¬ìŠ¤íŠ¸ ìš”ì²­ íŒ¨í‚·
+#define PACKETTYPE_WN_WANTED_LIST			(DWORD)0x00ff00f1   // í˜„ìƒê¸ˆ ë¦¬ìŠ¤íŠ¸ ì‘ë‹µ íŒ¨í‚·
+#define PACKETTYPE_NW_WANTED_INFO			(DWORD)0x00ff00f2   // í˜„ìƒë²” ìžì„¸í•œì •ë³´ ìš”ì²­ íŒ¨í‚· 
+#define PACKETTYPE_WN_WANTED_INFO			(DWORD)0x00ff00f3   // í˜„ìƒë²” ìžì„¸í•œì •ë³´ íŒ¨í‚· 
 
-#define PACKETTYPE_WC_WANTED_GOLD			(DWORD)0x00ff00f4	// Çö»ó±ÝÀ» ¼³Á¤ 
-#define PACKETTYPE_WC_WANTED_REWARD			(DWORD)0x00ff00f5	// Æ¯Á¤ ÇÃ·¹ÀÌ¾îÀÇ Çö»ó±Ý¾× ±¸ÇÏ±â 
-#define PACKETTYPE_CW_WANTED_LIST			(DWORD)0x00ff00f6	// Çö»ó±Ý ¸®½ºÆ® º¸³»±â 
-#define PACKETTYPE_CW_WANTED_REWARD			(DWORD)0x00ff00f7	// Çö»ó±ÝÀ» ¾ò´Â´Ù.
+#define PACKETTYPE_WC_WANTED_GOLD			(DWORD)0x00ff00f4	// í˜„ìƒê¸ˆì„ ì„¤ì • 
+#define PACKETTYPE_WC_WANTED_REWARD			(DWORD)0x00ff00f5	// íŠ¹ì • í”Œë ˆì´ì–´ì˜ í˜„ìƒê¸ˆì•¡ êµ¬í•˜ê¸° 
+#define PACKETTYPE_CW_WANTED_LIST			(DWORD)0x00ff00f6	// í˜„ìƒê¸ˆ ë¦¬ìŠ¤íŠ¸ ë³´ë‚´ê¸° 
+#define PACKETTYPE_CW_WANTED_REWARD			(DWORD)0x00ff00f7	// í˜„ìƒê¸ˆì„ ì–»ëŠ”ë‹¤.
 
-#define PACKETTYPE_CT_WANTED				(DWORD)0x00ff00f8	// Çö»ó±ÝÀ» Ã³¸®¿äÃ» 
-#define PACKETTYPE_TC_LIST					(DWORD)0x00ff00f9	// Çö»ó±Ý ¸®½ºÆ® ¾ò±â 
-#define PACKETTYPE_REQ_LEAVE				(DWORD)0x00ff00fa	// Á¢¼Ó Á¾·á½Ãµµ ÆÐÅ¶ 
-#define PACKETTYPE_WT_REQ_LEAVE				(DWORD)0x00ff00fb	// World->Trans Á¢¼Ó Á¾·á½Ãµµ ÆÐÅ¶ 
-#define PACKETTYPE_NW_WANTED_NAME			(DWORD)0x00ff00fc	// Çö»ó¹ü ÀÌ¸§ ¿äÃ» 
-#define PACKETTYPE_WN_WANTED_NAME			(DWORD)0x00ff00fd	// Çö»ó¹ü ÀÌ¸§ ÀÀ´ä 
+#define PACKETTYPE_CT_WANTED				(DWORD)0x00ff00f8	// í˜„ìƒê¸ˆì„ ì²˜ë¦¬ìš”ì²­ 
+#define PACKETTYPE_TC_LIST					(DWORD)0x00ff00f9	// í˜„ìƒê¸ˆ ë¦¬ìŠ¤íŠ¸ ì–»ê¸° 
+#define PACKETTYPE_REQ_LEAVE				(DWORD)0x00ff00fa	// ì ‘ì† ì¢…ë£Œì‹œë„ íŒ¨í‚· 
+#define PACKETTYPE_WT_REQ_LEAVE				(DWORD)0x00ff00fb	// World->Trans ì ‘ì† ì¢…ë£Œì‹œë„ íŒ¨í‚· 
+#define PACKETTYPE_NW_WANTED_NAME			(DWORD)0x00ff00fc	// í˜„ìƒë²” ì´ë¦„ ìš”ì²­ 
+#define PACKETTYPE_WN_WANTED_NAME			(DWORD)0x00ff00fd	// í˜„ìƒë²” ì´ë¦„ ì‘ë‹µ 
 
 #define PACKETTYPE_REPLACE					(DWORD)0x00ff0f00
 #define	PACKETTYPE_CORR_REQ					(DWORD)0x00ff0ff0
@@ -438,74 +438,74 @@
 #define	PACKETTYPE_MY_PROCESS2			(DWORD)0xf0009007
 #define PACKETTYPE_RENEWEVNET		(DWORD)0xf000b005
 
-// TAG°ü·Ã 
+// TAGê´€ë ¨ 
 #define PACKETTYPE_TAG				(DWORD)0xf000b006
 #define PACKETTYPE_SENDTAG			(DWORD)0xf000b007
 #define PACKETTYPE_INSERTTAG_RESULT	(DWORD)0xf000b008
 
 #define PACKETTYPE_PARTYLEVEL		(DWORD)0xf000b009
 
-#define PACKETTYPE_WC_GUILDLOGO		(DWORD)0xf000b00a	// ·Î°íº¯°æ 
-#define PACKETTYPE_WC_GUILDCONTRIBUTION    (DWORD)0xf000b00b	// °øÇå (Æä³Ä¿Í PXP°øÇå È½¼ö)
-#define PACKETTYPE_WC_GUILDNOTICE   (DWORD)0xf000b00c	// °øÁö»çÇ× º¯°æ 
-#define PACKETTYPE_CW_GUILDLOGO		(DWORD)0xf000b00d	// ·Î°íº¯°æ 
-#define PACKETTYPE_CW_GUILDCONTRIBUTION	(DWORD)0xf000b00e	// °øÇå 
-#define PACKETTYPE_CW_GUILDNOTICE   (DWORD)0xf000b00f	// °øÁö»çÇ× º¯°æ 
+#define PACKETTYPE_WC_GUILDLOGO		(DWORD)0xf000b00a	// ë¡œê³ ë³€ê²½ 
+#define PACKETTYPE_WC_GUILDCONTRIBUTION    (DWORD)0xf000b00b	// ê³µí—Œ (íŽ˜ëƒì™€ PXPê³µí—Œ íšŸìˆ˜)
+#define PACKETTYPE_WC_GUILDNOTICE   (DWORD)0xf000b00c	// ê³µì§€ì‚¬í•­ ë³€ê²½ 
+#define PACKETTYPE_CW_GUILDLOGO		(DWORD)0xf000b00d	// ë¡œê³ ë³€ê²½ 
+#define PACKETTYPE_CW_GUILDCONTRIBUTION	(DWORD)0xf000b00e	// ê³µí—Œ 
+#define PACKETTYPE_CW_GUILDNOTICE   (DWORD)0xf000b00f	// ê³µì§€ì‚¬í•­ ë³€ê²½ 
 
-#define	PACKETTYPE_NW_GUILDLOGO			(DWORD)0xf000b010	// ·Î°í º¯°æ 
-#define	PACKETTYPE_NW_GUILDCONTRIBUTION	(DWORD)0xf000b011	// °øÇåµµ 
-#define	PACKETTYPE_NW_GUILDNOTICE		(DWORD)0xf000b012	// °øÁö»çÇ× 
+#define	PACKETTYPE_NW_GUILDLOGO			(DWORD)0xf000b010	// ë¡œê³  ë³€ê²½ 
+#define	PACKETTYPE_NW_GUILDCONTRIBUTION	(DWORD)0xf000b011	// ê³µí—Œë„ 
+#define	PACKETTYPE_NW_GUILDNOTICE		(DWORD)0xf000b012	// ê³µì§€ì‚¬í•­ 
 #define	PACKETTYPE_FOCUSOBJ				(DWORD)0xf000b013	
 
 #define	PACKETTYPE_CALL_USPLOGGINGQUEST		(DWORD)0xf000b014
 
-// World¿¡¼­ Neuz·Î´Â snapshopÀ¸·Î 
+// Worldì—ì„œ Neuzë¡œëŠ” snapshopìœ¼ë¡œ 
 
-#define PACKETTYPE_CD_GUILD_LOGO			(DWORD)0xf000b016	// ·Î°í 
-#define PACKETTYPE_WD_GUILD_CONTRIBUTION	(DWORD)0xf000b017	// °øÇå 
-#define PACKETTYPE_CD_GUILD_NOTICE			(DWORD)0xf000b018	// °øÁö 
+#define PACKETTYPE_CD_GUILD_LOGO			(DWORD)0xf000b016	// ë¡œê³  
+#define PACKETTYPE_WD_GUILD_CONTRIBUTION	(DWORD)0xf000b017	// ê³µí—Œ 
+#define PACKETTYPE_CD_GUILD_NOTICE			(DWORD)0xf000b018	// ê³µì§€ 
 
-#define PACKETTYPE_GUILD_BANK_WND			(DWORD)0xf000b020	// ±æµå Ã¢°í ¿ÀÇÂ 
-#define PACKETTYPE_PUTITEMGUILDBANK			(DWORD)0xf000b021	// ±æµå Ã¢°í ¾ÆÀÌÅÛ ³Ö±â(Ç²~~ ^^;;; )
+#define PACKETTYPE_GUILD_BANK_WND			(DWORD)0xf000b020	// ê¸¸ë“œ ì°½ê³  ì˜¤í”ˆ 
+#define PACKETTYPE_PUTITEMGUILDBANK			(DWORD)0xf000b021	// ê¸¸ë“œ ì°½ê³  ì•„ì´í…œ ë„£ê¸°(í’‹~~ ^^;;; )
 #define PACKETTYPE_GETITEMGUILDBANK			(DWORD)0xf000b022	
 #define PACKETTYPE_GUILD_MSG_CONTROL		(DWORD)0xf000b023	
 
-#define PACKETTYPE_GUILD_AUTHORITY			(DWORD)0xf000b026	// ±æµå ±ÇÇÑ ¼³Á¤( Authority°¡ ±ÇÇÑÀÌ¶ó´Ï~ ²Ú~~ ¤»¤§¤»¤§ )
-#define PACKETTYPE_GUILD_PENYA				(DWORD)0xf000b027	// ±æµå PENYA ¼³Á¤
-#define PACKETTYPE_GUILD_DB_REALPENYA		(DWORD)0xf000b028	// ±æµå PENYA ½ÇÁ¦·Î ±æµå¿øµé¿¡ ÁÖ±â
-#define PACKETTYPE_GUILD_GAMELOGIN			(DWORD)0xf000b029	// ±æµå¿øÀÌ °ÔÀÓ¿¡ µé¾î¿È
-#define PACKETTYPE_GUILD_GAMEJOIN			(DWORD)0xf000b030	// °ÔÀÓ¿¡ µé¾î¿ÔÀ¸¹Ç·Î ³ª¿¡°Ô ±æµå¿ø Á¤º¸¸¦ ÁÜ
-#define PACKETTYPE_CHANGEGUILDJOBLEVEL		(DWORD)0xf000b031	// ÀüÁ÷ÇßÀ»¶§/·¹º§¾÷ÇßÀ»½Ã ±æµå¿øµé¿¡°Ô ¾Ë·ÁÁÜ
-#define PACKETTYPE_GUILD_SETNAME			(DWORD)0xf000b032	// ±æµåÀÌ¸§À» ¹Ù²Þ
+#define PACKETTYPE_GUILD_AUTHORITY			(DWORD)0xf000b026	// ê¸¸ë“œ ê¶Œí•œ ì„¤ì •( Authorityê°€ ê¶Œí•œì´ë¼ë‹ˆ~ ê¾¹~~ ã…‹ã„·ã…‹ã„· )
+#define PACKETTYPE_GUILD_PENYA				(DWORD)0xf000b027	// ê¸¸ë“œ PENYA ì„¤ì •
+#define PACKETTYPE_GUILD_DB_REALPENYA		(DWORD)0xf000b028	// ê¸¸ë“œ PENYA ì‹¤ì œë¡œ ê¸¸ë“œì›ë“¤ì— ì£¼ê¸°
+#define PACKETTYPE_GUILD_GAMELOGIN			(DWORD)0xf000b029	// ê¸¸ë“œì›ì´ ê²Œìž„ì— ë“¤ì–´ì˜´
+#define PACKETTYPE_GUILD_GAMEJOIN			(DWORD)0xf000b030	// ê²Œìž„ì— ë“¤ì–´ì™”ìœ¼ë¯€ë¡œ ë‚˜ì—ê²Œ ê¸¸ë“œì› ì •ë³´ë¥¼ ì¤Œ
+#define PACKETTYPE_CHANGEGUILDJOBLEVEL		(DWORD)0xf000b031	// ì „ì§í–ˆì„ë•Œ/ë ˆë²¨ì—…í–ˆì„ì‹œ ê¸¸ë“œì›ë“¤ì—ê²Œ ì•Œë ¤ì¤Œ
+#define PACKETTYPE_GUILD_SETNAME			(DWORD)0xf000b032	// ê¸¸ë“œì´ë¦„ì„ ë°”ê¿ˆ
 
-#define PACKETTYPE_GUILD_ERROR				(DWORD)0xf000b035	// ±æµå ¿¡·¯ Á¤º¸ º¸³»±â
-#define	PACKETTYPE_DECL_GUILD_WAR			(DWORD)0xf000b036	// ±æµå ÀüÀï ¼±Æ÷
-#define	PACKETTYPE_ACPT_GUILD_WAR			(DWORD)0xf000b037	// ±æµå ÀüÀï ½ÃÀÛ
-#define PACKETTYPE_NC_ADDVOTE				(DWORD)0xf000b038	// ÅõÇ¥ ÀÔ·Â 
-#define PACKETTYPE_NC_REMOVEVOTE			(DWORD)0xf000b039	// ÅõÇ¥ Ãë¼Ò 
-#define PACKETTYPE_NC_CLOSEVOTE				(DWORD)0xf000b03a	// ÅõÇ¥ Á¾·á 
-#define PACKETTYPE_NC_CASTVOTE				(DWORD)0xf000b03b	// ÅõÇ¥ÇÏ±â 
+#define PACKETTYPE_GUILD_ERROR				(DWORD)0xf000b035	// ê¸¸ë“œ ì—ëŸ¬ ì •ë³´ ë³´ë‚´ê¸°
+#define	PACKETTYPE_DECL_GUILD_WAR			(DWORD)0xf000b036	// ê¸¸ë“œ ì „ìŸ ì„ í¬
+#define	PACKETTYPE_ACPT_GUILD_WAR			(DWORD)0xf000b037	// ê¸¸ë“œ ì „ìŸ ì‹œìž‘
+#define PACKETTYPE_NC_ADDVOTE				(DWORD)0xf000b038	// íˆ¬í‘œ ìž…ë ¥ 
+#define PACKETTYPE_NC_REMOVEVOTE			(DWORD)0xf000b039	// íˆ¬í‘œ ì·¨ì†Œ 
+#define PACKETTYPE_NC_CLOSEVOTE				(DWORD)0xf000b03a	// íˆ¬í‘œ ì¢…ë£Œ 
+#define PACKETTYPE_NC_CASTVOTE				(DWORD)0xf000b03b	// íˆ¬í‘œí•˜ê¸° 
 
-#define PACKETTYPE_CD_ADDVOTE				(DWORD)0xf000b03c   // ÅõÇ¥ ÀÔ·Â(CORE -> DB)
-#define PACKETTYPE_CD_REMOVEVOTE			(DWORD)0xf000b03d	// ÅõÇ¥ Ãë¼Ò(CORE -> DB)
-#define PACKETTYPE_CD_CLOSEVOTE				(DWORD)0xf000b03e	// ÅõÇ¥ Á¾·á(CORE -> DB)
-#define PACKETTYPE_CD_CASTVOTE				(DWORD)0xf000b03f	// ÅõÇ¥ÇÏ±â (CORE -> DB)
-#define PACKETTYPE_DC_ADDVOTERESULT			(DWORD)0xf000b040	// ÅõÇ¥ ÀÔ·Â°á°ú (DB -> CORE)
-#define PACKETTYPE_CW_ADDVOTERESULT			(DWORD)0xf000b041	// ÅõÇ¥ ÀÔ·Â°á°ú (CORE -> WORLD)
-#define PACKETTYPE_CW_MODIFYVOTE			(DWORD)0xf000b042	// ÅõÇ¥ º¯°æ  (CORE -> WORLD)
+#define PACKETTYPE_CD_ADDVOTE				(DWORD)0xf000b03c   // íˆ¬í‘œ ìž…ë ¥(CORE -> DB)
+#define PACKETTYPE_CD_REMOVEVOTE			(DWORD)0xf000b03d	// íˆ¬í‘œ ì·¨ì†Œ(CORE -> DB)
+#define PACKETTYPE_CD_CLOSEVOTE				(DWORD)0xf000b03e	// íˆ¬í‘œ ì¢…ë£Œ(CORE -> DB)
+#define PACKETTYPE_CD_CASTVOTE				(DWORD)0xf000b03f	// íˆ¬í‘œí•˜ê¸° (CORE -> DB)
+#define PACKETTYPE_DC_ADDVOTERESULT			(DWORD)0xf000b040	// íˆ¬í‘œ ìž…ë ¥ê²°ê³¼ (DB -> CORE)
+#define PACKETTYPE_CW_ADDVOTERESULT			(DWORD)0xf000b041	// íˆ¬í‘œ ìž…ë ¥ê²°ê³¼ (CORE -> WORLD)
+#define PACKETTYPE_CW_MODIFYVOTE			(DWORD)0xf000b042	// íˆ¬í‘œ ë³€ê²½  (CORE -> WORLD)
 
-#define PACKETTYPE_UPDATE_GUILD_RANKING		(DWORD)0xf000b043	// ±æµå·©Å·À» ¾÷µ¥ÀÌÆ®ÇÏ±â
-#define PACKETTYPE_UPDATE_GUILD_RANKING_END	(DWORD)0xf000b044	// ±æµå·©Å·À» ¾÷µ¥ÀÌÆ® ¿Ï·á		
-#define PACKETTYPE_UPDATE_GUILD_RANKING_DB	(DWORD)0xf000b04d	// ±æµå·©Å·À» ¾÷µ¥ÀÌÆ®ÇÏ±â
-#define PACKETTYPE_REQUEST_GUILD_RANKING	(DWORD)0xf000b04e	// ±æµå·©Å·À» ¿äÃ»ÇÏ±â
+#define PACKETTYPE_UPDATE_GUILD_RANKING		(DWORD)0xf000b043	// ê¸¸ë“œëž­í‚¹ì„ ì—…ë°ì´íŠ¸í•˜ê¸°
+#define PACKETTYPE_UPDATE_GUILD_RANKING_END	(DWORD)0xf000b044	// ê¸¸ë“œëž­í‚¹ì„ ì—…ë°ì´íŠ¸ ì™„ë£Œ		
+#define PACKETTYPE_UPDATE_GUILD_RANKING_DB	(DWORD)0xf000b04d	// ê¸¸ë“œëž­í‚¹ì„ ì—…ë°ì´íŠ¸í•˜ê¸°
+#define PACKETTYPE_REQUEST_GUILD_RANKING	(DWORD)0xf000b04e	// ê¸¸ë“œëž­í‚¹ì„ ìš”ì²­í•˜ê¸°
 
-#define	PACKETTYPE_WAR_DEAD		(DWORD)0Xf000b045	// ±æµåÀü »ç¸Á
-#define	PACKETTYPE_WAR_END	(DWORD)0xf000b046	// Á¾Àü
-#define	PACKETTYPE_SURRENDER	(DWORD)0xf000b047	// Ç×º¹
-#define	PACKETTYPE_QUERY_TRUCE	(DWORD)0xf000b048	// Á¤Àü ¿äÃ»
-#define	PACKETTYPE_ACPT_TRUCE	(DWORD)0xf000b049	// Á¤Àü ¼ö¶ô
-#define	PACKETTYPE_WAR_TIMEOUT	(DWORD)0xf000b04a	// Àü½Ã Á¾·á
-#define	PACKETTYPE_WAR_MASTER_ABSENT	(DWORD)0xf000b04b	// ±æµå ¸¶½ºÅÍ ºÎÀç
+#define	PACKETTYPE_WAR_DEAD		(DWORD)0Xf000b045	// ê¸¸ë“œì „ ì‚¬ë§
+#define	PACKETTYPE_WAR_END	(DWORD)0xf000b046	// ì¢…ì „
+#define	PACKETTYPE_SURRENDER	(DWORD)0xf000b047	// í•­ë³µ
+#define	PACKETTYPE_QUERY_TRUCE	(DWORD)0xf000b048	// ì •ì „ ìš”ì²­
+#define	PACKETTYPE_ACPT_TRUCE	(DWORD)0xf000b049	// ì •ì „ ìˆ˜ë½
+#define	PACKETTYPE_WAR_TIMEOUT	(DWORD)0xf000b04a	// ì „ì‹œ ì¢…ë£Œ
+#define	PACKETTYPE_WAR_MASTER_ABSENT	(DWORD)0xf000b04b	// ê¸¸ë“œ ë§ˆìŠ¤í„° ë¶€ìž¬
 #define	PACKETTYPE_SCHOOL_REPORT	(DWORD)0xf000b04c
 #define PACKETTYPE_COMMERCIALELEM	(DWORD)0xf000b04f
 #define	PACKETTYPE_UPGRADEBASE		(DWORD)0xf000b050
@@ -517,8 +517,8 @@
 // (DWORD)0xf000d00b
 #define PACHETTYPE_ITEMTRANSY		(DWORD)0xf000d00c
 #define PACKETTYPE_RANDOMSCROLL		(DWORD)0xf000d00d
-#define PACKETTYPE_REMVOE_ATTRIBUTE (DWORD)0xf000d00b // ¼Ó¼ºÁ¦·Ã Á¦°Å
-#define PACKETTYPE_CHANGE_ATTRIBUTE (DWORD)0xf000d00e // ¼Ó¼ºÁ¦·Ã º¯°æ
+#define PACKETTYPE_REMVOE_ATTRIBUTE (DWORD)0xf000d00b // ì†ì„±ì œë ¨ ì œê±°
+#define PACKETTYPE_CHANGE_ATTRIBUTE (DWORD)0xf000d00e // ì†ì„±ì œë ¨ ë³€ê²½
 
 #define	PACKETTYPE_UPDATEGUILDQUEST	(DWORD)0xf000b051
 #define	PACKETTYPE_BUYING_INFO	(DWORD)0xf000b052
@@ -613,7 +613,7 @@
 #define PACKETTYPE_ULTIMATE_REMOVEGEM		(DWORD)0xf000f115
 
 #define PACKETTYPE_EXCHANGE					(DWORD)0xf000f116
-// ÀÌº¥Æ®(·ç¾Æ ½ºÅ©¸³Æ®)
+// ì´ë²¤íŠ¸(ë£¨ì•„ ìŠ¤í¬ë¦½íŠ¸)
 #define PACKETTYPE_EVENTLUA_STATE			(DWORD)0xf000f117
 #define PACKETTYPE_EVENTLUA_CHANGED			(DWORD)0xf000f118
 #define PACKETTYPE_EVENTLUA_NEEDSTATE		(DWORD)0xf000f119
@@ -834,9 +834,9 @@
 #define PACKETTYPE_COLLECTION_CERTIFY				(DWORD)0x88100220
 
 
-//	mulcom	BEGIN100405	°¢¼º º¸È£ÀÇ µÎ·ç¸¶¸®
+//	mulcom	BEGIN100405	ê°ì„± ë³´í˜¸ì˜ ë‘ë£¨ë§ˆë¦¬
 #define PACKETTYPE_ITEM_SELECT_AWAKENING_VALUE		(DWORD)0x88100221
-//	mulcom	END100405	°¢¼º º¸È£ÀÇ µÎ·ç¸¶¸®
+//	mulcom	END100405	ê°ì„± ë³´í˜¸ì˜ ë‘ë£¨ë§ˆë¦¬
 
 #define PACKETTYPE_GUILDHOUSE_TENDER_MAINWND		(DWORD)0x88100230
 #define PACKETTYPE_GUILDHOUSE_TENDER_INFOWND		(DWORD)0x88100231
@@ -871,6 +871,7 @@
 #endif // __FASHION_COMBINE
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
+#define PACKETTYPE_UPDATE_JOB						(DWORD)0x88100251
 #define SNAPSHOTTYPE_CHAT	(WORD)0x0001
 #define SNAPSHOTTYPE_ACTMSG	(WORD)0x0002
 #define SNAPSHOTTYPE_CREATEITEM	(WORD)0x0003
@@ -1067,7 +1068,7 @@
 
 #define SNAPSHOTTYPE_SET_JOB_SKILL		(WORD)0x00a7
 #define SNAPSHOTTYPE_SET_NEAR_JOB_SKILL (WORD)0x00a8
-#define SNAPSHOTTYPE_RETURNSAY			(WORD)0x00a9				// ±Ó¼Ó¸»¿¡¼­ µÇµ¹¾Æ¿À´Â°Í : Ã£À»¼ö°¡ ¾øÀ½, ±Ó¼Ó¸» ³»¿ë
+#define SNAPSHOTTYPE_RETURNSAY			(WORD)0x00a9				// ê·“ì†ë§ì—ì„œ ë˜ëŒì•„ì˜¤ëŠ”ê²ƒ : ì°¾ì„ìˆ˜ê°€ ì—†ìŒ, ê·“ì†ë§ ë‚´ìš©
 #define SNAPSHOTTYPE_CREATESFXALLOW		(WORD)0x00aa
 #define	SNAPSHOTTYPE_REMOVEITEMATID		(WORD)0x00ab
 #define	SNAPSHOTTYPE_QUERYEQUIP			(WORD)0x00ac
@@ -1156,16 +1157,16 @@
 #define SNAPSHOTTYPE_GUILD_BANK_WND		(WORD)(0x00FA)
 #define SNAPSHOTTYPE_PUTITEMGUILDBANK	(WORD)(0x00EF)
 #define SNAPSHOTTYPE_GETITEMGUILDBANK	(WORD)(0x00D4)
-#define SNAPSHOTTYPE_GUILD_LOGO		(WORD)0x00fb				// ·Î°í 
-#define SNAPSHOTTYPE_GUILD_CONTRIBUTION	(WORD)0x00fc			// °øÇåµµ 
-#define SNAPSHOTTYPE_GUILD_NOTICE		(WORD)0x00fd			// °øÁö»çÇ× 
-#define	SNAPSHOTTYPE_GUILD_AUTHORITY	(WORD)0x00fe			// ±ÇÇÑ º¯°æ 
-#define SNAPSHOTTYPE_GUILD_PENYA		(WORD)0x00ff			// Æä³Ä º¯°æ 
-#define SNAPSHOTTYPE_GUILD_REAL_PENYA	(WORD)(0x00D5)		// ¿ù±Þ ¹ÞÀ½
-#define SNAPSHOTTYPE_GUILD_CHANGEJOBLEVEL	(WORD)(0x00D6)	// ·¹º§ÀÌ³ª Á÷¾÷ÀÌ ¹Ù²ñ
-#define SNAPSHOTTYPE_GUILD_ADDVOTE		(WORD)(0x00D8)	// ÅõÇ¥°¡ Ãß°¡µÊ 
-#define SNAPSHOTTYPE_GUILD_MODIFYVOTE   (WORD)(0x00D9)	// ÅõÇ¥ÀÇ º¯°æ(Á¦°Å, Á¾·á, ÅõÇ¥ÇÔ)
-#define	SNAPSHOTTYPE_WAR	(WORD)0x00da	// ÀüÀï
+#define SNAPSHOTTYPE_GUILD_LOGO		(WORD)0x00fb				// ë¡œê³  
+#define SNAPSHOTTYPE_GUILD_CONTRIBUTION	(WORD)0x00fc			// ê³µí—Œë„ 
+#define SNAPSHOTTYPE_GUILD_NOTICE		(WORD)0x00fd			// ê³µì§€ì‚¬í•­ 
+#define	SNAPSHOTTYPE_GUILD_AUTHORITY	(WORD)0x00fe			// ê¶Œí•œ ë³€ê²½ 
+#define SNAPSHOTTYPE_GUILD_PENYA		(WORD)0x00ff			// íŽ˜ëƒ ë³€ê²½ 
+#define SNAPSHOTTYPE_GUILD_REAL_PENYA	(WORD)(0x00D5)		// ì›”ê¸‰ ë°›ìŒ
+#define SNAPSHOTTYPE_GUILD_CHANGEJOBLEVEL	(WORD)(0x00D6)	// ë ˆë²¨ì´ë‚˜ ì§ì—…ì´ ë°”ë€œ
+#define SNAPSHOTTYPE_GUILD_ADDVOTE		(WORD)(0x00D8)	// íˆ¬í‘œê°€ ì¶”ê°€ë¨ 
+#define SNAPSHOTTYPE_GUILD_MODIFYVOTE   (WORD)(0x00D9)	// íˆ¬í‘œì˜ ë³€ê²½(ì œê±°, ì¢…ë£Œ, íˆ¬í‘œí•¨)
+#define	SNAPSHOTTYPE_WAR	(WORD)0x00da	// ì „ìŸ
 
 #define SNAPSHOTTYPE_REQUEST_GUILDRANK	(WORD)(0x00db)
 #define	SNAPSHOTTYPE_SEX_CHANGE		(WORD)(0x00dc)
@@ -1283,9 +1284,9 @@
 #define SNAPSHOTTYPE_DECOUPLE_RESULT	(WORD)0x9704
 #define SNAPSHOTTYPE_ADD_COUPLE_EXPERIENCE	(WORD)0x9705
 
-#ifdef __SPEED_SYNC_0108		// ResetDestParam speed ¼öÁ¤
+#ifdef __SPEED_SYNC_0108		// ResetDestParam speed ìˆ˜ì •
 #define	SNAPSHOTTYPE_RESETDESTPARAM_SYNC			(WORD)0x9800
-#endif // __SPEED_SYNC_0108		// ResetDestParam speed ¼öÁ¤
+#endif // __SPEED_SYNC_0108		// ResetDestParam speed ìˆ˜ì •
 #define SNAPSHOTTYPE_PCBANG_INFO					(WORD)0x9810
 
 #define SNAPSHOTTYPE_ACCOUNT_PLAYTIME				(WORD)0x9820
@@ -1313,9 +1314,9 @@
 #define SNAPSHOTTYPE_CAMPUS_REMOVE					(WORD)0x8832
 #define SNAPSHOTTYPE_CAMPUS_UPDATE_POINT			(WORD)0x8833
 
-//	mulcom	BEGIN100405	°¢¼º º¸È£ÀÇ µÎ·ç¸¶¸®
+//	mulcom	BEGIN100405	ê°ì„± ë³´í˜¸ì˜ ë‘ë£¨ë§ˆë¦¬
 #define SNAPSHOTTYPE_ITEM_SELECT_AWAKENING_VALUE	(WORD)0x8834
-//	mulcom	END100405	°¢¼º º¸È£ÀÇ µÎ·ç¸¶¸®
+//	mulcom	END100405	ê°ì„± ë³´í˜¸ì˜ ë‘ë£¨ë§ˆë¦¬
 
 #define SNAPSHOTTYPE_GUILDHOUSE_TENDER_MAINWND		(WORD)0x8840
 #define SNAPSHOTTYPE_GUILDHOUSE_TENDER_INFOWND		(WORD)0x8841
@@ -1353,25 +1354,25 @@
 #define ERROR_INVALID_NAME_CHARACTER		111L
 #define	ERROR_WARTIME						112L
 #define ERROR_BLOCKGOLD_ACCOUNT				119L
-#define ERROR_FLYFF_PASSWORD				120L	// ºñ¹Ð ¹øÈ£°¡ Æ²¸³´Ï´Ù.
-#define ERROR_FLYFF_ACCOUNT					121L	// Àß¸øµÈ °èÁ¤ÀÔ´Ï´Ù.
-#define ERROR_FLYFF_AUTH					122L	// ½Ç¸íÀÎÁõÈÄ °ÔÀÓÁ¢¼ÓÀÌ °¡´ÉÇÕ´Ï´Ù
-#define ERROR_FLYFF_PERMIT					123L    // ÇÁ¸®ÇÁ´Â 12¼¼ ÀÌ»ó ÀÌ¿ë°¡ ÀÌ¹Ç·Î °ÔÀÓÁ¢¼ÓÀ» ÇÒ¼ö ¾ø½À´Ï´Ù.
-#define ERROR_FLYFF_NEED_AGREEMENT			124L	// 14¼¼ ¹Ì¸¸ °¡ÀÔÀÚ ºÐµéÀº ºÎ¸ð´Ô µ¿ÀÇ¼­¸¦ º¸³»ÁÖ¼Å¾ß
-#define ERROR_FLYFF_NO_MEMBERSHIP			125L	// À¥¿¡¼­ Å»ÅðÇÑ °èÁ¤ÀÔ´Ï´Ù
-#define ERROR_BILLING_INFO_FAILED			126L	// ºô¸µ Á¤º¸ ¾øÀ½
-#define ERROR_BILLING_DATABASE_ERROR		127L	// ºô¸µ DB ¿¡·¯ 
-#define ERROR_BILLING_TIME_OVER				128L	// ºô¸µ »ç¿ë½Ã°£ ¸¸·á 
-#define ERROR_BILLING_OTHER_ERROR			129L	// ºô¸µ ±âÅ¸ ´Ù¸¥ ¿¡·¯ 
-#define ERROR_BILLING_DISCONNECTED			130L	// ¼­¹ö Á¢¼Ó ÇØÁ¦
-#define ERROR_TOO_LATE_PLAY					131L	// ÅÂ±¹ 22½Ã¿¡¼­ 06½Ã±îÁö¸¸ ÇÃ·¹ÀÌ °¡´ÉÇÕ´Ï´Ù.
-#define ERROR_IP_CUT						132L	// ÇØ¿Ü¿¡¼­ ±¹³»·Î ¸øµé¾î¿È
-#define ERROR_FLYFF_DB_JOB_ING				133L	// ½Ç½Ã°£ µ¥ÀÌÅÍ ÀÛ¾÷ À¯Àú		
-#define ERROR_15SEC_PREVENT					134L	// 15ÃÊ°£ ·Î±×ÀÎ ±ÝÁö 
-#define ERROR_15MIN_PREVENT					135L	// 15ºÐ°£ ·Î±×ÀÎ ±ÝÁö 
-#define ERROR_CERT_GENERAL					136L	// CERT ÀÏ¹Ý ¿À·ù 	
-#define	ERROR_FLYFF_EXPIRED_SESSION_PASSWORD	137L	// ¼¼¼Ç ÆÐ½º¿öµå ¸¸·á
-#define	ERROR_FLYFF_RESOURCE_MODIFIED	138L	// ¼¼¼Ç ÆÐ½º¿öµå ¸¸·á
+#define ERROR_FLYFF_PASSWORD				120L	// ë¹„ë°€ ë²ˆí˜¸ê°€ í‹€ë¦½ë‹ˆë‹¤.
+#define ERROR_FLYFF_ACCOUNT					121L	// ìž˜ëª»ëœ ê³„ì •ìž…ë‹ˆë‹¤.
+#define ERROR_FLYFF_AUTH					122L	// ì‹¤ëª…ì¸ì¦í›„ ê²Œìž„ì ‘ì†ì´ ê°€ëŠ¥í•©ë‹ˆë‹¤
+#define ERROR_FLYFF_PERMIT					123L    // í”„ë¦¬í”„ëŠ” 12ì„¸ ì´ìƒ ì´ìš©ê°€ ì´ë¯€ë¡œ ê²Œìž„ì ‘ì†ì„ í• ìˆ˜ ì—†ìŠµë‹ˆë‹¤.
+#define ERROR_FLYFF_NEED_AGREEMENT			124L	// 14ì„¸ ë¯¸ë§Œ ê°€ìž…ìž ë¶„ë“¤ì€ ë¶€ëª¨ë‹˜ ë™ì˜ì„œë¥¼ ë³´ë‚´ì£¼ì…”ì•¼
+#define ERROR_FLYFF_NO_MEMBERSHIP			125L	// ì›¹ì—ì„œ íƒˆí‡´í•œ ê³„ì •ìž…ë‹ˆë‹¤
+#define ERROR_BILLING_INFO_FAILED			126L	// ë¹Œë§ ì •ë³´ ì—†ìŒ
+#define ERROR_BILLING_DATABASE_ERROR		127L	// ë¹Œë§ DB ì—ëŸ¬ 
+#define ERROR_BILLING_TIME_OVER				128L	// ë¹Œë§ ì‚¬ìš©ì‹œê°„ ë§Œë£Œ 
+#define ERROR_BILLING_OTHER_ERROR			129L	// ë¹Œë§ ê¸°íƒ€ ë‹¤ë¥¸ ì—ëŸ¬ 
+#define ERROR_BILLING_DISCONNECTED			130L	// ì„œë²„ ì ‘ì† í•´ì œ
+#define ERROR_TOO_LATE_PLAY					131L	// íƒœêµ­ 22ì‹œì—ì„œ 06ì‹œê¹Œì§€ë§Œ í”Œë ˆì´ ê°€ëŠ¥í•©ë‹ˆë‹¤.
+#define ERROR_IP_CUT						132L	// í•´ì™¸ì—ì„œ êµ­ë‚´ë¡œ ëª»ë“¤ì–´ì˜´
+#define ERROR_FLYFF_DB_JOB_ING				133L	// ì‹¤ì‹œê°„ ë°ì´í„° ìž‘ì—… ìœ ì €		
+#define ERROR_15SEC_PREVENT					134L	// 15ì´ˆê°„ ë¡œê·¸ì¸ ê¸ˆì§€ 
+#define ERROR_15MIN_PREVENT					135L	// 15ë¶„ê°„ ë¡œê·¸ì¸ ê¸ˆì§€ 
+#define ERROR_CERT_GENERAL					136L	// CERT ì¼ë°˜ ì˜¤ë¥˜ 	
+#define	ERROR_FLYFF_EXPIRED_SESSION_PASSWORD	137L	// ì„¸ì…˜ íŒ¨ìŠ¤ì›Œë“œ ë§Œë£Œ
+#define	ERROR_FLYFF_RESOURCE_MODIFIED	138L	// ì„¸ì…˜ íŒ¨ìŠ¤ì›Œë“œ ë§Œë£Œ
 
 // Party
 #define ERROR_NOLEADER						200L
@@ -1385,7 +1386,7 @@
 #define ERROR_NOTMAMBER						208L
 #define ERROR_SAMLEADER						209L
 
-// NOERR_XXX ¿Í ERROR_XXX ´Â Áßº¹µÇ¸é ¾ÈµÈ´Ù.
+// NOERR_XXX ì™€ ERROR_XXX ëŠ” ì¤‘ë³µë˜ë©´ ì•ˆëœë‹¤.
 #define	NOERR_REGISTER_ACCOUNT				500L		
 #define NOERR_LOGIN							501L
 
@@ -1465,27 +1466,27 @@ typedef	struct	_runscriptfunc
 #define PN_COLLECTION	26000
 
 
-// PACKETTYPE_ADD_ACCOUNTÀÇ ¸®ÅÏ ÄÚµå
-const BYTE ACCOUNT_DUPLIACTE     = 0;			// Áßº¹ ¿¡·¯ 
-const BYTE ACCOUNT_CHECK_OK      = 1;			// ¼º°ø
-const BYTE ACCOUNT_EXTERNAL_ADDR = 2;			// Çã¿ëµÇÁö ¾Ê´Â ÁÖ¼Ò 
-const BYTE ACCOUNT_OVERFLOW      = 3;			// ÀÎ¿øÃÊ°ú
-const BYTE ACCOUNT_BILLING_INFO_FAILED    = 4;	// ºô¸µ Á¤º¸ ¾øÀ½ 
-const BYTE ACCOUNT_BILLING_DATABASE_ERROR = 5;	// ºô¸µ DB ¿¡·¯ 
-const BYTE ACCOUNT_BILLING_TIME_OVER      = 6;	// ºô¸µ »ç¿ë½Ã°£ ¸¸·á 
-const BYTE ACCOUNT_BILLING_OTHER_ERROR    = 7;	// ºô¸µ ±âÅ¸ ´Ù¸¥ ¿¡·¯ 
-const BYTE ACCOUNT_BILLING_DISCONNECTED	  = 8;  // ºô¸µ ¼­¹ö°¡ ²÷°Ü ÀÖ´Â °æ¿ì
-const BYTE ACCOUNT_IPCUT_ADDR	  = 9;  // ºô¸µ ¼­¹ö°¡ ²÷°Ü ÀÖ´Â °æ¿ì
+// PACKETTYPE_ADD_ACCOUNTì˜ ë¦¬í„´ ì½”ë“œ
+const BYTE ACCOUNT_DUPLIACTE     = 0;			// ì¤‘ë³µ ì—ëŸ¬ 
+const BYTE ACCOUNT_CHECK_OK      = 1;			// ì„±ê³µ
+const BYTE ACCOUNT_EXTERNAL_ADDR = 2;			// í—ˆìš©ë˜ì§€ ì•ŠëŠ” ì£¼ì†Œ 
+const BYTE ACCOUNT_OVERFLOW      = 3;			// ì¸ì›ì´ˆê³¼
+const BYTE ACCOUNT_BILLING_INFO_FAILED    = 4;	// ë¹Œë§ ì •ë³´ ì—†ìŒ 
+const BYTE ACCOUNT_BILLING_DATABASE_ERROR = 5;	// ë¹Œë§ DB ì—ëŸ¬ 
+const BYTE ACCOUNT_BILLING_TIME_OVER      = 6;	// ë¹Œë§ ì‚¬ìš©ì‹œê°„ ë§Œë£Œ 
+const BYTE ACCOUNT_BILLING_OTHER_ERROR    = 7;	// ë¹Œë§ ê¸°íƒ€ ë‹¤ë¥¸ ì—ëŸ¬ 
+const BYTE ACCOUNT_BILLING_DISCONNECTED	  = 8;  // ë¹Œë§ ì„œë²„ê°€ ëŠê²¨ ìžˆëŠ” ê²½ìš°
+const BYTE ACCOUNT_IPCUT_ADDR	  = 9;  // ë¹Œë§ ì„œë²„ê°€ ëŠê²¨ ìžˆëŠ” ê²½ìš°
 
-const BYTE ACCOUNT_BILLING_WAIT_ACK	      = 128;  // ºô¸µÀÀ´äÀ» ±â´Ù¸®´Â °æ¿ì 
+const BYTE ACCOUNT_BILLING_WAIT_ACK	      = 128;  // ë¹Œë§ì‘ë‹µì„ ê¸°ë‹¤ë¦¬ëŠ” ê²½ìš° 
 
 //
-// m_cbAccountFlagÀÇ ÀÇ¹Ì 
+// m_cbAccountFlagì˜ ì˜ë¯¸ 
 //
-const BYTE ACCOUNT_FLAG_18           = 0x01;		// 18¼¼ÀÌ»ó 
-const BYTE ACCOUNT_FLAG_SCHOOLEVENT  = 0x02;		// ÇÐ±³´ëÇ×Àü ÀÌº¥Æ® Âü°¡°¡´ÉÀÚ?
-const BYTE ACCOUNT_FLAG_UNREGISTER18 = 0x04;		// ¹Ìµî·Ï ¼ºÀÎ 
-const BYTE ACCOUNT_FLAG_HANGAME		 = 0x08;		// ÇÑ°ÔÀÓ »ç¿ëÀÚ
+const BYTE ACCOUNT_FLAG_18           = 0x01;		// 18ì„¸ì´ìƒ 
+const BYTE ACCOUNT_FLAG_SCHOOLEVENT  = 0x02;		// í•™êµëŒ€í•­ì „ ì´ë²¤íŠ¸ ì°¸ê°€ê°€ëŠ¥ìž?
+const BYTE ACCOUNT_FLAG_UNREGISTER18 = 0x04;		// ë¯¸ë“±ë¡ ì„±ì¸ 
+const BYTE ACCOUNT_FLAG_HANGAME		 = 0x08;		// í•œê²Œìž„ ì‚¬ìš©ìž
 
 
 #define CHATTING_ENTERMEMBER		(BYTE)0x00
@@ -1519,83 +1520,83 @@ const BYTE COMMONPLACE_QUAKE	= 0x02;
 //const BYTE COMMONPLACE_ERROR	= 0x03;
 
 
-//Çö»ó±Ý Ã³¸®°ü·Ã 
-const BYTE CT_WANTED_REQ_LIST   = 0x00;		// Core->Trans ¸®½ºÆ® ¿äÃ» 
-const BYTE CT_WANTED_SET		= 0x01;		// Core->Trans Çö»ó±Ý ¼³Á¤ 
+//í˜„ìƒê¸ˆ ì²˜ë¦¬ê´€ë ¨ 
+const BYTE CT_WANTED_REQ_LIST   = 0x00;		// Core->Trans ë¦¬ìŠ¤íŠ¸ ìš”ì²­ 
+const BYTE CT_WANTED_SET		= 0x01;		// Core->Trans í˜„ìƒê¸ˆ ì„¤ì • 
 
 #if __VER < 8 // __S8_PK
-const BYTE ADD_PLAYER_ENEMY  = 0x00;		// ÇÃ·¹ÀÌ¾î Àû Ãß°¡ 
-const BYTE DEL_PLAYER_ENEMY  = 0x01;		// ÇÃ·¹ÀÌ¾î Àû Á¦°Å 
+const BYTE ADD_PLAYER_ENEMY  = 0x00;		// í”Œë ˆì´ì–´ ì  ì¶”ê°€ 
+const BYTE DEL_PLAYER_ENEMY  = 0x01;		// í”Œë ˆì´ì–´ ì  ì œê±° 
 #endif // __VER < 8 // __S8_PK
 #endif //__MSGHDR_H__
 
-const BYTE GC_WINGUILD			= 0x00;		// ÀÌ±ä ±æµå Á¤º¸
-const BYTE GC_IN_WINDOW			= 0x01;		// ´ëÀü ½ÅÃ» Ã¢ ¶ç¿ò
-const BYTE GC_IN_APP			= 0x02;		// ´ëÀü ½ÅÃ»
-const BYTE GC_IN_COMPLETE		= 0x03;		// ±æµå´ëÀü ½ÅÃ» ¿Ï·á
-const BYTE GC_REQUEST_STATUS	= 0x04;		// ´ëÀü ½ÅÃ» ÇöÈ²
-const BYTE GC_SELECTPLAYER		= 0x05;		// ±æµå´ëÀü ¼±ÅÃ Ä³¸¯ÅÍ Ã¢ ¶ç¿ò
-const BYTE GC_SELECTWARPOS		= 0x06;		// ´ëÀüÀ§Ä¡ À©µµ¿ì ¶ç¿ò
-const BYTE GC_BESTPLAYER		= 0x07;		// BEST Player Á¤º¸
-const BYTE GC_ISREQUEST			= 0x08;		// ½ÅÃ»ÁßÀÎÁö?
-const BYTE GC_USERSTATE			= 0x10;		// À¯Àú»óÅÂ
-const BYTE GC_WARPLAYERLIST		= 0x11;		// ÀüÀïÀ¯Àú Á¤º¸
-const BYTE GC_GUILDSTATUS		= 0x20;		// ÀÚ½ÅÀÇ ±æµå »óÈ²
-const BYTE GC_GUILDPRECEDENCE	= 0x21;		// ±æµå ¼øÀ§
-const BYTE GC_PLAYERPRECEDENCE	= 0x22;		// °³ÀÎ ¼øÀ§
-const BYTE GC_GCSTATE			= 0x30;		// ´ëÀü »óÈ²	
-const BYTE GC_NEXTTIMESTATE		= 0x31;		// ´ëÀü½Ã ´ÙÀ½ ½Ã°£°ú »óÅÂ ³Ñ°ÜÁÖ±â
-const BYTE GC_ENTERTIME			= 0x32;		// ´ëÀü½Ã µé¾î°¥¼ö ÀÖ´Â ½Ã°£
-const BYTE GC_DIAGMESSAGE		= 0x33;		// ´ÙÀÌ¾ó ·Î±× ¸Þ¼¼Áö
-const BYTE GC_TELE				= 0x34;		// ÅÚ·¹Æ÷Æ®
-const BYTE GC_LOG				= 0x35;		// ´ëÀü ·Î±×( ´ëÀüÀÌ ³¡³ª¸é ³ª¿À°Ô~ )
-const BYTE GC_LOG_REALTIME		= 0x36;		// ´ëÀü ·Î±×( ½Ç½Ã°£À¸·Î Ã¤ÆÃÃ¢¿¡ ³ª¿À°Ô~ )
-const BYTE GC_GETPENYAGUILD		= 0x40;		// ±æµå ½ÅÃ»±Ý¾× ¹× º¸»ó
-const BYTE GC_GETPENYAPLAYER	= 0x41;		// º£½ºÆ® ÇÃ·¹ÀÌ¾î º¸»ó
-const BYTE GC_PLAYERPOINT		= 0x42;		// ±æµå´ëÀü ÇÃ·¹ÀÌ¾î Æ÷ÀÎÆ®
+const BYTE GC_WINGUILD			= 0x00;		// ì´ê¸´ ê¸¸ë“œ ì •ë³´
+const BYTE GC_IN_WINDOW			= 0x01;		// ëŒ€ì „ ì‹ ì²­ ì°½ ë„ì›€
+const BYTE GC_IN_APP			= 0x02;		// ëŒ€ì „ ì‹ ì²­
+const BYTE GC_IN_COMPLETE		= 0x03;		// ê¸¸ë“œëŒ€ì „ ì‹ ì²­ ì™„ë£Œ
+const BYTE GC_REQUEST_STATUS	= 0x04;		// ëŒ€ì „ ì‹ ì²­ í˜„í™©
+const BYTE GC_SELECTPLAYER		= 0x05;		// ê¸¸ë“œëŒ€ì „ ì„ íƒ ìºë¦­í„° ì°½ ë„ì›€
+const BYTE GC_SELECTWARPOS		= 0x06;		// ëŒ€ì „ìœ„ì¹˜ ìœˆë„ìš° ë„ì›€
+const BYTE GC_BESTPLAYER		= 0x07;		// BEST Player ì •ë³´
+const BYTE GC_ISREQUEST			= 0x08;		// ì‹ ì²­ì¤‘ì¸ì§€?
+const BYTE GC_USERSTATE			= 0x10;		// ìœ ì €ìƒíƒœ
+const BYTE GC_WARPLAYERLIST		= 0x11;		// ì „ìŸìœ ì € ì •ë³´
+const BYTE GC_GUILDSTATUS		= 0x20;		// ìžì‹ ì˜ ê¸¸ë“œ ìƒí™©
+const BYTE GC_GUILDPRECEDENCE	= 0x21;		// ê¸¸ë“œ ìˆœìœ„
+const BYTE GC_PLAYERPRECEDENCE	= 0x22;		// ê°œì¸ ìˆœìœ„
+const BYTE GC_GCSTATE			= 0x30;		// ëŒ€ì „ ìƒí™©	
+const BYTE GC_NEXTTIMESTATE		= 0x31;		// ëŒ€ì „ì‹œ ë‹¤ìŒ ì‹œê°„ê³¼ ìƒíƒœ ë„˜ê²¨ì£¼ê¸°
+const BYTE GC_ENTERTIME			= 0x32;		// ëŒ€ì „ì‹œ ë“¤ì–´ê°ˆìˆ˜ ìžˆëŠ” ì‹œê°„
+const BYTE GC_DIAGMESSAGE		= 0x33;		// ë‹¤ì´ì–¼ ë¡œê·¸ ë©”ì„¸ì§€
+const BYTE GC_TELE				= 0x34;		// í…”ë ˆí¬íŠ¸
+const BYTE GC_LOG				= 0x35;		// ëŒ€ì „ ë¡œê·¸( ëŒ€ì „ì´ ëë‚˜ë©´ ë‚˜ì˜¤ê²Œ~ )
+const BYTE GC_LOG_REALTIME		= 0x36;		// ëŒ€ì „ ë¡œê·¸( ì‹¤ì‹œê°„ìœ¼ë¡œ ì±„íŒ…ì°½ì— ë‚˜ì˜¤ê²Œ~ )
+const BYTE GC_GETPENYAGUILD		= 0x40;		// ê¸¸ë“œ ì‹ ì²­ê¸ˆì•¡ ë° ë³´ìƒ
+const BYTE GC_GETPENYAPLAYER	= 0x41;		// ë² ìŠ¤íŠ¸ í”Œë ˆì´ì–´ ë³´ìƒ
+const BYTE GC_PLAYERPOINT		= 0x42;		// ê¸¸ë“œëŒ€ì „ í”Œë ˆì´ì–´ í¬ì¸íŠ¸
 
-const BYTE SOMMON_FRIEND			= 0x00;		// Ä£±¸ ¼ÒÈ¯
-const BYTE SOMMON_FRIEND_CONFIRM	= 0x01;		// Ä£±¸ ¼ÒÈ¯ È®ÀÎ
-const BYTE SOMMON_PARTY_CONFIRM		= 0x10;		// ÆÄÆ¼ ¼ÒÈ¯
+const BYTE SOMMON_FRIEND			= 0x00;		// ì¹œêµ¬ ì†Œí™˜
+const BYTE SOMMON_FRIEND_CONFIRM	= 0x01;		// ì¹œêµ¬ ì†Œí™˜ í™•ì¸
+const BYTE SOMMON_PARTY_CONFIRM		= 0x10;		// íŒŒí‹° ì†Œí™˜
 
-const BYTE LOG_SKILLPOINT_GET_QUEST	= 0x00;		// ½ºÅ³Æ÷ÀÎÆ® ¾ò±â - Äù½ºÆ®
-const BYTE LOG_SKILLPOINT_GET_HUNT	= 0x01;		// ½ºÅ³Æ÷ÀÎÆ® ¾ò±â - ¸ó½ºÅÍ
-const BYTE LOG_SKILLPOINT_USE		= 0x10;		// ½ºÅ³Æ÷ÀÎÆ® ¾²±â - ½ºÅ³·¹º§¾÷
+const BYTE LOG_SKILLPOINT_GET_QUEST	= 0x00;		// ìŠ¤í‚¬í¬ì¸íŠ¸ ì–»ê¸° - í€˜ìŠ¤íŠ¸
+const BYTE LOG_SKILLPOINT_GET_HUNT	= 0x01;		// ìŠ¤í‚¬í¬ì¸íŠ¸ ì–»ê¸° - ëª¬ìŠ¤í„°
+const BYTE LOG_SKILLPOINT_USE		= 0x10;		// ìŠ¤í‚¬í¬ì¸íŠ¸ ì“°ê¸° - ìŠ¤í‚¬ë ˆë²¨ì—…
 
-const BYTE PK_PINK					= 0x00;		// ÇÎÅ©»óÅÂ Àü¼Û
-const BYTE PK_PROPENSITY			= 0x01;		// Ä«¿À¼ºÇâ Àü¼Û
-const BYTE PK_PKVALUE				= 0x02;		// Ä«¿À¼öÄ¡ Àü¼Û
+const BYTE PK_PINK					= 0x00;		// í•‘í¬ìƒíƒœ ì „ì†¡
+const BYTE PK_PROPENSITY			= 0x01;		// ì¹´ì˜¤ì„±í–¥ ì „ì†¡
+const BYTE PK_PKVALUE				= 0x02;		// ì¹´ì˜¤ìˆ˜ì¹˜ ì „ì†¡
 
-//const BYTE ANGEL_WNDCREATE			= 0x00;		// ¿£Á©Ã¢
-const BYTE ANGEL_INFO				= 0x01;		// ¿£Á© Á¤º¸ ÁÖ±â(°æÇèÄ¡, ·¹º§)
+//const BYTE ANGEL_WNDCREATE			= 0x00;		// ì—”ì ¤ì°½
+const BYTE ANGEL_INFO				= 0x01;		// ì—”ì ¤ ì •ë³´ ì£¼ê¸°(ê²½í—˜ì¹˜, ë ˆë²¨)
 
 const BYTE TEXT_GENERAL				= 0x01;		// OnText
 const BYTE TEXT_DIAG				= 0x02;		// OnDiagText
 
-const BYTE MINIGAME_KAWIBAWIBO_RESUTLT		= 0x01;		// °¡À§¹ÙÀ§º¸ °á°ú°ª
-const BYTE MINIGAME_REASSEMBLE_RESULT		= 0x02;		// ÆÛÁñ °á°ú
-const BYTE MINIGAME_REASSEMBLE_OPENWND		= 0x03;		// ÆÛÁñÃ¢ ¿­¶§ Ä«µå¾ÆÀÌÅÛ °ªµéÀ» ¾ò±âÀ§ÇØ...
-const BYTE MINIGAME_ALPHABET_OPENWND		= 0x04;		// ¾ËÆÄºª Ã¢ ¿­¶§ °ø°³ ±ÛÀÚ¿Í À§Ä¡
-const BYTE MINIGAME_ALPHABET_RESULT			= 0x05;		// ¾ËÆÄºª ¸ÂÃß±â °á°ú
-const BYTE MINIGAME_FIVESYSTEM_OPENWND		= 0x06;		// ¿À°ö Ã¢ ¿­¶§ ÃÖ¼Ò, ÃÖ´ë, ¹è¼ö
-const BYTE MINIGAME_FIVESYSTEM_RESULT		= 0x07;		// ¿À°ö °á°ú
+const BYTE MINIGAME_KAWIBAWIBO_RESUTLT		= 0x01;		// ê°€ìœ„ë°”ìœ„ë³´ ê²°ê³¼ê°’
+const BYTE MINIGAME_REASSEMBLE_RESULT		= 0x02;		// í¼ì¦ ê²°ê³¼
+const BYTE MINIGAME_REASSEMBLE_OPENWND		= 0x03;		// í¼ì¦ì°½ ì—´ë•Œ ì¹´ë“œì•„ì´í…œ ê°’ë“¤ì„ ì–»ê¸°ìœ„í•´...
+const BYTE MINIGAME_ALPHABET_OPENWND		= 0x04;		// ì•ŒíŒŒë²³ ì°½ ì—´ë•Œ ê³µê°œ ê¸€ìžì™€ ìœ„ì¹˜
+const BYTE MINIGAME_ALPHABET_RESULT			= 0x05;		// ì•ŒíŒŒë²³ ë§žì¶”ê¸° ê²°ê³¼
+const BYTE MINIGAME_FIVESYSTEM_OPENWND		= 0x06;		// ì˜¤ê³± ì°½ ì—´ë•Œ ìµœì†Œ, ìµœëŒ€, ë°°ìˆ˜
+const BYTE MINIGAME_FIVESYSTEM_RESULT		= 0x07;		// ì˜¤ê³± ê²°ê³¼
 
 
-const BYTE ULTIMATE_MAKEITEM				= 0x01;		// ºû³ª´Â ¿À¸®Ä®Äñ »ý¼º
-const BYTE ULTIMATE_TRANSWEAPON				= 0x02;		// ¹«±â º¯È¯(ÀÏ¹Ý->À¯´ÏÅ©, À¯´ÏÅ©->¾óÅÍ¸Ú)
-const BYTE ULTIMATE_MAKEGEM					= 0x03;		// º¸¼® »ý¼º(¾ÆÀÌÅÛ ÂÉ°³±â)
-const BYTE ULTIMATE_SETGEM					= 0x04;		// º¸¼® ÇÕ¼º
-const BYTE ULTIMATE_REMOVEGEM				= 0x05;		// º¸¼® Á¦°Å
-const BYTE ULTIMATE_ENCHANTWEAPON			= 0x06;		// ¾óÅÍ¸Ú ¿þÆù Á¦·Ã
+const BYTE ULTIMATE_MAKEITEM				= 0x01;		// ë¹›ë‚˜ëŠ” ì˜¤ë¦¬ì¹¼ì¿° ìƒì„±
+const BYTE ULTIMATE_TRANSWEAPON				= 0x02;		// ë¬´ê¸° ë³€í™˜(ì¼ë°˜->ìœ ë‹ˆí¬, ìœ ë‹ˆí¬->ì–¼í„°ë©‹)
+const BYTE ULTIMATE_MAKEGEM					= 0x03;		// ë³´ì„ ìƒì„±(ì•„ì´í…œ ìª¼ê°œê¸°)
+const BYTE ULTIMATE_SETGEM					= 0x04;		// ë³´ì„ í•©ì„±
+const BYTE ULTIMATE_REMOVEGEM				= 0x05;		// ë³´ì„ ì œê±°
+const BYTE ULTIMATE_ENCHANTWEAPON			= 0x06;		// ì–¼í„°ë©‹ ì›¨í° ì œë ¨
 
-const BYTE EXCHANGE_RESULT					= 0x01;		// ±³È¯ ½ºÅ©¸³Æ® °á°ú
+const BYTE EXCHANGE_RESULT					= 0x01;		// êµí™˜ ìŠ¤í¬ë¦½íŠ¸ ê²°ê³¼
 
-const BYTE LEGENDSKILL_RESULT					= 0x01;		// legend ½ºÅ³ °á°ú
+const BYTE LEGENDSKILL_RESULT					= 0x01;		// legend ìŠ¤í‚¬ ê²°ê³¼
 
-const BYTE GI_LOG_VIEW_ITEM_ADD					= 0x01;		// ±æµåÃ¢°í ¾ÆÀÌÅÛÃß°¡ ·Î±×
-const BYTE GI_LOG_VIEW_ITEM_REMOVE					= 0x02;		// ±æµåÃ¢°í ¾ÆÀÌÅÛÁ¦°Å ·Î±×
-const BYTE GI_LOG_VIEW_MONEY_ADD					= 0x03;		// ±æµåÃ¢°í µ·Ãß°¡ ·Î±×
-const BYTE GI_LOG_VIEW_MONEY_REMOVE					= 0x04;		// ±æµåÃ¢°í µ·Ãß°¡ ·Î±×
+const BYTE GI_LOG_VIEW_ITEM_ADD					= 0x01;		// ê¸¸ë“œì°½ê³  ì•„ì´í…œì¶”ê°€ ë¡œê·¸
+const BYTE GI_LOG_VIEW_ITEM_REMOVE					= 0x02;		// ê¸¸ë“œì°½ê³  ì•„ì´í…œì œê±° ë¡œê·¸
+const BYTE GI_LOG_VIEW_MONEY_ADD					= 0x03;		// ê¸¸ë“œì°½ê³  ëˆì¶”ê°€ ë¡œê·¸
+const BYTE GI_LOG_VIEW_MONEY_REMOVE					= 0x04;		// ê¸¸ë“œì°½ê³  ëˆì¶”ê°€ ë¡œê·¸
 
 const BYTE SECRETROOM_GUILDLIST		= 0x01;
 const BYTE SECRETROOM_KILLCOUNT		= 0x02;
