@@ -84,11 +84,11 @@ extern CEnvironment g_Environment;
 
 LPSKILL CMover::GetSkill( int nType, int nIdx )
 {
-	// nType == 0ì´ë©´ ì§ì—… ìŠ¤í‚¬
-	// nType == 1ì´ë©´ ë¼ì´ì„ ìŠ¤ ìŠ¤í‚¬ 
+	// nType == 0ÀÌ¸é Á÷¾÷ ½ºÅ³
+	// nType == 1ÀÌ¸é ¶óÀÌ¼±½º ½ºÅ³ 
 	if( nIdx >= MAX_SKILL_JOB )
 	{
-		Error( "CMover::GetSkill : %s nId = %d ë²”ìœ„ë¥¼ ë²—ì–´ë‚¨", m_szName, nIdx );
+		Error( "CMover::GetSkill : %s nId = %d ¹üÀ§¸¦ ¹ş¾î³²", m_szName, nIdx );
 		nIdx = 0;
 	}
 	return &m_aJobSkill[ nIdx ];
@@ -120,17 +120,17 @@ BOOL CMover::CheckSkill( DWORD dwSkill )
 	
 	if( pSkillProp == NULL || pSkillProp->nLog == 1 )
 		return FALSE;
-#if __VER >= 10 // __LEGEND	//	9ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
+#if __VER >= 10 // __LEGEND	//	9Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
 #ifdef __3RD_LEGEND16
 	if( !IsMaster() && !IsHero() && !IsLegendHero() && GetLevel() < (int)( pSkillProp->dwReqDisLV ) )
 #else // __3RD_LEGEND16
 	if( !IsMaster() && !IsHero() && GetLevel() < (int)( pSkillProp->dwReqDisLV ) )
 #endif // __3RD_LEGEND16
 		return FALSE;
-#else //__LEGEND	//	9ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
+#else //__LEGEND	//	9Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
 	if( GetLevel() < pSkillProp->dwReqDisLV )
 		return FALSE;
-#endif	//__LEGEND	//	9ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
+#endif	//__LEGEND	//	9Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
 				
 	if( pSkillProp->dwReSkill1 != 0xffffffff )
 	{
@@ -160,7 +160,7 @@ BOOL CMover::CheckSkill( DWORD dwSkill )
 }
 
 
-// ì¼€ë¦­í„°ê°€ ë ˆë²¨ì—…ì‹œ ìŠ¤í‚¬ì¤‘ì— ì¼€ë¦­í„°ë ˆë²¨ë•œì‹œ í™œì„±í™” ì•ˆëœê²ƒë“¤ í™œì„±ì—¬ë¶€ ì²´í¬í•˜ì—¬ ì •ë³´ì¶œë ¥
+// ÄÉ¸¯ÅÍ°¡ ·¹º§¾÷½Ã ½ºÅ³Áß¿¡ ÄÉ¸¯ÅÍ·¹º§¶«½Ã È°¼ºÈ­ ¾ÈµÈ°Íµé È°¼º¿©ºÎ Ã¼Å©ÇÏ¿© Á¤º¸Ãâ·Â
 void CMover::PutLvUpSkillName_1( DWORD dwLevel )
 {
 #ifdef __CLIENT
@@ -235,17 +235,17 @@ BOOL IsActive( CMover* pMover, DWORD dwSkill )
 		if( pSkillProp1 == NULL )
 			return FALSE;
 
-#if __VER >= 10 // __LEGEND	//	9ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
+#if __VER >= 10 // __LEGEND	//	9Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
 #ifdef __3RD_LEGEND16
 		if( (int)( pSkillProp1->dwReqDisLV ) > pMover->GetLevel() && !pMover->IsMaster() && !pMover->IsHero() && !pMover->IsLegendHero() )
 #else // __3RD_LEGEND16
 		if( (int)( pSkillProp1->dwReqDisLV ) > pMover->GetLevel() && !pMover->IsMaster() && !pMover->IsHero() )
 #endif // __3RD_LEGEND16
 			return FALSE;
-#else //__LEGEND	//	9ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
+#else //__LEGEND	//	9Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
 		if( pSkillProp1->dwReqDisLV > pMover->GetLevel() )
 			return FALSE;
-#endif	//__LEGEND	//	9ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
+#endif	//__LEGEND	//	9Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
 		
 		if( pSkillProp->dwReSkillLevel1 != pSkill1->dwLevel )
 			return FALSE;
@@ -263,46 +263,46 @@ BOOL IsActive( CMover* pMover, DWORD dwSkill )
 		pSkillProp1 = prj.GetSkillProp( pSkill1->dwSkill );
 		if( pSkillProp1 == NULL )
 			return FALSE;
-#if __VER >= 10 // __LEGEND	//	9ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
+#if __VER >= 10 // __LEGEND	//	9Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
 #ifdef __3RD_LEGEND16
 		if( (int)( pSkillProp1->dwReqDisLV ) > pMover->GetLevel() && !pMover->IsMaster() && !pMover->IsHero() && !pMover->IsLegendHero() )
 #else // __3RD_LEGEND16
 		if( (int)( pSkillProp1->dwReqDisLV ) > pMover->GetLevel() && !pMover->IsMaster() && !pMover->IsHero() )
 #endif // __3RD_LEGEND16
 			return FALSE;
-#else //__LEGEND	//	9ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
+#else //__LEGEND	//	9Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
 		if( pSkillProp1->dwReqDisLV > pMover->GetLevel() )
 			return FALSE;
-#endif	//__LEGEND	//	9ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
+#endif	//__LEGEND	//	9Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
 		
 		if( pSkillProp->dwReSkillLevel2 != pSkill1->dwLevel )
 			return FALSE;		
 	}
-#if __VER >= 10 // __LEGEND	//	9ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
+#if __VER >= 10 // __LEGEND	//	9Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
 #ifdef __3RD_LEGEND16
 		if( (int)( pSkillProp->dwReqDisLV ) > pMover->GetLevel() && !pMover->IsMaster() && !pMover->IsHero() && !pMover->IsLegendHero() )
 #else // __3RD_LEGEND16
 		if( (int)( pSkillProp->dwReqDisLV ) > pMover->GetLevel() && !pMover->IsMaster() && !pMover->IsHero() )
 #endif // __3RD_LEGEND16
 			return FALSE;
-#else //__LEGEND	//	9ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
+#else //__LEGEND	//	9Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
 	if( pSkillProp->dwReqDisLV > pMover->GetLevel() )
 		return FALSE;
-#endif	//__LEGEND	//	9ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
+#endif	//__LEGEND	//	9Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
 
 	return TRUE;
 }
 
 
-// ìŠ¤í‚¬ ë ˆë²¨ì—…ì‹œ ì¼€ë¦­í„° ë ˆë²¨ë•œì‹œ ì•ˆë‚˜ì™”ë˜ ìŠ¤í‚¬ë“¤ ê²€ìƒ‰í•˜ì—¬ ì •ë³´ ì¶œë ¥
+// ½ºÅ³ ·¹º§¾÷½Ã ÄÉ¸¯ÅÍ ·¹º§¶«½Ã ¾È³ª¿Ô´ø ½ºÅ³µé °Ë»öÇÏ¿© Á¤º¸ Ãâ·Â
 void CMover::PutLvUpSkillName_2( DWORD dwSkill )
 {
 #ifdef __CLIENT
 	LPSKILL pSkill = GetSkill( dwSkill );
 	ItemProp* pSkillProp = prj.GetSkillProp( dwSkill );
 	
-	//í˜„ì¬ í™œì„±í™” ë˜ì–´ìˆëŠ”ëƒ?
-	//ë‚˜ë¥¼ ê°–ê³ ìˆëŠ” ìŠ¤í‚¬ì„ ê²€ì‚¬í•˜ì—¬ ì¡°ê±´ì— ë§ìœ¼ë©´ ê·¸ìŠ¤í‚¬ì„ í™œì„±í™” í•œë‹¤.
+	//ÇöÀç È°¼ºÈ­ µÇ¾îÀÖ´Â³Ä?
+	//³ª¸¦ °®°íÀÖ´Â ½ºÅ³À» °Ë»çÇÏ¿© Á¶°Ç¿¡ ¸ÂÀ¸¸é ±×½ºÅ³À» È°¼ºÈ­ ÇÑ´Ù.
 	for( int i = 0; i < MAX_SKILL_JOB; i++ )	
 	{
 		if( m_aJobSkill[i].dwSkill == NULL_ID ) 
@@ -325,40 +325,40 @@ void CMover::PutLvUpSkillName_2( DWORD dwSkill )
 }
 
 #ifdef __WORLDSERVER
-/// ê±°ë˜, ì£½ìŒ, ê°œì¸ìƒì ì¤‘, ì „íˆ¬ì¤‘ FALSE
+/// °Å·¡, Á×À½, °³ÀÎ»óÁ¡Áß, ÀüÅõÁß FALSE
 int CMover::GetSummonState()
 {
-	// ê±°ë˜
+	// °Å·¡
 	if( m_vtInfo.GetOther() != NULL )
 		return 1;
-	  // ì°½ê³ 
+	  // Ã¢°í
 	if( m_bBank )
 		return 1;
-	  // ê¸¸ë“œì°½ê³ 
+	  // ±æµåÃ¢°í
 	if( m_bGuildBank )
 		return 1;
 
-	// ì£½ìŒ
+	// Á×À½
 	if( IsDie() )
 		return 2;
 
-	// ê°œì¸ìƒì ì¤‘
+	// °³ÀÎ»óÁ¡Áß
 	if( m_vtInfo.VendorIsVendor() || m_vtInfo.IsVendorOpen() )
 		return 3;
 
-	// ì „íˆ¬ì¤‘
+	// ÀüÅõÁß
 	if( IsAttackMode() )
 		return 4;
 	
-	// ë¹„í–‰ì¤‘
+	// ºñÇàÁß
 	if( ( IsFly() ) )
 		return 5;
 
 
-#if __VER >= 8 // 8ì°¨ ë“€ì–¼ 061226 ma
+#if __VER >= 8 // 8Â÷ µà¾ó 061226 ma
 	if( m_nDuel )
 		return 6;
-#endif // __VER >= 8 // 8ì°¨ ë“€ì–¼ 061226 ma
+#endif // __VER >= 8 // 8Â÷ µà¾ó 061226 ma
 
 
 	return 0;
@@ -398,7 +398,7 @@ BOOL CMover::IsPro()
 	return prj.m_aJob[ m_nJob ].dwJobType == JTYPE_PRO;
 }
 
-#if __VER >= 10 // __LEGEND	//	9ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
+#if __VER >= 10 // __LEGEND	//	9Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
 BYTE	CMover::GetLegendChar()
 {
 	if(IsMaster())
@@ -422,7 +422,7 @@ BOOL	CMover::IsHero()
 {
 	return prj.m_aJob[ m_nJob ].dwJobType == 6;//temp JTYPE_HERO;
 }
-#endif	//__LEGEND	//	9ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
+#endif	//__LEGEND	//	9Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
 
 #ifdef __3RD_LEGEND16
 BOOL	CMover::IsLegendHero()
@@ -443,7 +443,7 @@ BOOL CMover::IsInteriorityJob( int nJob )
 			return TRUE;
 		}
 	}
-	if( IsMaster()  )	// ë ˆë²¨ì´ ì•ˆë˜ë©´ ëª»ì°¸.				
+	if( IsMaster()  )	// ·¹º§ÀÌ ¾ÈµÇ¸é ¸øÂü.				
 	{
 		if( nJob < MAX_EXPERT )
 		{
@@ -456,7 +456,7 @@ BOOL CMover::IsInteriorityJob( int nJob )
 				return TRUE;
 		}
 	}
-	if( IsHero()  )	// ë ˆë²¨ì´ ì•ˆë˜ë©´ ëª»ì°¸.				
+	if( IsHero()  )	// ·¹º§ÀÌ ¾ÈµÇ¸é ¸øÂü.				
 	{
 		if( nJob < MAX_EXPERT )
 		{
@@ -469,7 +469,7 @@ BOOL CMover::IsInteriorityJob( int nJob )
 				return TRUE;
 		}
 #if __VER >= 14 // __NEW_ITEM_LIMIT_LEVEL
-		else if( nJob < MAX_MASTER )	// HeroëŠ” ë§ˆìŠ¤í„° ë¬´ê¸°ë¥¼ ì¥ì°©í•  ìˆ˜ ìˆë‹¤.
+		else if( nJob < MAX_MASTER )	// Hero´Â ¸¶½ºÅÍ ¹«±â¸¦ ÀåÂøÇÒ ¼ö ÀÖ´Ù.
 		{
 			if( nJob + 8 == m_nJob )
 				return TRUE;
@@ -489,7 +489,7 @@ BOOL CMover::IsInteriorityJob( int nJob )
 			if( nJob + 26 == m_nJob )
 				return TRUE;
 		}
-		else if( nJob < MAX_MASTER )	// HeroëŠ” ë§ˆìŠ¤í„° ë¬´ê¸°ë¥¼ ì¥ì°©í•  ìˆ˜ ìˆë‹¤.
+		else if( nJob < MAX_MASTER )	// Hero´Â ¸¶½ºÅÍ ¹«±â¸¦ ÀåÂøÇÒ ¼ö ÀÖ´Ù.
 		{
 			if( nJob + 16 == m_nJob )
 				return TRUE;
@@ -504,15 +504,15 @@ BOOL CMover::IsInteriorityJob( int nJob )
 	return FALSE;
 }
 
-// ìŠ¤í‚¬ìˆ˜ 3(ê¸°ë³¸)14(ìµìŠ¤í¼íŠ¸)7(í”„ë¡œí˜ì…”ë„)
-// ì§ì—… 10, ìµìŠ¤í¼íŠ¸ 40. í”„ë¡œ 30
+// ½ºÅ³¼ö 3(±âº»)14(ÀÍ½ºÆÛÆ®)7(ÇÁ·ÎÆä¼Å³Î)
+// Á÷¾÷ 10, ÀÍ½ºÆÛÆ® 40. ÇÁ·Î 30
 BOOL  CMover::SetExpert( int nJob )
 {
 	if( m_nJob == nJob )
 		return FALSE;
 	m_nJob = nJob;
 
-	int nNum = 3; // 3ì€ ê¸°ë³¸ ìŠ¤í‚¬ì˜ ê°¯ìˆ˜ë‹¤. 3 ì´ìƒë¶€í„° ìµìŠ¤í¼íŠ¸ ìŠ¤í‚¬ì´ ì¶”ê°€ëœë‹¤ëŠ” ì˜ë¯¸ 
+	int nNum = 3; // 3Àº ±âº» ½ºÅ³ÀÇ °¹¼ö´Ù. 3 ÀÌ»óºÎÅÍ ÀÍ½ºÆÛÆ® ½ºÅ³ÀÌ Ãß°¡µÈ´Ù´Â ÀÇ¹Ì 
 	LPSKILL lpSkill;
 	ItemProp** apSkillProp = prj.m_aJobSkill[ m_nJob ];
 	int nJobNum = prj.m_aJobSkillNum[ m_nJob ];
@@ -545,13 +545,13 @@ int   CMover::GetRemainGP()
 	return m_nRemainGP;
 }
 
-// ëª…ì¤‘ë¥  í•˜ë½ ìƒíƒœëŠ” ì´í…ì´ë²¤íŠ¸ì™€ ìƒê´€ì—†ì´ ì˜¬ìˆ˜ ìˆê¸°ë•Œë¬¸ì— GetParm()ì„ ì—¬ê¸°ì„œ ìµœì¢… ê³„ì‚°í•´ì•¼í•œë‹¤.
+// ¸íÁß·ü ÇÏ¶ô »óÅÂ´Â ÀÌÅ¢ÀÌº¥Æ®¿Í »ó°ü¾øÀÌ ¿Ã¼ö ÀÖ±â¶§¹®¿¡ GetParm()À» ¿©±â¼­ ÃÖÁ¾ °è»êÇØ¾ßÇÑ´Ù.
 int	CMover::GetAdjHitRate( void )
 {
 	return GetParam( DST_ADJ_HITRATE, m_nAdjHitRate );
 }
 
-// íšŒí”¼ìœ¨ 
+// È¸ÇÇÀ² 
 int CMover::GetParrying()
 {
 	if( IsPlayer() )
@@ -575,7 +575,7 @@ void CMover::UpdateParam()
 		m_nAdjParry = 0;
 	}
 }
-// ì•„ì´í…œì˜ ì„±ëŠ¥ì„ ì–»ëŠ”ë‹¤. 
+// ¾ÆÀÌÅÛÀÇ ¼º´ÉÀ» ¾ò´Â´Ù. 
 int CMover::GetItemAbility( int nItem )
 {
 	ItemProp* pItemProp = prj.GetItemProp( nItem );
@@ -585,14 +585,14 @@ int CMover::GetItemAbility( int nItem )
 		return nAbilityMin;
 	return nAbilityMin + ( xRand() % (nAbilityMax - nAbilityMin ) );
 }
-// ì•„ì´í…œì˜ ìµœì†Œ ì„±ëŠ¥ì„ ì–»ëŠ”ë‹¤.
+// ¾ÆÀÌÅÛÀÇ ÃÖ¼Ò ¼º´ÉÀ» ¾ò´Â´Ù.
 int CMover::GetItemAbilityMin( int nItem )
 {
 	ItemProp* pItemProp = prj.GetItemProp( nItem );
 	int nAbilityMin = GetParam( DST_ABILITY_MIN, pItemProp->dwAbilityMin );
 	return nAbilityMin;
 }
-// ì•„ì´í…œì˜ ìµœëŒ€ ì„±ëŠ¥ì„ ì–»ëŠ”ë‹¤.
+// ¾ÆÀÌÅÛÀÇ ÃÖ´ë ¼º´ÉÀ» ¾ò´Â´Ù.
 int CMover::GetItemAbilityMax( int nItem )
 {
 	ItemProp* pItemProp = prj.GetItemProp( nItem );
@@ -600,12 +600,12 @@ int CMover::GetItemAbilityMax( int nItem )
 	return nAbilityMax;
 }
 
-// íˆíŠ¸í¬ì¸íŠ¸ ì¦ê°
+// È÷Æ®Æ÷ÀÎÆ® Áõ°¨
 void CMover::IncHitPoint(int nVal) 
 { 
 	SetPointParam( DST_HP, m_nHitPoint + nVal );
 }
-// ë§ˆë‚˜í¬ì¸íŠ¸ ì¦ê°
+// ¸¶³ªÆ÷ÀÎÆ® Áõ°¨
 void CMover::IncManaPoint(int nVal) 
 { 
 #ifdef __WORLDSERVER 			
@@ -643,8 +643,8 @@ PK_TYPE GetPKCase( CMover *pAttacker, CMover *pDefender )
 	SLAUGHTER_GRADE atkGrade = pAttacker->GetSlaughterGrade();			
 	SLAUGHTER_GRADE defGrade = pDefender->GetSlaughterGrade();			
 
-	if( pAttacker->IsMode( RECOVERCHAO_MODE ) )		// ì¹´ë¥´ë§ˆ íšŒë³µ ê¸°ê°„ì— ìˆëŠ” ìƒíƒœì—ì„œ ë‹¤ì‹œ ë‹¤ë¥¸ ìœ ì €ë¥¼ ê°€ê²©í•  ê²½ìš°, 
-		atkGrade = SLAUGHTER_SEMI_CHAOTIC;			// ì¤€ ì¹´ì˜¤ ìœ ì €ì™€ ê°™ì€ ë£°ì´ ì ìš©ì´ ëœë‹¤.
+	if( pAttacker->IsMode( RECOVERCHAO_MODE ) )		// Ä«¸£¸¶ È¸º¹ ±â°£¿¡ ÀÖ´Â »óÅÂ¿¡¼­ ´Ù½Ã ´Ù¸¥ À¯Àú¸¦ °¡°İÇÒ °æ¿ì, 
+		atkGrade = SLAUGHTER_SEMI_CHAOTIC;			// ÁØ Ä«¿À À¯Àú¿Í °°Àº ·êÀÌ Àû¿ëÀÌ µÈ´Ù.
 	
 	static PK_TYPE table[3][3] = {
 		{ NORMAL_AND_NORMAL, NORMAL_AND_SEMI, NORMAL_AND_CHAO },
@@ -655,15 +655,15 @@ PK_TYPE GetPKCase( CMover *pAttacker, CMover *pDefender )
 	return table[ atkGrade ][ defGrade ];
 }
 #endif // __VER < 8 // __S8_PK
-// ë“€ì–¼í›„ì˜ ê²°ê³¼ ì²˜ë¦¬.
-// thisê°€ ìŠ¹ìê°€ ëœë‹¤.
-// pLoseëŠ” íŒ¨ë°°ì.
+// µà¾óÈÄÀÇ °á°ú Ã³¸®.
+// this°¡ ½ÂÀÚ°¡ µÈ´Ù.
+// pLose´Â ÆĞ¹èÀÚ.
 
 #ifdef __WORLDSERVER
 
 #if __VER < 8 // __S8_PK
-// PKì‹œë„ì— ì˜í•œ m_nSlaughter(=ì¹´ë¥´ë§ˆ ìˆ˜ì¹˜) ë³€ê²½  
-// nDead : ì£½ì€ì, return : ì¦ê°ëŸ‰.
+// PK½Ãµµ¿¡ ÀÇÇÑ m_nSlaughter(=Ä«¸£¸¶ ¼öÄ¡) º¯°æ  
+// nDead : Á×ÀºÀÚ, return : Áõ°¨·®.
 int CMover::IncSlaughterPoint2( CMover *pDead )
 {
 	ASSERT( pDead->IsPlayer() && IsPlayer() );
@@ -676,7 +676,7 @@ int CMover::IncSlaughterPoint2( CMover *pDead )
 
 	switch( type )
 	{
-	case NORMAL_AND_NORMAL:		// ì¼ë°˜ ìœ ì € ì™€ ì¼ë°˜ ìœ ì € 
+	case NORMAL_AND_NORMAL:		// ÀÏ¹İ À¯Àú ¿Í ÀÏ¹İ À¯Àú 
 		m_nSlaughter -= 50;
 		break;
 	case NORMAL_AND_SEMI:
@@ -684,7 +684,7 @@ int CMover::IncSlaughterPoint2( CMover *pDead )
 	case NORMAL_AND_CHAO:
 		break;
 
-	case SEMI_AND_NORMAL:		// ì¤€ì¹´ì˜¤ì™€ ì¼ë°˜ ìœ ì € 
+	case SEMI_AND_NORMAL:		// ÁØÄ«¿À¿Í ÀÏ¹İ À¯Àú 
 		m_nSlaughter -= 30;
 		break;
 	case SEMI_AND_SEMI:
@@ -692,7 +692,7 @@ int CMover::IncSlaughterPoint2( CMover *pDead )
 	case SEMI_AND_CHAO:
 		break;
 
-	case CHAO_AND_NORMAL:		// ì¹´ì˜¤ì™€ ì¼ë°˜ ìœ ì € 
+	case CHAO_AND_NORMAL:		// Ä«¿À¿Í ÀÏ¹İ À¯Àú 
 		break;
 	case CHAO_AND_SEMI:
 		break;
@@ -703,8 +703,8 @@ int CMover::IncSlaughterPoint2( CMover *pDead )
 
 }
 
-// PKì— ì˜í•œ ê²½ìš°, slaughterê°’ì„ ë³€ê²½ì‹œí‚¨ë‹¤.
-// pDead : ì£½ì€ì, return : ì¦ê°ëŸ‰.
+// PK¿¡ ÀÇÇÑ °æ¿ì, slaughter°ªÀ» º¯°æ½ÃÅ²´Ù.
+// pDead : Á×ÀºÀÚ, return : Áõ°¨·®.
 int CMover::IncSlaughterPoint( CMover *pDead )
 {
 	ASSERT( pDead->IsPlayer() && IsPlayer() );
@@ -715,7 +715,7 @@ int CMover::IncSlaughterPoint( CMover *pDead )
 
 	switch( type )
 	{
-	case NORMAL_AND_NORMAL:		// ì¼ë°˜ ìœ ì € ì™€ ì¼ë°˜ ìœ ì € 
+	case NORMAL_AND_NORMAL:		// ÀÏ¹İ À¯Àú ¿Í ÀÏ¹İ À¯Àú 
 		if( IsRegionAttr( RA_PENALTY_PK ) )
 			m_nSlaughter = -2000;
 		else if( IsRegionAttr( RA_PK ) )
@@ -727,7 +727,7 @@ int CMover::IncSlaughterPoint( CMover *pDead )
 		{
 			if( pDead->IsAfterDeath() == FALSE )
 			{
-				// ì ˆëŒ€ê°’ì˜ ì°¨ê°€ í° ê²½ìš°ë§Œ ì¹´ë¥´ë§ˆ í¬ì¸íŠ¸ë¥¼ ì–»ëŠ”ë‹¤.
+				// Àı´ë°ªÀÇ Â÷°¡ Å« °æ¿ì¸¸ Ä«¸£¸¶ Æ÷ÀÎÆ®¸¦ ¾ò´Â´Ù.
 				int nGradeA = prj.GetKarmaProp( m_nSlaughter )->nGrade;
 				int nGradeB = prj.GetKarmaProp( pDead->m_nSlaughter )->nGrade;
 				int nDelta = abs(nGradeB) - abs(nGradeA);
@@ -737,7 +737,7 @@ int CMover::IncSlaughterPoint( CMover *pDead )
 		}	
 		break;
 
-	case SEMI_AND_NORMAL:		// ì¤€ì¹´ì˜¤ì™€ ì¼ë°˜ ìœ ì € 
+	case SEMI_AND_NORMAL:		// ÁØÄ«¿À¿Í ÀÏ¹İ À¯Àú 
 		if( IsRegionAttr( RA_PENALTY_PK ) )
 			m_nSlaughter -= 2000;
 		else if( IsRegionAttr( RA_PK ) )
@@ -749,7 +749,7 @@ int CMover::IncSlaughterPoint( CMover *pDead )
 	case SEMI_AND_CHAO:
 		break;
 
-	case CHAO_AND_NORMAL:		// ì¹´ì˜¤ì™€ ì¼ë°˜ ìœ ì € 
+	case CHAO_AND_NORMAL:		// Ä«¿À¿Í ÀÏ¹İ À¯Àú 
 		if( IsRegionAttr( RA_PENALTY_PK ) )
 		{
 			int nGrade = prj.GetKarmaProp( m_nSlaughter )->nGrade;
@@ -777,38 +777,38 @@ void CMover::ChangeFame( CMover *pLose )
 	float fVal = 0;
 	int nGap = 0;
 
-	nGap = pLose->GetLevel() - GetLevel();		// íŒ¨ìì™€ ìŠ¹ìì˜ ë ˆë²¨ì°¨ì´
+	nGap = pLose->GetLevel() - GetLevel();		// ÆĞÀÚ¿Í ½ÂÀÚÀÇ ·¹º§Â÷ÀÌ
 
-	if( nGap >= 80 )	    { nVal = 100; fVal = 15.0f; }	// íŒ¨ìê°€ ë ˆë²¨ì´ í›¨ ë†’ì•˜ë‹¤.
+	if( nGap >= 80 )	    { nVal = 100; fVal = 15.0f; }	// ÆĞÀÚ°¡ ·¹º§ÀÌ ÈÎ ³ô¾Ò´Ù.
 	else if( nGap >= 30 )	{ nVal = 50;  fVal = 10.0f; }
 	else if( nGap >= 20 )	{ nVal = 30;  fVal = 8.0f;  }
 	else if( nGap >= 10 )	{ nVal = 10;  fVal = 6.0f;  }
-	else if( nGap <= -80 )	{ nVal = 1;   fVal = 1.0f;  }	// íŒ¨ìê°€ ë ˆë²¨ì´ í›¨ ë‚®ì•˜ë‹¤.
+	else if( nGap <= -80 )	{ nVal = 1;   fVal = 1.0f;  }	// ÆĞÀÚ°¡ ·¹º§ÀÌ ÈÎ ³·¾Ò´Ù.
 	else if( nGap <= -30 )	{ nVal = 2;   fVal = 2.0f;  }
 	else if( nGap <= -20 )	{ nVal = 3;   fVal = 3.0f;  }
 	else if( nGap <= -10 )	{ nVal = 4;   fVal = 4.0f;  }
 	else                    { nVal = 5;   fVal = 5.0f;  }	// 9 ~ -9
 
 
-	if( nVal )		// ìŠ¹ìì—ê²Œ ëª…ì„±ì¹˜ ì¤Œ
+	if( nVal )		// ½ÂÀÚ¿¡°Ô ¸í¼ºÄ¡ ÁÜ
 	{	
-		if( this->IsFly() && pLose->IsFly() )	// ê³µì¤‘ ë“€ì–¼ì˜ ê²½ìš°ì—ëŠ” íŒ¨ë°°ì‹œ ìƒì‹¤í•˜ëŠ” ëª…ì„± í¬ì¸íŠ¸ëŠ” ë™ì¼í•˜ì§€ë§Œ, ìŠ¹ë¦¬ ì‹œ íšë“í•˜ëŠ” ëª…ì„±í¬ì¸íŠ¸ëŠ” ì§€ìƒ ì „íˆ¬ì— 2ë°°ë¡œ í•œë‹¤
+		if( this->IsFly() && pLose->IsFly() )	// °øÁß µà¾óÀÇ °æ¿ì¿¡´Â ÆĞ¹è½Ã »ó½ÇÇÏ´Â ¸í¼º Æ÷ÀÎÆ®´Â µ¿ÀÏÇÏÁö¸¸, ½Â¸® ½Ã È¹µæÇÏ´Â ¸í¼ºÆ÷ÀÎÆ®´Â Áö»ó ÀüÅõ¿¡ 2¹è·Î ÇÑ´Ù
 			nVal *= 2;
 			
 		m_nFame += nVal;	
 		g_UserMng.AddSetFame( this, m_nFame );
-		((CUser*)this)->AddDefinedText( TID_GAME_GETFAMEPOINT, "%d", nVal );	// xxx ëª…ì„± í¬ì¸íŠ¸ë¥¼ ì–»ì—ˆë‹¤
-#if __VER >= 13 // __HONORABLE_TITLE			// ë‹¬ì¸
+		((CUser*)this)->AddDefinedText( TID_GAME_GETFAMEPOINT, "%d", nVal );	// xxx ¸í¼º Æ÷ÀÎÆ®¸¦ ¾ò¾ú´Ù
+#if __VER >= 13 // __HONORABLE_TITLE			// ´ŞÀÎ
 		((CUser*)this)->CheckHonorStat();
 		((CUser*)this)->AddHonorListAck();
 		g_UserMng.AddHonorTitleChange( this, m_nHonor);
-#endif	// __HONORABLE_TITLE			// ë‹¬ì¸
+#endif	// __HONORABLE_TITLE			// ´ŞÀÎ
 	}
 	
-	if( fVal )	// íŒ¨ìì˜ ëª…ì„±ì¹˜(í¼ì„¼íŠ¸)ë¥¼ ê¹ìŒ.
+	if( fVal )	// ÆĞÀÚÀÇ ¸í¼ºÄ¡(ÆÛ¼¾Æ®)¸¦ ±ğÀ½.
 	{
 		int		nDecVal;
-		fVal = fVal / 100.0f;	// ë¹„ìœ¨ë¡œ í™˜ì‚°.
+		fVal = fVal / 100.0f;	// ºñÀ²·Î È¯»ê.
 		nDecVal = (int)(pLose->m_nFame * fVal);
 		if( nDecVal <= 0 )	nDecVal = 1;
 		pLose->m_nFame -= nDecVal;
@@ -816,13 +816,13 @@ void CMover::ChangeFame( CMover *pLose )
 			pLose->m_nFame = 0;
 
 		g_UserMng.AddSetFame( pLose, pLose->m_nFame );
-		((CUser*)pLose)->AddDefinedText( TID_GAME_DECFAMEPOINT, "%d", nDecVal );	// xxx ëª…ì„± í¬ì¸íŠ¸ê°€ ê°ì†Œ.
+		((CUser*)pLose)->AddDefinedText( TID_GAME_DECFAMEPOINT, "%d", nDecVal );	// xxx ¸í¼º Æ÷ÀÎÆ®°¡ °¨¼Ò.
 		g_dpDBClient.SendLogPkPvp( this, pLose, nVal, 'D' );
-#if __VER >= 13 // __HONORABLE_TITLE			// ë‹¬ì¸
+#if __VER >= 13 // __HONORABLE_TITLE			// ´ŞÀÎ
 		((CUser*)pLose)->CheckHonorStat();
 		((CUser*)pLose)->AddHonorListAck();
 		g_UserMng.AddHonorTitleChange( pLose, pLose->m_nHonor);
-#endif	// __HONORABLE_TITLE			// ë‹¬ì¸
+#endif	// __HONORABLE_TITLE			// ´ŞÀÎ
 	}
 }
 #endif // __WORLDSERVER
@@ -836,34 +836,34 @@ int	CMover::DuelResult( CMover *pLose )
 			return 0;
 	}
 
-	// ìŠ¹ìëŠ” ë ˆë²¨ì°¨ì—ë”°ë¼ ê²½í—˜ì¹˜ ìƒìŠ¹
-	// íŒ¨ìëŠ” ë ˆë²¨ì°¨ì—ë”°ë¼ ê²½í—˜ì¹˜% í•˜ë½
-	if( pLose->m_nDuel == 1 )	// ê°œì¸ PvP
+	// ½ÂÀÚ´Â ·¹º§Â÷¿¡µû¶ó °æÇèÄ¡ »ó½Â
+	// ÆĞÀÚ´Â ·¹º§Â÷¿¡µû¶ó °æÇèÄ¡% ÇÏ¶ô
+	if( pLose->m_nDuel == 1 )	// °³ÀÎ PvP
 	{
 		ChangeFame( pLose );
 		
 #ifdef __PVPDEBUFSKILL
 		//pLose->m_SkillState.SetMover( pLose );
-		pLose->m_nDead = PROCESS_COUNT * 2;		// ì¢…ë£Œ í›„ 2ì´ˆê°„ì€ ë¬´ì 
+		pLose->m_nDead = PROCESS_COUNT * 2;		// Á¾·á ÈÄ 2ÃÊ°£Àº ¹«Àû
 		pLose->RemoveAttackerBuffs( pLose->m_idDuelOther );
 		//m_SkillState.SetMover( this );
-		m_nDead = PROCESS_COUNT * 2;		// ì¢…ë£Œ í›„ 2ì´ˆê°„ì€ ë¬´ì 
+		m_nDead = PROCESS_COUNT * 2;		// Á¾·á ÈÄ 2ÃÊ°£Àº ¹«Àû
 		RemoveAttackerBuffs( m_idDuelOther );
 #endif // __PVPDEBUFSKILL
 	}
 	else
-	// ê·¹ë‹¨ ë“€ì–¼.
-	if( pLose->m_nDuel == 2 )		// ê·¹ë‹¨ ë“€ì–¼ì¤‘ì¼ë• ê·¹ë‹¨ì¥ë¼ë¦¬ì˜ ë ˆë²¨ì„ ë¹„êµ.
+	// ±Ø´Ü µà¾ó.
+	if( pLose->m_nDuel == 2 )		// ±Ø´Ü µà¾óÁßÀÏ¶© ±Ø´ÜÀå³¢¸®ÀÇ ·¹º§À» ºñ±³.
 	{
 		int nVal = 0;
 		float fVal = 0;
 		int nGap = 0;
 
 		CParty *pLoseParty = g_PartyMng.GetParty( pLose->m_idparty );
-		if( pLoseParty == NULL || pLoseParty->IsLeader( pLose->m_idPlayer ) == FALSE )		// íŒŒí‹°ê°€ ì—†ê±°ë‚˜ ì£½ì€ë„˜ì´ ëŒ€ì¥ì´ ì•„ë‹ˆë©´ ê± ë¦¬í„´.
+		if( pLoseParty == NULL || pLoseParty->IsLeader( pLose->m_idPlayer ) == FALSE )		// ÆÄÆ¼°¡ ¾ø°Å³ª Á×Àº³ÑÀÌ ´ëÀåÀÌ ¾Æ´Ï¸é °Á ¸®ÅÏ.
 			return 0;
 		
-		CParty *pParty = g_PartyMng.GetParty( m_idparty );		// ì´ê¸´ì¸¡ íŒŒí‹°.
+		CParty *pParty = g_PartyMng.GetParty( m_idparty );		// ÀÌ±äÃø ÆÄÆ¼.
 		if( pParty == NULL )
 			return 0;
 
@@ -873,11 +873,11 @@ int	CMover::DuelResult( CMover *pLose )
 		else
 			nGap	= pLose->GetLevel() - GetLevel();
 		
-		if( nGap >= 80 )	{ nVal = 100; fVal = 15.0f; }		// íŒ¨ìê°€ ë ˆë²¨ì´ í›¨ ë†’ì•˜ë‹¤.
+		if( nGap >= 80 )	{ nVal = 100; fVal = 15.0f; }		// ÆĞÀÚ°¡ ·¹º§ÀÌ ÈÎ ³ô¾Ò´Ù.
 		else if( nGap >= 50 )	{ nVal = 50; fVal = 10.0f; }
 		else if( nGap >= 20 )	{ nVal = 30; fVal = 8.0f; }
 		else if( nGap >= 10 )	{ nVal = 10; fVal = 6.0f; }
-		else if( nGap <= -80 )	{ nVal = 1; fVal = 1.0f; }		// íŒ¨ìê°€ ë ˆë²¨ì´ í›¨ ë‚®ì•˜ë‹¤.
+		else if( nGap <= -80 )	{ nVal = 1; fVal = 1.0f; }		// ÆĞÀÚ°¡ ·¹º§ÀÌ ÈÎ ³·¾Ò´Ù.
 		else if( nGap <= -50 )	{ nVal = 2; fVal = 2.0f; }
 		else if( nGap <= -20 )	{ nVal = 3; fVal = 3.0f; }
 		else if( nGap <= -10 )	{ nVal = 4; fVal = 4.0f; }
@@ -886,15 +886,15 @@ int	CMover::DuelResult( CMover *pLose )
 		g_DPCoreClient.SendSetPartyDuel( pParty->m_uPartyId, pLoseParty->m_uPartyId, FALSE );
 
 		pLose->m_bLastDuelParty = TRUE;
-		pLoseParty->DoDuelResult( pParty, 0, nVal, fVal );		// íŒŒí‹°ì›ë“¤ì—ê²Œ íŒ¨ë°°ì‚¬ì‹¤ì„ ì•Œë¦¬ê³  ë“€ì–¼ ì¤‘ì§€ì‹œí‚´.
-		pParty->DoDuelResult( pLoseParty, 1, nVal, fVal );		// íŒŒí‹°ì›ë“¤ì—ê²Œ ìŠ¹ë¦¬ë¥¼ ì•Œë¦¼.
+		pLoseParty->DoDuelResult( pParty, 0, nVal, fVal );		// ÆÄÆ¼¿øµé¿¡°Ô ÆĞ¹è»ç½ÇÀ» ¾Ë¸®°í µà¾ó ÁßÁö½ÃÅ´.
+		pParty->DoDuelResult( pLoseParty, 1, nVal, fVal );		// ÆÄÆ¼¿øµé¿¡°Ô ½Â¸®¸¦ ¾Ë¸².
 	}
 #endif	// __WORLDSERVER
 
 	return 1;
 }
 
-// íˆíŠ¸í¬ì¸íŠ¸ë¥¼ ì…‹í•˜ê¸°
+// È÷Æ®Æ÷ÀÎÆ®¸¦ ¼ÂÇÏ±â
 void CMover::SetHitPoint(int nVal) 
 {
 	m_nHitPoint = nVal;
@@ -904,7 +904,7 @@ void CMover::SetHitPoint(int nVal)
 	if( m_nHitPoint > GetMaxHitPoint() )
 		m_nHitPoint = GetMaxHitPoint(); 
 }
-// ë§ˆë‚˜ í¬ì¸íŠ¸ë¥¼ ì…‹í•˜ê¸° 
+// ¸¶³ª Æ÷ÀÎÆ®¸¦ ¼ÂÇÏ±â 
 void CMover::SetManaPoint(int nVal) 
 {
 	m_nManaPoint = nVal;
@@ -913,7 +913,7 @@ void CMover::SetManaPoint(int nVal)
 	if( m_nManaPoint > GetMaxManaPoint() )
 		m_nManaPoint = GetMaxManaPoint(); 
 }
-// í”¼ì§€ì¹¼ í¬ì¸íŠ¸ë¥¼ ì…‹í•˜ê¸° 
+// ÇÇÁöÄ® Æ÷ÀÎÆ®¸¦ ¼ÂÇÏ±â 
 void CMover::SetFatiguePoint(int nVal) 
 {
 	m_nFatiguePoint = nVal;
@@ -935,7 +935,7 @@ int CMover::GetPointParam(int nDestParameter )
 	return( 0 );
 }
 
-void CMover::SetPointParam( int nDstParameter, int nValue, BOOL bTrans )	// bTransê°€ TRUEì´ë©´ ê°•ì œì „ì†¡
+void CMover::SetPointParam( int nDstParameter, int nValue, BOOL bTrans )	// bTrans°¡ TRUEÀÌ¸é °­Á¦Àü¼Û
 {
 #ifdef __WORLDSERVER
 	int nMax = nValue;
@@ -983,7 +983,7 @@ void CMover::SetPointParam( int nDstParameter, int nValue, BOOL bTrans )	// bTra
 			break;
 		case DST_GOLD:
 			//m_dwGold	= (DWORD)nValue;
-#ifdef __PERIN_BUY_BUG	// chipi_091219 ì¶”ê°€
+#ifdef __PERIN_BUY_BUG	// chipi_091219 Ãß°¡
 #ifdef __WORLDSERVER
 			Error( "SetPointParam( DST_GOLD ) - [User:%s(%07d)], [Value:%d]", static_cast<CUser*>(this)->GetName(), static_cast<CUser*>(this)->m_idPlayer, nValue );
 			return;
@@ -1018,7 +1018,7 @@ BOOL CMover::IncStrLevel()
 		pJobAbillity = &prj.m_aJobAbillity[ GetJob() ];
 	else
 		pJobAbillity = &prj.m_aJobAbillity[ JOB_VAGRANT ];
-	if( (int)m_nRemainGP >= (int)pJobAbillity->dwStr )		// ì´ë¶€ë¶„ (int)ë¡œ ìºìŠ¤íŠ¸ í•´ì£¼ì§€ ì•Šìœ¼ë©´ ì»´íŒŒì¼ëŸ¬ ë²„ê·¸ ë‚œë‹¤.
+	if( (int)m_nRemainGP >= (int)pJobAbillity->dwStr )		// ÀÌºÎºĞ (int)·Î Ä³½ºÆ® ÇØÁÖÁö ¾ÊÀ¸¸é ÄÄÆÄÀÏ·¯ ¹ö±× ³­´Ù.
 	{
 		m_nStr += pJobAbillity->dwStrAdd;
 		m_nRemainGP -= pJobAbillity->dwStr;
@@ -1103,7 +1103,7 @@ BOOL CMover::IncIntLevel()
 BOOL CMover::AddExperience( EXPINTEGER nExp, BOOL bFirstCall, BOOL bMultiPly, BOOL bMonster )
 {
 #ifdef __VTN_TIMELIMIT
-	//	mulcom	BEGIN100315	ë² íŠ¸ë‚¨ ì‹œê°„ ì œí•œ
+	//	mulcom	BEGIN100315	º£Æ®³² ½Ã°£ Á¦ÇÑ
 	if( ::GetLanguage() == LANG_VTN )
 	{
 		if( IsPlayer() && m_nAccountPlayTime != -1 )
@@ -1118,10 +1118,10 @@ BOOL CMover::AddExperience( EXPINTEGER nExp, BOOL bFirstCall, BOOL bMultiPly, BO
 			}
 		}
 	}
-	//	mulcom	END100315	ë² íŠ¸ë‚¨ ì‹œê°„ ì œí•œ
+	//	mulcom	END100315	º£Æ®³² ½Ã°£ Á¦ÇÑ
 #endif // __VTN_TIMELIMIT
 
-	if( nExp <= 0 )		// nExpê°€ ë§ˆì´ë„ˆìŠ¤ì´ê±°ë‚˜ 0ì´ë©´ ì²˜ë¦¬í• í•„ìš” ì—†ìŒ.
+	if( nExp <= 0 )		// nExp°¡ ¸¶ÀÌ³Ê½ºÀÌ°Å³ª 0ÀÌ¸é Ã³¸®ÇÒÇÊ¿ä ¾øÀ½.
 		return FALSE;
 
 	if( m_nHitPoint <= 0 )
@@ -1174,7 +1174,7 @@ BOOL CMover::AddExperience( EXPINTEGER nExp, BOOL bFirstCall, BOOL bMultiPly, BO
 		}
 		if( nAngel <= 0 || 100 < nAngel  )
 			nAngel = 100;
-		// åº·: ì „ì§ ì „ ì—”ì ¤ ë²„í”„ í™œì„±í™” í›„ ì „ì§í•˜ëŠ” ê²½ìš°, í•„ìš” ìˆ˜ì¹˜ê°€ ë„ˆë¬´ í¬ë‹¤.
+		// Ë¬: ÀüÁ÷ Àü ¿£Á© ¹öÇÁ È°¼ºÈ­ ÈÄ ÀüÁ÷ÇÏ´Â °æ¿ì, ÇÊ¿ä ¼öÄ¡°¡ ³Ê¹« Å©´Ù.
 		EXPINTEGER nMaxAngelExp = prj.m_aExpCharacter[m_nAngelLevel].nExp1 / 100 * nAngel;
 		if( m_nAngelExp < nMaxAngelExp )
 		{
@@ -1245,7 +1245,7 @@ BOOL CMover::AddExperience( EXPINTEGER nExp, BOOL bFirstCall, BOOL bMultiPly, BO
 			return TRUE;
 		}		
 	}
-#if __VER >= 10 // __LEGEND	//	10ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
+#if __VER >= 10 // __LEGEND	//	10Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
 	else if(IsMaster())
 	{
 		if( m_nLevel > MAX_GENERAL_LEVEL )
@@ -1278,7 +1278,7 @@ BOOL CMover::AddExperience( EXPINTEGER nExp, BOOL bFirstCall, BOOL bMultiPly, BO
 		}
 #endif // __ANGEL_EXPERIENCE
 	}
-#endif	//__LEGEND	//	10ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
+#endif	//__LEGEND	//	10Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
 #ifdef __3RD_LEGEND16
 	else if( IsLegendHero() )
 	{
@@ -1313,7 +1313,7 @@ BOOL CMover::AddExperience( EXPINTEGER nExp, BOOL bFirstCall, BOOL bMultiPly, BO
 		}
 		if( nAngel <= 0 || 100 < nAngel  )
 			nAngel = 100;
-		// åº·: ì „ì§ ì „ ì—”ì ¤ ë²„í”„ í™œì„±í™” í›„ ì „ì§í•˜ëŠ” ê²½ìš°, í•„ìš” ìˆ˜ì¹˜ê°€ ë„ˆë¬´ í¬ë‹¤.
+		// Ë¬: ÀüÁ÷ Àü ¿£Á© ¹öÇÁ È°¼ºÈ­ ÈÄ ÀüÁ÷ÇÏ´Â °æ¿ì, ÇÊ¿ä ¼öÄ¡°¡ ³Ê¹« Å©´Ù.
 		EXPINTEGER nMaxAngelExp = prj.m_aExpCharacter[m_nAngelLevel].nExp1 / 100 * nAngel;
 		if( m_nAngelExp < nMaxAngelExp )
 		{
@@ -1360,7 +1360,7 @@ BOOL CMover::AddExperience( EXPINTEGER nExp, BOOL bFirstCall, BOOL bMultiPly, BO
 #endif // __CSC_VER8_5
 #endif // __ANGEL_EXPERIENCE
 
-	m_nExp1 += nExp;									// pxpì™€ ê´€ê³„ì—†ì´ expê°€ ì¦ê°€. ë§Œì‰ì´!
+	m_nExp1 += nExp;									// pxp¿Í °ü°è¾øÀÌ exp°¡ Áõ°¡. ¸¸½¦ÀÌ!
 	
 	if( bFirstCall )
 	{
@@ -1370,7 +1370,7 @@ BOOL CMover::AddExperience( EXPINTEGER nExp, BOOL bFirstCall, BOOL bMultiPly, BO
 		{
 			m_dwPKExp	= (DWORD)( m_dwPKExp + nExp );
 			DWORD dwPropensity = GetPKPropensity(); // undorflow
-			int nLevelPKExp = prj.GetLevelExp( GetLevel() ); // Levelë³„ ê°ì†Œ ê²½í—˜ì¹˜
+			int nLevelPKExp = prj.GetLevelExp( GetLevel() ); // Levelº° °¨¼Ò °æÇèÄ¡
 			if( nLevelPKExp != 0 )
 			{
 				int nSubExp = m_dwPKExp / nLevelPKExp;
@@ -1390,7 +1390,7 @@ BOOL CMover::AddExperience( EXPINTEGER nExp, BOOL bFirstCall, BOOL bMultiPly, BO
 #endif // __VER >= 8 // __S8_PK
 	}
 
-	if( m_nExp1 >= prj.m_aExpCharacter[nNextLevel].nExp1 )	// ë ˆë²¨ì—…
+	if( m_nExp1 >= prj.m_aExpCharacter[nNextLevel].nExp1 )	// ·¹º§¾÷
 	{
 #ifdef __3RD_LEGEND16
 		if( IsLegendHero() && ( nNextLevel > MAX_3RD_LEGEND_LEVEL ) )
@@ -1408,7 +1408,7 @@ BOOL CMover::AddExperience( EXPINTEGER nExp, BOOL bFirstCall, BOOL bMultiPly, BO
 			return FALSE;
 		}
 #else // __3RD_LEGEND16
-#if __VER >= 10 // __LEGEND	//	10ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
+#if __VER >= 10 // __LEGEND	//	10Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
 		if( IsHero() && ( nNextLevel > MAX_LEGEND_LEVEL ) )
 		{
 			m_nLevel = MAX_LEGEND_LEVEL;
@@ -1423,7 +1423,7 @@ BOOL CMover::AddExperience( EXPINTEGER nExp, BOOL bFirstCall, BOOL bMultiPly, BO
 			m_nExp1  = (prj.m_aExpCharacter[nNextLevel].nExp1 - 1);
 			return FALSE;
 		}
-#else //__LEGEND	//	10ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
+#else //__LEGEND	//	10Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
 		if( nNextLevel > MAX_GENERAL_LEVEL )
 		{
 			m_nLevel = MAX_GENERAL_LEVEL;
@@ -1431,21 +1431,21 @@ BOOL CMover::AddExperience( EXPINTEGER nExp, BOOL bFirstCall, BOOL bMultiPly, BO
 			m_nExp1  = (prj.m_aExpCharacter[nNextLevel].nExp1 - 1);
 			return FALSE;
 		}
-#endif	//__LEGEND	//	10ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
+#endif	//__LEGEND	//	10Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
 #endif // __3RD_LEGEND16
 		EXPINTEGER nExptmp;
 //		BOOL f	= FALSE;
 
 		{
 			m_nRemainGP += prj.m_aExpCharacter[ nNextLevel ].dwLPPoint;
-#if __VER >= 10 // __LEGEND	//	10ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
+#if __VER >= 10 // __LEGEND	//	10Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
 #ifdef __3RD_LEGEND16
 			if( IsMaster() || IsHero() || IsLegendHero() )
 #else // __3RD_LEGEND16
 			if( IsMaster() || IsHero() )
 #endif // __3RD_LEGEND16
 				m_nRemainGP++;
-#endif	//__LEGEND	//	10ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
+#endif	//__LEGEND	//	10Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
 
 			nExptmp		= m_nExp1 - prj.m_aExpCharacter[nNextLevel].nExp1;
 #if __VER >= 8  
@@ -1478,7 +1478,7 @@ BOOL CMover::AddExperience( EXPINTEGER nExp, BOOL bFirstCall, BOOL bMultiPly, BO
 				nExptmp  = 0;
 				return FALSE;
 			}
-#if __VER >= 10 // __LEGEND	//	10ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
+#if __VER >= 10 // __LEGEND	//	10Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
 			else if( IsMaster() && m_nLevel > MAX_GENERAL_LEVEL )
 			{
 				m_nLevel = MAX_GENERAL_LEVEL;
@@ -1511,7 +1511,7 @@ BOOL CMover::AddExperience( EXPINTEGER nExp, BOOL bFirstCall, BOOL bMultiPly, BO
 				return FALSE;
 			}
 #endif // __3RD_LEGEND16
-#endif	//__LEGEND	//	10ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
+#endif	//__LEGEND	//	10Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
 
 			if( bLevelUp )
 			{
@@ -1523,14 +1523,14 @@ BOOL CMover::AddExperience( EXPINTEGER nExp, BOOL bFirstCall, BOOL bMultiPly, BO
 				if( m_nDeathLevel >= m_nLevel )
 				{
 					m_nRemainGP -= prj.m_aExpCharacter[ nNextLevel ].dwLPPoint;
-#if __VER >= 10 // __LEGEND	//	10ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
+#if __VER >= 10 // __LEGEND	//	10Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
 #ifdef __3RD_LEGEND16
 					if( IsMaster() || IsHero() || IsLegendHero() )
 #else // __3RD_LEGEND16
 					if( IsMaster() || IsHero() )
 #endif // __3RD_LEGEND16
 						m_nRemainGP--;
-#endif	//__LEGEND	//	10ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
+#endif	//__LEGEND	//	10Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
 				}
 #endif //  __VER >= 8  
 
@@ -1538,11 +1538,11 @@ BOOL CMover::AddExperience( EXPINTEGER nExp, BOOL bFirstCall, BOOL bMultiPly, BO
 				if( m_nDeathLevel < m_nLevel )
 				{
 					int nGetPoint = ((GetLevel() - 1) / 20) + 2;
-#if __VER >= 10 // __LEGEND	//	10ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
+#if __VER >= 10 // __LEGEND	//	10Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
 					if( IsMaster() || IsHero() )
 						SetMasterSkillPointUp();
 					else
-#endif	//__LEGEND	//	10ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
+#endif	//__LEGEND	//	10Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
 					{
 						AddSkillPoint( nGetPoint );
 						g_dpDBClient.SendLogSkillPoint( LOG_SKILLPOINT_GET_HUNT, nGetPoint, this, NULL );
@@ -1571,18 +1571,18 @@ BOOL CMover::AddExperience( EXPINTEGER nExp, BOOL bFirstCall, BOOL bMultiPly, BO
 			else
 			{
 				m_nRemainGP -= prj.m_aExpCharacter[ nNextLevel ].dwLPPoint;
-#if __VER >= 10 // __LEGEND	//	10ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
+#if __VER >= 10 // __LEGEND	//	10Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
 #ifdef __3RD_LEGEND16
 				if( IsMaster() || IsHero() || IsLegendHero() )
 #else // __3RD_LEGEND16
 				if( IsMaster() || IsHero() )
 #endif // __3RD_LEGEND16
 					m_nRemainGP--;
-#endif	//__LEGEND	//	10ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
+#endif	//__LEGEND	//	10Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
 				nExptmp	= m_nExp1	= 0;
 			}
 
-			// ë ˆë²¨ 20ì´ ë˜ëŠ”ìˆœê°„ ë¹„í–‰ë ˆë²¨ì€ 1ì´ëœë‹¤.
+			// ·¹º§ 20ÀÌ µÇ´Â¼ø°£ ºñÇà·¹º§Àº 1ÀÌµÈ´Ù.
 			if( m_nLevel == 20 )
 				SetFlightLv( 1 );
 			
@@ -1602,33 +1602,33 @@ BOOL CMover::AddExperience( EXPINTEGER nExp, BOOL bFirstCall, BOOL bMultiPly, BO
 	return FALSE;
 }
 
-// ê²½í—˜ì¹˜ë¥¼ nExpë§Œí¼ ê¹ëŠ”ë‹¤.  ë ™ë‹¤ìš´ë„ ëœë‹¤.
-// bExp2Clear : pxpë¥¼ 0ìœ¼ë¡œ í• ê±´ì§€ ë§ê±´ì§€.
-// bLvDown : ë ˆë²¨ë‹¤ìš´ì„ í• ê±´ì§€ ë§ê±´ì§€.
+// °æÇèÄ¡¸¦ nExp¸¸Å­ ±ğ´Â´Ù.  ·¾´Ù¿îµµ µÈ´Ù.
+// bExp2Clear : pxp¸¦ 0À¸·Î ÇÒ°ÇÁö ¸»°ÇÁö.
+// bLvDown : ·¹º§´Ù¿îÀ» ÇÒ°ÇÁö ¸»°ÇÁö.
 BOOL CMover::DecExperience( EXPINTEGER nExp, BOOL bExp2Clear, BOOL bLvDown )
 {
-	if( nExp < 0 )	// ê°’ì€ í•­ìƒ ì–‘ìˆ˜ë¡œë§Œ ì¤˜ì•¼ í•œë‹¤.
+	if( nExp < 0 )	// °ªÀº Ç×»ó ¾ç¼ö·Î¸¸ Áà¾ß ÇÑ´Ù.
 		return FALSE;
 	
 	int nPrevLevel	= m_nLevel - 1;
-	if( nPrevLevel < 1 )	// ë ˆë²¨ 1ì´í•˜ë¡œëŠ” ë”ì´ìƒ ë‚´ë ¤ê°€ì§€ ì•ŠìŒ.
+	if( nPrevLevel < 1 )	// ·¹º§ 1ÀÌÇÏ·Î´Â ´õÀÌ»ó ³»·Á°¡Áö ¾ÊÀ½.
 		return FALSE;
 
-	m_nExp1		-= nExp;	// nExpë§Œí¼ ê²½í—˜ì¹˜ë¥¼ ê¹ìŒ. Exp2ëŠ” 0%ë¡œ.
+	m_nExp1		-= nExp;	// nExp¸¸Å­ °æÇèÄ¡¸¦ ±ğÀ½. Exp2´Â 0%·Î.
 
-#if __VER < 8     // 8ì°¨ ìŠ¤í‚¬ê²½í—˜ì¹˜ë‹¤ìš´ë³€ê²½
+#if __VER < 8     // 8Â÷ ½ºÅ³°æÇèÄ¡´Ù¿îº¯°æ
 	m_nSkillExp	-= nExp;
 #endif	// __VER >= 8  
 
 	if( m_nExp1 < 0 )
 	{
-		if( bLvDown )	// ë ™ë‹¤ìš´ì´ ë˜ëŠ” ìƒí™©.
+		if( bLvDown )	// ·¾´Ù¿îÀÌ µÇ´Â »óÈ².
 		{
 #if __VER >= 8  
 			--m_nLevel;
 			m_nExp1 = (EXPINTEGER)(prj.m_aExpCharacter[m_nLevel+1].nExp1 + m_nExp1 );
 #endif //  __VER >= 8  
-			return TRUE;	// ë ™ë‹¤ìš´ ëìœ¼ë©´ TRUEë¦¬í„´
+			return TRUE;	// ·¾´Ù¿î µÆÀ¸¸é TRUE¸®ÅÏ
 		}
 		else
 		{
@@ -1641,51 +1641,51 @@ BOOL CMover::DecExperience( EXPINTEGER nExp, BOOL bExp2Clear, BOOL bLvDown )
 	return FALSE;
 }
 
-// í˜„ì¬ ë ˆë²¨ì˜ ìµœëŒ€ê²½í—˜ì¹˜ì˜ %ë¡œ ê²½í—˜ì¹˜ í•˜ë½
+// ÇöÀç ·¹º§ÀÇ ÃÖ´ë°æÇèÄ¡ÀÇ %·Î °æÇèÄ¡ ÇÏ¶ô
 // ex) fPercent = 0.2f;		// 20%
 BOOL CMover::DecExperiencePercent( float fPercent, BOOL bExp2Clear, BOOL bLvDown )
 {
-	EXPINTEGER	nExpOld		= m_nExp1;		// ê¹ì´ê¸°ì „ exp
-	EXPINTEGER	nMaxExp		= prj.m_aExpCharacter[m_nLevel+1].nExp1;	// ê¹ì´ê¸°ì „ ê²½í—˜ì¹˜ì¹˜ ë§¥ìŠ¤ëŸ‰.
-	int	nOldLv	= m_nLevel;		// ê¹ì´ê¸°ì „ ë ˆë²¨.
+	EXPINTEGER	nExpOld		= m_nExp1;		// ±ğÀÌ±âÀü exp
+	EXPINTEGER	nMaxExp		= prj.m_aExpCharacter[m_nLevel+1].nExp1;	// ±ğÀÌ±âÀü °æÇèÄ¡Ä¡ ¸Æ½º·®.
+	int	nOldLv	= m_nLevel;		// ±ğÀÌ±âÀü ·¹º§.
 
 	if( fPercent == 0.0f )	
-		return FALSE;	// 0%ë¥¼ ê¹ëŠ” ìƒí™©ì´ë©´ ê³„ì‚°í•  í•„ìš” ì—†ë‹¤.
+		return FALSE;	// 0%¸¦ ±ğ´Â »óÈ²ÀÌ¸é °è»êÇÒ ÇÊ¿ä ¾ø´Ù.
 
-	EXPINTEGER	nDecExp = (EXPINTEGER)(prj.m_aExpCharacter[m_nLevel+1].nExp1 * fPercent );	// í˜„ì¬ë ˆë²¨ì˜ ìµœëŒ€ê²½í—˜ì¹˜ * í¼ì„¼íŠ¸
+	EXPINTEGER	nDecExp = (EXPINTEGER)(prj.m_aExpCharacter[m_nLevel+1].nExp1 * fPercent );	// ÇöÀç·¹º§ÀÇ ÃÖ´ë°æÇèÄ¡ * ÆÛ¼¾Æ®
 	bLvDown		= DecExperience( nDecExp, bExp2Clear, bLvDown );
 
-	if( bLvDown )	// ì‹¤ì œë¡œ ë ˆë²¨ì´ ë‹¤ìš´ë˜ì—ˆì„ë•Œ.
+	if( bLvDown )	// ½ÇÁ¦·Î ·¹º§ÀÌ ´Ù¿îµÇ¾úÀ»¶§.
 	{
-		if( m_nLevel - nOldLv < -1 )	// ë ˆë²¨ì´ ë‘ë‹¨ê³„ ì´ìƒ ë‹¤ìš´ë˜ëŠ” ì¼ì€ ì—†ì–´ì•¼ í•œë‹¤.
-			Error( "CMover::DecExperiencePercent : %s ë ˆë²¨ë‹¤ìš´ ì´ìƒ. %d -> %d  %I64d(%f)"
+		if( m_nLevel - nOldLv < -1 )	// ·¹º§ÀÌ µÎ´Ü°è ÀÌ»ó ´Ù¿îµÇ´Â ÀÏÀº ¾ø¾î¾ß ÇÑ´Ù.
+			Error( "CMover::DecExperiencePercent : %s ·¹º§´Ù¿î ÀÌ»ó. %d -> %d  %I64d(%f)"
 			, m_szName, nOldLv, m_nLevel, nDecExp, fPercent );
 
-		EXPINTEGER	nDecExp2	= ( prj.m_aExpCharacter[m_nLevel+1].nExp1 - m_nExp1 ) + nExpOld;	// ì‹¤ì œ ê¹ì¸ í¬ì¸íŠ¸.
-		if( nDecExp2 > nDecExp )	// ì‹¤ì œ ê¹ì¸ì–‘ì´ ì›ë˜ ê¹ìœ¼ë ¤ê³  í–ˆë˜ ì–‘ë³´ë‹¤ ë§ìœ¼ë©´ ê²½ê³ .
-			Error( "1 CMover::DecExperiencePercent : %s(Lv%d) ê²½í—˜ì¹˜ê°€ ì´ìƒí•˜ê²Œ ê¹ì„. %I64d %I64d(%f) %I64d %I64d"
+		EXPINTEGER	nDecExp2	= ( prj.m_aExpCharacter[m_nLevel+1].nExp1 - m_nExp1 ) + nExpOld;	// ½ÇÁ¦ ±ğÀÎ Æ÷ÀÎÆ®.
+		if( nDecExp2 > nDecExp )	// ½ÇÁ¦ ±ğÀÎ¾çÀÌ ¿ø·¡ ±ğÀ¸·Á°í Çß´ø ¾çº¸´Ù ¸¹À¸¸é °æ°í.
+			Error( "1 CMover::DecExperiencePercent : %s(Lv%d) °æÇèÄ¡°¡ ÀÌ»óÇÏ°Ô ±ğÀÓ. %I64d %I64d(%f) %I64d %I64d"
 			, m_szName, GetLevel(), nMaxExp, nDecExp, fPercent, nExpOld, m_nExp1 );
 	}
 	else
 	{
-		EXPFLOAT fOldPercent = static_cast<EXPFLOAT>( nExpOld ) / static_cast<EXPFLOAT>( nMaxExp );		// ê¹ì´ê¸°ì „ í¼ì„¼íŠ¸ëŸ‰.
-		EXPFLOAT fCurPercent = static_cast<EXPFLOAT>( m_nExp1 ) / static_cast<EXPFLOAT>( nMaxExp );		// ê¹ì€í›„ í¼ì„¼íŠ¸ëŸ‰.
+		EXPFLOAT fOldPercent = static_cast<EXPFLOAT>( nExpOld ) / static_cast<EXPFLOAT>( nMaxExp );		// ±ğÀÌ±âÀü ÆÛ¼¾Æ®·®.
+		EXPFLOAT fCurPercent = static_cast<EXPFLOAT>( m_nExp1 ) / static_cast<EXPFLOAT>( nMaxExp );		// ±ïÀºÈÄ ÆÛ¼¾Æ®·®.
 
 		if( fOldPercent - fCurPercent > 0.060f )
-			Error( "0 CMover::DecExperiencePercent : %s(Lv%d) ê²½í—˜ì¹˜ê°€ ì´ìƒí•˜ê²Œ ê¹ì„. %I64d %I64d(%f) %I64d(%f) %I64d(%f)"
+			Error( "0 CMover::DecExperiencePercent : %s(Lv%d) °æÇèÄ¡°¡ ÀÌ»óÇÏ°Ô ±ğÀÓ. %I64d %I64d(%f) %I64d(%f) %I64d(%f)"
 			, m_szName, GetLevel(), nMaxExp, nDecExp, fPercent, nExpOld, fOldPercent, m_nExp1, fCurPercent );
 	}
 
 	return bLvDown;
 }
 
-// ë¹„í–‰ ê²½í—˜ì¹˜ íšë“
+// ºñÇà °æÇèÄ¡ È¹µæ
 BOOL CMover::AddFxp( int nFxp )
 {
-	if( nFxp <= 0 )		// nExpê°€ ë§ˆì´ë„ˆìŠ¤ì´ê±°ë‚˜ 0ì´ë©´ ì²˜ë¦¬í• í•„ìš” ì—†ìŒ.
+	if( nFxp <= 0 )		// nExp°¡ ¸¶ÀÌ³Ê½ºÀÌ°Å³ª 0ÀÌ¸é Ã³¸®ÇÒÇÊ¿ä ¾øÀ½.
 		return FALSE;
 
-	if( m_nHitPoint <= 0 )		// ì£½ê³ ë‚˜ì„  ê²½í—˜ì¹˜ íšë“ ëª»í•¨.
+	if( m_nHitPoint <= 0 )		// Á×°í³ª¼± °æÇèÄ¡ È¹µæ ¸øÇÔ.
 		return FALSE;
 
 	if( GetFlightLv() == 0 )
@@ -1693,21 +1693,21 @@ BOOL CMover::AddFxp( int nFxp )
 
 	int nNextLevel = GetFlightLv() + 1;
 
-	m_nFxp += nFxp;		// ì¼ë‹¨ ê²½í—˜ì¹˜ë¥¼ ë”í•˜ê³ .
-	if( (DWORD)( m_nFxp ) >= prj.m_aFxpCharacter[nNextLevel].dwFxp ) // ë ˆë²¨ì—…ì´ ë˜ì—ˆëŠ”ì§€ í™•ì¸.
+	m_nFxp += nFxp;		// ÀÏ´Ü °æÇèÄ¡¸¦ ´õÇÏ°í.
+	if( (DWORD)( m_nFxp ) >= prj.m_aFxpCharacter[nNextLevel].dwFxp ) // ·¹º§¾÷ÀÌ µÇ¾ú´ÂÁö È®ÀÎ.
 	{
 		int		FxpBuf;
-		FxpBuf = m_nFxp - prj.m_aFxpCharacter[ nNextLevel ].dwFxp;		// ë ˆë²¨ì—…í•˜ê³ ë„ ì–¼ë§ˆë‚˜ ë” ì˜¤ë²„ëëŠ”ì§€?
+		FxpBuf = m_nFxp - prj.m_aFxpCharacter[ nNextLevel ].dwFxp;		// ·¹º§¾÷ÇÏ°íµµ ¾ó¸¶³ª ´õ ¿À¹öµÆ´ÂÁö?
 		m_nFxp = 0;
-		SetFlightLv( nNextLevel );	// ë ˆë²¨ ì¦ê°€.
+		SetFlightLv( nNextLevel );	// ·¹º§ Áõ°¡.
 		
 #ifdef __CLIENT
-		// ë ˆë²¨ì—…ì‹œ ì´í™íŠ¸
+		// ·¹º§¾÷½Ã ÀÌÆåÆ®
 		CreateSfx(g_Neuz.m_pd3dDevice,XI_GEN_LEVEL_UP01,GetPos(),GetId());
 		PlayMusic( BGM_IN_LEVELUP );
 #endif	// __CLIENT
 	
-		// ì˜¤ë°”ëœ ê²½í—˜ì¹˜ëŠ” í•œë²ˆë” ëŒë ¤ì„œ ë”í•´ì¤Œ.
+		// ¿À¹ÙµÈ °æÇèÄ¡´Â ÇÑ¹ø´õ µ¹·Á¼­ ´õÇØÁÜ.
 		if( FxpBuf > 0)
 		{
 			AddFxp( FxpBuf );
@@ -1722,7 +1722,7 @@ BOOL CMover::AddChangeJob( int nJob )
 {
 	BOOL	bResult = FALSE;
 	LPSKILL lpSkill;
-	if( MAX_JOBBASE <= nJob && nJob < MAX_EXPERT ) // 1ì°¨ ì „ì§ ê¹Œì§€~~ ^^;;;;
+	if( MAX_JOBBASE <= nJob && nJob < MAX_EXPERT ) // 1Â÷ ÀüÁ÷ ±îÁö~~ ^^;;;;
 	{
 		m_nJob = nJob;
 		
@@ -1736,7 +1736,7 @@ BOOL CMover::AddChangeJob( int nJob )
 		}
 		bResult = TRUE;
 	}
-	if( MAX_EXPERT <= nJob && nJob < MAX_PROFESSIONAL ) // 2ì°¨ ì „ì§ ê¹Œì§€~~ ^^;;;;
+	if( MAX_EXPERT <= nJob && nJob < MAX_PROFESSIONAL ) // 2Â÷ ÀüÁ÷ ±îÁö~~ ^^;;;;
 	{
 		m_nJob = nJob;
 		
@@ -1750,8 +1750,8 @@ BOOL CMover::AddChangeJob( int nJob )
 		}
 		bResult = TRUE;
 	}
-#if __VER >= 10 // __LEGEND	//	10ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
-	if( MAX_PROFESSIONAL <= nJob && nJob < MAX_MASTER ) // ì „ìŠ¹ ê¹Œì§€~~ ^^;;;;
+#if __VER >= 10 // __LEGEND	//	10Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
+	if( MAX_PROFESSIONAL <= nJob && nJob < MAX_MASTER ) // Àü½Â ±îÁö~~ ^^;;;;
 	{
 		m_nJob = nJob;
 		
@@ -1762,12 +1762,12 @@ BOOL CMover::AddChangeJob( int nJob )
 			ItemProp* pSkillProp = apSkillProp[ i ];
 			lpSkill = &m_aJobSkill[ i + MAX_JOB_SKILL + MAX_EXPERT_SKILL + MAX_PRO_SKILL];
 			lpSkill->dwSkill = pSkillProp->dwID;
-			lpSkill->dwLevel = 1;	//masterìŠ¤í‚¬ì€ 1ë¶€í„° ì¤€ë‹¤.
+			lpSkill->dwLevel = 1;	//master½ºÅ³Àº 1ºÎÅÍ ÁØ´Ù.
 		}
 		bResult = TRUE;
 	}
 	
-	if( MAX_MASTER <= nJob && nJob < MAX_HERO ) // ì˜ì›… ê¹Œì§€~~ ^^;;;;
+	if( MAX_MASTER <= nJob && nJob < MAX_HERO ) // ¿µ¿õ ±îÁö~~ ^^;;;;
 	{
 		m_nJob = nJob;
 		
@@ -1797,18 +1797,18 @@ BOOL CMover::AddChangeJob( int nJob )
 		bResult = TRUE;
 	}
 #endif // __3RD_LEGEND16
-#endif	//__LEGEND	//	10ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
+#endif	//__LEGEND	//	10Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
 
 
 #ifdef __WORLDSERVER
 #ifdef __S_NEW_SKILL_2
 	g_dpDBClient.SaveSkill( (CUser*)this );
 #endif // __S_NEW_SKILL_2
-#if __VER >= 13 // __HONORABLE_TITLE			// ë‹¬ì¸
+#if __VER >= 13 // __HONORABLE_TITLE			// ´ŞÀÎ
 	((CUser*)this)->CheckHonorStat();
 	((CUser*)this)->AddHonorListAck();
 	g_UserMng.AddHonorTitleChange( this, m_nHonor);
-#endif	// __HONORABLE_TITLE			// ë‹¬ì¸
+#endif	// __HONORABLE_TITLE			// ´ŞÀÎ
 #endif // __WORLDSERVER
 	return bResult;
 }
@@ -1817,7 +1817,7 @@ BOOL CMover::SetFxp( int nFxp, int nFlightLv )
 {
 	m_nFxp = nFxp;
 
-	// ë ˆë²¨ì´ ì˜¬ëìœ¼ë©´.
+	// ·¹º§ÀÌ ¿Ã¶úÀ¸¸é.
 	if( nFlightLv > GetFlightLv() )
 	{
 		SetFlightLv( nFlightLv );
@@ -1838,19 +1838,12 @@ BOOL CMover::SetExperience( EXPINTEGER nExp1, int nLevel )
 
 	if( IsInvalidObj(this) )
 		return 0;
-#ifdef __CLIENT
-	if( (GetLevel() == 120 || GetLevel() == 129) && GetExpPercent() == 9999 )
-	{
-		SAFE_DELETE( g_WndMng.m_pJobChangeEx );
-		g_WndMng.m_pJobChangeEx = new CWndJobChangeEx;
-		g_WndMng.m_pJobChangeEx->Initialize();
-	}
-#endif
+
 	if( nLevel > m_nLevel )
 	{
 #ifdef __CLIENT
- 		// 15ë ™ ë˜ë©´ ë”ì´ìƒ ì´ˆë³´ìê°€ ì•„ë‹ˆë¯€ë¡œ ìë™ìœ¼ë¡œ ì´ˆë³´ìë„ì›€ë§ ë„ì.
-		if( nLevel == 15 )		// 1ì°¨ì „ì§ë ˆë²¨ 15ì— ëŒ€í•œ define ìˆìœ¼ë©´ ê·¸ê±¸ë¡œ ë°”ê¿”ì£¼. -xuzhu-
+ 		// 15·¾ µÇ¸é ´õÀÌ»ó ÃÊº¸ÀÚ°¡ ¾Æ´Ï¹Ç·Î ÀÚµ¿À¸·Î ÃÊº¸ÀÚµµ¿ò¸» ²ôÀÚ.
+		if( nLevel == 15 )		// 1Â÷ÀüÁ÷·¹º§ 15¿¡ ´ëÇÑ define ÀÖÀ¸¸é ±×°É·Î ¹Ù²ãÁÖ. -xuzhu-
 			g_Option.m_nInstantHelp = 0;
  		
 		PutLvUpSkillName_1(nLevel);
@@ -1922,12 +1915,6 @@ BOOL CMover::SetExperience( EXPINTEGER nExp1, int nLevel )
 				if( GetLevel() != 1 )
 					pWndWorld->m_pWndGuideSystem->GuideStart(FALSE);
 			#endif
-			if( GetLevel() == 15 || GetLevel() == 60 /*|| ((GetLevel() == 120 || GetLevel() == 129) && GetExpPercent() >= 9900 ) */)
-			{
-				SAFE_DELETE( g_WndMng.m_pJobChangeEx );
-				g_WndMng.m_pJobChangeEx = new CWndJobChangeEx;
-				g_WndMng.m_pJobChangeEx->Initialize();
-			}
 				switch(GetLevel())
 				{
 			#if __VER >= 12 // __MOD_TUTORIAL
@@ -1979,7 +1966,7 @@ BOOL CMover::SetExperience( EXPINTEGER nExp1, int nLevel )
 
 		return TRUE;
 	}
-	else if( nLevel < m_nLevel )	// ë ˆë²¨ ë‹¤ìš´ì´ ë˜ì—ˆì„ë•Œ.
+	else if( nLevel < m_nLevel )	// ·¹º§ ´Ù¿îÀÌ µÇ¾úÀ»¶§.
 	{
 		m_nLevel	= nLevel;
 		if( nLevel < 20 )
@@ -2068,8 +2055,8 @@ int CMover::SumEquipDefenseAbility( LONG* pnMin, LONG* pnMax )
 			pItemElem = GetEquipItem( i ); //m_Inventory.GetAtId( m_adwEquipment[ i ] );
 			//if(pItem && !pItem->IsBreakableItem() && (pItem->m_nHitPoint == 1 || pItem->m_nHitPoint == 0))
 			//	continue; IK2_ARMOR
-			// IK_ARMORë¥¼ ì´ì œ ì²´í¬í•˜ì§€ ì•Šìœ¼ë¯€ë¡œ ë¨¸ë¦¬ë‚˜ íŒ”ì°Œë“±ì— ë””íœìŠ¤ê°’ì´ ë“¤ì–´ê°€ì§€ ì•Šë„ë¡ ì£¼ì˜í•œë‹¤.
-			// ë¬´ê¸°ì˜ ì–´ë¹Œë¦¬í‹°ëŠ” ë””íœìŠ¤ì— í¬í•¨ë˜ì§€ ì•ŠëŠ”ë‹¤
+			// IK_ARMOR¸¦ ÀÌÁ¦ Ã¼Å©ÇÏÁö ¾ÊÀ¸¹Ç·Î ¸Ó¸®³ª ÆÈÂîµî¿¡ µğÆæ½º°ªÀÌ µé¾î°¡Áö ¾Êµµ·Ï ÁÖÀÇÇÑ´Ù.
+			// ¹«±âÀÇ ¾îºô¸®Æ¼´Â µğÆæ½º¿¡ Æ÷ÇÔµÇÁö ¾Ê´Â´Ù
 			//if( pItemElem && pItemElem->GetProp()->dwItemKind2 < IK2_WEAPON_DIRECT && pItemElem->GetProp()->dwItemKind2 > IK2_WEAPON_GUN )  //&& ( pItemElem->m_nHitPoint > 1 || pItemElem->m_nHitPoint == -1) )
 			if( pItemElem )
 			{
@@ -2100,12 +2087,12 @@ int CMover::SumEquipDefenseAbility( LONG* pnMin, LONG* pnMax )
 				}
 			}
 		}
-		// ëª¨ë“  í•©ì‚°ì´ ëë‚¬ë‹¤ë©´ ê° ìš”ì†Œì— ìˆ˜ì •ì¹˜ë¥¼ ì ìš©í•œë‹¤.
+		// ¸ğµç ÇÕ»êÀÌ ³¡³µ´Ù¸é °¢ ¿ä¼Ò¿¡ ¼öÁ¤Ä¡¸¦ Àû¿ëÇÑ´Ù.
 		nMin = GetParam( DST_ABILITY_MIN, nMin );
 		nMax = GetParam( DST_ABILITY_MAX, nMax );
 		if( pnMin ) *pnMin = nMin;
 		if( pnMax ) *pnMax = nMax;
-		return ( ( nMin + nMax ) / 2 ); // ë¦¬í„´ ê°’ì€ í‰ê·  ê°’ì´ë‹¤. íŒì •ì‹œì—ëŠ” ì‚¬ìš©í•˜ì§€ ì•ŠëŠ”ë‹¤. ì¶œë ¥ì´ë‚˜ ê¸°íƒ€ ìš©ë„ë¡œ ì‚¬ìš©í•œë‹¤.
+		return ( ( nMin + nMax ) / 2 ); // ¸®ÅÏ °ªÀº Æò±Õ °ªÀÌ´Ù. ÆÇÁ¤½Ã¿¡´Â »ç¿ëÇÏÁö ¾Ê´Â´Ù. Ãâ·ÂÀÌ³ª ±âÅ¸ ¿ëµµ·Î »ç¿ëÇÑ´Ù.
 	}
 	else
 	{
@@ -2136,12 +2123,12 @@ void CMover::SumEquipAdjValue( int* pnAdjHitRate, int* pnAdjParray )
 	}
 }
 
-// ì•ˆë³´ì´ëŠ” ìƒíƒœ
+// ¾Èº¸ÀÌ´Â »óÅÂ
 BOOL CMover::SetDarkCover( BOOL bApply, DWORD tmMaxTime )
 {
 	if( bApply )
 	{
-		if( GetAdjParam( DST_IMMUNITY ) & CHS_INVISIBILITY )	// íˆ¬ëª…í™”ì— ë©´ì—­ì´ë¼....ê·¸ëŸ°ê²ƒë„ ìˆë‚˜?
+		if( GetAdjParam( DST_IMMUNITY ) & CHS_INVISIBILITY )	// Åõ¸íÈ­¿¡ ¸é¿ªÀÌ¶ó....±×·±°Íµµ ÀÖ³ª?
 			return FALSE;	
 		SetDestParam( DST_CHRSTATE, CHS_INVISIBILITY, NULL_CHGPARAM );
 		m_wDarkCover =	(short)( (tmMaxTime / 1000.0f) * PROCESS_COUNT );
@@ -2149,7 +2136,7 @@ BOOL CMover::SetDarkCover( BOOL bApply, DWORD tmMaxTime )
 	{
 		if( GetAdjParam( DST_CHRSTATE) & CHS_INVISIBILITY )
 		{
-			ResetDestParam( DST_CHRSTATE, CHS_INVISIBILITY, TRUE );		// ì•”í‘ìƒíƒœí•´ì œ
+			ResetDestParam( DST_CHRSTATE, CHS_INVISIBILITY, TRUE );		// ¾ÏÈæ»óÅÂÇØÁ¦
 		}
 		m_wDarkCover = 0;
 	}
@@ -2157,28 +2144,28 @@ BOOL CMover::SetDarkCover( BOOL bApply, DWORD tmMaxTime )
 	return TRUE;
 }
 
-// ìŠ¤í„´ìƒíƒœë¡œ ë§Œë“¤ê¸°
+// ½ºÅÏ»óÅÂ·Î ¸¸µé±â
 BOOL CMover::SetStun( BOOL bApply, DWORD tmMaxTime )
 {
 	if( bApply )
 	{
 		MoverProp *pMoverProp = GetProp();
 		if( pMoverProp->dwClass == RANK_SUPER || pMoverProp->dwClass == RANK_MIDBOSS )
-			return FALSE;			// ìŠˆí¼ëª¹ì€ ìŠ¤í„´ì— ì•ˆê±¸ë¦°ë‹¤. ì´ë ‡ê²Œ í•˜ì§€ë§ê³  ìŠ¤í„´ì— ì´ë®¨ì´ ë˜ê²Œ ì„¤ì •í•˜ëŠ”ê²Œ ì¢‹ë‹¤.
+			return FALSE;			// ½´ÆÛ¸÷Àº ½ºÅÏ¿¡ ¾È°É¸°´Ù. ÀÌ·¸°Ô ÇÏÁö¸»°í ½ºÅÏ¿¡ ÀÌ¹ÃÀÌ µÇ°Ô ¼³Á¤ÇÏ´Â°Ô ÁÁ´Ù.
 
 		if( GetAdjParam( DST_IMMUNITY ) & CHS_STUN ) 
-			return FALSE;		// ë…ì— ë©´ì—­ìƒíƒœë‹¤.
+			return FALSE;		// µ¶¿¡ ¸é¿ª»óÅÂ´Ù.
 
 		SetDestParam( DST_CHRSTATE, CHS_STUN, NULL_CHGPARAM, FALSE );
-		SendActMsg( OBJMSG_STUN );		// ìŠ¤í„´ ìƒíƒœ ì‹œì‘.
-		m_wStunCnt = (short)( (tmMaxTime / 1000.0f) * PROCESS_COUNT );		// ì–¼ë§ˆë™ì•ˆì´ë‚˜ ìŠ¤í„´ìƒíƒœê°€ ë˜ëŠëƒ.
+		SendActMsg( OBJMSG_STUN );		// ½ºÅÏ »óÅÂ ½ÃÀÛ.
+		m_wStunCnt = (short)( (tmMaxTime / 1000.0f) * PROCESS_COUNT );		// ¾ó¸¶µ¿¾ÈÀÌ³ª ½ºÅÏ»óÅÂ°¡ µÇ´À³Ä.
 	}
 	else
 	{
-		if( GetAdjParam( DST_CHRSTATE ) & CHS_STUN )	// ì´ê±° ê²€ì‚¬ì•ˆí•˜ë©´ ë§¤ë²ˆ í´ë¼ë¡œ ResetDestParamì„ ë‚ ë¦°ë‹¤.
-			ResetDestParam( DST_CHRSTATE, CHS_STUN, FALSE);	// ìŠ¤í„´ ìƒíƒœ í•´ì œ.
+		if( GetAdjParam( DST_CHRSTATE ) & CHS_STUN )	// ÀÌ°Å °Ë»ç¾ÈÇÏ¸é ¸Å¹ø Å¬¶ó·Î ResetDestParamÀ» ³¯¸°´Ù.
+			ResetDestParam( DST_CHRSTATE, CHS_STUN, FALSE);	// ½ºÅÏ »óÅÂ ÇØÁ¦.
 		m_wStunCnt = 0;
-		m_dwFlag &= (~MVRF_NOACTION);				// ì•¡ì…˜ ê¸ˆì§€ ìƒíƒœë¡œ ì „í™˜.
+		m_dwFlag &= (~MVRF_NOACTION);				// ¾×¼Ç ±İÁö »óÅÂ·Î ÀüÈ¯.
 	}
 
 #ifdef __WORLDSERVER
@@ -2189,24 +2176,24 @@ BOOL CMover::SetStun( BOOL bApply, DWORD tmMaxTime )
 }
 
 
-// thisë¥¼ ë…ì— ê±¸ë¦¬ê²Œ í•œë‹¤.
-// idAttacker : ê³µê²©ì(ì»¨íŠ¸ë¡¤ì¼ìˆ˜ë„ ìˆìŠ´)
-// tmMaxTime : 1/1000ì´ˆ ë‹¨ìœ„.
-// tmUnit : ëª‡ì´ˆ ë§ˆë‹¤ ë…ë°ë¯¸ì§€ê°€ ê¹ì¼êº¼ëƒ.
-// nDamage : ë°ë¯¸ì§€ëŸ‰
+// this¸¦ µ¶¿¡ °É¸®°Ô ÇÑ´Ù.
+// idAttacker : °ø°İÀÚ(ÄÁÆ®·ÑÀÏ¼öµµ ÀÖ½¿)
+// tmMaxTime : 1/1000ÃÊ ´ÜÀ§.
+// tmUnit : ¸îÃÊ ¸¶´Ù µ¶µ¥¹ÌÁö°¡ ±ğÀÏ²¨³Ä.
+// nDamage : µ¥¹ÌÁö·®
 BOOL CMover::SetPoison( BOOL bApply, OBJID idAttacker, DWORD tmMaxTime, DWORD tmUnit, short wDamage )
 {
 	if( bApply )
 	{
 		if( GetAdjParam( DST_IMMUNITY ) & CHS_POISON ) 
-			return FALSE;		// ë…ì— ë©´ì—­ìƒíƒœë‹¤.
+			return FALSE;		// µ¶¿¡ ¸é¿ª»óÅÂ´Ù.
 		SetDestParam( DST_CHRSTATE, CHS_POISON, NULL_CHGPARAM );
 		if( tmMaxTime == -1 )
-			Error( "SetPoison : %s ë…íš¨ê³¼ì˜ ì§€ì†ì‹œê°„ì´ ì§€ì •ë˜ì§€ ì•ŠìŒ", GetName() );
+			Error( "SetPoison : %s µ¶È¿°úÀÇ Áö¼Ó½Ã°£ÀÌ ÁöÁ¤µÇÁö ¾ÊÀ½", GetName() );
 		if( tmUnit == -1 )
-			Error( "SetPoison : %s ë…íš¨ê³¼ì˜ tick ì‹œê°„ì´ ì§€ì •ë˜ì§€ ì•ŠìŒ", GetName() );
+			Error( "SetPoison : %s µ¶È¿°úÀÇ tick ½Ã°£ÀÌ ÁöÁ¤µÇÁö ¾ÊÀ½", GetName() );
 		if( wDamage == -1 )
-			Error( "SetPoison : %s ë…íš¨ê³¼ì˜ í‹±ë‹¹ ë°ë¯¸ì§€ê°€ ì§€ì •ë˜ì§€ ì•ŠìŒ", GetName() );
+			Error( "SetPoison : %s µ¶È¿°úÀÇ Æ½´ç µ¥¹ÌÁö°¡ ÁöÁ¤µÇÁö ¾ÊÀ½", GetName() );
 		
 		m_wPoisonCnt = (short)( (tmMaxTime / 1000.0f) * PROCESS_COUNT );			// 1/1000
 		m_wPoisonDamage = wDamage;
@@ -2215,7 +2202,7 @@ BOOL CMover::SetPoison( BOOL bApply, OBJID idAttacker, DWORD tmMaxTime, DWORD tm
 	} else
 	{
 		if( GetAdjParam( DST_CHRSTATE) & CHS_POISON )
-			ResetDestParam( DST_CHRSTATE, CHS_POISON, TRUE );	// ë…ìƒíƒœ í•´ì œ
+			ResetDestParam( DST_CHRSTATE, CHS_POISON, TRUE );	// µ¶»óÅÂ ÇØÁ¦
 		m_wPoisonCnt = 0;
 		m_wPoisonDamage = 0;
 		m_tmPoisonUnit = 0;
@@ -2224,28 +2211,28 @@ BOOL CMover::SetPoison( BOOL bApply, OBJID idAttacker, DWORD tmMaxTime, DWORD tm
 	return TRUE;
 }
 
-// thisë¥¼ ì•”í‘ìƒíƒœì— ë¹ ì§€ê²Œ í•œë‹¤
-// tmMaxTime : ì•”í‘ ì§€ì†ì‹œê°„(1/1000)
-// nAdjHitRate : ì§€ì†ì‹œê°„ë™ì•ˆ ìˆ˜ì •ë  ëª…ì¤‘ë¥ 
-// bApply : ì ìš©/í•´ì œ
+// this¸¦ ¾ÏÈæ»óÅÂ¿¡ ºüÁö°Ô ÇÑ´Ù
+// tmMaxTime : ¾ÏÈæ Áö¼Ó½Ã°£(1/1000)
+// nAdjHitRate : Áö¼Ó½Ã°£µ¿¾È ¼öÁ¤µÉ ¸íÁß·ü
+// bApply : Àû¿ë/ÇØÁ¦
 BOOL CMover::SetDark( BOOL bApply, DWORD tmMaxTime, int nAdjHitRate )
 {
 	if( bApply )
 	{
 		if( GetAdjParam( DST_IMMUNITY ) & CHS_DARK ) 
-			return FALSE;		// ì•”í‘ì— ë©´ì—­ìƒíƒœë‹¤.
+			return FALSE;		// ¾ÏÈæ¿¡ ¸é¿ª»óÅÂ´Ù.
 		SetDestParam( DST_CHRSTATE, CHS_DARK, NULL_CHGPARAM );
 		SetDestParam( DST_ADJ_HITRATE, nAdjHitRate, NULL_CHGPARAM );
 		m_wDarkCnt = (short)( (tmMaxTime / 1000.0f) * PROCESS_COUNT );
 		if( nAdjHitRate == -1 )
-			Error( "SetDark : %s ì–´ë‘ íš¨ê³¼ì˜ ëª…ì¤‘ë¥  ìˆ˜ì •ì¹˜ê°€ ì§€ì •ë˜ì§€ ì•ŠìŒ", GetName() );
+			Error( "SetDark : %s ¾îµÒÈ¿°úÀÇ ¸íÁß·ü ¼öÁ¤Ä¡°¡ ÁöÁ¤µÇÁö ¾ÊÀ½", GetName() );
 		m_wDarkVal = nAdjHitRate;
 	} else
 	{
 		if( GetAdjParam( DST_CHRSTATE) & CHS_DARK )
 		{
-			ResetDestParam( DST_CHRSTATE, CHS_DARK, TRUE );		// ì•”í‘ìƒíƒœí•´ì œ
-			ResetDestParam( DST_ADJ_HITRATE, m_wDarkVal, TRUE );	// ì•”í‘ë™ì•ˆ ìˆ˜ì •ëë˜ ëª…ì¤‘ë¥  í•´ì œ
+			ResetDestParam( DST_CHRSTATE, CHS_DARK, TRUE );		// ¾ÏÈæ»óÅÂÇØÁ¦
+			ResetDestParam( DST_ADJ_HITRATE, m_wDarkVal, TRUE );	// ¾ÏÈæµ¿¾È ¼öÁ¤µÆ´ø ¸íÁß·ü ÇØÁ¦
 //			if( m_wDarkCnt >= 0 )
 //				Error( "SetDark : %d", m_wDarkVal );
 		}
@@ -2255,23 +2242,23 @@ BOOL CMover::SetDark( BOOL bApply, DWORD tmMaxTime, int nAdjHitRate )
 	return TRUE;
 }
 
-// thisë¥¼ ì¶œí˜ˆì„ ì¼ìœ¼í‚¨ë‹¤. ë…ê³¼ ë¹„ìŠ·.
-// tmMaxTime : 1/1000ì´ˆ ë‹¨ìœ„.
-// tmUnit : ëª‡ì´ˆ ë§ˆë‹¤ ë°ë¯¸ì§€ê°€ ê¹ì¼êº¼ëƒ.
-// nDamage : ë°ë¯¸ì§€ëŸ‰
+// this¸¦ ÃâÇ÷À» ÀÏÀ¸Å²´Ù. µ¶°ú ºñ½Á.
+// tmMaxTime : 1/1000ÃÊ ´ÜÀ§.
+// tmUnit : ¸îÃÊ ¸¶´Ù µ¥¹ÌÁö°¡ ±ğÀÏ²¨³Ä.
+// nDamage : µ¥¹ÌÁö·®
 BOOL	CMover::SetBleeding( BOOL bApply, OBJID idAttacker, DWORD tmMaxTime, DWORD tmUnit, short wDamage )
 {
 	if( bApply )
 	{
-		if( GetAdjParam( DST_IMMUNITY ) & CHS_BLEEDING ) return FALSE;		// ì¶œí˜ˆì— ë©´ì—­ìƒíƒœë‹¤.
+		if( GetAdjParam( DST_IMMUNITY ) & CHS_BLEEDING ) return FALSE;		// ÃâÇ÷¿¡ ¸é¿ª»óÅÂ´Ù.
 		
 		SetDestParam( DST_CHRSTATE, CHS_BLEEDING, NULL_CHGPARAM );
 		if( tmMaxTime == -1 )
-			Error( "SetBleeding : %s ì¶œí˜ˆíš¨ê³¼ì˜ ì§€ì†ì‹œê°„ì´ ì§€ì •ë˜ì§€ ì•ŠìŒ", GetName() );
+			Error( "SetBleeding : %s ÃâÇ÷È¿°úÀÇ Áö¼Ó½Ã°£ÀÌ ÁöÁ¤µÇÁö ¾ÊÀ½", GetName() );
 		if( tmUnit == -1 )
-			Error( "SetBleeding : %s ì¶œí˜ˆíš¨ê³¼ì˜ tick ì‹œê°„ì´ ì§€ì •ë˜ì§€ ì•ŠìŒ", GetName() );
+			Error( "SetBleeding : %s ÃâÇ÷È¿°úÀÇ tick ½Ã°£ÀÌ ÁöÁ¤µÇÁö ¾ÊÀ½", GetName() );
 		if( wDamage == -1 )
-			Error( "SetBleeding : %s ì¶œí˜ˆíš¨ê³¼ì˜ í‹±ë‹¹ ë°ë¯¸ì§€ê°€ ì§€ì •ë˜ì§€ ì•ŠìŒ", GetName() );
+			Error( "SetBleeding : %s ÃâÇ÷È¿°úÀÇ Æ½´ç µ¥¹ÌÁö°¡ ÁöÁ¤µÇÁö ¾ÊÀ½", GetName() );
 		
 		m_wBleedingCnt = (short)( (tmMaxTime / 1000.0f) * PROCESS_COUNT );			// 1/1000
 		m_wBleedingDamage = wDamage;
@@ -2280,7 +2267,7 @@ BOOL	CMover::SetBleeding( BOOL bApply, OBJID idAttacker, DWORD tmMaxTime, DWORD 
 	} else
 	{
 		if( GetAdjParam( DST_CHRSTATE) & CHS_BLEEDING )
-			ResetDestParam( DST_CHRSTATE, CHS_BLEEDING, TRUE );	// ë…ìƒíƒœ í•´ì œ
+			ResetDestParam( DST_CHRSTATE, CHS_BLEEDING, TRUE );	// µ¶»óÅÂ ÇØÁ¦
 		m_wBleedingCnt = 0;
 		m_wBleedingDamage = 0;
 		m_tmBleedingUnit = 0;
@@ -2288,13 +2275,13 @@ BOOL	CMover::SetBleeding( BOOL bApply, OBJID idAttacker, DWORD tmMaxTime, DWORD 
 	return TRUE;
 }
 
-// dwStateë¥¼ í•´ì œí•¨
-// CHS_ALLì„ í•˜ë©´ ëª¨ë“  ë””ë²„í”„.
+// dwState¸¦ ÇØÁ¦ÇÔ
+// CHS_ALLÀ» ÇÏ¸é ¸ğµç µğ¹öÇÁ.
 void CMover::RemoveDebuff( DWORD dwState )
 {
-	// ìŠ¤í‚¬ë¡œ ê±¸ë¦°ê±´ ì´ê±¸ë¡œ í•´ì œí•´ì•¼í•˜ê³ 
+	// ½ºÅ³·Î °É¸°°Ç ÀÌ°É·Î ÇØÁ¦ÇØ¾ßÇÏ°í
 	RemoveChrStateBuffs( dwState );
-	// ìŠ¤í‚¬ì´ ì•„ë‹Œ ì•„ì´í…œê°™ì€ê±¸ë¡œ ìƒíƒœë§Œ ê±¸ë¦°ê±´ ì´ê±¸ë¡œ í’€ì–´ì•¼ í•œë‹¤.
+	// ½ºÅ³ÀÌ ¾Æ´Ñ ¾ÆÀÌÅÛ°°Àº°É·Î »óÅÂ¸¸ °É¸°°Ç ÀÌ°É·Î Ç®¾î¾ß ÇÑ´Ù.
 	if( dwState & CHS_DARK )
 		SetDark( FALSE );
 	if( dwState & CHS_POISON )
@@ -2305,7 +2292,7 @@ void CMover::RemoveDebuff( DWORD dwState )
 	if( dwState & CHS_BLEEDING )
 		SetBleeding( FALSE );
 	
-	#if __VER >= 11 // __MA_VER11_06				// í™•ìœ¨ìŠ¤í‚¬ íš¨ê³¼ìˆ˜ì • world,neuz
+	#if __VER >= 11 // __MA_VER11_06				// È®À²½ºÅ³ È¿°ú¼öÁ¤ world,neuz
 	if( dwState & CHS_DEBUFFALL )
 	{
 		RemoveDstParamBuffs( DST_SPEED );
@@ -2313,21 +2300,21 @@ void CMover::RemoveDebuff( DWORD dwState )
 		RemoveDstParamBuffs( DST_CHR_CHANCESTUN );
 		RemoveDstParamBuffs( DST_CHR_CHANCEBLEEDING );
 	}
-	#endif // __MA_VER11_06				// í™•ìœ¨ìŠ¤í‚¬ íš¨ê³¼ìˆ˜ì • world,neuz
+	#endif // __MA_VER11_06				// È®À²½ºÅ³ È¿°ú¼öÁ¤ world,neuz
 
 #endif	//
 
-	// ì´ê±° ì•ˆì—ì„œ Resetì„ í˜¸ì¶œí•œë‹¤.
+	// ÀÌ°Å ¾È¿¡¼­ ResetÀ» È£ÃâÇÑ´Ù.
 	SetDestParam( DST_CURECHR, dwState, NULL_CHGPARAM );
 }
 
-// thisì—ê²Œ ê±¸ë¦° ë²„í”„ë¥¼ 1ê°œ ì—†ì•¤ë‹¤.
+// this¿¡°Ô °É¸° ¹öÇÁ¸¦ 1°³ ¾ø¾Ø´Ù.
 void CMover::RemoveBuffOne( DWORD dwSkill )
 {
 #ifdef __BUFF_1107
 	m_buffs.RemoveBuffs( RBF_ONCE | RBF_GOODSKILL, 0 );
 #else	// __BUFF_1107
-	m_SkillState.RemoveOneSkillBuff();		// ì´ë¡œìš´ë²„í”„ìŠ¤í‚¬ í•˜ë‚˜ë¥¼ ì œê±° í•œë‹¤.
+	m_SkillState.RemoveOneSkillBuff();		// ÀÌ·Î¿î¹öÇÁ½ºÅ³ ÇÏ³ª¸¦ Á¦°Å ÇÑ´Ù.
 #endif	// __BUFF_1107
 }	
 
@@ -2336,7 +2323,7 @@ void CMover::RemoveBuffAll( void )
 #ifdef __BUFF_1107
 	m_buffs.RemoveBuffs( RBF_GOODSKILL, 0 );
 #else	// __BUFF_1107
-	m_SkillState.RemoveAllSkillBuff();		// ì´ë¡œìš´ë²„í”„ìŠ¤í‚¬ì„ ëª¨ë‘ ì°¾ì•„ ì‚­ì œ í•œë‹¤.
+	m_SkillState.RemoveAllSkillBuff();		// ÀÌ·Î¿î¹öÇÁ½ºÅ³À» ¸ğµÎ Ã£¾Æ »èÁ¦ ÇÑ´Ù.
 #endif	// __BUFF_1107
 }
 
@@ -2345,7 +2332,7 @@ void CMover::RemoveBuffAll( void )
 
 ///////////////////////////////////////////////////////////////////////////////
 // 
-// ë…, ì•”í‘ë“± ì¶”ê°€ëŠ¥ë ¥ì¹˜ì˜ ì„¸íŒ…ì€ ì´ê±¸ë¡œ í•˜ì.
+// µ¶, ¾ÏÈæµî Ãß°¡´É·ÂÄ¡ÀÇ ¼¼ÆÃÀº ÀÌ°É·Î ÇÏÀÚ.
 void CMover::SetDestParam( int nIdx, ItemProp *pProp, BOOL bSend )
 {
 	SetDestParam( pProp->dwDestParam[nIdx], pProp->nAdjParamVal[nIdx], pProp->dwChgParamVal[nIdx], bSend );
@@ -2356,7 +2343,7 @@ void CMover::ResetDestParam( int nIdx, ItemProp *pProp, BOOL bSend )
 	ResetDestParam( pProp->dwDestParam[nIdx], pProp->nAdjParamVal[nIdx], bSend );
 }
 
-// ëª©í‘œ íŒŒë¼ë¯¸í„°ë¥¼ ì…‹í•œë‹¤.
+// ¸ñÇ¥ ÆÄ¶ó¹ÌÅÍ¸¦ ¼ÂÇÑ´Ù.
 void CMover::SetDestParam( int nItemIdx, BOOL bSend )
 {
 	ItemProp* pItemProp = prj.GetItemProp( nItemIdx );
@@ -2372,20 +2359,20 @@ void CMover::SetDestParam( int nItemIdx, BOOL bSend )
 
 //--------------------------------------------------------------------------
 //
-// ëª©í‘œ íŒŒë¼ë©”íƒ€ë¥¼ ì…‹í•œë‹¤.
+// ¸ñÇ¥ ÆÄ¶ó¸ŞÅ¸¸¦ ¼ÂÇÑ´Ù.
 void CMover::SetDestParam( int nDstParameter, int nAdjParameterValue, int nChgParameterValue, BOOL bSend )
 {
 	BOOL fSuccess	= FALSE;
 
-#if __VER >= 10 // __LEGEND	//	10ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
+#if __VER >= 10 // __LEGEND	//	10Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
 	if( (nDstParameter < 0 ) && ( nDstParameter != DST_ADJDEF_RATE && nDstParameter != DST_ADJDEF ) )
 		return;
 #else
 	if( nDstParameter < 0 )
 		return;
-#endif	//__LEGEND	//	10ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
+#endif	//__LEGEND	//	10Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
 	
-	// HP, MPë“±ì€ SetPointParamìœ¼ë¡œ ì²˜ë¦¬í•œë‹¤. ê·¼ë”” SetDestParam í•˜ë‚˜ë¡œ í†µì¼ì‹œì¼°ìœ¼ë©´ ë‚«ì§€ ì•Šì„ê¹Œ?
+	// HP, MPµîÀº SetPointParamÀ¸·Î Ã³¸®ÇÑ´Ù. ±Ùµğ SetDestParam ÇÏ³ª·Î ÅëÀÏ½ÃÄ×À¸¸é ³´Áö ¾ÊÀ»±î?
 	switch( nDstParameter )
 	{
 #ifdef __WORLDSERVER
@@ -2420,13 +2407,13 @@ void CMover::SetDestParam( int nDstParameter, int nAdjParameterValue, int nChgPa
 	case DST_FP:	SetPointParam( nDstParameter, GetFatiguePoint() + nAdjParameterValue );	return;
 #endif // __WORLDSERVER
 	case DST_GOLD:	
-#ifdef __PERIN_BUY_BUG	// chipi_091219 ì¶”ê°€
+#ifdef __PERIN_BUY_BUG	// chipi_091219 Ãß°¡
 		Error( "SetDestParam( DST_GOLD ) - [User:%s(%07d)], [Value:%d]", static_cast<CUser*>(this)->GetName(), static_cast<CUser*>(this)->m_idPlayer, nAdjParameterValue );
 		return;
 #endif // __PERIN_BUY_BUG
 
 		if( AddGold( nAdjParameterValue ) == FALSE )	
-			SetGold( 0 );		// underflowì´ë©´ 0ë¡œ ë§Œë“ ë‹¤. ì´ì „ì½”ë“œì™€ í˜¸í™˜ë˜ê²Œ í•œë‹¤. ë­”ê°€ ì°œì°œ 
+			SetGold( 0 );		// underflowÀÌ¸é 0·Î ¸¸µç´Ù. ÀÌÀüÄÚµå¿Í È£È¯µÇ°Ô ÇÑ´Ù. ¹º°¡ ÂòÂò 
 		return;
 
 	case DST_RESIST_ALL:
@@ -2466,21 +2453,21 @@ void CMover::SetDestParam( int nDstParameter, int nAdjParameterValue, int nChgPa
 
 	case DST_HP_RECOVERY_RATE:
 		{
-			int nMax	= GetMaxOriginHitPoint();		// ë²„í”„ì˜ ì˜í–¥ì„ ë°›ì§€ ì•Šì€ ì˜¤ë¦¬ì§€ë‚  ì–‘
+			int nMax	= GetMaxOriginHitPoint();		// ¹öÇÁÀÇ ¿µÇâÀ» ¹ŞÁö ¾ÊÀº ¿À¸®Áö³¯ ¾ç
 			int nRecv	= (int)( (nMax * (nAdjParameterValue / 100.0f)) );
 			SetDestParam( DST_HP_RECOVERY, nRecv, NULL_CHGPARAM, bSend );
 		}
 		return;
 	case DST_MP_RECOVERY_RATE:
 		{
-			int nMax	= GetMaxOriginManaPoint();		// ë²„í”„ì˜ ì˜í–¥ì„ ë°›ì§€ ì•Šì€ ì˜¤ë¦¬ì§€ë‚  ì–‘
+			int nMax	= GetMaxOriginManaPoint();		// ¹öÇÁÀÇ ¿µÇâÀ» ¹ŞÁö ¾ÊÀº ¿À¸®Áö³¯ ¾ç
 			int nRecv	= (int)( (nMax * (nAdjParameterValue / 100.0f)) );
 			SetDestParam( DST_MP_RECOVERY, nRecv, NULL_CHGPARAM, bSend );
 		}
 		return;
 	case DST_FP_RECOVERY_RATE:
 		{
-			int nMax	= GetMaxOriginFatiguePoint();		// ë²„í”„ì˜ ì˜í–¥ì„ ë°›ì§€ ì•Šì€ ì˜¤ë¦¬ì§€ë‚  ì–‘
+			int nMax	= GetMaxOriginFatiguePoint();		// ¹öÇÁÀÇ ¿µÇâÀ» ¹ŞÁö ¾ÊÀº ¿À¸®Áö³¯ ¾ç
 			int nRecv	= (int)( (nMax * (nAdjParameterValue / 100.0f)) );
 			SetDestParam( DST_FP_RECOVERY, nRecv, NULL_CHGPARAM, bSend );
 		}
@@ -2498,17 +2485,17 @@ void CMover::SetDestParam( int nDstParameter, int nAdjParameterValue, int nChgPa
 	case DST_ALL_RECOVERY_RATE:
 		{
 			// HP
-			int nMax	= GetMaxOriginHitPoint();		// ë²„í”„ì˜ ì˜í–¥ì„ ë°›ì§€ ì•Šì€ ì˜¤ë¦¬ì§€ë‚  ì–‘
+			int nMax	= GetMaxOriginHitPoint();		// ¹öÇÁÀÇ ¿µÇâÀ» ¹ŞÁö ¾ÊÀº ¿À¸®Áö³¯ ¾ç
 			int nRecv	= (int)( (nMax * (nAdjParameterValue / 100.0f)) );
 			SetDestParam( DST_HP_RECOVERY, nRecv, NULL_CHGPARAM, bSend );
 
 			// MP
-			nMax	= GetMaxOriginManaPoint();		// ë²„í”„ì˜ ì˜í–¥ì„ ë°›ì§€ ì•Šì€ ì˜¤ë¦¬ì§€ë‚  ì–‘
+			nMax	= GetMaxOriginManaPoint();		// ¹öÇÁÀÇ ¿µÇâÀ» ¹ŞÁö ¾ÊÀº ¿À¸®Áö³¯ ¾ç
 			nRecv	= (int)( (nMax * (nAdjParameterValue / 100.0f)) );
 			SetDestParam( DST_MP_RECOVERY, nRecv, NULL_CHGPARAM, bSend );
 
 			// FP
-			nMax	= GetMaxOriginFatiguePoint();		// ë²„í”„ì˜ ì˜í–¥ì„ ë°›ì§€ ì•Šì€ ì˜¤ë¦¬ì§€ë‚  ì–‘
+			nMax	= GetMaxOriginFatiguePoint();		// ¹öÇÁÀÇ ¿µÇâÀ» ¹ŞÁö ¾ÊÀº ¿À¸®Áö³¯ ¾ç
 			nRecv	= (int)( (nMax * (nAdjParameterValue / 100.0f)) );
 			SetDestParam( DST_FP_RECOVERY, nRecv, NULL_CHGPARAM, bSend );
 		}
@@ -2525,21 +2512,21 @@ void CMover::SetDestParam( int nDstParameter, int nAdjParameterValue, int nChgPa
 		return;
 	case DST_KILL_HP_RATE:
 		{
-			int nMax	= GetMaxOriginHitPoint();		// ë²„í”„ì˜ ì˜í–¥ì„ ë°›ì§€ ì•Šì€ ì˜¤ë¦¬ì§€ë‚  ì–‘
+			int nMax	= GetMaxOriginHitPoint();		// ¹öÇÁÀÇ ¿µÇâÀ» ¹ŞÁö ¾ÊÀº ¿À¸®Áö³¯ ¾ç
 			int nRecv	= (int)( (nMax * (nAdjParameterValue / 100.0f)) );
 			SetDestParam( DST_KILL_HP, nRecv, NULL_CHGPARAM, bSend );
 		}
 		return;
 	case DST_KILL_MP_RATE:
 		{
-			int nMax	= GetMaxOriginManaPoint();		// ë²„í”„ì˜ ì˜í–¥ì„ ë°›ì§€ ì•Šì€ ì˜¤ë¦¬ì§€ë‚  ì–‘
+			int nMax	= GetMaxOriginManaPoint();		// ¹öÇÁÀÇ ¿µÇâÀ» ¹ŞÁö ¾ÊÀº ¿À¸®Áö³¯ ¾ç
 			int nRecv	= (int)( (nMax * (nAdjParameterValue / 100.0f)) );
 			SetDestParam( DST_KILL_MP, nRecv, NULL_CHGPARAM, bSend );
 		}
 		return;
 	case DST_KILL_FP_RATE:
 		{
-			int nMax	= GetMaxOriginFatiguePoint();		// ë²„í”„ì˜ ì˜í–¥ì„ ë°›ì§€ ì•Šì€ ì˜¤ë¦¬ì§€ë‚  ì–‘
+			int nMax	= GetMaxOriginFatiguePoint();		// ¹öÇÁÀÇ ¿µÇâÀ» ¹ŞÁö ¾ÊÀº ¿À¸®Áö³¯ ¾ç
 			int nRecv	= (int)( (nMax * (nAdjParameterValue / 100.0f)) );
 			SetDestParam( DST_KILL_FP, nRecv, NULL_CHGPARAM, bSend );
 		}
@@ -2547,17 +2534,17 @@ void CMover::SetDestParam( int nDstParameter, int nAdjParameterValue, int nChgPa
 	case DST_KILL_ALL_RATE:
 		{
 			// HP
-			int nMax	= GetMaxOriginHitPoint();		// ë²„í”„ì˜ ì˜í–¥ì„ ë°›ì§€ ì•Šì€ ì˜¤ë¦¬ì§€ë‚  ì–‘
+			int nMax	= GetMaxOriginHitPoint();		// ¹öÇÁÀÇ ¿µÇâÀ» ¹ŞÁö ¾ÊÀº ¿À¸®Áö³¯ ¾ç
 			int nRecv	= (int)( (nMax * (nAdjParameterValue / 100.0f)) );
 			SetDestParam( DST_KILL_HP, nRecv, NULL_CHGPARAM, bSend );
 			
 			// MP
-			nMax	= GetMaxOriginManaPoint();		// ë²„í”„ì˜ ì˜í–¥ì„ ë°›ì§€ ì•Šì€ ì˜¤ë¦¬ì§€ë‚  ì–‘
+			nMax	= GetMaxOriginManaPoint();		// ¹öÇÁÀÇ ¿µÇâÀ» ¹ŞÁö ¾ÊÀº ¿À¸®Áö³¯ ¾ç
 			nRecv	= (int)( (nMax * (nAdjParameterValue / 100.0f)) );
 			SetDestParam( DST_KILL_MP, nRecv, NULL_CHGPARAM, bSend );
 			
 			// FP
-			nMax	= GetMaxOriginFatiguePoint();		// ë²„í”„ì˜ ì˜í–¥ì„ ë°›ì§€ ì•Šì€ ì˜¤ë¦¬ì§€ë‚  ì–‘
+			nMax	= GetMaxOriginFatiguePoint();		// ¹öÇÁÀÇ ¿µÇâÀ» ¹ŞÁö ¾ÊÀº ¿À¸®Áö³¯ ¾ç
 			nRecv	= (int)( (nMax * (nAdjParameterValue / 100.0f)) );
 			SetDestParam( DST_KILL_FP, nRecv, NULL_CHGPARAM, bSend );
 		}
@@ -2570,20 +2557,20 @@ void CMover::SetDestParam( int nDstParameter, int nAdjParameterValue, int nChgPa
 		return;
 	} // switch
 
-	// ì´ ê²€ì‚¬ë¥¼ ì™œ ìœ„ì—ë‹¤ ì•ˆë„£ê³  ì—¬ê¸°ë‹¤ ë„£ì—ˆëƒë©´
-	// DST_GOLD, PXP, RESIST_ALLê°™ì€ê²½ìš°ëŠ” MAX_ADJPARAMARYë³´ë‹¤ ë” í°ê°’ì„ ì‚¬ìš©í•œë‹¤. 
-	// ê·¸ë˜ì„œ ê·¸ëŸ°ê²ƒë“¤ì€ ìœ„ì—ì„œ ì²˜ë¦¬í•˜ê³  ë°”ë¡œ ë¦¬í„´í•˜ê³ 
-	// ì¼ë°˜ì ì¸ê²ƒë“¤ë§Œ ì´ìª½ìœ¼ë¡œ ì˜¨ë‹¤.
+	// ÀÌ °Ë»ç¸¦ ¿Ö À§¿¡´Ù ¾È³Ö°í ¿©±â´Ù ³Ö¾ú³Ä¸é
+	// DST_GOLD, PXP, RESIST_ALL°°Àº°æ¿ì´Â MAX_ADJPARAMARYº¸´Ù ´õ Å«°ªÀ» »ç¿ëÇÑ´Ù. 
+	// ±×·¡¼­ ±×·±°ÍµéÀº À§¿¡¼­ Ã³¸®ÇÏ°í ¹Ù·Î ¸®ÅÏÇÏ°í
+	// ÀÏ¹İÀûÀÎ°Íµé¸¸ ÀÌÂÊÀ¸·Î ¿Â´Ù.
 	if( nDstParameter >= MAX_ADJPARAMARY)
 		return;
 	
-	if( nAdjParameterValue != 0 )	// 0ì´ ë“¤ì–´ì˜¨ê²ƒë„ ì˜ëª»ëœê±°ë‹ˆê¹Œ ê²½ê³ ë¥¼ ë‚´ì•¼ í•˜ì§€ ì•Šì„ê¹Œ ì‹¶ë‹¤.
+	if( nAdjParameterValue != 0 )	// 0ÀÌ µé¾î¿Â°Íµµ Àß¸øµÈ°Å´Ï±î °æ°í¸¦ ³»¾ß ÇÏÁö ¾ÊÀ»±î ½Í´Ù.
 	{
 		fSuccess	= TRUE;
 
 		switch( nDstParameter )
 		{
-		case DST_CHRSTATE:		// ìƒíƒœë³€ê²½ì˜ ê²½ìš°ëŠ”
+		case DST_CHRSTATE:		// »óÅÂº¯°æÀÇ °æ¿ì´Â
 		case DST_IMMUNITY:
 			if( nAdjParameterValue != NULL_ID )
 			{
@@ -2592,16 +2579,16 @@ void CMover::SetDestParam( int nDstParameter, int nAdjParameterValue, int nChgPa
 					Error( "SetDestParam : Adj == -1, %s", GetName() );
 					return;
 				}
-				m_adjParamAry[nDstParameter] |= nAdjParameterValue;		// ë¹„íŠ¸ë¡œ ì˜¨ì˜¤í”„ ëœë‹¤.
+				m_adjParamAry[nDstParameter] |= nAdjParameterValue;		// ºñÆ®·Î ¿Â¿ÀÇÁ µÈ´Ù.
 			} else
 				fSuccess = FALSE;
 			break;
-		case DST_CURECHR:		// ìƒíƒœí•´ì œ
+		case DST_CURECHR:		// »óÅÂÇØÁ¦
 			ResetDestParam( DST_CHRSTATE, nAdjParameterValue, bSend );
 			return;
 		case DST_REFLECT_DAMAGE:
-			m_adjParamAry[nDstParameter] += nAdjParameterValue;		// ë°ë¯¸ì§€ì˜ ëª‡%ë¥¼ ëŒë ¤ì£¼ëŠ”ê°€?
-			m_chgParamAry[nDstParameter] = nChgParameterValue;		// ëª‡%ì˜ í™•ë¥ ë¡œ ë°œë™ë˜ëŠ”ê°€?
+			m_adjParamAry[nDstParameter] += nAdjParameterValue;		// µ¥¹ÌÁöÀÇ ¸î%¸¦ µ¹·ÁÁÖ´Â°¡?
+			m_chgParamAry[nDstParameter] = nChgParameterValue;		// ¸î%ÀÇ È®·ü·Î ¹ßµ¿µÇ´Â°¡?
 			break;
 		case DST_CHR_CHANCEBLEEDING:
 		case DST_CHR_CHANCESTEALHP:
@@ -2609,17 +2596,17 @@ void CMover::SetDestParam( int nDstParameter, int nAdjParameterValue, int nChgPa
 		case DST_CHR_CHANCEDARK:
 		case DST_CHR_CHANCESTUN:
 		case DST_AUTOHP:
-			m_adjParamAry[nDstParameter] += nAdjParameterValue;		// ì°¬ìŠ¤ í™•ë¥ .	// %ë¯¸ë§Œìœ¼ë¡œ íšŒë³µë˜ê²Œ í• êº¼ëƒ.
-			m_chgParamAry[nDstParameter] = nChgParameterValue;		// ì°¬ìŠ¤ê°€ ê±¸ë ¸ì„ë•Œ ì§€ì†ì‹œê°„		// %HPê°€ íšŒë³µë êº¼ëƒ.
+			m_adjParamAry[nDstParameter] += nAdjParameterValue;		// Âù½º È®·ü.	// %¹Ì¸¸À¸·Î È¸º¹µÇ°Ô ÇÒ²¨³Ä.
+			m_chgParamAry[nDstParameter] = nChgParameterValue;		// Âù½º°¡ °É·ÈÀ»¶§ Áö¼Ó½Ã°£		// %HP°¡ È¸º¹µÉ²¨³Ä.
 			break;
 #if __VER >= 9	// __PET_0410
 		case DST_HEAL:
-			m_nHealCnt	= (short)( PROCESS_COUNT * 6.0f );		// ì¿¨íƒ€ì„ 6ì´ˆ
+			m_nHealCnt	= (short)( PROCESS_COUNT * 6.0f );		// ÄğÅ¸ÀÓ 6ÃÊ
 			m_adjParamAry[nDstParameter]	+= nAdjParameterValue;	
 			break;
 #endif	// __PET_0410
 		default:
-			m_adjParamAry[nDstParameter] += nAdjParameterValue;		// ëˆ„ì 
+			m_adjParamAry[nDstParameter] += nAdjParameterValue;		// ´©Àû
 			break;
 		}
 	}
@@ -2628,7 +2615,7 @@ void CMover::SetDestParam( int nDstParameter, int nAdjParameterValue, int nChgPa
 	{
 		fSuccess	= TRUE;
 
-		// å°¹
+		// ëÅ
 		if( nDstParameter == DST_SPEED )
 		{
 			if( m_chgParamAry[nDstParameter] == 0x7FFFFFFF )
@@ -2637,7 +2624,7 @@ void CMover::SetDestParam( int nDstParameter, int nAdjParameterValue, int nChgPa
 		}
 		else
 		{
-			m_chgParamAry[nDstParameter] = nChgParameterValue;	// ê³ ì •ëœ ê°’.
+			m_chgParamAry[nDstParameter] = nChgParameterValue;	// °íÁ¤µÈ °ª.
 		}
 	}
 #ifdef __WORLDSERVER
@@ -2648,7 +2635,7 @@ void CMover::SetDestParam( int nDstParameter, int nAdjParameterValue, int nChgPa
 }
 
 //
-// ëª©í‘œ íŒŒë¼ë©”íƒ€ë¥¼ ë¦¬ì…‹í•œë‹¤.
+// ¸ñÇ¥ ÆÄ¶ó¸ŞÅ¸¸¦ ¸®¼ÂÇÑ´Ù.
 //
 void CMover::ResetDestParam( int nDstParameter, int nAdjParameterValue, BOOL fSend )
 {
@@ -2691,21 +2678,21 @@ void CMover::ResetDestParam( int nDstParameter, int nAdjParameterValue, BOOL fSe
 
 	case DST_HP_RECOVERY_RATE:
 		{
-			int nMax	= GetMaxOriginHitPoint();		// ë²„í”„ì˜ ì˜í–¥ì„ ë°›ì§€ ì•Šì€ ì˜¤ë¦¬ì§€ë‚  ì–‘
+			int nMax	= GetMaxOriginHitPoint();		// ¹öÇÁÀÇ ¿µÇâÀ» ¹ŞÁö ¾ÊÀº ¿À¸®Áö³¯ ¾ç
 			int nRecv	= (int)( (nMax * (nAdjParameterValue / 100.0f)) );
 			ResetDestParam( DST_HP_RECOVERY, nRecv, TRUE );
 		}
 		return;
 	case DST_MP_RECOVERY_RATE:
 		{
-			int nMax	= GetMaxOriginManaPoint();		// ë²„í”„ì˜ ì˜í–¥ì„ ë°›ì§€ ì•Šì€ ì˜¤ë¦¬ì§€ë‚  ì–‘
+			int nMax	= GetMaxOriginManaPoint();		// ¹öÇÁÀÇ ¿µÇâÀ» ¹ŞÁö ¾ÊÀº ¿À¸®Áö³¯ ¾ç
 			int nRecv	= (int)( (nMax * (nAdjParameterValue / 100.0f)) );
 			ResetDestParam( DST_MP_RECOVERY, nRecv, TRUE );
 		}
 		return;
 	case DST_FP_RECOVERY_RATE:
 		{
-			int nMax	= GetMaxOriginFatiguePoint();		// ë²„í”„ì˜ ì˜í–¥ì„ ë°›ì§€ ì•Šì€ ì˜¤ë¦¬ì§€ë‚  ì–‘
+			int nMax	= GetMaxOriginFatiguePoint();		// ¹öÇÁÀÇ ¿µÇâÀ» ¹ŞÁö ¾ÊÀº ¿À¸®Áö³¯ ¾ç
 			int nRecv	= (int)( (nMax * (nAdjParameterValue / 100.0f)) );
 			ResetDestParam( DST_FP_RECOVERY, nRecv, TRUE );
 		}
@@ -2723,17 +2710,17 @@ void CMover::ResetDestParam( int nDstParameter, int nAdjParameterValue, BOOL fSe
 	case DST_ALL_RECOVERY_RATE:
 		{
 			// HP
-			int nMax	= GetMaxOriginHitPoint();		// ë²„í”„ì˜ ì˜í–¥ì„ ë°›ì§€ ì•Šì€ ì˜¤ë¦¬ì§€ë‚  ì–‘
+			int nMax	= GetMaxOriginHitPoint();		// ¹öÇÁÀÇ ¿µÇâÀ» ¹ŞÁö ¾ÊÀº ¿À¸®Áö³¯ ¾ç
 			int nRecv	= (int)( (nMax * (nAdjParameterValue / 100.0f)) );
 			ResetDestParam( DST_HP_RECOVERY, nRecv, TRUE );
 			
 			// MP
-			nMax	= GetMaxOriginManaPoint();		// ë²„í”„ì˜ ì˜í–¥ì„ ë°›ì§€ ì•Šì€ ì˜¤ë¦¬ì§€ë‚  ì–‘
+			nMax	= GetMaxOriginManaPoint();		// ¹öÇÁÀÇ ¿µÇâÀ» ¹ŞÁö ¾ÊÀº ¿À¸®Áö³¯ ¾ç
 			nRecv	= (int)( (nMax * (nAdjParameterValue / 100.0f)) );
 			ResetDestParam( DST_MP_RECOVERY, nRecv, TRUE );
 			
 			// FP
-			nMax	= GetMaxOriginFatiguePoint();		// ë²„í”„ì˜ ì˜í–¥ì„ ë°›ì§€ ì•Šì€ ì˜¤ë¦¬ì§€ë‚  ì–‘
+			nMax	= GetMaxOriginFatiguePoint();		// ¹öÇÁÀÇ ¿µÇâÀ» ¹ŞÁö ¾ÊÀº ¿À¸®Áö³¯ ¾ç
 			nRecv	= (int)( (nMax * (nAdjParameterValue / 100.0f)) );
 			ResetDestParam( DST_FP_RECOVERY, nRecv, TRUE );
 		}
@@ -2750,21 +2737,21 @@ void CMover::ResetDestParam( int nDstParameter, int nAdjParameterValue, BOOL fSe
 		return;
 	case DST_KILL_HP_RATE:
 		{
-			int nMax	= GetMaxOriginHitPoint();		// ë²„í”„ì˜ ì˜í–¥ì„ ë°›ì§€ ì•Šì€ ì˜¤ë¦¬ì§€ë‚  ì–‘
+			int nMax	= GetMaxOriginHitPoint();		// ¹öÇÁÀÇ ¿µÇâÀ» ¹ŞÁö ¾ÊÀº ¿À¸®Áö³¯ ¾ç
 			int nRecv	= (int)( (nMax * (nAdjParameterValue / 100.0f)) );
 			ResetDestParam( DST_KILL_HP, nRecv, TRUE );
 		}
 		return;
 	case DST_KILL_MP_RATE:
 		{
-			int nMax	= GetMaxOriginManaPoint();		// ë²„í”„ì˜ ì˜í–¥ì„ ë°›ì§€ ì•Šì€ ì˜¤ë¦¬ì§€ë‚  ì–‘
+			int nMax	= GetMaxOriginManaPoint();		// ¹öÇÁÀÇ ¿µÇâÀ» ¹ŞÁö ¾ÊÀº ¿À¸®Áö³¯ ¾ç
 			int nRecv	= (int)( (nMax * (nAdjParameterValue / 100.0f)) );
 			ResetDestParam( DST_KILL_MP, nRecv, TRUE );
 		}
 		return;
 	case DST_KILL_FP_RATE:
 		{
-			int nMax	= GetMaxOriginFatiguePoint();		// ë²„í”„ì˜ ì˜í–¥ì„ ë°›ì§€ ì•Šì€ ì˜¤ë¦¬ì§€ë‚  ì–‘
+			int nMax	= GetMaxOriginFatiguePoint();		// ¹öÇÁÀÇ ¿µÇâÀ» ¹ŞÁö ¾ÊÀº ¿À¸®Áö³¯ ¾ç
 			int nRecv	= (int)( (nMax * (nAdjParameterValue / 100.0f)) );
 			ResetDestParam( DST_KILL_FP, nRecv, TRUE );
 		}
@@ -2772,15 +2759,15 @@ void CMover::ResetDestParam( int nDstParameter, int nAdjParameterValue, BOOL fSe
 	case DST_KILL_ALL_RATE:
 		{
 			// HP
-			int nMax	= GetMaxOriginHitPoint();		// ë²„í”„ì˜ ì˜í–¥ì„ ë°›ì§€ ì•Šì€ ì˜¤ë¦¬ì§€ë‚  ì–‘
+			int nMax	= GetMaxOriginHitPoint();		// ¹öÇÁÀÇ ¿µÇâÀ» ¹ŞÁö ¾ÊÀº ¿À¸®Áö³¯ ¾ç
 			int nRecv	= (int)( (nMax * (nAdjParameterValue / 100.0f)) );
 			ResetDestParam( DST_KILL_HP, nRecv, TRUE );
 			// MP
-			nMax	= GetMaxOriginManaPoint();		// ë²„í”„ì˜ ì˜í–¥ì„ ë°›ì§€ ì•Šì€ ì˜¤ë¦¬ì§€ë‚  ì–‘
+			nMax	= GetMaxOriginManaPoint();		// ¹öÇÁÀÇ ¿µÇâÀ» ¹ŞÁö ¾ÊÀº ¿À¸®Áö³¯ ¾ç
 			nRecv	= (int)( (nMax * (nAdjParameterValue / 100.0f)) );
 			ResetDestParam( DST_KILL_MP, nRecv, TRUE );
 			// FP
-			nMax	= GetMaxOriginFatiguePoint();		// ë²„í”„ì˜ ì˜í–¥ì„ ë°›ì§€ ì•Šì€ ì˜¤ë¦¬ì§€ë‚  ì–‘
+			nMax	= GetMaxOriginFatiguePoint();		// ¹öÇÁÀÇ ¿µÇâÀ» ¹ŞÁö ¾ÊÀº ¿À¸®Áö³¯ ¾ç
 			nRecv	= (int)( (nMax * (nAdjParameterValue / 100.0f)) );
 			ResetDestParam( DST_KILL_FP, nRecv, TRUE );
 		}
@@ -2793,25 +2780,25 @@ void CMover::ResetDestParam( int nDstParameter, int nAdjParameterValue, BOOL fSe
 	}
 
 
-	// ì´ ê²€ì‚¬ë¥¼ ì™œ ìœ„ì—ë‹¤ ì•ˆë„£ê³  ì—¬ê¸°ë‹¤ ë„£ì—ˆëƒë©´
-	// DST_GOLD, PXP, RESIST_ALLê°™ì€ê²½ìš°ëŠ” MAX_ADJPARAMARYë³´ë‹¤ ë” í°ê°’ì„ ì‚¬ìš©í•œë‹¤. 
-	// ê·¸ë˜ì„œ ê·¸ëŸ°ê²ƒë“¤ì€ ìœ„ì—ì„œ ì²˜ë¦¬í•˜ê³  ë°”ë¡œ ë¦¬í„´í•˜ê³ 
-	// ì¼ë°˜ì ì¸ê²ƒë“¤ë§Œ ì´ìª½ìœ¼ë¡œ ì˜¨ë‹¤.
+	// ÀÌ °Ë»ç¸¦ ¿Ö À§¿¡´Ù ¾È³Ö°í ¿©±â´Ù ³Ö¾ú³Ä¸é
+	// DST_GOLD, PXP, RESIST_ALL°°Àº°æ¿ì´Â MAX_ADJPARAMARYº¸´Ù ´õ Å«°ªÀ» »ç¿ëÇÑ´Ù. 
+	// ±×·¡¼­ ±×·±°ÍµéÀº À§¿¡¼­ Ã³¸®ÇÏ°í ¹Ù·Î ¸®ÅÏÇÏ°í
+	// ÀÏ¹İÀûÀÎ°Íµé¸¸ ÀÌÂÊÀ¸·Î ¿Â´Ù.
 	
 	if( nDstParameter >= MAX_ADJPARAMARY || nDstParameter < 0 )
 	{
-//		Error( "ResetDestParam %s : ì˜ëª»ëœ ê°’ nDstParam : %d", m_szName, nDstParameter );
+//		Error( "ResetDestParam %s : Àß¸øµÈ °ª nDstParam : %d", m_szName, nDstParameter );
 		return;
 	}
 	if( nAdjParameterValue != 0 ) 
 	{
 		if( nDstParameter == DST_CHRSTATE )
-			m_adjParamAry[nDstParameter] &= (~nAdjParameterValue);		// í•´ë‹¹ë¹„íŠ¸ ì˜¤í”„.
+			m_adjParamAry[nDstParameter] &= (~nAdjParameterValue);		// ÇØ´çºñÆ® ¿ÀÇÁ.
 		else
 			m_adjParamAry[nDstParameter] += (-nAdjParameterValue);
 	}
 
-	// å°¹
+	// ëÅ
 	if( nAdjParameterValue == 0 )	//
 	{
 		if( nDstParameter == DST_SPEED && m_chgParamAry[nDstParameter] != 0x7FFFFFFF && m_chgParamAry[nDstParameter] > 0 )
@@ -2827,25 +2814,25 @@ void CMover::ResetDestParam( int nDstParameter, int nAdjParameterValue, BOOL fSe
 #ifdef __WORLDSERVER
 	if( fSend == TRUE ) 
 	{
-	#ifdef	__SPEED_SYNC_0108 // ResetDestParam speed ìˆ˜ì •
+	#ifdef	__SPEED_SYNC_0108 // ResetDestParam speed ¼öÁ¤
 		if( nDstParameter == DST_SPEED )
 			g_UserMng.AddResetDestParamSync( this, nDstParameter, nAdjParameterValue, (int)m_adjParamAry[nDstParameter] );
 		else
 			g_UserMng.AddResetDestParam( this, nDstParameter, nAdjParameterValue );
-	#else	// 	__SPEED_SYNC_0108 ResetDestParam speed ìˆ˜ì •
+	#else	// 	__SPEED_SYNC_0108 ResetDestParam speed ¼öÁ¤
 		g_UserMng.AddResetDestParam( this, nDstParameter, nAdjParameterValue );
-	#endif	// 	__SPEED_SYNC_0108 ResetDestParam speed ìˆ˜ì •
+	#endif	// 	__SPEED_SYNC_0108 ResetDestParam speed ¼öÁ¤
 	}
 #endif	// __WORLDSERVER
 }
 
-#ifdef __SPEED_SYNC_0108		// ResetDestParam speed ìˆ˜ì •
+#ifdef __SPEED_SYNC_0108		// ResetDestParam speed ¼öÁ¤
 void CMover::ResetDestParamSync( int nDstParameter,int nAdjParameterValue, int nParameterValue, BOOL fSend )
 {
 #ifdef __CLIENT
 	if( nDstParameter >= MAX_ADJPARAMARY || nDstParameter < 0 )
 	{
-//		Error( "ResetDestParam %s : ì˜ëª»ëœ ê°’ nDstParam : %d", m_szName, nDstParameter );
+//		Error( "ResetDestParam %s : Àß¸øµÈ °ª nDstParam : %d", m_szName, nDstParameter );
 		return;
 	}
 
@@ -2864,16 +2851,16 @@ void CMover::ResetDestParamSync( int nDstParameter,int nAdjParameterValue, int n
 	}
 #endif	// __CLIENT
 }
-#endif // __SPEED_SYNC_0108		// ResetDestParam speed ìˆ˜ì •
+#endif // __SPEED_SYNC_0108		// ResetDestParam speed ¼öÁ¤
 
-// ìˆ˜ì • íŒŒë¼ë¯¸í„°ë¥¼ ì–»ëŠ”ë‹¤.
+// ¼öÁ¤ ÆÄ¶ó¹ÌÅÍ¸¦ ¾ò´Â´Ù.
 int CMover::GetAdjParam( int nDestParameter )
 {
 	if( nDestParameter < MAX_ADJPARAMARY )
 		return m_adjParamAry[ nDestParameter ];
 	return 0;
 }
-// êµì²´ íŒŒë¼ë¯¸í„°ë¥¼ ì–»ëŠ”ë‹¤.
+// ±³Ã¼ ÆÄ¶ó¹ÌÅÍ¸¦ ¾ò´Â´Ù.
 int CMover::GetChgParam( int nDestParameter )
 {
 	if( nDestParameter < MAX_ADJPARAMARY )
@@ -2881,7 +2868,7 @@ int CMover::GetChgParam( int nDestParameter )
 	return 0x7FFFFFFF;
 }
 
-// íŒŒë¼ë¯¸í„°ë¥¼ ì–»ëŠ”ë‹¤.
+// ÆÄ¶ó¹ÌÅÍ¸¦ ¾ò´Â´Ù.
 int CMover::GetParam( int nDest, int nParam )
 {
 	int nChgParam = GetChgParam( nDest );
@@ -2896,15 +2883,15 @@ int CMover::GetParam( int nDest, int nParam )
 }
 
 /////////////////////////////////////////////////////////////////////////////
-// ì—¬ê¸°ë¶€í„° íŒŒë¼ë©”íƒ€ ì–»ê¸° í•¨ìˆ˜ë“¤ 
-// GetParamì„ ì‚¬ìš©í•˜ì—¬ ìˆ˜ì •ëœ ê°’ì„ ë‚´ì¤€ë‹¤.
+// ¿©±âºÎÅÍ ÆÄ¶ó¸ŞÅ¸ ¾ò±â ÇÔ¼öµé 
+// GetParamÀ» »ç¿ëÇÏ¿© ¼öÁ¤µÈ °ªÀ» ³»ÁØ´Ù.
 //
-// íˆíŠ¸ í¬ì¸íŠ¸ ì–»ê¸° 
+// È÷Æ® Æ÷ÀÎÆ® ¾ò±â 
 int CMover::GetHitPoint()
 {
 	return GetParam( DST_HP, m_nHitPoint );
 }
-// ë§ˆë‚˜ í¬ì¸íŠ¸ ì–»ê¸° 
+// ¸¶³ª Æ÷ÀÎÆ® ¾ò±â 
 int CMover::GetManaPoint()
 {
 #ifdef __EVENT1206
@@ -2913,7 +2900,7 @@ int CMover::GetManaPoint()
 #endif	// __EVENT1206
 	return GetParam( DST_MP, m_nManaPoint );
 }
-// í”¼ì§€ì¹¼ í¬ì¸íŠ¸ ì–»ê¸°
+// ÇÇÁöÄ® Æ÷ÀÎÆ® ¾ò±â
 int CMover::GetFatiguePoint()
 {
 #ifdef __EVENT1206
@@ -2923,7 +2910,7 @@ int CMover::GetFatiguePoint()
 	return GetParam( DST_FP, m_nFatiguePoint );
 }
 
-// ìµœëŒ€ íˆíŠ¸ í¬ì¸íŠ¸ ì–»ê¸° 
+// ÃÖ´ë È÷Æ® Æ÷ÀÎÆ® ¾ò±â 
 int CMover::GetMaxHitPoint()
 {
 	if( IsInvalidObj(this) )	
@@ -2943,7 +2930,7 @@ int CMover::GetMaxHitPoint()
 	return nResult; 
 }
 
-// ìµœëŒ€ ë§ˆë‚˜ í¬ì¸íŠ¸ ì–»ê¸° 
+// ÃÖ´ë ¸¶³ª Æ÷ÀÎÆ® ¾ò±â 
 int CMover::GetMaxManaPoint()
 {
 	float factor = 1.0f;
@@ -2960,7 +2947,7 @@ int CMover::GetMaxManaPoint()
 	return nResult; 
 }
 
-// ìµœëŒ€ í”¼ë¡œ í¬ì¸íŠ¸ ì–»ê¸°
+// ÃÖ´ë ÇÇ·Î Æ÷ÀÎÆ® ¾ò±â
 int CMover::GetMaxFatiguePoint()
 {
 	float factor = 1.0f;
@@ -3035,8 +3022,8 @@ int CMover::GetMaxOriginManaPoint( BOOL bOriginal )
 
 	if( IsPlayer() )
 	{
-		// INT((((BaseLv*2) + (INT*8))*Jobê³„ìˆ˜) + 22)+(INT*Jobê³„ìˆ˜)) +  â‘  
-		// â‘  : ì•„ì´í…œì—ì˜í•œ ì¶”ê°€ ìƒìŠ¹ (%ë‹¨ìœ„) TDDO
+		// INT((((BaseLv*2) + (INT*8))*Job°è¼ö) + 22)+(INT*Job°è¼ö)) +  ¨ç 
+		// ¨ç : ¾ÆÀÌÅÛ¿¡ÀÇÇÑ Ãß°¡ »ó½Â (%´ÜÀ§) TDDO
 		JobProp* pProperty = prj.GetJobProp( GetJob() ); 
 		float factor = pProperty->fFactorMaxMP;
 		
@@ -3064,7 +3051,7 @@ int CMover::GetMaxOriginFatiguePoint( BOOL bOriginal )
 
 	if( IsPlayer() )
 	{
-		// (((BaseLv*2) + (STA*6))*Jobê³„ìˆ˜) +(STA*Jobê³„ìˆ˜) + â‘  + â‘¡
+		// (((BaseLv*2) + (STA*6))*Job°è¼ö) +(STA*Job°è¼ö) + ¨ç + ¨è
 		JobProp* pProperty = prj.GetJobProp( GetJob() ); 
 		float factor = pProperty->fFactorMaxFP;
 
@@ -3097,15 +3084,15 @@ int CMover::GetFatiguePointPercent( int nPercent )
 	return MulDiv( GetFatiguePoint(),  nPercent, nMax );
 }
 
-// HP íšŒë³µ ê°’ ì–»ê¸°
+// HP È¸º¹ °ª ¾ò±â
 /*
-	HP Recovery : íšŒë³µëŸ‰	PC/NPC : int(((í˜„ì¬ë ˆë²¨ + STA)/3.4)+2) + AddHpRecovery
-	MP Recovery : íšŒë³µëŸ‰	PC/NPC : int(((í˜„ì¬ë ˆë²¨ + INT)/4)+2) + Addecovery
-	FP Recovery : íšŒë³µëŸ‰	PC/NPC : int(((í˜„ì¬ë ˆë²¨ + STA + DEX)/4.5)+2) + AddHpRecovery
+	HP Recovery : È¸º¹·®	PC/NPC : int(((ÇöÀç·¹º§ + STA)/3.4)+2) + AddHpRecovery
+	MP Recovery : È¸º¹·®	PC/NPC : int(((ÇöÀç·¹º§ + INT)/4)+2) + Addecovery
+	FP Recovery : È¸º¹·®	PC/NPC : int(((ÇöÀç·¹º§ + STA + DEX)/4.5)+2) + AddHpRecovery
 
-	HP Recovery : íšŒë³µì†ë„	PC/NPC : íœ´ì‹(ì •ì§€)ì‹œ 5ì´ˆì— í•œë²ˆì”© íšŒë³µí•˜ë©° íœ´ì‹í•˜ì§€ ì•ŠëŠ” ìƒí™©ì—ì„œëŠ” 12ì´ˆì— í•œë²ˆì”© íšŒë³µí•¨ - AddHpRecoveryTime
-	MP Recovery : íšŒë³µì†ë„	PC/NPC : íœ´ì‹(ì •ì§€)ì‹œ 5ì´ˆì— í•œë²ˆì”© íšŒë³µí•˜ë©° íœ´ì‹í•˜ì§€ ì•ŠëŠ” ìƒí™©ì—ì„œëŠ” 12ì´ˆì— í•œë²ˆì”© íšŒë³µí•¨ - AddMpRecoveryTime
-	FP Recovery : íšŒë³µì†ë„	PC/NPC : íœ´ì‹(ì •ì§€)ì‹œ 5ì´ˆì— í•œë²ˆì”© íšŒë³µí•˜ë©° íœ´ì‹í•˜ì§€ ì•ŠëŠ” ìƒí™©ì—ì„œëŠ” 12ì´ˆì— í•œë²ˆì”© íšŒë³µí•¨ - AddFpRecoveryTime
+	HP Recovery : È¸º¹¼Óµµ	PC/NPC : ÈŞ½Ä(Á¤Áö)½Ã 5ÃÊ¿¡ ÇÑ¹ø¾¿ È¸º¹ÇÏ¸ç ÈŞ½ÄÇÏÁö ¾Ê´Â »óÈ²¿¡¼­´Â 12ÃÊ¿¡ ÇÑ¹ø¾¿ È¸º¹ÇÔ - AddHpRecoveryTime
+	MP Recovery : È¸º¹¼Óµµ	PC/NPC : ÈŞ½Ä(Á¤Áö)½Ã 5ÃÊ¿¡ ÇÑ¹ø¾¿ È¸º¹ÇÏ¸ç ÈŞ½ÄÇÏÁö ¾Ê´Â »óÈ²¿¡¼­´Â 12ÃÊ¿¡ ÇÑ¹ø¾¿ È¸º¹ÇÔ - AddMpRecoveryTime
+	FP Recovery : È¸º¹¼Óµµ	PC/NPC : ÈŞ½Ä(Á¤Áö)½Ã 5ÃÊ¿¡ ÇÑ¹ø¾¿ È¸º¹ÇÏ¸ç ÈŞ½ÄÇÏÁö ¾Ê´Â »óÈ²¿¡¼­´Â 12ÃÊ¿¡ ÇÑ¹ø¾¿ È¸º¹ÇÔ - AddFpRecoveryTime
 
   */
 int CMover::GetHPRecovery()
@@ -3117,14 +3104,14 @@ int CMover::GetHPRecovery()
 		fFactor = pProperty->fFactorHPRecovery;
 	}
 
-	//(ë ˆë²¨/3)+ (MaxHP/ (500* ë ˆë²¨))+(STA*Jobê³„ìˆ˜)
+	//(·¹º§/3)+ (MaxHP/ (500* ·¹º§))+(STA*Job°è¼ö)
 	int nValue = (int)( (GetLevel() / 3.0f) + (GetMaxHitPoint() / (500.f * GetLevel())) + (GetSta() * fFactor) );
 #if __VER >= 9 // __RECOVERY10
-	nValue	= (int)( nValue - ( nValue * 0.1f ) ); // íšŒë³µëŸ‰ 10% í•˜í–¥
+	nValue	= (int)( nValue - ( nValue * 0.1f ) ); // È¸º¹·® 10% ÇÏÇâ
 #endif //__RECOVERY10
 	return GetParam( DST_HP_RECOVERY, nValue );
 }
-// MP íšŒë³µ ê°’ ì–»ê¸°
+// MP È¸º¹ °ª ¾ò±â
 int CMover::GetMPRecovery()
 {
 	float fFactor = 1.0f;
@@ -3134,14 +3121,14 @@ int CMover::GetMPRecovery()
 		fFactor = pProperty->fFactorMPRecovery;
 	}
 
-	// ((ë ˆë²¨*1.5)+(MaxMP/(500*ë ˆë²¨))+(INT*Jobê³„ìˆ˜))*0.2
+	// ((·¹º§*1.5)+(MaxMP/(500*·¹º§))+(INT*Job°è¼ö))*0.2
 	int nValue = (int)( ((GetLevel() * 1.5f) + (GetMaxManaPoint() / (500.f * GetLevel())) + (GetInt() * fFactor)) * 0.2f );
 #if __VER >= 9 // __RECOVERY10
-	nValue	= (int)( nValue - ( nValue * 0.1f ) ); // íšŒë³µëŸ‰ 10% í•˜í–¥
+	nValue	= (int)( nValue - ( nValue * 0.1f ) ); // È¸º¹·® 10% ÇÏÇâ
 #endif //__RECOVERY10
 	return GetParam( DST_MP_RECOVERY, nValue );
 }
-// FP íšŒë³µ ê°’ ì–»ê¸° 
+// FP È¸º¹ °ª ¾ò±â 
 int CMover::GetFPRecovery()
 {
 	float fFactor = 1.0f;
@@ -3150,21 +3137,21 @@ int CMover::GetFPRecovery()
 		JobProp* pProperty = prj.GetJobProp( GetJob() ); 
 		fFactor = pProperty->fFactorFPRecovery;
 	}
-	// ((ë ˆë²¨*2)+(MaxFP/(500*ë ˆë²¨))+(STA*Jobê³„ìˆ˜))*0.2
+	// ((·¹º§*2)+(MaxFP/(500*·¹º§))+(STA*Job°è¼ö))*0.2
 	int nValue = (int)( ((GetLevel() * 2.0f) + (GetMaxFatiguePoint() / (500.f * GetLevel())) + (GetSta() * fFactor)) * 0.2f );
 #if __VER >= 9 // __RECOVERY10
-	nValue	= (int)( nValue - ( nValue * 0.1f ) ); // íšŒë³µëŸ‰ 10% í•˜í–¥
+	nValue	= (int)( nValue - ( nValue * 0.1f ) ); // È¸º¹·® 10% ÇÏÇâ
 #endif //__RECOVERY10
 	return GetParam( DST_FP_RECOVERY, nValue );
 }
 
 #ifdef __CLIENT
-// ëª…ì„± ì´ë¦„ì„ ìŠ¤íŠ¸ë§ìœ¼ë¡œ ëŒë ¤ì¤€ë‹¤.
+// ¸í¼º ÀÌ¸§À» ½ºÆ®¸µÀ¸·Î µ¹·ÁÁØ´Ù.
 LPCTSTR CMover::GetFameName( void )
 {
 	switch( GetJob() )
 	{
-	// ì•„í¬ë¡œë±ƒ
+	// ¾ÆÅ©·Î¹î
 	case JOB_ACROBAT:
 	case JOB_JESTER:
 	case JOB_RANGER:
@@ -3184,7 +3171,7 @@ LPCTSTR CMover::GetFameName( void )
 		else if( m_nFame >= 10 )	return prj.GetText( TID_GAME_ACR_FAME01 );
 		break;
 
-	// ë¨¸ì„œë„ˆë¦¬ì¼ë•Œ
+	// ¸Ó¼­³Ê¸®ÀÏ¶§
 	case JOB_MERCENARY:	
 	case JOB_KNIGHT:	
 	case JOB_BLADE:
@@ -3203,7 +3190,7 @@ LPCTSTR CMover::GetFameName( void )
 		else if( m_nFame >= 100 )	return prj.GetText( TID_GAME_MER_FAME02 );
 		else if( m_nFame >= 10 )	return prj.GetText( TID_GAME_MER_FAME01 );
 		break;
-	// ë§¤ì§€ì…˜
+	// ¸ÅÁö¼Ç
 	case JOB_MAGICIAN:
 	case JOB_PSYCHIKEEPER:	
 	case JOB_ELEMENTOR:
@@ -3224,7 +3211,7 @@ LPCTSTR CMover::GetFameName( void )
 		else if( m_nFame >= 10 )	return prj.GetText( TID_GAME_MAG_FAME01 );
 		break;
 
-	// ì–´ì‹œìŠ¤íŠ¸
+	// ¾î½Ã½ºÆ®
 	case JOB_ASSIST:
 	case JOB_BILLPOSTER:	
 	case JOB_RINGMASTER:
@@ -3249,7 +3236,7 @@ LPCTSTR CMover::GetFameName( void )
 }
 
 #if __VER < 8 // __S8_PK
-// ìŠ¬ë¡œí„° ì´ë¦„ì„ ìŠ¤íŠ¸ë§ìœ¼ë¡œ ëŒë ¤ì¤€ë‹¤.
+// ½½·ÎÅÍ ÀÌ¸§À» ½ºÆ®¸µÀ¸·Î µ¹·ÁÁØ´Ù.
 LPCTSTR CMover::GetSlaughterName( void )
 {
 	KarmaProp* pProp = prj.GetKarmaProp( m_nSlaughter );
@@ -3267,7 +3254,7 @@ LPCTSTR CMover::GetSlaughterName( void )
 #endif
 
 
-// ë§ˆë²• ì €í–¥ë ¥ ì–»ê¸° 
+// ¸¶¹ı ÀúÇâ·Â ¾ò±â 
 int CMover::GetResistMagic()
 {
 	return GetParam( DST_RESIST_MAGIC, 0 );
@@ -3276,7 +3263,7 @@ int CMover::GetResistSpell( int nDestParam )
 {
 	MoverProp *pProp = GetProp();
 	if( pProp == NULL )
-		Error( "CMover::GetReistSpell : %d í”„ë¡œí¼í‹° ì½ê¸° ì‹¤íŒ¨", GetName() );
+		Error( "CMover::GetReistSpell : %d ÇÁ·ÎÆÛÆ¼ ÀĞ±â ½ÇÆĞ", GetName() );
 
 	int		nResist = 0;
 
@@ -3288,7 +3275,7 @@ int CMover::GetResistSpell( int nDestParam )
 	case DST_RESIST_EARTH:			nResist = pProp->nResistEarth;		break;
 	case DST_RESIST_WIND:			nResist = pProp->nResistWind;		break;
 	default:
-		Error( "CMover::GetResistSpell : %s íŒŒë¼ë©”í„° ì˜ëª»ë¨ %d", GetName(), nDestParam );
+		Error( "CMover::GetResistSpell : %s ÆÄ¶ó¸ŞÅÍ Àß¸øµÊ %d", GetName(), nDestParam );
 		break;
 	}
 	return GetParam( nDestParam, nResist );
@@ -3304,7 +3291,7 @@ int CMover::GetStr()
 	int nResult = m_nStr + GetParam( DST_STR, 0 );
 
 #if __VER < 8 // __S8_PK
-	// ì‹œë ¨ëª¨ë“œì´ê³  ì‹œë ¨ì œí•œìƒíƒœì´ë©´ í˜ë„í‹° ì ìš©
+	// ½Ã·Ã¸ğµåÀÌ°í ½Ã·ÃÁ¦ÇÑ»óÅÂÀÌ¸é Æä³ÎÆ¼ Àû¿ë
 	if( IsMode( RECOVERCHAO_MODE ) && IsSMMode(SM_STR_DOWN) )
 	{
 		KarmaProp* pKarmaProp = prj.GetKarmaProp(m_nSlaughter);
@@ -3325,7 +3312,7 @@ int CMover::GetDex()
 	int nResult = m_nDex + GetParam( DST_DEX, 0 );
 
 #if __VER < 8 // __S8_PK
-	// ì‹œë ¨ëª¨ë“œì´ê³  ì‹œë ¨ì œí•œìƒíƒœì´ë©´ í˜ë„í‹° ì ìš©
+	// ½Ã·Ã¸ğµåÀÌ°í ½Ã·ÃÁ¦ÇÑ»óÅÂÀÌ¸é Æä³ÎÆ¼ Àû¿ë
 	if( IsMode( RECOVERCHAO_MODE ) && IsSMMode(SM_DEX_DOWN) )
 	{
 		KarmaProp* pKarmaProp = prj.GetKarmaProp(m_nSlaughter);
@@ -3346,7 +3333,7 @@ int CMover::GetInt()
 	int nResult = m_nInt + GetParam( DST_INT, 0 );
 
 #if __VER < 8 // __S8_PK
-	// ì‹œë ¨ëª¨ë“œì´ê³  ì‹œë ¨ì œí•œìƒíƒœì´ë©´ í˜ë„í‹° ì ìš©
+	// ½Ã·Ã¸ğµåÀÌ°í ½Ã·ÃÁ¦ÇÑ»óÅÂÀÌ¸é Æä³ÎÆ¼ Àû¿ë
 	if( IsMode( RECOVERCHAO_MODE ) && IsSMMode(SM_INT_DOWN) )
 	{
 		KarmaProp* pKarmaProp = prj.GetKarmaProp(m_nSlaughter);
@@ -3367,7 +3354,7 @@ int CMover::GetSta()
 	int nResult = m_nSta + GetParam( DST_STA, 0 );
 
 #if __VER < 8 // __S8_PK
-	// ì‹œë ¨ëª¨ë“œì´ê³  ì‹œë ¨ì œí•œìƒíƒœì´ë©´ í˜ë„í‹° ì ìš©
+	// ½Ã·Ã¸ğµåÀÌ°í ½Ã·ÃÁ¦ÇÑ»óÅÂÀÌ¸é Æä³ÎÆ¼ Àû¿ë
 	if( IsMode( RECOVERCHAO_MODE ) && IsSMMode(SM_STA_DOWN) )
 	{
 		KarmaProp* pKarmaProp = prj.GetKarmaProp(m_nSlaughter);
@@ -3408,7 +3395,7 @@ FLOAT CMover::GetSpeed(FLOAT fSrcSpeed)
 //	if( nChgValue != 0x7FFFFFFF )
 //		return fSrcSpeed * (nChgValue / 100.0f);		// ex) fSrcSpeed * 0.5f
 
-	// å°¹
+	// ëÅ
 	if( nChgValue != 0x7FFFFFFF )
 		return 0;
 
@@ -3434,11 +3421,11 @@ FLOAT CMover::GetSpeed(FLOAT fSrcSpeed)
 
 
 //
-// í˜„ì¬ ë™ì‘ìƒíƒœë¥¼ ê°•ì œë¡œ ì„¸íŒ…
-// ë™ê¸°í™” ì´ì™¸ëŠ” ì‚¬ìš©í•˜ì§€ ë§ê²ƒ.
+// ÇöÀç µ¿ÀÛ»óÅÂ¸¦ °­Á¦·Î ¼¼ÆÃ
+// µ¿±âÈ­ ÀÌ¿Ü´Â »ç¿ëÇÏÁö ¸»°Í.
 //
 
-// í–‰ìœ„ ëª…ë ¹ì€ ê°•ì œ ë™ê¸°í™” í•˜ê³  ì´ë™ ëª…ë ¹ì€ ë¬´ì‹œí•œë‹¤.
+// ÇàÀ§ ¸í·ÉÀº °­Á¦ µ¿±âÈ­ ÇÏ°í ÀÌµ¿ ¸í·ÉÀº ¹«½ÃÇÑ´Ù.
 void CMover::BehaviorActionForceSet( void )
 {
 	if( m_CorrAction.fValid && m_CorrAction.fBehavior == TRUE ) {
@@ -3619,7 +3606,7 @@ BOOL CMover::SetQuest( int nQuestId, int nState, LPQUEST lpReturnQuest )
 	newQuest.m_nState = nState;
 
 	LPQUEST lpQuest = FindQuest( nQuestId );
-	// ì´ë¯¸ ì™„ë£Œëœ ì¼€ìŠ¤íŠ¸ë¼ë©´ ì„¸íŒ… ì‹¤íŒ¨ 
+	// ÀÌ¹Ì ¿Ï·áµÈ ÄÉ½ºÆ®¶ó¸é ¼¼ÆÃ ½ÇÆĞ 
 	if( lpQuest == NULL && IsCompleteQuest( newQuest.m_wId ) )
 		return FALSE;
 	if( lpReturnQuest )
@@ -3629,19 +3616,19 @@ BOOL CMover::SetQuest( int nQuestId, int nState, LPQUEST lpReturnQuest )
 BOOL CMover::SetQuest( LPQUEST lpNewQuest )
 {
 	LPQUEST lpQuest = FindQuest( lpNewQuest->m_wId );
-	// ì´ë¯¸ ì™„ë£Œëœ ì¼€ìŠ¤íŠ¸ë¼ë©´ ì„¸íŒ… ì‹¤íŒ¨ 
+	// ÀÌ¹Ì ¿Ï·áµÈ ÄÉ½ºÆ®¶ó¸é ¼¼ÆÃ ½ÇÆĞ 
 	if( lpQuest == NULL && IsCompleteQuest( lpNewQuest->m_wId ) )
 		return FALSE;
 	return __SetQuest( lpQuest, lpNewQuest );
 }
 BOOL CMover::__SetQuest( LPQUEST lpQuest, LPQUEST lpNewQuest )
 {
-	// í€˜ìŠ¤íŠ¸ë¥¼ ë°œê²¬ ëª»í–ˆìœ¼ë©´ ìƒˆë¡œ ì¶”ê°€í•œë‹¤.
+	// Äù½ºÆ®¸¦ ¹ß°ß ¸øÇßÀ¸¸é »õ·Î Ãß°¡ÇÑ´Ù.
 	if( lpQuest == NULL )
 	{
 		if( m_nQuestSize >= MAX_QUEST )
 		{
-			Error("SetQuestCnt : í€˜ìŠ¤íŠ¸ ì´ˆê³¼");
+			Error("SetQuestCnt : Äù½ºÆ® ÃÊ°ú");
 			return FALSE;
 		}
 #ifdef __CLIENT
@@ -3656,15 +3643,15 @@ BOOL CMover::__SetQuest( LPQUEST lpQuest, LPQUEST lpNewQuest )
 		if( pQuestProp && pQuestProp->m_nEndCondLimitTime  )
 			lpNewQuest->m_wTime = pQuestProp->m_nEndCondLimitTime;
 #ifdef __WORLDSERVER
-		// íƒ€ì´ë¨¸ ì´ˆê¸°í™” 
+		// Å¸ÀÌ¸Ó ÃÊ±âÈ­ 
 		m_timerQuestLimitTime.Reset();
 #endif
 	}
 	else
-	// í€˜ìŠ¤íŠ¸ ì™„ë£Œë‹¤. ê·¸ë ‡ë‹¤ë©´ ìºì‰¬ì—ì„œ ë’¤ì ¸ì„œ ì œê±°í•˜ì 
+	// Äù½ºÆ® ¿Ï·á´Ù. ±×·¸´Ù¸é Ä³½¬¿¡¼­ µÚÁ®¼­ Á¦°ÅÇÏÀÚ 
 	if( lpNewQuest->m_nState == QS_END )
 	{
-		// ëŒ€ì‹ , ì™„ë£Œ ê¶¤ìŠ¤íŠ¸ ë°°ì—´ì— ë„£ì–´ ë³´ê´€í•œë‹¤.
+		// ´ë½Å, ¿Ï·á ±Ë½ºÆ® ¹è¿­¿¡ ³Ö¾î º¸°üÇÑ´Ù.
 		if( m_nCompleteQuestSize < MAX_COMPLETE_QUEST ) 
 		{
 			for( int i = 0; i < m_nQuestSize; i++ )
@@ -3692,7 +3679,7 @@ BOOL CMover::__SetQuest( LPQUEST lpQuest, LPQUEST lpNewQuest )
 			}
 #endif // __IMPROVE_QUEST_INTERFACE
 			QuestProp* pProp = prj.m_aPropQuest.GetAt( lpNewQuest->m_wId );
-			// í€˜ìŠ¤íŠ¸ íƒ€ì…ì´ ì˜ë¢°ì†Œë¼ë©´ ì™„ë£Œ ë°°ì—´ì— ë“¤ì–´ê°€ì§€ ì•ŠëŠ”ë‹¤. 
+			// Äù½ºÆ® Å¸ÀÔÀÌ ÀÇ·Ú¼Ò¶ó¸é ¿Ï·á ¹è¿­¿¡ µé¾î°¡Áö ¾Ê´Â´Ù. 
 			//if( pProp->m_nQuestType != QT_REQUEST && pProp->m_bRepeat == FALSE )
 			if( pProp && pProp->m_bRepeat == FALSE )
 				m_aCompleteQuest[ m_nCompleteQuestSize++ ] = lpNewQuest->m_wId; 
@@ -3760,9 +3747,9 @@ int CMover::GetItemNumForClient( DWORD dwItemId )
 }
 #endif //__CLIENT
 #ifdef __WORLDSERVER
-// ìŠ¤í¬ë¦½íŠ¸ì—ì„œ ì‚¬ìš©í•˜ëŠ” í•¨ìˆ˜
-// í€˜ìŠ¤íŠ¸ì—ì„œ ì•„ì´í…œì„ ì œê±°í•  ë•Œ ì‚¬ìš©í•œë‹¤. í€˜ìŠ¤íŠ¸ ì•„ì´í…œë“¤ì€ ê±°ë˜ë‚˜ ê°œì¸ìƒì ì— ì˜¬ë¦´ ìˆ˜ ì—†ê¸° ë•Œë¬¸ì—
-// IsUsableItemê²€ì‚¬ë¥¼ í•˜ì§€ ì•ŠëŠ”ë‹¤.
+// ½ºÅ©¸³Æ®¿¡¼­ »ç¿ëÇÏ´Â ÇÔ¼ö
+// Äù½ºÆ®¿¡¼­ ¾ÆÀÌÅÛÀ» Á¦°ÅÇÒ ¶§ »ç¿ëÇÑ´Ù. Äù½ºÆ® ¾ÆÀÌÅÛµéÀº °Å·¡³ª °³ÀÎ»óÁ¡¿¡ ¿Ã¸± ¼ö ¾ø±â ¶§¹®¿¡
+// IsUsableItem°Ë»ç¸¦ ÇÏÁö ¾Ê´Â´Ù.
 int CMover::RemoveItemA( DWORD dwItemId, short nNum )
 {
 	if( nNum == -1 )
@@ -3795,7 +3782,7 @@ int CMover::RemoveItemA( DWORD dwItemId, short nNum )
 }
 #endif	// __WORLDSERVER
 
-// ìŠ¤í¬ë¦½íŠ¸ì—ì„œ ì‚¬ìš©í•˜ëŠ” í•¨ìˆ˜ 
+// ½ºÅ©¸³Æ®¿¡¼­ »ç¿ëÇÏ´Â ÇÔ¼ö 
 int CMover::RemoveAllItem( DWORD dwItemId )
 {
 	int nNum = 0;
@@ -3848,7 +3835,7 @@ void CMover::Abrade( CMover* pAttacker, int nParts )
 			return;
 		
 		int nWpn = pWeapon->m_nHitPoint;
-		pWeapon->m_nHitPoint	-= ( pWeaponProp->nAbrasion  / 5 ) * GetItemEnduranceWeight(0);			// ë’¤ì—ì„œ ì¶”ê°€ë¡œ ê¹ì§€ ì•Šê³  ì—¬ê¸°ì„œ 2ë²ˆ ê³±í–ˆë‹¤.
+		pWeapon->m_nHitPoint	-= ( pWeaponProp->nAbrasion  / 5 ) * GetItemEnduranceWeight(0);			// µÚ¿¡¼­ Ãß°¡·Î ±ğÁö ¾Ê°í ¿©±â¼­ 2¹ø °öÇß´Ù.
 		if( pWeapon->m_nHitPoint < 0 )		pWeapon->m_nHitPoint = 0;
 		
 		if( nWpn != pWeapon->m_nHitPoint )
@@ -3903,7 +3890,7 @@ void CMover::Abrade( CMover* pAttacker, int nParts )
 
 DWORD CMover::GetRandomPartsAbraded( void )
 {
-//	ì‹¤ë“œ 50%
+//	½Çµå 50%
 	int nRand	= xRand();
 	if( nRand % 2 )
 		return PARTS_SHIELD;
@@ -4019,7 +4006,7 @@ void CMover::UpdateItem( BYTE nId, CHAR cParam, DWORD dwValue )
 				}
 				break;
 				
-			case UI_AO: // ì•„ì´í…œ + ì˜¬ë¦¬ê¸°...
+			case UI_AO: // ¾ÆÀÌÅÛ + ¿Ã¸®±â...
 				{
 #if __VER >= 13 // __EXT_ENCHANT
 					DWORD dwMax = 20;
@@ -4043,7 +4030,7 @@ void CMover::UpdateItem( BYTE nId, CHAR cParam, DWORD dwValue )
 					UpdateParam();
 				}
 				break;
-			case UI_RAO: // ì•„ì´í…œ ì†ì„± + ì˜¬ë¦¬ê¸°...
+			case UI_RAO: // ¾ÆÀÌÅÛ ¼Ó¼º + ¿Ã¸®±â...
 				{
 #if __VER >= 13 // __EXT_ENCHANT
 					if( ( (CItemElem*)pItemBase )->m_nResistAbilityOption > 20 )
@@ -4062,7 +4049,7 @@ void CMover::UpdateItem( BYTE nId, CHAR cParam, DWORD dwValue )
 					UpdateParam();
 				}
 				break;
-			case UI_IR:  // ì•„ì´í…œì— ë¬´ìŠ¨ì†ì„±ì¸ì§€ ë„£ê¸°
+			case UI_IR:  // ¾ÆÀÌÅÛ¿¡ ¹«½¼¼Ó¼ºÀÎÁö ³Ö±â
 				{
 					( (CItemElem*)pItemBase )->m_bItemResist	= (BYTE)( dwValue );
 					UpdateParam();
@@ -4097,7 +4084,7 @@ void CMover::UpdateItem( BYTE nId, CHAR cParam, DWORD dwValue )
 					static_cast<CItemElem*>(pItemBase)->SetPiercingSize( dwValue );
 					static_cast<CItemElem*>(pItemBase)->SetVisKeepTimeSize( dwValue );
 
-#ifdef __CLIENT	//sun : ì‹¤ì²´ ë¹„ìŠ¤ ì¥ì°©ì´( ì„œë²„ë¡œë¶€í„° íŒ¨í‚·ì„ ë°›ì•„ì„œ ì²˜ë¦¬ë ë•Œ )ì´ë£¨ì–´ì§ˆë•Œ íš¨ê³¼ìŒ ì¶œë ¥ 
+#ifdef __CLIENT	//sun : ½ÇÃ¼ ºñ½º ÀåÂøÀÌ( ¼­¹ö·ÎºÎÅÍ ÆĞÅ¶À» ¹Ş¾Æ¼­ Ã³¸®µÉ¶§ )ÀÌ·ç¾îÁú¶§ È¿°úÀ½ Ãâ·Â 
 					PLAYSND(SND_INF_EQUIPACCESSORY, &g_pPlayer->GetPos());
 #endif // __CLIENT
 				}
@@ -4106,7 +4093,7 @@ void CMover::UpdateItem( BYTE nId, CHAR cParam, DWORD dwValue )
 				{
 					WORD wIndex	= LOWORD( dwValue ), wItemId	= HIWORD( dwValue );
 					static_cast<CItemElem*>(pItemBase)->SetPiercingItem( wIndex, wItemId );
-					static_cast<CItemElem*>(pItemBase)->SetVisKeepTime( wIndex, ( dwTime * 60 ) + time_null() ); // ë¶„ë‹¨ìœ„ ì‹œê°„ì„ ì´ˆë‹¨ìœ„ë¡œ ë³€ê²½
+					static_cast<CItemElem*>(pItemBase)->SetVisKeepTime( wIndex, ( dwTime * 60 ) + time_null() ); // ºĞ´ÜÀ§ ½Ã°£À» ÃÊ´ÜÀ§·Î º¯°æ
 
 #ifdef __CLIENT
 					PLAYSND(SND_INF_EQUIPACCESSORY, &g_pPlayer->GetPos());
