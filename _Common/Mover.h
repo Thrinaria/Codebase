@@ -48,18 +48,18 @@ typedef	MemPooler<CMover>	CMoverPool;
 
 /// SetMotion() option
 #define	MOP_NONE				0x00000000
-#define	MOP_SWDFORCE			0x00000001		/// °Ë±¤ »ı¼ºÇÏ°Ô
-#define	MOP_FIXED				0x00000002		/// dwMotion°ªÀ» ±×´ë·Î ·ÎµùÇÏ°Ô ( +100 ¾ÈÇÏ°Ô.. )
-#define	MOP_NO_TRANS			0x00000004		/// ¸ğ¼Ç Æ®·£Áö¼Ç ÇÏÁö¾ÊÀ½.
-#define	MOP_HITSLOW				0x00000008		/// Å¸Á¡ÀÌÈÄºÎÅÍ ½½·Î¿ì.
+#define	MOP_SWDFORCE			0x00000001		/// ê²€ê´‘ ìƒì„±í•˜ê²Œ
+#define	MOP_FIXED				0x00000002		/// dwMotionê°’ì„ ê·¸ëŒ€ë¡œ ë¡œë”©í•˜ê²Œ ( +100 ì•ˆí•˜ê²Œ.. )
+#define	MOP_NO_TRANS			0x00000004		/// ëª¨ì…˜ íŠ¸ëœì§€ì…˜ í•˜ì§€ì•ŠìŒ.
+#define	MOP_HITSLOW				0x00000008		/// íƒ€ì ì´í›„ë¶€í„° ìŠ¬ë¡œìš°.
 
-#define	REQ_USESKILL			0x00000001		/// ÀÀ´ä¿äÃ» ÇÃ·¡±× - ½ºÅ³»ç¿ë ÀÀ´ä
-#define	REQ_MOTION				0x00000002		/// ÀÀ´ä¿äÃ» ÇÃ·¡±× - ¸ğ¼Ç ÀÀ´ä
+#define	REQ_USESKILL			0x00000001		/// ì‘ë‹µìš”ì²­ í”Œë˜ê·¸ - ìŠ¤í‚¬ì‚¬ìš© ì‘ë‹µ
+#define	REQ_MOTION				0x00000002		/// ì‘ë‹µìš”ì²­ í”Œë˜ê·¸ - ëª¨ì…˜ ì‘ë‹µ
 
 #define	OBJTYPE_PLAYER			0x00000001		
 #define	OBJTYPE_MONSTER			0x00000002		
 #define OBJTYPE_CTRL			0x00000004		
-#define	OBJTYPE_FLYING			0x00010000		/// m_dwTypeFlag¿¡¼­ »ç¿ë.
+#define	OBJTYPE_FLYING			0x00010000		/// m_dwTypeFlagì—ì„œ ì‚¬ìš©.
 
 #define	CRITICAL_PROBABILITY	3
 #define	CRITICAL_BERSERK_HP		30
@@ -102,11 +102,11 @@ const int PETVIS_DEFAULT_VIS_SLOT_SZIE	=	2;
 #ifdef __3RD_LEGEND16
 #define MAX_SKILL_JOB	( MAX_JOB_SKILL + MAX_EXPERT_SKILL + MAX_PRO_SKILL + MAX_MASTER_SKILL + MAX_HERO_SKILL + MAX_LEGEND_HERO_SKILL )
 #else // __3RD_LEGEND16
-#if __VER >= 10 // __LEGEND	//	10Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
+#if __VER >= 10 // __LEGEND	//	10ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
 #define MAX_SKILL_JOB	( MAX_JOB_SKILL + MAX_EXPERT_SKILL + MAX_PRO_SKILL + MAX_MASTER_SKILL + MAX_HERO_SKILL )
-#else //__LEGEND	//	10Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
+#else //__LEGEND	//	10ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
 #define MAX_SKILL_JOB	( MAX_JOB_SKILL + MAX_EXPERT_SKILL + MAX_PRO_SKILL )
-#endif	//__LEGEND	//	10Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
+#endif	//__LEGEND	//	10ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
 #endif // __3RD_LEGEND16
 
 #ifdef __INTERNALSERVER
@@ -124,7 +124,7 @@ const DWORD NEXT_TICK_RECOVERY      = SEC(2);
 const DWORD NEXT_TICK_RECOVERYSTAND = SEC(3);
 
 
-#if __VER >= 10 // __LEGEND	//	9Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
+#if __VER >= 10 // __LEGEND	//	9ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
 
 #define	LEGEND_CLASS_NORMAL			0
 #define	LEGEND_CLASS_MASTER			1
@@ -132,7 +132,7 @@ const DWORD NEXT_TICK_RECOVERYSTAND = SEC(3);
 #ifdef __3RD_LEGEND16
 #define LEGEND_CLASS_LEGENDHERO	3
 #endif // __3RD_LEGEND16
-#endif	//__LEGEND	//	9Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
+#endif	//__LEGEND	//	9ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
 
 #ifdef __BARUNA_PIERCING
 #define MAX_BARUNA_DOT 2
@@ -140,79 +140,79 @@ const DWORD NEXT_TICK_RECOVERYSTAND = SEC(3);
 
 #define MAX_HUMAN_PARTS 31
 
-/// ReplaceÇÔ¼ö¿¡¼­ »ç¿ëÇÏ´Â Å¸ÀÔ 	
+/// Replaceí•¨ìˆ˜ì—ì„œ ì‚¬ìš©í•˜ëŠ” íƒ€ì… 	
 enum REPLACE_TYPE
 {
-	REPLACE_NORMAL,				/// ºñÇàÃ¼ Å¸°í ÀÎº¥ÀÌ Â÷¸é ¸·À½ 
-	REPLACE_FORCE,				/// ¹«Á¶°Ç ÀÌµ¿ 
+	REPLACE_NORMAL,				/// ë¹„í–‰ì²´ íƒ€ê³  ì¸ë²¤ì´ ì°¨ë©´ ë§‰ìŒ 
+	REPLACE_FORCE,				/// ë¬´ì¡°ê±´ ì´ë™ 
 };
 
-/// ½ºÅ³ »ç¿ë Å¸ÀÔ
+/// ìŠ¤í‚¬ ì‚¬ìš© íƒ€ì…
 enum SKILLUSETYPE
 {
-	SUT_NORMAL,			/// ´ÜÃàÅ°¿¡ ³Ö°í »ç¿ëÇÏ´Â ÀÏ¹İÀûÀÎ ¹æ½Ä.
-	SUT_QUEUESTART,		/// ½ºÅ³Å¥·Î Ã³À½ ½ÃÀÛÇÏ´Â ½ºÅ³ÀÌ´Ù.(Ä³½ºÆÃÀ» ¸ô¾Æ¼­ÇÔ)
-	SUT_QUEUEING,		/// ½ºÅ³Å¥ÀÇ ¿¬¼Ó¹ß»çÁß ½ºÅ³ÀÌ´Ù.(Ä³½ºÆÃµ¿ÀÛ¾øÀÌ ¹Ù·Î ¹ß»ç)
+	SUT_NORMAL,			/// ë‹¨ì¶•í‚¤ì— ë„£ê³  ì‚¬ìš©í•˜ëŠ” ì¼ë°˜ì ì¸ ë°©ì‹.
+	SUT_QUEUESTART,		/// ìŠ¤í‚¬íë¡œ ì²˜ìŒ ì‹œì‘í•˜ëŠ” ìŠ¤í‚¬ì´ë‹¤.(ìºìŠ¤íŒ…ì„ ëª°ì•„ì„œí•¨)
+	SUT_QUEUEING,		/// ìŠ¤í‚¬íì˜ ì—°ì†ë°œì‚¬ì¤‘ ìŠ¤í‚¬ì´ë‹¤.(ìºìŠ¤íŒ…ë™ì‘ì—†ì´ ë°”ë¡œ ë°œì‚¬)
 };
 
 ////////////////////////////////////////////////////////////////////////////////
-// PVP °ü·Ã 
+// PVP ê´€ë ¨ 
 ////////////////////////////////////////////////////////////////////////////////
 
-/// Player vs PlayerÀÇ ¸ğµå 
+/// Player vs Playerì˜ ëª¨ë“œ 
 enum PVP_MODE
 {
-	PVP_MODE_NONE,				/// PVPºÒ°¡ 	
-	PVP_MODE_GUILDWAR,			/// ±æµå¿ö 
+	PVP_MODE_NONE,				/// PVPë¶ˆê°€ 	
+	PVP_MODE_GUILDWAR,			/// ê¸¸ë“œì›Œ 
 	PVP_MODE_PK,				/// PK
-	PVP_MODE_DUEL				/// µà¾ó 
+	PVP_MODE_DUEL				/// ë“€ì–¼ 
 };
 
 #if __VER < 8 // __S8_PK
-/// PK Å¸ÀÔ 
+/// PK íƒ€ì… 
 enum PK_TYPE
 {
-	NORMAL_AND_NORMAL,			/// ÀÏ¹İ À¯Àú ¿Í ÀÏ¹İ À¯Àú 
+	NORMAL_AND_NORMAL,			/// ì¼ë°˜ ìœ ì € ì™€ ì¼ë°˜ ìœ ì € 
 	NORMAL_AND_SEMI,
 	NORMAL_AND_CHAO,
-	SEMI_AND_NORMAL,			/// ÁØÄ«¿À¿Í ÀÏ¹İ À¯Àú 
+	SEMI_AND_NORMAL,			/// ì¤€ì¹´ì˜¤ì™€ ì¼ë°˜ ìœ ì € 
 	SEMI_AND_SEMI,
 	SEMI_AND_CHAO,
-	CHAO_AND_NORMAL,			/// Ä«¿À¿Í ÀÏ¹İ À¯Àú 
+	CHAO_AND_NORMAL,			/// ì¹´ì˜¤ì™€ ì¼ë°˜ ìœ ì € 
 	CHAO_AND_SEMI,
 	CHAO_AND_CHAO
 };
 
-/// Ä«¸£¸¶ º¯°æ¿øÀÎ 
+/// ì¹´ë¥´ë§ˆ ë³€ê²½ì›ì¸ 
 enum CHANGE_SLAUGHTER_TYPE
 {
-	CHANGE_SLAUGHTER_ATTACK,	/// 'PK½Ãµµ'·Î ÀÎÇÑ Ä«¸£¸¶(=½½·ÎÅÍ°ª) º¯°æ 
-	CHANGE_SLAUGHTER_KILL,		/// PK·Î ÀÎÇÑ Ä«¸£¸¶(=½½·ÎÅÍ°ª) º¯°æ 
-	CHANGE_SLAUGHTER_RECOVERY,	/// ÀÚ¿¬È¸º¹ 
-	CHANGE_SLAUGHTER_SET,		/// ´Ü¼øÇÑ ´ëÀÔ 
+	CHANGE_SLAUGHTER_ATTACK,	/// 'PKì‹œë„'ë¡œ ì¸í•œ ì¹´ë¥´ë§ˆ(=ìŠ¬ë¡œí„°ê°’) ë³€ê²½ 
+	CHANGE_SLAUGHTER_KILL,		/// PKë¡œ ì¸í•œ ì¹´ë¥´ë§ˆ(=ìŠ¬ë¡œí„°ê°’) ë³€ê²½ 
+	CHANGE_SLAUGHTER_RECOVERY,	/// ìì—°íšŒë³µ 
+	CHANGE_SLAUGHTER_SET,		/// ë‹¨ìˆœí•œ ëŒ€ì… 
 };
 #endif // __VER < 8 // __S8_PK
 
-/// °Å·¡ È®ÀÎ Å¸ÀÔ 
+/// ê±°ë˜ í™•ì¸ íƒ€ì… 
 enum TRADE_CONFIRM_TYPE
 {
-	TRADE_CONFIRM_ERROR,		/// ÀÎº¥¿¡ ¿©À¯°¡ ¾ø°Å³ª, GOLD°¡ OVERFLOW³ª´Â °æ¿ì 
-	TRADE_CONFIRM_OK,			/// »ó´ëµµ ok(ÃÖÁ¾ °Å·¡)
+	TRADE_CONFIRM_ERROR,		/// ì¸ë²¤ì— ì—¬ìœ ê°€ ì—†ê±°ë‚˜, GOLDê°€ OVERFLOWë‚˜ëŠ” ê²½ìš° 
+	TRADE_CONFIRM_OK,			/// ìƒëŒ€ë„ ok(ìµœì¢… ê±°ë˜)
 };
 
-/// °Å·¡»óÅÂ 
+/// ê±°ë˜ìƒíƒœ 
 enum TRADE_STATE
 {
-	TRADE_STEP_ITEM,			/// ¾ÆÀÌÅÛ ´Ü°è - ¾ÆÀÌÅÛÀ» ¿Ã¸®°í ³»¸®°í  
-	TRADE_STEP_OK,			    /// OK´©¸¥ ´Ü°è - ok¹öÆ°À» ´­·È´Ù.        
-	TRADE_STEP_CONFIRM,			/// CONFIRM´Ü°è - ÃÖÁ¾È®ÀÎ´Ü°è            
+	TRADE_STEP_ITEM,			/// ì•„ì´í…œ ë‹¨ê³„ - ì•„ì´í…œì„ ì˜¬ë¦¬ê³  ë‚´ë¦¬ê³   
+	TRADE_STEP_OK,			    /// OKëˆ„ë¥¸ ë‹¨ê³„ - okë²„íŠ¼ì„ ëˆŒë ¸ë‹¤.        
+	TRADE_STEP_CONFIRM,			/// CONFIRMë‹¨ê³„ - ìµœì¢…í™•ì¸ë‹¨ê³„            
 };
 
 ////////////////////////////////////////////////////////////////////////////////
 // struct
 ////////////////////////////////////////////////////////////////////////////////
 
-/// ÀåÂø Á¤º¸ ±¸Á¶Ã¼ 
+/// ì¥ì°© ì •ë³´ êµ¬ì¡°ì²´ 
 typedef	struct	_EQUIP_INFO
 {
 	DWORD	dwId;
@@ -220,7 +220,7 @@ typedef	struct	_EQUIP_INFO
 	BYTE	byFlag;
 }	EQUIP_INFO,	*PEQUIP_INFO;
 
-/// ÀåÂø Ãß°¡ Á¤º¸ ±¸Á¶Ã¼ 
+/// ì¥ì°© ì¶”ê°€ ì •ë³´ êµ¬ì¡°ì²´ 
 typedef	struct	_EQUIP_INFO_ADD
 {
 #if __VER >= 11 // __SYS_IDENTIFY
@@ -259,7 +259,7 @@ typedef	struct	_EQUIP_INFO_ADD
 	}
 }	EQUIP_INFO_ADD, *PEQUIP_INFO_ADD;
 
-/// ÇÃ·¹ÀÌ¾î ¿Ü¾ç ±¸Á¶Ã¼ 
+/// í”Œë ˆì´ì–´ ì™¸ì–‘ êµ¬ì¡°ì²´ 
 typedef struct tagPLAYER
 {
 	EQUIP_INFO	m_aEquipInfo[MAX_HUMAN_PARTS];
@@ -274,14 +274,14 @@ typedef struct tagPLAYER
 	u_short		m_uSlot;
 } PLAYER,* LPPLAYER;
 
-/// Äù½ºÆ® ±¸Á¶Ã¼ 
+/// í€˜ìŠ¤íŠ¸ êµ¬ì¡°ì²´ 
 typedef struct tagQuest
 {
 	BYTE		m_nState;
 	WORD		m_wTime;
 	WORD		m_wId;
-//	BYTE		m_nKillNPCNum[ 2 ];	// chipi_091015 - NPC Kill Quest °¹¼ö È®Àå( BYTE -> WORD )
-	WORD		m_nKillNPCNum[ 2 ];	// chipi_091015 - NPC Kill Quest °¹¼ö È®Àå( BYTE -> WORD )
+//	BYTE		m_nKillNPCNum[ 2 ];	// chipi_091015 - NPC Kill Quest ê°¯ìˆ˜ í™•ì¥( BYTE -> WORD )
+	WORD		m_nKillNPCNum[ 2 ];	// chipi_091015 - NPC Kill Quest ê°¯ìˆ˜ í™•ì¥( BYTE -> WORD )
 	BYTE		m_bPatrol   : 1;
 	BYTE		m_bDialog   : 1;
 	BYTE		m_bReserve3 : 1;
@@ -295,7 +295,7 @@ typedef struct tagQuest
 
 } QUEST,* LPQUEST;
 
-/// µ¿±âÈ­¿¡¼­ »ç¿ëÇÏ´Â ±¸Á¶Ã¼ 
+/// ë™ê¸°í™”ì—ì„œ ì‚¬ìš©í•˜ëŠ” êµ¬ì¡°ì²´ 
 typedef	struct tagCORR_ACTION
 {
 	float		f;
@@ -316,31 +316,31 @@ typedef	struct tagCORR_ACTION
 	BOOL		fHalf;
 } CORR_ACTION, *PCORR_ACTION;
 
-/// ÇÇ°İ Á¤º¸ ±¸Á¶Ã¼ 
+/// í”¼ê²© ì •ë³´ êµ¬ì¡°ì²´ 
 struct HIT_INFO
 {
-	int		nHit;		/// ÀÔÀº µ¥¹ÌÁö 
-	DWORD	dwTick;		/// °ø°İ´çÇÑ ½Ã°¢ 
+	int		nHit;		/// ì…ì€ ë°ë¯¸ì§€ 
+	DWORD	dwTick;		/// ê³µê²©ë‹¹í•œ ì‹œê° 
 };
 
 typedef map<OBJID, HIT_INFO> SET_OBJID;		
 
-/// °ø°İÀÇ Å¸ÀÔ 
+/// ê³µê²©ì˜ íƒ€ì… 
 enum HITTYPE
 {
 	HITTYPE_FAIL	= 0,
 	HITTYPE_GENERIC,			/// Player vs Monster
 	HITTYPE_PVP,				/// Player vs Player
-	HITTYPE_WAR,				/// ±æµåÀü 
-	HITTYPE_SCHOOL,				/// ÇĞ±³ ´ëÇ× ÀÌº¥Æ® Å¸ÀÔ 
+	HITTYPE_WAR,				/// ê¸¸ë“œì „ 
+	HITTYPE_SCHOOL,				/// í•™êµ ëŒ€í•­ ì´ë²¤íŠ¸ íƒ€ì… 
 	HITTYPE_PK,					/// Player Killing
-	HITTYPE_GUILDCOMBAT,		/// ±æµå´ëÀü 
+	HITTYPE_GUILDCOMBAT,		/// ê¸¸ë“œëŒ€ì „ 
 #ifdef __JEFF_11_4
-	HITTYPE_ARENA,		// ¾Æ·¡³ª
+	HITTYPE_ARENA,		// ì•„ë˜ë‚˜
 #endif	// __JEFF_11_4
 };
 
-/// ¸®Àú·º¼Ç µ¥ÀÌÅ¸ ±¸Á¶Ã¼ 
+/// ë¦¬ì €ë ‰ì…˜ ë°ì´íƒ€ êµ¬ì¡°ì²´ 
 typedef struct RESURRECTION_DATA
 {
 	u_long		  dwPlayerID;
@@ -350,24 +350,24 @@ typedef struct RESURRECTION_DATA
 	int			  nDamage;
 } RESURRECTION_DATA;
 
-/// °Å·¡ÈÄ °á°ú ±¸Á¶Ã¼ 
+/// ê±°ë˜í›„ ê²°ê³¼ êµ¬ì¡°ì²´ 
 struct VENDOR_SELL_RESULT
 {
-	CItemElem	item;			/// ÆÈ¸° ¾ÆÀÌÅÛ 
-	int			nRemain;		/// ÆÈ¸®°í ³²Àº °¹¼ö 
-	int			nErrorCode;		/// ¿¡·¯ÄÚµå 
+	CItemElem	item;			/// íŒ”ë¦° ì•„ì´í…œ 
+	int			nRemain;		/// íŒ”ë¦¬ê³  ë‚¨ì€ ê°¯ìˆ˜ 
+	int			nErrorCode;		/// ì—ëŸ¬ì½”ë“œ 
 };
 
-/// °³ÀÎ»óÁ¡(Vendor)°ú °Å·¡(Trade) Å¬·¡½º 
+/// ê°œì¸ìƒì (Vendor)ê³¼ ê±°ë˜(Trade) í´ë˜ìŠ¤ 
 class CVTInfo
 {
 private:
-	DWORD					m_dwTradeGold;					/// °Å·¡ÁßÀÎ µ· 
+	DWORD					m_dwTradeGold;					/// ê±°ë˜ì¤‘ì¸ ëˆ 
 	CItemBase*				m_apItem_VT[MAX_VENDITEM];		/// vendor and trader share pointer array
-	OBJID					m_objId;						/// »ó´ë¹æ id
-	CMover*					m_pOwner;						/// Å¬·¡½º ¼ÒÀ¯ÀÚ 
-	TRADE_STATE				m_state;						/// °Å·¡»óÅÂ 
-	string					m_strTitle;						/// °³ÀÎ»óÁ¡ÀÇ Å¸ÀÌÆ² 
+	OBJID					m_objId;						/// ìƒëŒ€ë°© id
+	CMover*					m_pOwner;						/// í´ë˜ìŠ¤ ì†Œìœ ì 
+	TRADE_STATE				m_state;						/// ê±°ë˜ìƒíƒœ 
+	string					m_strTitle;						/// ê°œì¸ìƒì ì˜ íƒ€ì´í‹€ 
 
 public:
 	OBJID					GetOtherID() { return m_objId; }
@@ -391,7 +391,7 @@ public:
 	TRADE_STATE				TradeGetState();
 	void					TradeSetState( TRADE_STATE state );
 
-	void					VendorClose( BOOL bClearTitle = TRUE );	// °³ÀÎ »óÁ¡ ´İ±â
+	void					VendorClose( BOOL bClearTitle = TRUE );	// ê°œì¸ ìƒì  ë‹«ê¸°
 	void					VendorCopyItems( CItemBase** ppItemVd );
 	void					VendorItemNum( BYTE i, short nNum );
 	void					VendorSetItem( BYTE nId, BYTE i, short nNum, int nCost );
@@ -401,7 +401,7 @@ public:
 	BOOL				IsTrading( CItemElem* pItemElem );
 };
 
-/// ¼­¹ö¿¡¼­ SFXÇØÅ· ¶§¹®¿¡ »ı±ä ÀÚ·áÇü 
+/// ì„œë²„ì—ì„œ SFXí•´í‚¹ ë•Œë¬¸ì— ìƒê¸´ ìë£Œí˜• 
 struct SFXHIT_INFO
 {
 	OBJID	idTarget;
@@ -455,7 +455,7 @@ public:
 #endif	// __PET_1024
 private:
 	CMover*	m_pObj;
-	BYTE	m_nLevelup;		// PLU_LEVEL_UP ÀÌ¸é, Æê »ı¼º ½Ã Æê ·¹º§¾÷ È¿°ú »ı¼ºÇÏ°í 0À¸·Î ÃÊ±âÈ­
+	BYTE	m_nLevelup;		// PLU_LEVEL_UP ì´ë©´, í« ìƒì„± ì‹œ í« ë ˆë²¨ì—… íš¨ê³¼ ìƒì„±í•˜ê³  0ìœ¼ë¡œ ì´ˆê¸°í™”
 	
 #ifdef __PET_1024
 	char	m_szName[MAX_PET_NAME];
@@ -464,7 +464,7 @@ private:
 #endif	// __CLIENT
 
 
-/// ÇÃ·¹ÀÌ¾î¿Í NPC
+/// í”Œë ˆì´ì–´ì™€ NPC
 class CMover : public CCtrl
 {	
 public:	
@@ -472,43 +472,43 @@ public:
 	virtual ~CMover();
 
 	friend			CActionMover;
-	enum			{ PLAYER, NPC };			/// CMoverÀÇ Å¸ÀÔ 
+	enum			{ PLAYER, NPC };			/// CMoverì˜ íƒ€ì… 
 
 public:
 	int				Akerius;
-	BOOL			m_bPlayer;					/// PlayerÀÎ°¡, ¾Æ´Ï¶ó¸é NPC
-	u_long			m_idPlayer;					/// playerÀÇ db¹øÈ£, NPC´Â 0xffffffff
-	CActionMover*	m_pActMover;				/// ¹«¹ö¸¦ ¿òÁ÷ÀÌ´Â °´Ã¼. ¿©±â¼­ ¹«¹öÀÇ ¿òÁ÷ÀÓÀ» ÄÁÆ®·ÑÇÑ´Ù.
-	DWORD			m_dwTypeFlag;				/// OBJTYPE_FLYING ¸¸ »ç¿ë flag
-	DWORD			m_dwMode;					/// ¹«Àû, Åõ¸í, ÃÊÇÊ µîµî flag
-	DWORD			m_dwFlag;					/// MVRF_ °ü·Ã flag ½Ã¸®Áî
-	DWORD			m_dwStateMode;				/// PK, PVP, ºñÇà ½ÃÀü ... flag
-	FLOAT			m_fCrrSpd;					/// ÀÌµ¿ ¼Óµµ  
-	float			m_fAniSpeed;				/// ¾Ö´Ï¸ŞÀÌ¼Ç ¼Óµµ ¹è¼ö. 1.0ÀÌ ±âº». 2.0ÀÌ¸é µÎ¹èºü¸£±â. 2.0ÀÌ ¸Æ½º´Ù.
-	float			m_fArrivalRange;			/// ¸ñÇ¥¿¡ ¾ó¸¶¸¸Å­ ±ÙÁ¢ÇØ¾ßÇÏ´Â°¡. ¹ÌÅÍ´ÜÀ§. µğÆúÆ® 0
-	OBJID			m_idDest;					/// ¸ñÇ¥ °´Ã¼ ¾ÆÀÌµğ
-	D3DXVECTOR3		m_vDestPos;					/// ¸ñÇ¥ ÁöÁ¡ 
-	float			m_fDestAngle;				/// ¸ñÇ¥ °¢µµ 		
-	CShip*          m_pIADestPos;				/// ¿©±â¿¡ Æ÷ÀÎÅÍ°¡ ÀÖ´Ù¸é m_vDestPosÀÇ ÁÂÇ¥´Â m_pIADestPos¿ÀºêÁ§¿¡ ´ëÇÑ »ó´ëÁÂÇ¥°¡ µÈ´Ù.
-	BOOL			m_fWaitQueryGetPos;			/// µ¿±âÈ­ °ü·Ã 
-	int				m_nCorr;					/// µ¿±âÈ­ °ü·Ã - ³²¾ÆÀÖ´Â µ¿±â ÇÁ·¹ÀÓ ¼ö(½ÇÃ¼)
-	u_long			m_uRemnantCorrFrm;			/// µ¿±âÈ­ °ü·Ã - ³²¾ÆÀÖ´Â µ¿±â ÇÁ·¹ÀÓ ¼ö(°í½ºÆ®)
-	CORR_ACTION		m_CorrAction;				/// µ¿±âÈ­ Á¤º¸ ±¸Á¶Ã¼ 
-	bool			m_bForward;					/// ÀüÁøÁß?
+	BOOL			m_bPlayer;					/// Playerì¸ê°€, ì•„ë‹ˆë¼ë©´ NPC
+	u_long			m_idPlayer;					/// playerì˜ dbë²ˆí˜¸, NPCëŠ” 0xffffffff
+	CActionMover*	m_pActMover;				/// ë¬´ë²„ë¥¼ ì›€ì§ì´ëŠ” ê°ì²´. ì—¬ê¸°ì„œ ë¬´ë²„ì˜ ì›€ì§ì„ì„ ì»¨íŠ¸ë¡¤í•œë‹¤.
+	DWORD			m_dwTypeFlag;				/// OBJTYPE_FLYING ë§Œ ì‚¬ìš© flag
+	DWORD			m_dwMode;					/// ë¬´ì , íˆ¬ëª…, ì´ˆí•„ ë“±ë“± flag
+	DWORD			m_dwFlag;					/// MVRF_ ê´€ë ¨ flag ì‹œë¦¬ì¦ˆ
+	DWORD			m_dwStateMode;				/// PK, PVP, ë¹„í–‰ ì‹œì „ ... flag
+	FLOAT			m_fCrrSpd;					/// ì´ë™ ì†ë„  
+	float			m_fAniSpeed;				/// ì• ë‹ˆë©”ì´ì…˜ ì†ë„ ë°°ìˆ˜. 1.0ì´ ê¸°ë³¸. 2.0ì´ë©´ ë‘ë°°ë¹ ë¥´ê¸°. 2.0ì´ ë§¥ìŠ¤ë‹¤.
+	float			m_fArrivalRange;			/// ëª©í‘œì— ì–¼ë§ˆë§Œí¼ ê·¼ì ‘í•´ì•¼í•˜ëŠ”ê°€. ë¯¸í„°ë‹¨ìœ„. ë””í´íŠ¸ 0
+	OBJID			m_idDest;					/// ëª©í‘œ ê°ì²´ ì•„ì´ë””
+	D3DXVECTOR3		m_vDestPos;					/// ëª©í‘œ ì§€ì  
+	float			m_fDestAngle;				/// ëª©í‘œ ê°ë„ 		
+	CShip*          m_pIADestPos;				/// ì—¬ê¸°ì— í¬ì¸í„°ê°€ ìˆë‹¤ë©´ m_vDestPosì˜ ì¢Œí‘œëŠ” m_pIADestPosì˜¤ë¸Œì ì— ëŒ€í•œ ìƒëŒ€ì¢Œí‘œê°€ ëœë‹¤.
+	BOOL			m_fWaitQueryGetPos;			/// ë™ê¸°í™” ê´€ë ¨ 
+	int				m_nCorr;					/// ë™ê¸°í™” ê´€ë ¨ - ë‚¨ì•„ìˆëŠ” ë™ê¸° í”„ë ˆì„ ìˆ˜(ì‹¤ì²´)
+	u_long			m_uRemnantCorrFrm;			/// ë™ê¸°í™” ê´€ë ¨ - ë‚¨ì•„ìˆëŠ” ë™ê¸° í”„ë ˆì„ ìˆ˜(ê³ ìŠ¤íŠ¸)
+	CORR_ACTION		m_CorrAction;				/// ë™ê¸°í™” ì •ë³´ êµ¬ì¡°ì²´ 
+	bool			m_bForward;					/// ì „ì§„ì¤‘?
 	bool			m_bPositiveX;				/// GetPos().x - m_vDestPos.x > 0.0f
 	bool			m_bPositiveZ;				/// GetPos().z - m_vDestPos.z > 0.0f
-	bool			m_bLeft;					/// leftÈ¸ÀüÁß? Å¬¶ó¸¸??
-	DWORD			m_dwRegionAttr;				/// ÇöÀç ÁÂÇ¥ÀÇ region ¼Ó¼º 
-	DWORD			m_dwOldRegionAttr;			/// ÀÌÀü ÁÂÇ¥ÀÇ region ¼Ó¼º 
-	DWORD			m_dwMotion;					/// ¸ğ¼Ç ¹øÈ£ 
-	DWORD			m_dwMotionOption;			/// ¸ğ¼Ç Ãß°¡ ¿É¼Ç
-	OBJMSG			m_dwMotionArrive;			/// ÀÌµ¿ ¿Ï·á ÈÄ ¸ğ¼Ç
+	bool			m_bLeft;					/// leftíšŒì „ì¤‘? í´ë¼ë§Œ??
+	DWORD			m_dwRegionAttr;				/// í˜„ì¬ ì¢Œí‘œì˜ region ì†ì„± 
+	DWORD			m_dwOldRegionAttr;			/// ì´ì „ ì¢Œí‘œì˜ region ì†ì„± 
+	DWORD			m_dwMotion;					/// ëª¨ì…˜ ë²ˆí˜¸ 
+	DWORD			m_dwMotionOption;			/// ëª¨ì…˜ ì¶”ê°€ ì˜µì…˜
+	OBJMSG			m_dwMotionArrive;			/// ì´ë™ ì™„ë£Œ í›„ ëª¨ì…˜
 
-	DWORD			m_dwTickRecovery;			/// ¾ÉÀº »óÅÂÀÇ hp, mp º¹±¸ timer
-	DWORD			m_dwTickRecoveryStand;		/// stand »óÅÂÀÇ hp, mp º¹±¸ timer
+	DWORD			m_dwTickRecovery;			/// ì•‰ì€ ìƒíƒœì˜ hp, mp ë³µêµ¬ timer
+	DWORD			m_dwTickRecoveryStand;		/// stand ìƒíƒœì˜ hp, mp ë³µêµ¬ timer
 
 #ifdef __VTN_TIMELIMIT
-	int				m_nAccountPlayTime;		//ms´ÜÀ§ °èÁ¤ ÇÃ·¹ÀÌ ½Ã°£
+	int				m_nAccountPlayTime;		//msë‹¨ìœ„ ê³„ì • í”Œë ˆì´ ì‹œê°„
 #endif // __VTN_TIMELIMIT
 
 	BOOL	HasBuff( WORD wType, WORD wId );
@@ -536,16 +536,16 @@ public:
 #ifdef __BUFF_1107
 	CBuffMgr	m_buffs;
 #else	// __BUFF_1107
-	CSkillInfluence m_SkillState;				/// Áö¼Ó¼ºÀ» °®´Â ½ºÅ³ÀÇ »óÅÂ Ã³¸®(¿¹:ÇÁ·ÎÅØ¼Ç ??ÃÊµ¿¾È ¹æ¾î·Â ¾ó¸¶ Áõ°¡)
+	CSkillInfluence m_SkillState;				/// ì§€ì†ì„±ì„ ê°–ëŠ” ìŠ¤í‚¬ì˜ ìƒíƒœ ì²˜ë¦¬(ì˜ˆ:í”„ë¡œí…ì…˜ ??ì´ˆë™ì•ˆ ë°©ì–´ë ¥ ì–¼ë§ˆ ì¦ê°€)
 #endif	// __BUFF_1107
-	DWORD			m_dwSMTime[SM_MAX];			/// À¯·á ¾ÆÀÌÅÛ ½Ã°£ °ªÀ» °¡Áö°í ÀÖÀ½
-	SKILL			m_aJobSkill[ MAX_SKILL_JOB ];		/// ½ºÅ³ ¹è¿­ 
-	DWORD			m_tmReUseDelay[ MAX_SKILL_JOB ];	/// ½ºÅ³ Àç»ç¿ë½Ã°¢
+	DWORD			m_dwSMTime[SM_MAX];			/// ìœ ë£Œ ì•„ì´í…œ ì‹œê°„ ê°’ì„ ê°€ì§€ê³  ìˆìŒ
+	SKILL			m_aJobSkill[ MAX_SKILL_JOB ];		/// ìŠ¤í‚¬ ë°°ì—´ 
+	DWORD			m_tmReUseDelay[ MAX_SKILL_JOB ];	/// ìŠ¤í‚¬ ì¬ì‚¬ìš©ì‹œê°
 	
-	LONG			m_nStr, m_nSta, m_nDex, m_nInt;		/// ½ºÅİ 
-	LONG			m_nLevel;					/// ·¹º§ 
-	LONG			m_nDeathLevel;				/// Á×¾úÀ» ¶§ ·¹º§
-	EXPINTEGER		m_nExp1, m_nDeathExp;		/// m_nExp1 - °æÇèÄ¡, DeathExp - Á×¾úÀ» ¶§ °æÇèÄ¡
+	LONG			m_nStr, m_nSta, m_nDex, m_nInt;		/// ìŠ¤í…Ÿ 
+	LONG			m_nLevel;					/// ë ˆë²¨ 
+	LONG			m_nDeathLevel;				/// ì£½ì—ˆì„ ë•Œ ë ˆë²¨
+	EXPINTEGER		m_nExp1, m_nDeathExp;		/// m_nExp1 - ê²½í—˜ì¹˜, DeathExp - ì£½ì—ˆì„ ë•Œ ê²½í—˜ì¹˜
 
 private:
 #if __VER >= 12 // __MOD_TUTORIAL
@@ -564,58 +564,58 @@ public:
 	void	SetFlightLv( LONG nFlightLv )	{	m_nFlightLv	= nFlightLv;	}
 #endif	// __MOD_TUTORIAL
 
-	LONG			m_nFxp;		/// ºñÇà·¹º§, 
+	LONG			m_nFxp;		/// ë¹„í–‰ë ˆë²¨, 
 	LONG			m_nHitPoint;				/// HP
 	LONG			m_nManaPoint;				/// MP
-	LONG			m_nFatiguePoint;			/// FP( Áö±¸·Â )
-	LONG			m_nRemainGP;				/// ½ºÅÈ Æ÷ÀÎÆ® 
-	LONG			m_nDefenseMin, m_nDefenseMax;	/// ¹æ¾î·Â min, ¹æ¾î·Â max
-	int				m_nAdjHitRate, m_nAdjParry;		/// ¼öÁ¤Ä¡ 
-	BYTE			m_bySex;						/// ¼ºº° 
-	DWORD			m_dwSkinSet, m_dwFace, m_dwHairMesh, m_dwHairColor, m_dwHeadMesh;	/// ¿Ü¾ç 
-	FLOAT			m_fHairColorR, m_fHairColorG, m_fHairColorB;						/// ¸Ó¸®»ö 
-	LONG			m_nJob;						/// Á÷¾÷ 
-	DWORD			m_dwAuthorization;			/// À¯Àú ±ÇÇÑ (ÀÏ¹İ¿¡¼­ ÃÖ°í °ü¸®ÀÚ±îÁö )
+	LONG			m_nFatiguePoint;			/// FP( ì§€êµ¬ë ¥ )
+	LONG			m_nRemainGP;				/// ìŠ¤íƒ¯ í¬ì¸íŠ¸ 
+	LONG			m_nDefenseMin, m_nDefenseMax;	/// ë°©ì–´ë ¥ min, ë°©ì–´ë ¥ max
+	int				m_nAdjHitRate, m_nAdjParry;		/// ìˆ˜ì •ì¹˜ 
+	BYTE			m_bySex;						/// ì„±ë³„ 
+	DWORD			m_dwSkinSet, m_dwFace, m_dwHairMesh, m_dwHairColor, m_dwHeadMesh;	/// ì™¸ì–‘ 
+	FLOAT			m_fHairColorR, m_fHairColorG, m_fHairColorB;						/// ë¨¸ë¦¬ìƒ‰ 
+	LONG			m_nJob;						/// ì§ì—… 
+	DWORD			m_dwAuthorization;			/// ìœ ì € ê¶Œí•œ (ì¼ë°˜ì—ì„œ ìµœê³  ê´€ë¦¬ìê¹Œì§€ )
 
-	TCHAR			m_szCharacterKey[32];		/// NPC key¹®ÀÚ¿­ 
-	DWORD			m_dwBelligerence;			/// È£Àü¼º ¿©ºÎ 
-	BOOL			m_bActiveAttack;			/// ¼±°ø¸÷ÀÎ°¡?
-	DWORD			m_dwVirtItem;				/// npc°¡ »ç¿ë(°ø°İ)ÇÒ ¾ÆÀÌÅÛ. ¶Ç´Â ÇÃ·¹ÀÌ¾î°¡ ¹«±â ºñÀåÂø½Ã »ç¿ëÇÒ ±âº» ¾ÆÀÌÅÛ. 
-	DWORD			m_dwVirtType;				/// m_dwVirtItem°¡ ¾ÆÀÌÅÛÀÎÁö ½ºÅ³ÀÎÁö °áÁ¤ VT_ITEM, VT_SKILL
+	TCHAR			m_szCharacterKey[32];		/// NPC keyë¬¸ìì—´ 
+	DWORD			m_dwBelligerence;			/// í˜¸ì „ì„± ì—¬ë¶€ 
+	BOOL			m_bActiveAttack;			/// ì„ ê³µëª¹ì¸ê°€?
+	DWORD			m_dwVirtItem;				/// npcê°€ ì‚¬ìš©(ê³µê²©)í•  ì•„ì´í…œ. ë˜ëŠ” í”Œë ˆì´ì–´ê°€ ë¬´ê¸° ë¹„ì¥ì°©ì‹œ ì‚¬ìš©í•  ê¸°ë³¸ ì•„ì´í…œ. 
+	DWORD			m_dwVirtType;				/// m_dwVirtItemê°€ ì•„ì´í…œì¸ì§€ ìŠ¤í‚¬ì¸ì§€ ê²°ì • VT_ITEM, VT_SKILL
 private:
 	OBJID	m_oiEatPet;
 public:
-	int				m_nFuel;					/// ºñÇàÃ¼ ÇöÀç ¿¬·á.
-	int				m_tmAccFuel;				/// °¡¼Ó¿¬·á(½Ã°£´ÜÀ§)
-	BOOL			m_bItemFind;				/// Ä³½ºÆÃ ÈÄ¿¡ ¾ÆÀÌÅÛÀÌ ÀÖ´ÂÁö °Ë»çÇÒ °ÍÀÎ°¡? 
-	int				m_nReadyTime;				/// ºñÇàÃ¼ Å¸±â Ä³½ºÆÃ ½Ã°£
-	OBJID			m_dwUseItemId;				/// ºñÇàÃ¼ Å¸±â ¾ÆÀÌÅÛ ¾ÆÀÌµğ 
+	int				m_nFuel;					/// ë¹„í–‰ì²´ í˜„ì¬ ì—°ë£Œ.
+	int				m_tmAccFuel;				/// ê°€ì†ì—°ë£Œ(ì‹œê°„ë‹¨ìœ„)
+	BOOL			m_bItemFind;				/// ìºìŠ¤íŒ… í›„ì— ì•„ì´í…œì´ ìˆëŠ”ì§€ ê²€ì‚¬í•  ê²ƒì¸ê°€? 
+	int				m_nReadyTime;				/// ë¹„í–‰ì²´ íƒ€ê¸° ìºìŠ¤íŒ… ì‹œê°„
+	OBJID			m_dwUseItemId;				/// ë¹„í–‰ì²´ íƒ€ê¸° ì•„ì´í…œ ì•„ì´ë”” 
 
-	DWORD			m_dwCtrlReadyTime;			/// box open Ä³½ºÆÃ Å¸ÀÔ  
-	OBJID			m_dwCtrlReadyId;			/// Ä³½ºÆÃ ´ë»ó box ¾ÆÀÌµğ  
+	DWORD			m_dwCtrlReadyTime;			/// box open ìºìŠ¤íŒ… íƒ€ì…  
+	OBJID			m_dwCtrlReadyId;			/// ìºìŠ¤íŒ… ëŒ€ìƒ box ì•„ì´ë””  
 
-	OBJID			m_idAttacker;				/// this¸¦ ½ÇÁ¦ °ø°İÇÑ³Ñ
-	OBJID			m_idTargeter;				/// this¸¦ Å¸°ÙÀâ°í Á¡À¯ÇÏ°í ÀÖ´Â³Ñ.
-	OBJID			m_idTracking;				/// ºñÇàÁß ÀÚµ¿ÃßÀûÇÏ°í ÀÖ´Â Å¸°Ù.
-	OBJID			m_idLastHitMover;			/// this°¡ ¸¶Áö¸·À¸·Î ÃÆ´ø ¹«¹ö¾ÆÀÌµğ
-	float			m_fExpRatio;				/// exp Áö±Ş·ü. this¸¦ Á×¿´À»¶§ thisÀÇ expÀÇ ¸îÆÛ¼¾Æ®¸¦ ÁÙ°ÍÀÎ°¡. µğÆúÆ®´Â 1.0ÀÌ´Ù. ÀÌ°ÍÀº ÆÄÆ¼¶§´Â Àû¿ëµÇÁö ¾Ê´Â´Ù.
-	int				m_nAtkCnt;					/// °ø°İÇÏ¸é Ä«¿îÅÍ°¡ 0ÀÌµÇ¸é¼­ °è¼Ó Áõ°¡ÇÑ´Ù.
-	int				m_nReflexDmg;				/// ¸®ÇÃ·º½º µ¥¹ÌÁö ´©Àû (¼­¹ö¸¸)
-	LONG			m_nPlusMaxHitPoint;			/// Ãß°¡ MAX HP
-	DWORD			m_tmPoisonUnit;				/// µ¶ Àû¿ë ½Ã°£
-	DWORD			m_tmBleedingUnit;			/// ¸îÃÊ¸¶´Ù ÇÑ¹ø¾¿ÀÎ°¡?
-	OBJID			m_idPoisonAttacker;			/// µ¶ °ø°İÀÚ
-	OBJID			m_idBleedingAttacker;		/// ÃâÇ÷ °ø°İÀÚ
-	short			m_wStunCnt;					/// ½ºÅÏ»óÅÂ ½Ã°£ 
-	short			m_wPoisonCnt;				/// µ¶»óÅÂ ½Ã°£ 
-	short			m_wPoisonDamage;			/// µ¶À¸·Î ±ğÀÏ µ¥¹ÌÁö
-	short			m_wDarkCnt;					/// ¾ÏÈæ Áö¼Ó½Ã°£
-	short			m_wDarkVal;					/// ¾ÏÈæµ¿¾È ±ğÀÏ ¸íÁß·ü ¼öÁ¤Ä¡
-	short			m_wBleedingCnt;				/// ÃâÇ÷ »óÅÂ ½Ã°£ 
-	short			m_wBleedingDamage;			/// ÃâÇ÷·Î ±ğÀÏ µ¥¹ÌÁö
-	short			m_wDarkCover;				/// ¾Èº¸ÀÌ°Ô ¼û±â
+	OBJID			m_idAttacker;				/// thisë¥¼ ì‹¤ì œ ê³µê²©í•œë„˜
+	OBJID			m_idTargeter;				/// thisë¥¼ íƒ€ê²Ÿì¡ê³  ì ìœ í•˜ê³  ìˆëŠ”ë„˜.
+	OBJID			m_idTracking;				/// ë¹„í–‰ì¤‘ ìë™ì¶”ì í•˜ê³  ìˆëŠ” íƒ€ê²Ÿ.
+	OBJID			m_idLastHitMover;			/// thisê°€ ë§ˆì§€ë§‰ìœ¼ë¡œ ì³¤ë˜ ë¬´ë²„ì•„ì´ë””
+	float			m_fExpRatio;				/// exp ì§€ê¸‰ë¥ . thisë¥¼ ì£½ì˜€ì„ë•Œ thisì˜ expì˜ ëª‡í¼ì„¼íŠ¸ë¥¼ ì¤„ê²ƒì¸ê°€. ë””í´íŠ¸ëŠ” 1.0ì´ë‹¤. ì´ê²ƒì€ íŒŒí‹°ë•ŒëŠ” ì ìš©ë˜ì§€ ì•ŠëŠ”ë‹¤.
+	int				m_nAtkCnt;					/// ê³µê²©í•˜ë©´ ì¹´ìš´í„°ê°€ 0ì´ë˜ë©´ì„œ ê³„ì† ì¦ê°€í•œë‹¤.
+	int				m_nReflexDmg;				/// ë¦¬í”Œë ‰ìŠ¤ ë°ë¯¸ì§€ ëˆ„ì  (ì„œë²„ë§Œ)
+	LONG			m_nPlusMaxHitPoint;			/// ì¶”ê°€ MAX HP
+	DWORD			m_tmPoisonUnit;				/// ë… ì ìš© ì‹œê°„
+	DWORD			m_tmBleedingUnit;			/// ëª‡ì´ˆë§ˆë‹¤ í•œë²ˆì”©ì¸ê°€?
+	OBJID			m_idPoisonAttacker;			/// ë… ê³µê²©ì
+	OBJID			m_idBleedingAttacker;		/// ì¶œí˜ˆ ê³µê²©ì
+	short			m_wStunCnt;					/// ìŠ¤í„´ìƒíƒœ ì‹œê°„ 
+	short			m_wPoisonCnt;				/// ë…ìƒíƒœ ì‹œê°„ 
+	short			m_wPoisonDamage;			/// ë…ìœ¼ë¡œ ê¹ì¼ ë°ë¯¸ì§€
+	short			m_wDarkCnt;					/// ì•”í‘ ì§€ì†ì‹œê°„
+	short			m_wDarkVal;					/// ì•”í‘ë™ì•ˆ ê¹ì¼ ëª…ì¤‘ë¥  ìˆ˜ì •ì¹˜
+	short			m_wBleedingCnt;				/// ì¶œí˜ˆ ìƒíƒœ ì‹œê°„ 
+	short			m_wBleedingDamage;			/// ì¶œí˜ˆë¡œ ê¹ì¼ ë°ë¯¸ì§€
+	short			m_wDarkCover;				/// ì•ˆë³´ì´ê²Œ ìˆ¨ê¸°
 #if __VER >= 9	// __PET_0410
-	short			m_nHealCnt;		//	0ÀÏ °æ¿ì¸¸ ÀÚµ¿ Ä¡À¯
+	short			m_nHealCnt;		//	0ì¼ ê²½ìš°ë§Œ ìë™ ì¹˜ìœ 
 #endif	// __PET_0410
 #ifdef __BARUNA_PIERCING
 	short			m_dwForceDamageDamage[4];
@@ -640,57 +640,57 @@ public:
 		}
 #endif	// __AI_0711
 
-	BYTE			m_nAttackResistLeft;		/// ÄÚµå Á¸ÀçÇÏÁö¸¸ °ÔÀÓ³» »ç¿ëÇÏÁö ¾ÊÀ½ ( ¿Ş¼Õ ¼Ó¼º °ø°İ·Â Ãß°¡ ) 
-	BYTE			m_nAttackResistRight;		/// ÄÚµå Á¸ÀçÇÏÁö¸¸ °ÔÀÓ³» »ç¿ëÇÏÁö ¾ÊÀ½ ( ¿À¸¥¼Õ ¼Ó¼º °ø°İ·Â Ãß°¡ ) 
-	BYTE			m_nDefenseResist;			/// ÄÚµå Á¸ÀçÇÏÁö¸¸ °ÔÀÓ³» »ç¿ëÇÏÁö ¾ÊÀ½ ( ¼Ó¼º ¹æ¾î·Â ) 
+	BYTE			m_nAttackResistLeft;		/// ì½”ë“œ ì¡´ì¬í•˜ì§€ë§Œ ê²Œì„ë‚´ ì‚¬ìš©í•˜ì§€ ì•ŠìŒ ( ì™¼ì† ì†ì„± ê³µê²©ë ¥ ì¶”ê°€ ) 
+	BYTE			m_nAttackResistRight;		/// ì½”ë“œ ì¡´ì¬í•˜ì§€ë§Œ ê²Œì„ë‚´ ì‚¬ìš©í•˜ì§€ ì•ŠìŒ ( ì˜¤ë¥¸ì† ì†ì„± ê³µê²©ë ¥ ì¶”ê°€ ) 
+	BYTE			m_nDefenseResist;			/// ì½”ë“œ ì¡´ì¬í•˜ì§€ë§Œ ê²Œì„ë‚´ ì‚¬ìš©í•˜ì§€ ì•ŠìŒ ( ì†ì„± ë°©ì–´ë ¥ ) 
 	
-	u_long			m_idparty;					/// ÆÄÆ¼ ¹øÈ£ (Å¬¶ó¿¡¼± Æ¯º°ÇÑ °æ¿ì°¡ ¾Æ´Ï¸é »ç¿ëÇØ¼± ¾ÈµÊ  g_Party.m_uPartyId¸¦ »ç¿ë )
-	u_long			m_idGuild;					/// ±æµå ¹øÈ£ 
-	BOOL			m_bGuildBank;				/// ±æµå ¹ğÅ©¸¦ ÀÌ¿ëÁßÀÎÁö È®ÀÎ
-	DWORD			m_idGuildCloak;				/// ¸ÁÅäÀÇ ±æµå¹øÈ£¸¦ °¡Áö°í ÀÖÀ½
-	u_long			m_idWar;					/// ±æµåÀü °íÀ¯ ¹øÈ£ 
+	u_long			m_idparty;					/// íŒŒí‹° ë²ˆí˜¸ (í´ë¼ì—ì„  íŠ¹ë³„í•œ ê²½ìš°ê°€ ì•„ë‹ˆë©´ ì‚¬ìš©í•´ì„  ì•ˆë¨  g_Party.m_uPartyIdë¥¼ ì‚¬ìš© )
+	u_long			m_idGuild;					/// ê¸¸ë“œ ë²ˆí˜¸ 
+	BOOL			m_bGuildBank;				/// ê¸¸ë“œ ë±…í¬ë¥¼ ì´ìš©ì¤‘ì¸ì§€ í™•ì¸
+	DWORD			m_idGuildCloak;				/// ë§í† ì˜ ê¸¸ë“œë²ˆí˜¸ë¥¼ ê°€ì§€ê³  ìˆìŒ
+	u_long			m_idWar;					/// ê¸¸ë“œì „ ê³ ìœ  ë²ˆí˜¸ 
 
-	DWORD			m_tmActionPoint;			/// ¾×¼ÇÆ÷ÀÎÆ® ÀÚµ¿»ó½Â Å¸ÀÌ¸Ó(3ÃÊ) 
-	DWORD			m_dwTickCheer;				/// ÀÀ¿ø Å¸ÀÌ¸Ó 
-	int				m_nCheerPoint;				/// Å¸ÀÎ¿¡°Ô ÀÀ¿ø ¹ŞÀº °ª  
+	DWORD			m_tmActionPoint;			/// ì•¡ì…˜í¬ì¸íŠ¸ ìë™ìƒìŠ¹ íƒ€ì´ë¨¸(3ì´ˆ) 
+	DWORD			m_dwTickCheer;				/// ì‘ì› íƒ€ì´ë¨¸ 
+	int				m_nCheerPoint;				/// íƒ€ì¸ì—ê²Œ ì‘ì› ë°›ì€ ê°’  
 
-	DWORD			m_dwTickDuel;				/// µà¾ó »óÅÂ Å¸ÀÌ¸Ó 
-	DWORD			m_dwTickEndDuel;			/// µà¾ó Á¾·á Å¸ÀÌ¸Ó 
-	int				m_nDuelState;				/// µà¾ó»óÅÂ 
-	int				m_nDuel;					/// µà¾óÁß »óÅÂ ( 0:¾øÀ½ 1:°³ÀÎµà¾óÁß 2:ÆÄÆ¼µà¾óÁß )
-	OBJID			m_idDuelOther;				/// µà¾ó »ó´ëÀÇ ¾ÆÀÌµğ
-	u_long			m_idDuelParty;				/// ÆÄÆ¼µà¾óÁßÀÌ¸é »ó´ë¹æ ÆÄÆ¼ÀÇ ¾ÆÀÌµğ 
+	DWORD			m_dwTickDuel;				/// ë“€ì–¼ ìƒíƒœ íƒ€ì´ë¨¸ 
+	DWORD			m_dwTickEndDuel;			/// ë“€ì–¼ ì¢…ë£Œ íƒ€ì´ë¨¸ 
+	int				m_nDuelState;				/// ë“€ì–¼ìƒíƒœ 
+	int				m_nDuel;					/// ë“€ì–¼ì¤‘ ìƒíƒœ ( 0:ì—†ìŒ 1:ê°œì¸ë“€ì–¼ì¤‘ 2:íŒŒí‹°ë“€ì–¼ì¤‘ )
+	OBJID			m_idDuelOther;				/// ë“€ì–¼ ìƒëŒ€ì˜ ì•„ì´ë””
+	u_long			m_idDuelParty;				/// íŒŒí‹°ë“€ì–¼ì¤‘ì´ë©´ ìƒëŒ€ë°© íŒŒí‹°ì˜ ì•„ì´ë”” 
 	
-	int				m_nFame;					/// ¸í¼ºÄ¡ 
-	u_long			m_idMurderer;				/// ³¯ ¸¶Áö¸·À¸·Î Á×¿´´ø³Ñ ÇÃ·¹ÀÌ¾î ¾ÆÀÌµğ
+	int				m_nFame;					/// ëª…ì„±ì¹˜ 
+	u_long			m_idMurderer;				/// ë‚  ë§ˆì§€ë§‰ìœ¼ë¡œ ì£½ì˜€ë˜ë„˜ í”Œë ˆì´ì–´ ì•„ì´ë””
 #if __VER >= 8 // __S8_PK
-	DWORD			m_dwPKTime;					/// ÇÎÅ© »óÅÂ ½Ã°£
-	int				m_nPKValue;					/// PK ¼öÄ¡
-	DWORD			m_dwPKPropensity;			/// PK ¼ºÇâ
-	DWORD			m_dwPKExp;					/// PK ¼ºÇâ ½Àµæ °æÇèÄ¡		
+	DWORD			m_dwPKTime;					/// í•‘í¬ ìƒíƒœ ì‹œê°„
+	int				m_nPKValue;					/// PK ìˆ˜ì¹˜
+	DWORD			m_dwPKPropensity;			/// PK ì„±í–¥
+	DWORD			m_dwPKExp;					/// PK ì„±í–¥ ìŠµë“ ê²½í—˜ì¹˜		
 #else // __VER >= 8 // __S8_PK
-	int				m_nNumKill;					/// Å³¼ö
-	DWORD			m_dwKarmaTick;				/// Ä«¸£¸¶ Æ÷ÀÎÆ® ÀÚ¿¬ È¸º¹¿ë Å¸ÀÌ¸Ó 
-	int				m_nSlaughter;				/// Ä«¸£¸¶Æ÷ÀÎÆ®(Ä«¿À ¼öÄ¡)
+	int				m_nNumKill;					/// í‚¬ìˆ˜
+	DWORD			m_dwKarmaTick;				/// ì¹´ë¥´ë§ˆ í¬ì¸íŠ¸ ìì—° íšŒë³µìš© íƒ€ì´ë¨¸ 
+	int				m_nSlaughter;				/// ì¹´ë¥´ë§ˆí¬ì¸íŠ¸(ì¹´ì˜¤ ìˆ˜ì¹˜)
 #endif // __VER >= 8 // __S8_PK
 #if __VER >= 8 //__CSC_VER8_5
-	EXPINTEGER		m_nAngelExp;				/// ¿£Á© °æÇèÄ¡
-	LONG			m_nAngelLevel;				/// ¿£Á© Level
+	EXPINTEGER		m_nAngelExp;				/// ì—”ì ¤ ê²½í—˜ì¹˜
+	LONG			m_nAngelLevel;				/// ì—”ì ¤ Level
 #endif // __CSC_VER8_5
 
-#if __VER >= 10 // __LEGEND	//	9Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
+#if __VER >= 10 // __LEGEND	//	9ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
 	BYTE			m_nLegend;
-#endif	//__LEGEND	//	9Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
-#if __VER >= 11 // __MA_VER11_06				// È®À²½ºÅ³ È¿°ú¼öÁ¤ world,neuz
-	DWORD			dwRemoveSfxObj[MAX_SKILLBUFF_COUNT];			// »èÁ¦ÇÒ È¿°ú ¿ÀºêÁ§Æ® 
+#endif	//__LEGEND	//	9ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
+#if __VER >= 11 // __MA_VER11_06				// í™•ìœ¨ìŠ¤í‚¬ íš¨ê³¼ìˆ˜ì • world,neuz
+	DWORD			dwRemoveSfxObj[MAX_SKILLBUFF_COUNT];			// ì‚­ì œí•  íš¨ê³¼ ì˜¤ë¸Œì íŠ¸ 
 	DWORD			GetRemoveSfxObj(DWORD	dwRemoveSfxObjID);
 	void			SetRemoveSfxObj(DWORD	dwRemoveSfxObjID);
-#endif // __MA_VER11_06				// È®À²½ºÅ³ È¿°ú¼öÁ¤ world,neuz
+#endif // __MA_VER11_06				// í™•ìœ¨ìŠ¤í‚¬ íš¨ê³¼ìˆ˜ì • world,neuz
 
-#if __VER >= 13 // __HONORABLE_TITLE			// ´ŞÀÎ
-	int				m_nHonor;					// ´ŞÀÎ¼±ÅÃ 
-	DWORD			m_dwHonorCheckTime;			//´ŞÀÎ ½Ã°£Ã¼Å©
-	int				m_aHonorTitle[MAX_HONOR_TITLE];			// ´ŞÀÎ¼öÄ¡
+#if __VER >= 13 // __HONORABLE_TITLE			// ë‹¬ì¸
+	int				m_nHonor;					// ë‹¬ì¸ì„ íƒ 
+	DWORD			m_dwHonorCheckTime;			//ë‹¬ì¸ ì‹œê°„ì²´í¬
+	int				m_aHonorTitle[MAX_HONOR_TITLE];			// ë‹¬ì¸ìˆ˜ì¹˜
 	int				GetHonorTitle(int nIdx)	{	return m_aHonorTitle[nIdx];	}
 	void			SetHonorCount(int nIdx , int nCount );
 	void			CheckHonorStat();
@@ -700,7 +700,7 @@ public:
 	LPCTSTR			GetTitle();
 	void			SetTitle(LPCTSTR	pTitle);
 
-#endif	// __HONORABLE_TITLE			// ´ŞÀÎ
+#endif	// __HONORABLE_TITLE			// ë‹¬ì¸
 
 #ifdef __CLIENT
 	CSfx*			m_pSfxWing;
@@ -719,39 +719,39 @@ public:
 #endif	// __LORA
 #endif	// __JEFF_9_20
 
-	RESURRECTION_DATA				m_Resurrection_Data;		/// ¸®Àú·º¼Ç ½ºÅ³ Á¤º¸ 
-	CItemContainer< CItemElem  >*	m_ShopInventory[ MAX_VENDOR_INVENTORY_TAB ];	/// »óÀÎNPCÀÇ ¹°Ç° Á¤º¸ 
-	CItemContainer< CItemElem  >	m_Inventory;				/// ÀÎº¥Åä¸®
+	RESURRECTION_DATA				m_Resurrection_Data;		/// ë¦¬ì €ë ‰ì…˜ ìŠ¤í‚¬ ì •ë³´ 
+	CItemContainer< CItemElem  >*	m_ShopInventory[ MAX_VENDOR_INVENTORY_TAB ];	/// ìƒì¸NPCì˜ ë¬¼í’ˆ ì •ë³´ 
+	CItemContainer< CItemElem  >	m_Inventory;				/// ì¸ë²¤í† ë¦¬
 #if __VER >= 11 // __SYS_POCKET
 	CPocketController	m_Pocket;
 #endif	// __SYS_POCKET
-	EQUIP_INFO		m_aEquipInfo[MAX_HUMAN_PARTS];				/// ÀåÂøÁ¤º¸ 	
-	CVTInfo			m_vtInfo;					/// °Å·¡¿Í °³ÀÎ»óÁ¡ ¹øÈ£ 
+	EQUIP_INFO		m_aEquipInfo[MAX_HUMAN_PARTS];				/// ì¥ì°©ì •ë³´ 	
+	CVTInfo			m_vtInfo;					/// ê±°ë˜ì™€ ê°œì¸ìƒì  ë²ˆí˜¸ 
 
-	BYTE			m_nSlot;					/// ·Î±×ÀÎ È­¸éÀÇ 3°³ Ä³¸¯ÅÍ ¼ø¼­ ¹øÈ£ 
-	BOOL			m_bBank;					/// ÀºÇà ÀÌ¿ë Áß?
-	u_long			m_idPlayerBank[3];			/// 3°³ Ä³¸¯ÅÍ idPlayer
-	DWORD			m_dwGoldBank[3];			/// 3°³ Ä³¸¯ÅÍ ±æµåµ· 
-	CItemContainer< CItemElem >	m_Bank[3];		/// 3°³ Ä³¸¯ÅÍ ÀºÇà ¾ÆÀÌÅÛ 
+	BYTE			m_nSlot;					/// ë¡œê·¸ì¸ í™”ë©´ì˜ 3ê°œ ìºë¦­í„° ìˆœì„œ ë²ˆí˜¸ 
+	BOOL			m_bBank;					/// ì€í–‰ ì´ìš© ì¤‘?
+	u_long			m_idPlayerBank[3];			/// 3ê°œ ìºë¦­í„° idPlayer
+	DWORD			m_dwGoldBank[3];			/// 3ê°œ ìºë¦­í„° ê¸¸ë“œëˆ 
+	CItemContainer< CItemElem >	m_Bank[3];		/// 3ê°œ ìºë¦­í„° ì€í–‰ ì•„ì´í…œ 
 
-	BYTE			m_nQuestKeeping;			/// Å¬¶ô¿öÅ© ±æµå Äù½ºÆ® ¹øÈ£  
-	BYTE			m_nPartyQuestKeeping;		/// °Å´ë ¸ó½ºÅÍ Äù½ºÆ® ¹øÈ£ 
-	BYTE			m_nQuestSize;				/// Äù½ºÆ® °¹¼ö 
-	LPQUEST			m_aQuest;					/// ÇöÀç ÁøÇàÁßÀÎ Äù½ºÆ® ¹è¿­ 
-	BYTE			m_nCompleteQuestSize;		/// ¿Ï·áµÈ Äù½ºÆ® °¹¼ö 
-	LPWORD   		m_aCompleteQuest;			/// ¿Ï·áµÈ Äù½ºÆ® ¹è¿­ 	
+	BYTE			m_nQuestKeeping;			/// í´ë½ì›Œí¬ ê¸¸ë“œ í€˜ìŠ¤íŠ¸ ë²ˆí˜¸  
+	BYTE			m_nPartyQuestKeeping;		/// ê±°ëŒ€ ëª¬ìŠ¤í„° í€˜ìŠ¤íŠ¸ ë²ˆí˜¸ 
+	BYTE			m_nQuestSize;				/// í€˜ìŠ¤íŠ¸ ê°¯ìˆ˜ 
+	LPQUEST			m_aQuest;					/// í˜„ì¬ ì§„í–‰ì¤‘ì¸ í€˜ìŠ¤íŠ¸ ë°°ì—´ 
+	BYTE			m_nCompleteQuestSize;		/// ì™„ë£Œëœ í€˜ìŠ¤íŠ¸ ê°¯ìˆ˜ 
+	LPWORD   		m_aCompleteQuest;			/// ì™„ë£Œëœ í€˜ìŠ¤íŠ¸ ë°°ì—´ 	
 #if __VER >= 15 // __IMPROVE_QUEST_INTERFACE
 	BYTE			m_nCheckedQuestSize;
 	LPWORD			m_aCheckedQuest;
 #endif // __IMPROVE_QUEST_INTERFACE
 
-	int				m_nDead;					/// Á×Àº ÈÄ 5ÃÊ°£Àº ¹«Àû
-	int				m_nGuildCombatState;		/// ±æµå ´ëÀü »óÅÂ 
-	D3DXVECTOR3		m_vMarkingPos;				/// ·Îµå¶óÀÌÆ®¿¡¼­ ¸¶Å·ÇÑ ÁÂÇ¥ 
-	OBJID			m_idMarkingWorld;			/// ·Îµå¶óÀÌÆ®¿¡¼­ ¸¶Å·ÇÑ ¿ùµå ¾ÆÀÌµğ 
+	int				m_nDead;					/// ì£½ì€ í›„ 5ì´ˆê°„ì€ ë¬´ì 
+	int				m_nGuildCombatState;		/// ê¸¸ë“œ ëŒ€ì „ ìƒíƒœ 
+	D3DXVECTOR3		m_vMarkingPos;				/// ë¡œë“œë¼ì´íŠ¸ì—ì„œ ë§ˆí‚¹í•œ ì¢Œí‘œ 
+	OBJID			m_idMarkingWorld;			/// ë¡œë“œë¼ì´íŠ¸ì—ì„œ ë§ˆí‚¹í•œ ì›”ë“œ ì•„ì´ë”” 
 
 #ifdef __CLIENT
-	static BOOL		m_bQuestEmoticonAdd;		/// Äù½ºÆ® ¾ÆÀÌÄÜ È®Ãà ÇÁ·Î¼¼½º 
+	static BOOL		m_bQuestEmoticonAdd;		/// í€˜ìŠ¤íŠ¸ ì•„ì´ì½˜ í™•ì¶• í”„ë¡œì„¸ìŠ¤ 
 	static FLOAT	m_fQuestEmoticonScale;
 	int				m_nQuestEmoticonIndex;
 	bool			m_bShowQuestEmoticon;
@@ -760,12 +760,12 @@ public:
 	V_NaviPoint		m_vOtherPoint;
 	int				m_idSfxHit;
 	BYTE			m_nWaterCircleCount;
-	DWORD			m_dwReqFlag;				/// ÀÀ´ä¿äÃ» ÇÃ·¡±×.
+	DWORD			m_dwReqFlag;				/// ì‘ë‹µìš”ì²­ í”Œë˜ê·¸.
 	char			m_szPartyName[32];
-	float			m_fDestScale;				/// ÂÉ±×¶óµé¶§ ºÎµå·´°Ô ÇÏ±âÀ§ÇÑ..
-	float			m_fDestScaleSlerp;			/// 1.0f ~ 0.0À¸·Î º¯È­ÇÔ.
+	float			m_fDestScale;				/// ìª¼ê·¸ë¼ë“¤ë•Œ ë¶€ë“œëŸ½ê²Œ í•˜ê¸°ìœ„í•œ..
+	float			m_fDestScaleSlerp;			/// 1.0f ~ 0.0ìœ¼ë¡œ ë³€í™”í•¨.
 	CCooltimeMgr	m_cooltimeMgr;	
-	LPDIRECT3DTEXTURE9		m_pCloakTexture;	/// ¸ÁÅäÅØ½ºÃÄ.
+	LPDIRECT3DTEXTURE9		m_pCloakTexture;	/// ë§í† í…ìŠ¤ì³.
 
 #if __VER >= 8 //__Y_EYE_FLASH_8
 	static LPDIRECT3DTEXTURE9		m_pTextureEye[2][MAX_HEAD];
@@ -775,20 +775,20 @@ public:
 #endif // __CLIENT
 
 #ifdef __WORLDSERVER
-	CNpcProperty*	m_pNpcProperty;				/// NPC °íÀ¯ Á¤º¸( ´ë»ç, Äù½ºÆ®, ÆÄÀÏÀÌ¸§ ) ÇöÀç´Â ¸¶À» NPC ´ëÈ­Ã³¸®ÀÚ
-	CTimer          m_timerQuestLimitTime;		/// Äù½ºÆ® Á¦ÇÑ ½Ã°£ Å¸ÀÌ¸Ó 
-	DWORD	        m_dwPKTargetLimit;			/// PK¼±°øÁ¦ÇÑ½Ã°¢
-	DWORD			m_dwTickCreated;			/// »ı¼º ½Ã°¢ 
-	BOOL			m_bLastPK;					/// ¸¶Áö¸·À¸·Î Á×¾úÀ»¶§ ÇÃ·¹ÀÌ¾î¿¡°Ô(µà¾óÆ÷ÇÔ) Á×Àº°Ç°¡ ±×¿ÜÀÇ °æ¿ì·Î Á×Àº°Ç°¡.
-	BOOL			m_bLastDuelParty;			/// ÆÄÆ¼µà¾ó·Î »ç¸Á?
-	CTime			m_tGuildMember;				/// ±æµå Å»Åğ ½Ã°¢ 
-	BOOL			m_bGuildCombat;				/// ±æµå ´ëÀü Áß?
-//	OBJID			m_idCollecter;				/// thisÀÇ Ã¤Áı¼ÒÀ¯ÀÚ.
-//	int				m_nResource;				/// ÀÚ¿ø º¸À¯·®. - ¸ó½ºÅÍÃø¿¡¼­ »ç¿ë.
-//	int				m_nCollectOwnCnt;			/// > 0 ÀÎ»óÈ²Àº this´Â m_idCollecter°ÍÀÌ´Ù.
-	CSfxHitArray	m_sfxHitArray;				/// sfx hit Á¤º¸ ¹è¿­ 
-	map< OBJID, queue< SFXHIT_INFO> >	m_mapSFXInfo;		/// sfx ÇØÅ· ¶§¹®¿¡ ....	
-//	map< OBJID, int>					m_mapSFXCount;		/// sfx°¡ ¹ß»çµÇ¸é ++ 
+	CNpcProperty*	m_pNpcProperty;				/// NPC ê³ ìœ  ì •ë³´( ëŒ€ì‚¬, í€˜ìŠ¤íŠ¸, íŒŒì¼ì´ë¦„ ) í˜„ì¬ëŠ” ë§ˆì„ NPC ëŒ€í™”ì²˜ë¦¬ì
+	CTimer          m_timerQuestLimitTime;		/// í€˜ìŠ¤íŠ¸ ì œí•œ ì‹œê°„ íƒ€ì´ë¨¸ 
+	DWORD	        m_dwPKTargetLimit;			/// PKì„ ê³µì œí•œì‹œê°
+	DWORD			m_dwTickCreated;			/// ìƒì„± ì‹œê° 
+	BOOL			m_bLastPK;					/// ë§ˆì§€ë§‰ìœ¼ë¡œ ì£½ì—ˆì„ë•Œ í”Œë ˆì´ì–´ì—ê²Œ(ë“€ì–¼í¬í•¨) ì£½ì€ê±´ê°€ ê·¸ì™¸ì˜ ê²½ìš°ë¡œ ì£½ì€ê±´ê°€.
+	BOOL			m_bLastDuelParty;			/// íŒŒí‹°ë“€ì–¼ë¡œ ì‚¬ë§?
+	CTime			m_tGuildMember;				/// ê¸¸ë“œ íƒˆí‡´ ì‹œê° 
+	BOOL			m_bGuildCombat;				/// ê¸¸ë“œ ëŒ€ì „ ì¤‘?
+//	OBJID			m_idCollecter;				/// thisì˜ ì±„ì§‘ì†Œìœ ì.
+//	int				m_nResource;				/// ìì› ë³´ìœ ëŸ‰. - ëª¬ìŠ¤í„°ì¸¡ì—ì„œ ì‚¬ìš©.
+//	int				m_nCollectOwnCnt;			/// > 0 ì¸ìƒí™©ì€ thisëŠ” m_idCollecterê²ƒì´ë‹¤.
+	CSfxHitArray	m_sfxHitArray;				/// sfx hit ì •ë³´ ë°°ì—´ 
+	map< OBJID, queue< SFXHIT_INFO> >	m_mapSFXInfo;		/// sfx í•´í‚¹ ë•Œë¬¸ì— ....	
+//	map< OBJID, int>					m_mapSFXCount;		/// sfxê°€ ë°œì‚¬ë˜ë©´ ++ 
 	map< OBJID, queue< SFXHIT_COUNT > >	m_mapSFXCount;
 #endif	// __WORLDSERVER
 
@@ -809,7 +809,7 @@ public:
 #endif // __PETVIS
 #endif	// __WORLDSERVER
 #if __VER >= 12 // __PET_0519
-	BOOL	IsUsingEatPet( CItemElem* pItemElem );	// »ç¿ëÁßÀÎ ¸ÔÆêÀÎ°¡?
+	BOOL	IsUsingEatPet( CItemElem* pItemElem );	// ì‚¬ìš©ì¤‘ì¸ ë¨¹í«ì¸ê°€?
 #endif	// __PET_0519
 
 	BOOL	HasActivatedEatPet( void )		{	return m_oiEatPet != NULL_ID;	}
@@ -819,9 +819,9 @@ public:
 	DWORD	GetPetId( void )	{	return m_dwPetId;	}
 	void	SetPetId( DWORD dwPetId )		{	m_dwPetId	= dwPetId;	}
 private:
-	DWORD	m_dwPetId;	// ¼ÒÈ¯ÁßÀÌ ÆêÀÇ ÀÎº¥Åä¸® À§Ä¡(í»), ¼ÒÈ¯ÁßÀÎ Æê ÀÎµ¦½º(öâ)
+	DWORD	m_dwPetId;	// ì†Œí™˜ì¤‘ì´ í«ì˜ ì¸ë²¤í† ë¦¬ ìœ„ì¹˜(è‡ª), ì†Œí™˜ì¤‘ì¸ í« ì¸ë±ìŠ¤(ä»–)
 #if __VER >= 12 // __PET_0519
-	int		DoUseItemPetTonic( CItemElem* pItemElem );	// Æê ¿µ¾çÁ¦ »ç¿ë
+	int		DoUseItemPetTonic( CItemElem* pItemElem );	// í« ì˜ì–‘ì œ ì‚¬ìš©
 #endif	// __PET_0519
 #if __VER >= 15 // __PETVIS
 private:
@@ -832,9 +832,9 @@ public:
 	CItemElem*	GetVisPetItem( void )	{ return m_Inventory.GetAtId( m_objIdVisPet ); }
 	void		SetVisPetItem( OBJID objId )	{ m_objIdVisPet = objId; }
 	BOOL		HasActivatedVisPet()	{ return m_objIdVisPet != NULL_ID; }
-	DWORD		m_dwMoverSfxId;	// ¹«¹ö¿¡ ºÙ´Â ÀÌÆåÆ®
+	DWORD		m_dwMoverSfxId;	// ë¬´ë²„ì— ë¶™ëŠ” ì´í™íŠ¸
 private:
-	OBJID		m_objIdVisPet;	// ¼ÒÈ¯ÁßÀÎ ºñ½ºÆêÀÇ ÀÎº¥Åä¸® À§Ä¡
+	OBJID		m_objIdVisPet;	// ì†Œí™˜ì¤‘ì¸ ë¹„ìŠ¤í«ì˜ ì¸ë²¤í† ë¦¬ ìœ„ì¹˜
 #endif // __PETVIS
 
 public:
@@ -879,8 +879,8 @@ public:
 	CItemElem*	GetCollector( void );
 #endif	//	__SYS_COLLECTING
 
-	int				m_nSkillLevel;				/// Áö±İ±îÁö ¿Ã¸° ½ºÅ³·¹º§
-	int				m_nSkillPoint;				/// ½ºÅ³ ÂïÀ» Æ÷ÀÎÆ® ¼öÄ¡ 
+	int				m_nSkillLevel;				/// ì§€ê¸ˆê¹Œì§€ ì˜¬ë¦° ìŠ¤í‚¬ë ˆë²¨
+	int				m_nSkillPoint;				/// ìŠ¤í‚¬ ì°ì„ í¬ì¸íŠ¸ ìˆ˜ì¹˜ 
 
 	CTimer			m_SkillTimer;
 	BOOL			m_SkillTimerStop;
@@ -904,37 +904,37 @@ public:
 #endif //__EVE_BALLOON
 
 private:
-	SET_OBJID		m_idEnemies;				/// Àû¿¡°Ô °ø°İ¹ŞÀº Á¤º¸ 
+	SET_OBJID		m_idEnemies;				/// ì ì—ê²Œ ê³µê²©ë°›ì€ ì •ë³´ 
 
-	OBJACT			m_oaCmd;					/// ¿ÀºêÁ§Æ® ¸í·É  
-	int				m_nCParam[3];				/// ¹ü¿ë ¸í·É ÆÄ¶ó¸ŞÅÍ
-	OBJACT			m_oaAct;					/// ¿ÀºêÁ§Æ® Çàµ¿»óÅÂ
+	OBJACT			m_oaCmd;					/// ì˜¤ë¸Œì íŠ¸ ëª…ë ¹  
+	int				m_nCParam[3];				/// ë²”ìš© ëª…ë ¹ íŒŒë¼ë©”í„°
+	OBJACT			m_oaAct;					/// ì˜¤ë¸Œì íŠ¸ í–‰ë™ìƒíƒœ
 #if __VER >= 8 // __S8_PK
-	int				m_nAParam[5];				/// ¹ü¿ë Çàµ¿ ÆÄ¶ó¸ŞÅÍ
+	int				m_nAParam[5];				/// ë²”ìš© í–‰ë™ íŒŒë¼ë©”í„°
 #else // __VER >= 8 // __S8_PK
-	int				m_nAParam[4];				/// ¹ü¿ë Çàµ¿ ÆÄ¶ó¸ŞÅÍ
+	int				m_nAParam[4];				/// ë²”ìš© í–‰ë™ íŒŒë¼ë©”í„°
 #endif // __VER >= 8 // __S8_PK
 
-	LONG			m_adjParamAry[ MAX_ADJPARAMARY ];		/// ¼öÁ¤ ÆÄ¶ó¹ÌÅÍ( ¿¹: hp + ¼öÁ¤hp )
-	LONG			m_chgParamAry[ MAX_ADJPARAMARY ];		/// ±³Ã¼ ÆÄ¶ó¹ÌÅÍ( ¿¹: ±³Ã¼ hp )
+	LONG			m_adjParamAry[ MAX_ADJPARAMARY ];		/// ìˆ˜ì • íŒŒë¼ë¯¸í„°( ì˜ˆ: hp + ìˆ˜ì •hp )
+	LONG			m_chgParamAry[ MAX_ADJPARAMARY ];		/// êµì²´ íŒŒë¼ë¯¸í„°( ì˜ˆ: êµì²´ hp )
 
-	BOOL			m_bRegenItem;				/// NPC »óÀÎÀÌ ÆÈ ¾ÆÀÌÅÛ »ı¼ºÇØ µÎ¾ú´Â°¡ flag  
-	int				m_nMovePattern;				/// NPC ÆĞÅÏ ÀÌµ¿ Å¸ÀÔ
-	int				m_nMoveEvent;				/// NPC ÆĞÅÏ ÀÌµ¿¶§ ¾²ÀÌ´Â »óÅÂº¯È­ 99¸é »óÅÂ³¡
-	int				m_nMoveEventCnt;			/// NPC ÆĞÅÏÀÌµ¿¶§ ¾²ÀÌ´Â »óÅÂº¯È­Ä«¿îÅÍ
+	BOOL			m_bRegenItem;				/// NPC ìƒì¸ì´ íŒ” ì•„ì´í…œ ìƒì„±í•´ ë‘ì—ˆëŠ”ê°€ flag  
+	int				m_nMovePattern;				/// NPC íŒ¨í„´ ì´ë™ íƒ€ì…
+	int				m_nMoveEvent;				/// NPC íŒ¨í„´ ì´ë™ë•Œ ì“°ì´ëŠ” ìƒíƒœë³€í™” 99ë©´ ìƒíƒœë
+	int				m_nMoveEventCnt;			/// NPC íŒ¨í„´ì´ë™ë•Œ ì“°ì´ëŠ” ìƒíƒœë³€í™”ì¹´ìš´í„°
 
 #ifdef	__CLIENT
 	DWORD			m_dwLadolfFlag;
-	CModelObject*   m_pLadolf;					/// ¶óµ¹ÇÁ¸ğµ¨
-	int				m_nDmgCnt;					/// µ¥¹ÌÁö Ä«¿îÆ®
+	CModelObject*   m_pLadolf;					/// ë¼ëŒí”„ëª¨ë¸
+	int				m_nDmgCnt;					/// ë°ë¯¸ì§€ ì¹´ìš´íŠ¸
 #if __VER >= 14 // __WING_ITEM
 	enum WingStateFlag
 	{
 		FLOATING, FLYING, TURNING
 	};
 
-	WingStateFlag	m_eWingStateFlag;		/// ¾Ö´Ï¸ŞÀÌ¼Ç ÇÃ·¡±× ½ºÀ§Ä¡
-	float			m_fOldLengthSq;			/// ³¯°³ ¾Ö´Ï¸ŞÀÌ¼Ç ¼Óµµ º¯È­·®ÀÇ ½ÃÀÛÁ¡À» ÀúÀåÇÏ±â À§ÇÑ º¯¼ö
+	WingStateFlag	m_eWingStateFlag;		/// ì• ë‹ˆë©”ì´ì…˜ í”Œë˜ê·¸ ìŠ¤ìœ„ì¹˜
+	float			m_fOldLengthSq;			/// ë‚ ê°œ ì• ë‹ˆë©”ì´ì…˜ ì†ë„ ë³€í™”ëŸ‰ì˜ ì‹œì‘ì ì„ ì €ì¥í•˜ê¸° ìœ„í•œ ë³€ìˆ˜
 #endif // __WING_ITEM
 #if __VER >= 8 //__Y_EYE_FLASH_8
 	CTimer			m_tmEye[2];
@@ -943,8 +943,8 @@ private:
 
 #if __VER >= 15 // __CAMPUS
 private:
-	u_long	m_idCampus;			// »çÁ¦ ¾ÆÀÌµğ
-//	int		m_nCampusPoint;		// »çÁ¦ Æ÷ÀÎÆ®
+	u_long	m_idCampus;			// ì‚¬ì œ ì•„ì´ë””
+//	int		m_nCampusPoint;		// ì‚¬ì œ í¬ì¸íŠ¸
 public:
 	int		m_nCampusPoint;
 	u_long	GetCampusId()		{	return m_idCampus;	}
@@ -963,14 +963,14 @@ public:
 #endif // __NEW_ITEM_VARUNA
 
 protected:
-	int				m_nCount;					/// ¹«¹ö°¡ ¹ü¿ëÀ¸·Î ¾²´Â ¼øÂ÷Àû Ä«¿îÅÍ. »ı¼ºÀÚ ¿Ü¿£ 0À¸·Î ÃÊ±âÈ­ ÇÏÁö ¸»°Í.
-	DWORD			m_dwGold;					/// Æä³Ä 
-	DWORD			m_dwRideItemIdx;			/// ºñÇàÃ¼ÀÇ ¾ÆÀÌÅÛ ÀÎµ¦½º
-	CModelObject*	m_pRide;					/// ºñÇàÃ¼ °´Ã¼ Æ÷ÀÎÅÍ 
-	TCHAR			m_szName[MAX_NAME];			/// ÀÌ¸§ 
+	int				m_nCount;					/// ë¬´ë²„ê°€ ë²”ìš©ìœ¼ë¡œ ì“°ëŠ” ìˆœì°¨ì  ì¹´ìš´í„°. ìƒì„±ì ì™¸ì—” 0ìœ¼ë¡œ ì´ˆê¸°í™” í•˜ì§€ ë§ê²ƒ.
+	DWORD			m_dwGold;					/// í˜ëƒ 
+	DWORD			m_dwRideItemIdx;			/// ë¹„í–‰ì²´ì˜ ì•„ì´í…œ ì¸ë±ìŠ¤
+	CModelObject*	m_pRide;					/// ë¹„í–‰ì²´ ê°ì²´ í¬ì¸í„° 
+	TCHAR			m_szName[MAX_NAME];			/// ì´ë¦„ 
 //	int				dwAkerius;
 public:
-	static CMover*  GetActiveMover() { return (CMover*)m_pObjActive; }	// ÁÖÀÎ°ø °´Ã¼ ¾ò±â 	
+	static CMover*  GetActiveMover() { return (CMover*)m_pObjActive; }	// ì£¼ì¸ê³µ ê°ì²´ ì–»ê¸° 	
 	static	int		GetHairCost( CMover* pMover, BYTE nR, BYTE nG, BYTE nB, BYTE nHair );
 	static void		UpdateParts( int nSex, int nSkinSet, int nFace, int nHairMesh, int nHeadMesh, PEQUIP_INFO pEquipInfo, CModelObject* pModel, CItemContainer< CItemElem  >* pInventory, BOOL bIfParts = TRUE, CMover* pMover = NULL );
 	static BOOL		DoEquip( int nSex, int nSkinSet, CItemElem* pItemElem, int nPart, const EQUIP_INFO & rEquipInfo, CItemContainer< CItemElem  >* pInventory, PEQUIP_INFO pEquipeInfo, CModelObject* pModel, BOOL bEquip, CMover *pMover );
@@ -980,18 +980,19 @@ public:
 	virtual	BOOL	SetIndex( LPDIRECT3DDEVICE9 pd3dDevice, DWORD dwIndex, BOOL bInitProp = FALSE, BOOL bDestParam = TRUE );
 	virtual BOOL	Read( CFileIO* pFile );
 	virtual void	Process();
-	virtual	void	Serialize( CAr & ar ); // ½Ã¸®¾ó¶óÀÌÁî ; ³×Æ®¿÷ »óÅÂ¿¡¼­ ¼­¹ö¿Í Å¬¶óÀÌ¾ğÆ®, Å¬¶óÀÌ¾ğÆ® ¼­¹ö°¡ ÁÖ°í¹ŞÀ» ÆĞÅ¶ ³»¿ë 
+	virtual	void	Serialize( CAr & ar ); // ì‹œë¦¬ì–¼ë¼ì´ì¦ˆ ; ë„¤íŠ¸ì› ìƒíƒœì—ì„œ ì„œë²„ì™€ í´ë¼ì´ì–¸íŠ¸, í´ë¼ì´ì–¸íŠ¸ ì„œë²„ê°€ ì£¼ê³ ë°›ì„ íŒ¨í‚· ë‚´ìš© 
 	virtual	CModel* LoadModel( LPDIRECT3DDEVICE9 pd3dDevice, DWORD dwType, DWORD dwIndex );
-	virtual void	InitProp( BOOL bInitAI = TRUE );		// °´Ã¼¸¦ ÇÁ·ÎÆÛÆ¼ ³»¿ëÀ¸·Î ÃÊ±âÈ­ 	
-//	virtual int		OnActCollecting();				// User¸¸ »ç¿ëµÇ´Â °ÍÀÌ¹Ç·Î CUser°¡¼­ Ã£À»°Í.
+	virtual void	InitProp( BOOL bInitAI = TRUE );		// ê°ì²´ë¥¼ í”„ë¡œí¼í‹° ë‚´ìš©ìœ¼ë¡œ ì´ˆê¸°í™” 	
+//	virtual int		OnActCollecting();				// Userë§Œ ì‚¬ìš©ë˜ëŠ” ê²ƒì´ë¯€ë¡œ CUserê°€ì„œ ì°¾ì„ê²ƒ.
 	virtual int		SendDamage( DWORD dwAtkFlag, OBJID idAttacker, int nParam = 0, BOOL bTarget = TRUE ) { return m_pActMover->SendDamage( dwAtkFlag, idAttacker, nParam, bTarget );  }
-	virtual int		SendDamageForce( DWORD dwAtkFlag, OBJID idAttacker, int nParam = 0, BOOL bTarget = TRUE ) { return m_pActMover->SendDamageForce( dwAtkFlag, idAttacker, nParam, bTarget ); }	// °­°ø°İ
+	virtual int		SendDamageForce( DWORD dwAtkFlag, OBJID idAttacker, int nParam = 0, BOOL bTarget = TRUE ) { return m_pActMover->SendDamageForce( dwAtkFlag, idAttacker, nParam, bTarget ); }	// ê°•ê³µê²©
 
-	void			Init();										// °´Ã¼ ÃÊ±âÈ­ 
+	void			Init();										// ê°ì²´ ì´ˆê¸°í™” 
 #ifdef __REBIRTH
 	void            InitLevelRebirth( int nJob, LONG nLevel, BOOL bGamma = TRUE ) ;
 #endif
-	void			InitLevel( int nJob, LONG nLevel, BOOL bGamma = TRUE );			// °´Ã¼¸¦ nLevel·Î ¹Ù²ãÁÜ
+	void			InitLevel( int nJob, LONG nLevel, BOOL bGamma = TRUE );			// ê°ì²´ë¥¼ nLevelë¡œ ë°”ê¿”ì¤Œ
+	void			InitLevelPumbaaa( int nJob, LONG nLevel, BOOL bGamma = TRUE ) ;
 	void			ProcessAniSpeed();
 	void			AllocShopInventory( LPCHARACTER pCharacter );
 	BOOL			IsVendorNPC();
@@ -1001,37 +1002,37 @@ public:
 	int				GetMaxPoint(int nDest);
 	DWORD			GetReuseDelay( int nIndex );
 	BOOL			InitSkillExp();
-	void			InitCharacter( LPCHARACTER lpCharacter );	// ÀÌ¸§ ÃÊ±âÈ­ LoadDialogÈ£Ãâ 
+	void			InitCharacter( LPCHARACTER lpCharacter );	// ì´ë¦„ ì´ˆê¸°í™” LoadDialogí˜¸ì¶œ 
 	LPCHARACTER		GetCharacter();								// 
-	void			InitNPCProperty();							// NPC°ü·Ã ½ºÅ©¸³Æ® ÃÊ±âÈ­ 	
-	BOOL			LoadDialog();								// dialog ½ºÅ©¸³Æ® ·Îµå 
-	void			ProcessRecovery();							// HP, MP, FPÈ¸º¹À» Ã³¸®ÇÑ´Ù.
-	BOOL			IsActiveMover() { return m_pObjActive == this; }	// ³»°¡ ÁÖÀÎ°ø °´Ã¼ÀÎ°¡?
-	int				IsSteal( CMover *pTarget );		// pTargetÀ» ½ºÆ¿ÇÏ·Á ÇÏ´Â°¡.
-	int				IsSteal( OBJID idTaget );		// id·Î °Ë»çÇÏ´Â ¹öÀü.
+	void			InitNPCProperty();							// NPCê´€ë ¨ ìŠ¤í¬ë¦½íŠ¸ ì´ˆê¸°í™” 	
+	BOOL			LoadDialog();								// dialog ìŠ¤í¬ë¦½íŠ¸ ë¡œë“œ 
+	void			ProcessRecovery();							// HP, MP, FPíšŒë³µì„ ì²˜ë¦¬í•œë‹¤.
+	BOOL			IsActiveMover() { return m_pObjActive == this; }	// ë‚´ê°€ ì£¼ì¸ê³µ ê°ì²´ì¸ê°€?
+	int				IsSteal( CMover *pTarget );		// pTargetì„ ìŠ¤í‹¸í•˜ë ¤ í•˜ëŠ”ê°€.
+	int				IsSteal( OBJID idTaget );		// idë¡œ ê²€ì‚¬í•˜ëŠ” ë²„ì „.
 	u_long			GetPartyId() { return m_idparty; }
 	BOOL			IsMode( DWORD dwMode ); 
-	void			SetMode( DWORD dwMode )		{ m_dwMode |= dwMode; }	// À¯Àú»óÅÂ ™VÆÃ
-	void			SetNotMode( DWORD dwMode )	{ m_dwMode &= (~dwMode); } // À¯Àú»óÅÂ ¸®™V
+	void			SetMode( DWORD dwMode )		{ m_dwMode |= dwMode; }	// ìœ ì €ìƒíƒœ Â™VíŒ…
+	void			SetNotMode( DWORD dwMode )	{ m_dwMode &= (~dwMode); } // ìœ ì €ìƒíƒœ ë¦¬Â™V
 	BOOL			SetDarkCover( BOOL bApply, DWORD tmMaxTime = 0 );
 	BOOL			SetStun( BOOL bApply, DWORD tmMaxTime = 0 );
-	BOOL			SetPoison( BOOL bApply, OBJID idAttacker = NULL_ID, DWORD tmMaxTime = 0, DWORD tmUnit = 0, short wDamage = 0 );	// this¸¦ µ¶¿¡ °É¸®°Ô ÇÑ´Ù.
-	BOOL			SetDark( BOOL bApply, DWORD tmMaxTime = 0, int nAdjHitRate = 0 );	// this¸¦ ¾ÏÈæ»óÅÂ¿¡ ºüÁö°Ô ÇÑ´Ù .
-	BOOL			SetBleeding( BOOL bApply, OBJID idAttacker = NULL_ID, DWORD tmMaxTime = 0, DWORD tmUnit = 0, short wDamage = 0 );	// this¸¦ ÃâÇ÷½ÃÅ²´Ù.
-	void			RemoveDebuff( DWORD dwState );		// µğ¹öÇÁ ÇØÁ¦
-	void			RemoveBuffOne( DWORD dwSkill = 0 );		// ¹öÇÁ ÇÏ³ª ÇØÁ¦
-	void			RemoveBuffAll();				// ¹öÇÁ ¸ğµÎ ÇØÁ¦.
+	BOOL			SetPoison( BOOL bApply, OBJID idAttacker = NULL_ID, DWORD tmMaxTime = 0, DWORD tmUnit = 0, short wDamage = 0 );	// thisë¥¼ ë…ì— ê±¸ë¦¬ê²Œ í•œë‹¤.
+	BOOL			SetDark( BOOL bApply, DWORD tmMaxTime = 0, int nAdjHitRate = 0 );	// thisë¥¼ ì•”í‘ìƒíƒœì— ë¹ ì§€ê²Œ í•œë‹¤ .
+	BOOL			SetBleeding( BOOL bApply, OBJID idAttacker = NULL_ID, DWORD tmMaxTime = 0, DWORD tmUnit = 0, short wDamage = 0 );	// thisë¥¼ ì¶œí˜ˆì‹œí‚¨ë‹¤.
+	void			RemoveDebuff( DWORD dwState );		// ë””ë²„í”„ í•´ì œ
+	void			RemoveBuffOne( DWORD dwSkill = 0 );		// ë²„í”„ í•˜ë‚˜ í•´ì œ
+	void			RemoveBuffAll();				// ë²„í”„ ëª¨ë‘ í•´ì œ.
 	BOOL			IsStateMode( DWORD dwMode ); 
-	void			SetStateMode( DWORD dwMode, BYTE nFlag );		// À¯Àú»óÅÂ ™VÆÃ
-	void			SetStateNotMode( DWORD dwMode, BYTE nFlag );	// À¯Àú»óÅÂ ¸®™V
+	void			SetStateMode( DWORD dwMode, BYTE nFlag );		// ìœ ì €ìƒíƒœ Â™VíŒ…
+	void			SetStateNotMode( DWORD dwMode, BYTE nFlag );	// ìœ ì €ìƒíƒœ ë¦¬Â™V
 	BOOL			IsUseItemReadyTime( ItemProp* pItemProp, OBJID dwObjItemId );
 	BOOL			IsNPC()				{ return !m_bPlayer; }
 	BOOL			IsPlayer()			{ return m_bPlayer; }
 	BOOL			IsEquipableNPC()	{	return( GetCharacter() && GetCharacter()->m_nEquipNum > 0 );	}
-	BOOL			IsFlyingNPC()		{ return (m_dwTypeFlag & OBJTYPE_FLYING) ? TRUE : FALSE; }		// ºñÇàÇü ¸÷ÀÎ°¡.
+	BOOL			IsFlyingNPC()		{ return (m_dwTypeFlag & OBJTYPE_FLYING) ? TRUE : FALSE; }		// ë¹„í–‰í˜• ëª¹ì¸ê°€.
 	BOOL			IsFly();
-	MoverProp*		GetProp() { return prj.GetMoverProp( m_dwIndex ); }	// °´Ã¼ÀÇ ÇÁ·ÎÆÛÆ¼ ¾ò±â 	
-	ItemProp*		GetActiveHandItemProp( int nParts = PARTS_RWEAPON );							// ¼Õ¿¡ µé·ÁÁø ¾ÆÀÌÅÛÀÇ ÇÁ·ÎÆÛÆ¼¸¦ ¾ò±â 
+	MoverProp*		GetProp() { return prj.GetMoverProp( m_dwIndex ); }	// ê°ì²´ì˜ í”„ë¡œí¼í‹° ì–»ê¸° 	
+	ItemProp*		GetActiveHandItemProp( int nParts = PARTS_RWEAPON );							// ì†ì— ë“¤ë ¤ì§„ ì•„ì´í…œì˜ í”„ë¡œí¼í‹°ë¥¼ ì–»ê¸° 
 	ItemProp*		GetTransyItem( ItemProp* pItemProp, BOOL bCheck = FALSE, LPCTSTR lpszFileName = NULL );
 	OBJID			GetDestId()			{ return m_idDest; }
 	CCtrl*			GetDestObj()		{ return prj.GetCtrl( m_idDest ); }
@@ -1043,7 +1044,7 @@ public:
 	void			ClearDestObj()     	{ m_idDest = NULL_ID; m_fArrivalRange = 0.0f; }
 	void			ClearDestPos()		{ m_vDestPos = D3DXVECTOR3( 0.0f, 0.0f, 0.0f ); }		
 	void			ClearDest()			{ ClearDestObj(); ClearDestPos(); }
-	void			SetStop()			{ SendActMsg( OBJMSG_STAND ); ClearDestObj(); } // ¸ØÃã 
+	void			SetStop()			{ SendActMsg( OBJMSG_STAND ); ClearDestObj(); } // ë©ˆì¶¤ 
 
 	BOOL			IsEmptyDestObj()	{ return m_idDest == NULL_ID; }
 	BOOL			IsEmptyDestPos()	{ return m_vDestPos.x == 0.0f && m_vDestPos.z == 0.0f; }
@@ -1067,21 +1068,21 @@ public:
 	BOOL			SetMotion(DWORD dwMotion, int nLoop = ANILOOP_LOOP, DWORD dwOption = 0 );	// MOP_SWDFORCE, MOP_FIXED, MOP_NO_TRANS, MOP_HITSLOW
 	BOOL			InitMotion(DWORD dwMotion);
 	void			SetDamagedMotion( CMover* pAttacker, DWORD dwAtkFlags );
-	CItemElem*		GetWeaponItem( int nParts = PARTS_RWEAPON );					// ÀåÂøÇÑ ¹«±â ¾ò±â 
-	CItemElem*		GetLWeaponItem();					// ¿Ş¼Õ¿¡ ÀåÂøÇÑ ¹«±â ¾ò±â.
-	CItemElem*		GetEquipItem( int nParts );			// ÀåÂøÇÑ ¾ÆÀÌÅÛ ¾ò±â 
+	CItemElem*		GetWeaponItem( int nParts = PARTS_RWEAPON );					// ì¥ì°©í•œ ë¬´ê¸° ì–»ê¸° 
+	CItemElem*		GetLWeaponItem();					// ì™¼ì†ì— ì¥ì°©í•œ ë¬´ê¸° ì–»ê¸°.
+	CItemElem*		GetEquipItem( int nParts );			// ì¥ì°©í•œ ì•„ì´í…œ ì–»ê¸° 
 	ItemProp*		GetEquipItemProp( CItemContainer<CItemElem>* pInventory, PEQUIP_INFO pEquipInfo, int nParts );
 	BOOL			IsDualWeapon();
 	void			RedoEquip( BOOL fFakeParts, BOOL bDestParam = TRUE );	
 	void			UpdateParts( BOOL bFakeParts  = FALSE ); // normal or fake
-	int				InvalidEquipOff( BOOL fFakeparts );		// °Å½Ã±âÇÑ Àåºñ¸¦ ¹ş±è.
+	int				InvalidEquipOff( BOOL fFakeparts );		// ê±°ì‹œê¸°í•œ ì¥ë¹„ë¥¼ ë²—ê¹€.
 	BOOL			DoEquip( CItemElem* pItemElem, BOOL bEquip, int nPart = -1 ); // for normal
 #if __VER >= 11 // __SYS_IDENTIFY
-	BOOL			IsEquipAble( CItemElem* pItem,BOOL bIgnoreLevel = FALSE );		// ÀåÂø°¡´ÉÇÑ°¡?
+	BOOL			IsEquipAble( CItemElem* pItem,BOOL bIgnoreLevel = FALSE );		// ì¥ì°©ê°€ëŠ¥í•œê°€?
 #else	// __SYS_IDENTIFY
-	BOOL			IsEquipAble( ItemProp *pItemProp, OBJID dwObjid ,BOOL bIgnoreLevel = FALSE);		// ÀåÂø°¡´ÉÇÑ°¡?
+	BOOL			IsEquipAble( ItemProp *pItemProp, OBJID dwObjid ,BOOL bIgnoreLevel = FALSE);		// ì¥ì°©ê°€ëŠ¥í•œê°€?
 #endif	// __SYS_IDENTIFY
-	BOOL			IsUnEquipAble( ItemProp *pItemProp );					// ¹ş´Â°Ô °¡´ÉÇÑ°¡?
+	BOOL			IsUnEquipAble( ItemProp *pItemProp );					// ë²—ëŠ”ê²Œ ê°€ëŠ¥í•œê°€?
 	void			SetEquipDstParam();
 	void			SumEquipAdjValue( int* pnAdjHitRate, int* pnAdjParray );
 	int				SumEquipDefenseAbility( LONG* pnMin, LONG* pnMax );
@@ -1107,14 +1108,14 @@ public:
 	void			SetDestParam( int nItemIdx2, BOOL fSend = TRUE );
 	void			SetDestParam( int nIdx, ItemProp *pProp, BOOL bSend = TRUE );
 	void			ResetDestParam( int nDstParameter, int nAdjParameterValue, BOOL fSend = TRUE );
-#ifdef __SPEED_SYNC_0108		// ResetDestParam speed ¼öÁ¤
+#ifdef __SPEED_SYNC_0108		// ResetDestParam speed ìˆ˜ì •
 	void			ResetDestParamSync( int nDstParameter,int nAdjParameterValue, int nParameterValue, BOOL fSend = TRUE );
-#endif // __SPEED_SYNC_0108		// ResetDestParam speed ¼öÁ¤
+#endif // __SPEED_SYNC_0108		// ResetDestParam speed ìˆ˜ì •
 	void			ResetDestParam( int nIdx, ItemProp *pProp, BOOL bSend = TRUE );
 	int				GetAdjParam( int nDestParameter );
 	int				GetChgParam( int nDestParameter );
 	int				GetPointParam( int nDstParameter );
-	void			SetPointParam( int nDstParameter, int nValue, BOOL bTrans = FALSE ); // bTrans°¡ TRUEÀÌ¸é °­Á¦Àü¼Û
+	void			SetPointParam( int nDstParameter, int nValue, BOOL bTrans = FALSE ); // bTransê°€ TRUEì´ë©´ ê°•ì œì „ì†¡
 	void			OnApplySM();
 	LPSKILL			GetSkill( int nType, int nIdx );
 	LPSKILL			GetSkill( DWORD dwSkill );
@@ -1127,7 +1128,7 @@ public:
 	void			SetHead( int nHead );
 	void			SetSkinSet( int nSkinSet );
 	void			SetName( const char* lpszName )		{	lstrcpy( m_szName, lpszName );	}
-	LPCTSTR			GetName( BOOL bNickname = FALSE );	// °´Ã¼ÀÇ ÀÌ¸§ ¾ò±â
+	LPCTSTR			GetName( BOOL bNickname = FALSE );	// ê°ì²´ì˜ ì´ë¦„ ì–»ê¸°
 	BYTE			GetSex() { return m_bySex; }
 	void			SetSex( BYTE bySex ) { m_bySex = bySex; }
 	BOOL			IsPeaceful() { return m_dwBelligerence == BELLI_PEACEFUL; }
@@ -1159,9 +1160,9 @@ public:
 	float			GetExpFactor();
 	float			GetItemDropRateFactor( CMover* pAttacker );
 	float			GetPieceItemDropRateFactor( CMover* pAttacker );
-	BOOL			AddExperience( EXPINTEGER nExp, BOOL bFirstCall = TRUE, BOOL bMultiply = TRUE, BOOL bMonster = FALSE );	// bMultiply : »ó¿ëÈ­ ¾ÆÀÌÅÛ Àû¿ë? // bMonster : ¸ó½ºÅÍ¸¦ Á×¿©¼­ ¿Â °æÇèÄ¡ ÀÎ°¡?
-	BOOL			DecExperience( EXPINTEGER nExp, BOOL bExp2Clear, BOOL bLvDown );	// °æÇèÄ¡¸¦ ±ğ´Â´Ù.
-	BOOL			DecExperiencePercent( float fPercent, BOOL bExp2Clear, BOOL bLvDown  );	// °æÇèÄ¡¸¦ ÆÛ¼¾Æ®·Î ±ğ´Â´Ù.
+	BOOL			AddExperience( EXPINTEGER nExp, BOOL bFirstCall = TRUE, BOOL bMultiply = TRUE, BOOL bMonster = FALSE );	// bMultiply : ìƒìš©í™” ì•„ì´í…œ ì ìš©? // bMonster : ëª¬ìŠ¤í„°ë¥¼ ì£½ì—¬ì„œ ì˜¨ ê²½í—˜ì¹˜ ì¸ê°€?
+	BOOL			DecExperience( EXPINTEGER nExp, BOOL bExp2Clear, BOOL bLvDown );	// ê²½í—˜ì¹˜ë¥¼ ê¹ëŠ”ë‹¤.
+	BOOL			DecExperiencePercent( float fPercent, BOOL bExp2Clear, BOOL bLvDown  );	// ê²½í—˜ì¹˜ë¥¼ í¼ì„¼íŠ¸ë¡œ ê¹ëŠ”ë‹¤.
 	BOOL			AddFxp( int nFxp );
 	BOOL			SetFxp( int nFxp, int nFlightLv );
 #if __VER < 8 // __S8_PK
@@ -1199,7 +1200,7 @@ public:
 	int		GetPerinNum( void );
 	__int64		GetTotalGold( void );
 #ifdef __WORLDSERVER
-	int		RemoveTotalGold( __int64 iGold );	// Á¦°ÅµÈ Æä¸° °³¼ö
+	int		RemoveTotalGold( __int64 iGold );	// ì œê±°ëœ í˜ë¦° ê°œìˆ˜
 	int		RemovePerin( int nPerin );
 #endif	// __WORLDSERVER
 #endif	// __LORA
@@ -1253,21 +1254,21 @@ public:
 	int				GetShowDefense( BOOL bRandom );
 	int				GetResistMagic();
 	int				GetResistSpell( int nDestParam );
-	int				GetMeleeSkillPower( ATTACK_INFO* pInfo );	// ±ÙÁ¢°ø°İ ½ºÅ³µ¥¹ÌÁö
-	int				GetMagicHitPower( int nMagicPower );			// ¿Ïµå°ø°İ µ¥¹ÌÁö
+	int				GetMeleeSkillPower( ATTACK_INFO* pInfo );	// ê·¼ì ‘ê³µê²© ìŠ¤í‚¬ë°ë¯¸ì§€
+	int				GetMagicHitPower( int nMagicPower );			// ì™„ë“œê³µê²© ë°ë¯¸ì§€
 	int				GetItemAbility( int nItem );
 	int				GetItemAbilityMin( int nItem );
 	int				GetItemAbilityMax( int nItem );
 	void			GetHitMinMax( int* pnMin, int* pnMax, ATTACK_INFO *pInfo = NULL );
 	BOOL			IsAfterDeath();
 	BOOL			IsDie() { return m_pActMover->IsDie() || m_nHitPoint == 0; }
-	BOOL			IsLive() { return m_pActMover->IsDie() == FALSE || m_nHitPoint > 0; }		// && ¸¦  ||·Î ¹Ù²åÀ½.  !=¸¦ >·Î ¹Ù²Ş
+	BOOL			IsLive() { return m_pActMover->IsDie() == FALSE || m_nHitPoint > 0; }		// && ë¥¼  ||ë¡œ ë°”ê¿¨ìŒ.  !=ë¥¼ >ë¡œ ë°”ê¿ˆ
 	int				GetCount() { return m_nCount; }
 #if __VER >= 8 // __S8_PK
 	void			SetPKPink( DWORD dwTime ) { if( dwTime == 0 || m_dwPKTime < dwTime ) m_dwPKTime = dwTime; }
 	DWORD			GetPKPink( void ) { return m_dwPKTime; }
-	BOOL			IsPKPink( void )	{ return m_dwPKTime > 0; }			/// PK ÇÎÅ© ¸ğµåÀÎÁö
-	BOOL			IsChaotic( void ) { return m_dwPKPropensity > 0; }	/// Ä«¿ÀÀÎÁö
+	BOOL			IsPKPink( void )	{ return m_dwPKTime > 0; }			/// PK í•‘í¬ ëª¨ë“œì¸ì§€
+	BOOL			IsChaotic( void ) { return m_dwPKPropensity > 0; }	/// ì¹´ì˜¤ì¸ì§€
 	void			SetPKValue( int nValue );
 	int				GetPKValue( void ) { return m_nPKValue; }
 	void			SetPKPropensity( DWORD dwValue );
@@ -1306,7 +1307,7 @@ public:
 	BOOL			SubLootDropMobSingle( CItem *pItem );
 	BOOL			SubLootDropMobParty( CItem *pItem, CParty *pParty );
 	BOOL			SubLootDropMob( CItem *pItem );
-	BOOL			DoLoot( CItem *pItem );		// ¹Ù´Ú¿¡ ¶³¾îÁø pItemÀ» Áİ´Â´Ù.
+	BOOL			DoLoot( CItem *pItem );		// ë°”ë‹¥ì— ë–¨ì–´ì§„ pItemì„ ì¤ëŠ”ë‹¤.
 	void			PickupGoldCore( int nGold );
 	void			PickupGold( int nGold, BOOL bDropMob );
 	BOOL			IsDropable( CItemElem* pItemElem, BOOL bPK );
@@ -1325,7 +1326,7 @@ public:
 	int				DoDropItemRandom( BOOL bExcludeEquip, CMover* pAttacker, BOOL bOnlyEquip = FALSE );
 	int				GetItemNum( DWORD dwItemId );
 #ifdef __CLIENT
-	int				GetItemNumForClient( DWORD dwItemId ); // Client¿¡¼­¸¸ »ç¿ëÇÏ´Â ¾ÆÀÌÅÛ °¹¼ö ±¸ÇÏ±â(Null check ÀÌ¿ÜÀÇ Usable check¾ÈÇÔ)
+	int				GetItemNumForClient( DWORD dwItemId ); // Clientì—ì„œë§Œ ì‚¬ìš©í•˜ëŠ” ì•„ì´í…œ ê°¯ìˆ˜ êµ¬í•˜ê¸°(Null check ì´ì™¸ì˜ Usable checkì•ˆí•¨)
 #endif //__CLIENT
 	int				RemoveAllItem( DWORD dwItemId );
 	BOOL			AddItem( CItemBase* pItemBase );
@@ -1340,11 +1341,11 @@ public:
 	CItemBase*		GetItemBankId( int nSlot, DWORD dwId );
 	void			RemoveItemBankId( int nSlot, DWORD dwId );
 	void			GenerateVendorItem( ItemProp** apItemProp, int* pcbSize, int nMax, LPVENDOR_ITEM pVendor );
-	BOOL			DropItemByDied( CMover* pAttacker );		// Á×¾î¼­ ¶³¾îÆ®¸®´Â µå¶ø.
+	BOOL			DropItemByDied( CMover* pAttacker );		// ì£½ì–´ì„œ ë–¨ì–´íŠ¸ë¦¬ëŠ” ë“œë.
 #if __VER >= 8 // __S8_PK
-	BOOL			DoUseSkill( DWORD dwSkill, int nLevel, OBJID idFocusObj, SKILLUSETYPE sutType = SUT_NORMAL, BOOL bControl = FALSE, const int nCastingTime = 0 );		// dwSkill/nLevel¸¸ °¡Áö°íµµ »ç¿ëÇÒ ¼ö ÀÖ´Â ¹öÀü.
+	BOOL			DoUseSkill( DWORD dwSkill, int nLevel, OBJID idFocusObj, SKILLUSETYPE sutType = SUT_NORMAL, BOOL bControl = FALSE, const int nCastingTime = 0 );		// dwSkill/nLevelë§Œ ê°€ì§€ê³ ë„ ì‚¬ìš©í•  ìˆ˜ ìˆëŠ” ë²„ì „.
 #else // __VER >= 8 // __S8_PK
-	BOOL			DoUseSkill( DWORD dwSkill, int nLevel, OBJID idFocusObj, SKILLUSETYPE sutType = SUT_NORMAL, const int nCastingTime = 0 );		// dwSkill/nLevel¸¸ °¡Áö°íµµ »ç¿ëÇÒ ¼ö ÀÖ´Â ¹öÀü.
+	BOOL			DoUseSkill( DWORD dwSkill, int nLevel, OBJID idFocusObj, SKILLUSETYPE sutType = SUT_NORMAL, const int nCastingTime = 0 );		// dwSkill/nLevelë§Œ ê°€ì§€ê³ ë„ ì‚¬ìš©í•  ìˆ˜ ìˆëŠ” ë²„ì „.
 #endif // __VER >= 8 // __S8_PK
 	void			SetPKTargetLimit( int nSec );
 	void			ClearCmd(); 
@@ -1363,8 +1364,8 @@ public:
 	BOOL			IsAttackAbleNPC( CMover* pNPC );
 	BOOL			IsPKInspection( CMover* pMover );
 	int				IsPKPVPInspectionBase( DWORD dwRegionAttr, BOOL bPVP = TRUE );
-#if __VER >= 8     // 8Â÷ µà¾óÁ¸¿¡ °ü°è¾øÀÌ PVP°¡´ÉÇÏ°ÔÇÔ   Neuz, World
-	int				IsPVPInspectionBase( DWORD dwRegionAttr,DWORD dwWorldID, BOOL bPVP = TRUE );//8Â÷ µà¾óÁ¸¿¡ °ü°è¾øÀÌ PVP°¡´ÉÇÏ°ÔÇÔ   Neuz, World
+#if __VER >= 8     // 8ì°¨ ë“€ì–¼ì¡´ì— ê´€ê³„ì—†ì´ PVPê°€ëŠ¥í•˜ê²Œí•¨   Neuz, World
+	int				IsPVPInspectionBase( DWORD dwRegionAttr,DWORD dwWorldID, BOOL bPVP = TRUE );//8ì°¨ ë“€ì–¼ì¡´ì— ê´€ê³„ì—†ì´ PVPê°€ëŠ¥í•˜ê²Œí•¨   Neuz, World
 #endif	// __VER >= 8  
 	BOOL			SubPKPVPInspectionBase( CMover* pMover, CMover* pMover1, DWORD dwPKAttr, int nFlag );
 	void			PrintString( CMover* pMover, DWORD dwId );
@@ -1397,25 +1398,25 @@ public:
 	int				DoAttackSP( CObj *pTargetObj, DWORD dwItemID );
 	int				DoAttackMelee( CMover *pTarget, OBJMSG dwMsg = OBJMSG_ATK1, DWORD dwItemID = 0 );
 	int				DoAttackMelee( OBJID idTarget, OBJMSG dwMsg = OBJMSG_ATK1, DWORD dwItemID = 0 );
-	int				DoDie( CCtrl *pAttackCtrl, DWORD dwMsg = 0 );	// µØÁ®¶ó.	
+	int				DoDie( CCtrl *pAttackCtrl, DWORD dwMsg = 0 );	// ë’ˆì ¸ë¼.	
 	void			ChangeFame( CMover *pLose );
 	int				DuelResult( CMover *pLose );
 	PVP_MODE		GetPVPCase( CMover *pAttacker );
-	void			SubPVP( CMover *pAttacker, int nReflect );	// »ç¶÷°ú »ç¶÷ÀÇ ½Î¿ò¿¡¼­ Á×¾úÀ»¶§.
-	int				SubDuel( CMover *pAttacker );	// µà¾óÁß¿¡ Á×¾úÀ»¶§ 
-	int				SubPK( CMover *pAttacker, int nReflect );		// PK¿¡ÀÇÇØ Á×¾úÀ»¶§.
-	int				SubWar( CMover *pAttacker );	// ÀüÀï¶§ Á×¾úÀ½
+	void			SubPVP( CMover *pAttacker, int nReflect );	// ì‚¬ëŒê³¼ ì‚¬ëŒì˜ ì‹¸ì›€ì—ì„œ ì£½ì—ˆì„ë•Œ.
+	int				SubDuel( CMover *pAttacker );	// ë“€ì–¼ì¤‘ì— ì£½ì—ˆì„ë•Œ 
+	int				SubPK( CMover *pAttacker, int nReflect );		// PKì—ì˜í•´ ì£½ì—ˆì„ë•Œ.
+	int				SubWar( CMover *pAttacker );	// ì „ìŸë•Œ ì£½ì—ˆìŒ
 	int				SubExperience( CMover *pDead );
 	void			AddKillRecovery();
 	BOOL			IsValidArea( CMover* pMover, float fLength );
-	void			SetJJim( CMover *pJJimer );		// this¸¦ pJJimer°¡ ÂòÇß´Ù´Â°É Ç¥½Ã.
+	void			SetJJim( CMover *pJJimer );		// thisë¥¼ pJJimerê°€ ì°œí–ˆë‹¤ëŠ”ê±¸ í‘œì‹œ.
 	void			SubReferTime( DWORD *pTime1, DWORD *pTime2, ItemProp *pSkillProp, AddSkillProp *pAddSkillProp );
-	BOOL			ApplyParam( CCtrl *pSrc, ItemProp *pSkillProp, AddSkillProp *pAddSkillProp, BOOL bSend = TRUE, int nDamage = 0 );	// this¿¡°Ô ÆÄ¶ó¸ŞÅÍ¸¦ Àû¿ë. pSrc´Â ½ÃÀüÀÚ.
-	BOOL			ApplyMagicSkill( CMover *pMover, DWORD dwSkill, DWORD dwLevel, ItemProp *pSkillProp, AddSkillProp *pAddSkillProp );	// pMover¿¡°Ô ½ºÅ³È¿°ú¸¦ Àû¿ëÇÔ.
+	BOOL			ApplyParam( CCtrl *pSrc, ItemProp *pSkillProp, AddSkillProp *pAddSkillProp, BOOL bSend = TRUE, int nDamage = 0 );	// thisì—ê²Œ íŒŒë¼ë©”í„°ë¥¼ ì ìš©. pSrcëŠ” ì‹œì „ì.
+	BOOL			ApplyMagicSkill( CMover *pMover, DWORD dwSkill, DWORD dwLevel, ItemProp *pSkillProp, AddSkillProp *pAddSkillProp );	// pMoverì—ê²Œ ìŠ¤í‚¬íš¨ê³¼ë¥¼ ì ìš©í•¨.
 	BOOL			GetSkillProp( ItemProp **ppSkillProp, AddSkillProp **ppAddSkillProp, int nSkill, DWORD dwLevel, LPCTSTR szErr );
-	BOOL			CreateSkillEffect( OBJID idTarget, int nSkill, DWORD dwLevel );		// ½ÇÁ¦ ½ºÅ³ ¹ßµ¿.
-	void			RemoveInvisible();		// Åõ¸íÈ­ »óÅÂ°É·ÁÀÖÀ¸¸é ÇØÁ¦ÇÔ.
-	void			SendDamageAround( int nDmgType, CMover *pAttacker, int nApplyType, int nAttackID, float fRange, float fTargetRatio, float fAroundRatio );	// this¸¦ Áß½ÉÀ¸·Î ÁÖº¯¿¡ µ¥¹ÌÁö¸¦ ÀÔÈû.
+	BOOL			CreateSkillEffect( OBJID idTarget, int nSkill, DWORD dwLevel );		// ì‹¤ì œ ìŠ¤í‚¬ ë°œë™.
+	void			RemoveInvisible();		// íˆ¬ëª…í™” ìƒíƒœê±¸ë ¤ìˆìœ¼ë©´ í•´ì œí•¨.
+	void			SendDamageAround( int nDmgType, CMover *pAttacker, int nApplyType, int nAttackID, float fRange, float fTargetRatio, float fAroundRatio );	// thisë¥¼ ì¤‘ì‹¬ìœ¼ë¡œ ì£¼ë³€ì— ë°ë¯¸ì§€ë¥¼ ì…í˜.
 	void			SendDamageLine( int nDmgType, int nApplyType, int nAttackID, float fWidth, float fHeight, float fDepth );
 	void			ChangeExpRatio( CMover* pAttacker, CMover* pDefender );
 	void			OnAttacked( CMover* pAttacker, int nDamage, BOOL bTarget, int nReflect );
@@ -1425,11 +1426,11 @@ public:
 #else	// __SKILL_0706
 	void			SetCoolTime( ItemProp *pSkillProp, LPCTSTR szCall );
 #endif	// __SKILL_0706
-	BOOL			OnMeleeSkill( int nType, int nCount = 1 );		// OBJMSG_ATK_MELEESKILL½ÇÇàÈÄ Å¸Á¡ÀÌ µÇ¾úÀ»¶§ ¹ß»ıÇÏ´Â ÀÌº¥Æ®.
-	BOOL			OnMagicSkill( int nType, int nCount = 1 );		// OBJMSG_ATK_MAGICSKILL½ÇÇàÈÄ Å¸Á¡ÀÌ µÇ¾úÀ»¶§ ¹ß»ıÇÏ´Â ÀÌº¥Æ®.
-	BOOL			OnAttackRange();		// Àå°Å¸®¹«±â°¡ ¹ß»çµÇ´Â ½ÃÁ¡¿¡ ¹ß»ıÇÏ´Â ÀÌº¥Æ®
-	BOOL			OnAttackMelee( DWORD dwState, CMover *pHitObj );		// ±Ù°Å¸®°ø°İ½Ã Å¸Á¡ÀÌ µÇ¾úÀ»¶§ ¹ß»ıÇÏ´Â ÀÌº¥Æ®.
-	BOOL			OnAttackMeleeContinue( DWORD dwState );		// Ã¹¹øÂ° Å¸Á¡ÀÌÈÄºÎÅÍ ¾Ö´Ï³¡³¯¶§±îÁö °è¼Ó.
+	BOOL			OnMeleeSkill( int nType, int nCount = 1 );		// OBJMSG_ATK_MELEESKILLì‹¤í–‰í›„ íƒ€ì ì´ ë˜ì—ˆì„ë•Œ ë°œìƒí•˜ëŠ” ì´ë²¤íŠ¸.
+	BOOL			OnMagicSkill( int nType, int nCount = 1 );		// OBJMSG_ATK_MAGICSKILLì‹¤í–‰í›„ íƒ€ì ì´ ë˜ì—ˆì„ë•Œ ë°œìƒí•˜ëŠ” ì´ë²¤íŠ¸.
+	BOOL			OnAttackRange();		// ì¥ê±°ë¦¬ë¬´ê¸°ê°€ ë°œì‚¬ë˜ëŠ” ì‹œì ì— ë°œìƒí•˜ëŠ” ì´ë²¤íŠ¸
+	BOOL			OnAttackMelee( DWORD dwState, CMover *pHitObj );		// ê·¼ê±°ë¦¬ê³µê²©ì‹œ íƒ€ì ì´ ë˜ì—ˆì„ë•Œ ë°œìƒí•˜ëŠ” ì´ë²¤íŠ¸.
+	BOOL			OnAttackMeleeContinue( DWORD dwState );		// ì²«ë²ˆì§¸ íƒ€ì ì´í›„ë¶€í„° ì• ë‹ˆëë‚ ë•Œê¹Œì§€ ê³„ì†.
 	void			OnAttackMelee_ClockWorks( DWORD dwState, CMover *pHitObj );
 	void			OnAttackMelee_BigMuscle( DWORD dwState, CMover *pHitObj );	
 	void			OnAttackMelee_Krrr( DWORD dwState, CMover *pHitObj );	
@@ -1437,25 +1438,25 @@ public:
 #if __VER >= 10 // __Y_DRAGON_FIRE
 	void			OnAttackMelee_Meteonyker( DWORD dwState, CMover *pHitObj );
 #endif//__Y_DRAGON_FIRE
-	BOOL			OnAttackMagic();		// ¿Ïµå°ø°İÀÌ ¹ß»çµÇ´Â ½ÃÁ¡¿¡ ¹ß»ıÇÏ´Â ÀÌº¥Æ®.
-	BOOL			OnAttackSP();			// Æ¯¼ö°ø°İ.
-	void			OnActDrop();			// Ä³¸¯ÅÍ°¡ ³ôÀº°÷¿¡¼­ ¶³¾îÁö±â ½ÃÀÛÇÏ´Â ½ÃÁ¡¿¡ ¹ß»ı.
+	BOOL			OnAttackMagic();		// ì™„ë“œê³µê²©ì´ ë°œì‚¬ë˜ëŠ” ì‹œì ì— ë°œìƒí•˜ëŠ” ì´ë²¤íŠ¸.
+	BOOL			OnAttackSP();			// íŠ¹ìˆ˜ê³µê²©.
+	void			OnActDrop();			// ìºë¦­í„°ê°€ ë†’ì€ê³³ì—ì„œ ë–¨ì–´ì§€ê¸° ì‹œì‘í•˜ëŠ” ì‹œì ì— ë°œìƒ.
 	void			OnActCollision();		//
-	void			OnActEndMeleeSkill();	// ±ÙÁ¢½ºÅ³ µ¿ÀÛÀÌ ³¡³ª´Â ½ÃÁ¡¿¡ ¹ß»ı.
-	void			OnActEndMagicSkill();	// ¸¶¹ı½ºÅ³ µ¿ÀÛÀÌ ³¡³ª´Â ½ÃÁ¡¿¡ ¹ß»ı.
-	void			OnEndMeleeAttack( DWORD dwState );		// ÀÏ¹İµ¿ÀÛ °ø°İ ³¡³¯¶§ ¹ß»ı(¸÷¸¸).
-	void			OnActEndJump4();		// ÂøÁö ÇÃ·¡±×°¡ »ç¶óÁö´Â ¼ø°£.
-	void			OnActLanding();		// ÂøÁö ÇÏ´Â ¼ø°£.
+	void			OnActEndMeleeSkill();	// ê·¼ì ‘ìŠ¤í‚¬ ë™ì‘ì´ ëë‚˜ëŠ” ì‹œì ì— ë°œìƒ.
+	void			OnActEndMagicSkill();	// ë§ˆë²•ìŠ¤í‚¬ ë™ì‘ì´ ëë‚˜ëŠ” ì‹œì ì— ë°œìƒ.
+	void			OnEndMeleeAttack( DWORD dwState );		// ì¼ë°˜ë™ì‘ ê³µê²© ëë‚ ë•Œ ë°œìƒ(ëª¹ë§Œ).
+	void			OnActEndJump4();		// ì°©ì§€ í”Œë˜ê·¸ê°€ ì‚¬ë¼ì§€ëŠ” ìˆœê°„.
+	void			OnActLanding();		// ì°©ì§€ í•˜ëŠ” ìˆœê°„.
 	void			OnActFMove();
-	void			OnActIALanding( CObj *pIAObj, const D3DXVECTOR3 &vPos );		// Interact¿ÀºêÁ§Æ®¿¡ ÂøÁöÇßÀ»¶§.
-	void			OnAttackStart( CMover *pTarget, OBJMSG dwMsg );					// °ø°İÀ» ¸· ½ÃÀÛÇßÀ»¶§(ÀÏ¹İ/½ºÅ³/¿Ïµå µî)
+	void			OnActIALanding( CObj *pIAObj, const D3DXVECTOR3 &vPos );		// Interactì˜¤ë¸Œì íŠ¸ì— ì°©ì§€í–ˆì„ë•Œ.
+	void			OnAttackStart( CMover *pTarget, OBJMSG dwMsg );					// ê³µê²©ì„ ë§‰ ì‹œì‘í–ˆì„ë•Œ(ì¼ë°˜/ìŠ¤í‚¬/ì™„ë“œ ë“±)
 	BOOL			IsBullet( ItemProp* pItemProp );
 	void			ProcessMovePattern();
 	int				GetMovePattern() { return m_nMovePattern; }
 	int				GetMoveEvent() { return m_nMoveEvent; }
-	void			SetMovePattern( int nPattern );		// ÀÌµ¿ÆĞÅÏ ¼³Á¤.
+	void			SetMovePattern( int nPattern );		// ì´ë™íŒ¨í„´ ì„¤ì •.
 //	BOOL			DoCollect( CMover *pTarget );
-	void			BehaviorActionForceSet();		// ¸í·ÉÀÌ Çàµ¿ ¸í·ÉÀÌ¸é °­Á¦ µ¿±âÇÏ°í, ¹«ºù ¸í·ÉÀÌ¸é ¹«½ÃÇÑ´Ù.
+	void			BehaviorActionForceSet();		// ëª…ë ¹ì´ í–‰ë™ ëª…ë ¹ì´ë©´ ê°•ì œ ë™ê¸°í•˜ê³ , ë¬´ë¹™ ëª…ë ¹ì´ë©´ ë¬´ì‹œí•œë‹¤.
 	void			ActionForceSet( D3DXVECTOR3 &vPos, D3DXVECTOR3 &vDelta, FLOAT fAngle, 
 									DWORD dwState, DWORD dwStateFlag, int nMotion, int nMotionEx, 
 									int nLoop, DWORD dwMotionOption );
@@ -1488,13 +1489,13 @@ public:
 	BOOL			IsAttackMode();
 	void			AddSkillPoint( int nPoint);
 	
-#if __VER >= 8     // 8Â÷ µà¾óÁ¸¿¡ °ü°è¾øÀÌ PVP°¡´ÉÇÏ°ÔÇÔ   Neuz, World
-	void			DoPVPEnd( CCtrl *pAttackCtrl, bool bWinner , DWORD dwMsg = 0 );	// µà¾ó³¡³­µÚ Ã³¸®
-	void			EndPVP(int	nPVPHP);	// µà¾ó³¡³­µÚ Ã³¸®
-	BOOL			m_bPVPEnd;			//µà¾óÀÌ ³¡³µ´Â°¡
+#if __VER >= 8     // 8ì°¨ ë“€ì–¼ì¡´ì— ê´€ê³„ì—†ì´ PVPê°€ëŠ¥í•˜ê²Œí•¨   Neuz, World
+	void			DoPVPEnd( CCtrl *pAttackCtrl, bool bWinner , DWORD dwMsg = 0 );	// ë“€ì–¼ëë‚œë’¤ ì²˜ë¦¬
+	void			EndPVP(int	nPVPHP);	// ë“€ì–¼ëë‚œë’¤ ì²˜ë¦¬
+	BOOL			m_bPVPEnd;			//ë“€ì–¼ì´ ëë‚¬ëŠ”ê°€
 #endif	// __VER >= 8  
 
-#if __VER >= 10 // __LEGEND	//	9Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
+#if __VER >= 10 // __LEGEND	//	9ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
 	BYTE			GetLegendChar()	;
 	void			SetLegendChar(	BYTE	nLegend	)	{	m_nLegend	=	nLegend;	}
 	BOOL			IsMaster();
@@ -1503,10 +1504,10 @@ public:
 #ifdef __3RD_LEGEND16
 	BOOL			IsLegendHero();
 #endif
-#endif	//__LEGEND	//	9Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
+#endif	//__LEGEND	//	9ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
 
 #if __VER >= 14 // __NEW_ITEM_LIMIT_LEVEL
-	DWORD			GetJobType( int nJob = NULL_ID )	{	if( nJob == NULL_ID ) nJob = m_nJob;	return prj.m_aJob[ nJob ].dwJobType;	}	// Á÷¾÷ Å¸ÀÔ
+	DWORD			GetJobType( int nJob = NULL_ID )	{	if( nJob == NULL_ID ) nJob = m_nJob;	return prj.m_aJob[ nJob ].dwJobType;	}	// ì§ì—… íƒ€ì…
 #endif // __NEW_ITEM_LIMIT_LEVEL
 
 
@@ -1550,18 +1551,18 @@ public:
 	void			AddExperiencePartyLevel( CUser* apMember[], CParty* pParty, EXPFLOAT fExpValue, float fFxpValue, int nMemberSize, int nMaxLevel10 );
 	BOOL			GetPartyMemberFind( CParty* pParty, CUser* apMember[], int* nTotalLevel, int* nMaxLevel10, int* nMaxLevel, int* nMemberSize );
 	float			GetExperienceReduceFactor( int nLevel, int nMaxLevel );
-//	BOOL			IsResourceMonster() { return m_nResource != -1; }		// ÀÚ¿ø¸ó½ºÅÍ³Ä? -1ÀÌ¸é ÀÚ¿ø¸ó½ºÅÍ°¡ ¾Æ´Ï´Ù. 0 ~ ÀÚ¿ø¸ó½ºÅÍ¶ó´Â ¶æ.
+//	BOOL			IsResourceMonster() { return m_nResource != -1; }		// ìì›ëª¬ìŠ¤í„°ëƒ? -1ì´ë©´ ìì›ëª¬ìŠ¤í„°ê°€ ì•„ë‹ˆë‹¤. 0 ~ ìì›ëª¬ìŠ¤í„°ë¼ëŠ” ëœ».
 	void			ArrowDown( int nCount );
 	int				GetQueueCastingTime();
 #if __VER >= 8 // __S8_PK
 	BOOL			DoUseSkill( int nType, int nIdx, OBJID idFocusObj, SKILLUSETYPE sutType, BOOL bControl );
-	float			SubDieDecExp( BOOL bTransfer = TRUE, DWORD dwDestParam = 0, BOOL bResurrection = FALSE  );	// Á×¾úÀ»¶§ °âÄ¡ ±ğ´Â ºÎºĞ.
+	float			SubDieDecExp( BOOL bTransfer = TRUE, DWORD dwDestParam = 0, BOOL bResurrection = FALSE  );	// ì£½ì—ˆì„ë•Œ ê²¸ì¹˜ ê¹ëŠ” ë¶€ë¶„.
 #else // __VER >= 8 // __S8_PK
 	BOOL			DoUseSkill( int nType, int nIdx, OBJID idFocusObj, SKILLUSETYPE sutType );
-	float			SubDieDecExp( BOOL bTransfer = TRUE, DWORD dwDestParam = 0 );	// Á×¾úÀ»¶§ °âÄ¡ ±ğ´Â ºÎºĞ.
+	float			SubDieDecExp( BOOL bTransfer = TRUE, DWORD dwDestParam = 0 );	// ì£½ì—ˆì„ë•Œ ê²¸ì¹˜ ê¹ëŠ” ë¶€ë¶„.
 #endif // __VER >= 8 // __S8_PK
 
-	void			SubAroundExp( CMover *pAttacker, float fRange );		// this¸¦ Áß½ÉÀ¸·Î fRange¹üÀ§¾È¿¡ ÀÖ´Â À¯Àú¿¡°Ô °æÇèÄ¡¸¦ ¹èºĞÇÑ´Ù.
+	void			SubAroundExp( CMover *pAttacker, float fRange );		// thisë¥¼ ì¤‘ì‹¬ìœ¼ë¡œ fRangeë²”ìœ„ì•ˆì— ìˆëŠ” ìœ ì €ì—ê²Œ ê²½í—˜ì¹˜ë¥¼ ë°°ë¶„í•œë‹¤.
 	void			AddPartyMemberExperience( CUser * pUser, EXPINTEGER nExp, int nFxp );
 	void			GetDieDecExp( int nLevel, FLOAT& fRate, FLOAT& fDecExp, BOOL& bPxpClear, BOOL& bLvDown );
 #if __VER >= 8 // __S8_PK
@@ -1591,7 +1592,7 @@ public:
 	void			ProcInstantGC();
 	BOOL			IsItemRedyTime( ItemProp* pItemProp, OBJID dwObjid, BOOL bItemFind );
 	int				ApplyDPC( int ATK, ATTACK_INFO* pInfo );
-	int				CalcLinkAttackDamage( int nDamage ); // ÆÄÆ¼½ºÅ³:¸µÅ©¾îÅÃÀÇ Ãß°¡ µ¥ÀÌ¹Ì°è»ê 	
+	int				CalcLinkAttackDamage( int nDamage ); // íŒŒí‹°ìŠ¤í‚¬:ë§í¬ì–´íƒì˜ ì¶”ê°€ ë°ì´ë¯¸ê³„ì‚° 	
 	int				CalcPropDamage( CMover* pDefender, DWORD dwAtkFlags );
 	int				CalcGenericDamage( CMover* pDefender, DWORD& dwAtkFlags );
 	int				GetMagicSkillPower( ATTACK_INFO* pInfo );
@@ -1627,12 +1628,12 @@ public:
 	void			OverCoatItemRenderCheck(CModelObject* pModel);
 	void			PlayCombatMusic();
 	BOOL			IsLoot( CItem *pItem ) { return TRUE; }
-	LPCTSTR			GetFameName();						// ¸í¼º ÀÌ¸§ ¾ò±â
+	LPCTSTR			GetFameName();						// ëª…ì„± ì´ë¦„ ì–»ê¸°
 #if __VER < 8 // __S8_PK
-	LPCTSTR			GetSlaughterName();					// ½½·¯ÅÍÀÌ¸§ ¾ò±â
+	LPCTSTR			GetSlaughterName();					// ìŠ¬ëŸ¬í„°ì´ë¦„ ì–»ê¸°
 #endif // __VER < 8 // __S8_PK
-	LPCTSTR			GetJobString();						// Á÷¾÷ ÀÌ¸§ ¾ò±â 
-	void			DialogOut( LPCTSTR lpszText );		// ¸»Ç³¼±¿¡ ÀÇÇÑ ´ë»ç Ãâ·Â
+	LPCTSTR			GetJobString();						// ì§ì—… ì´ë¦„ ì–»ê¸° 
+	void			DialogOut( LPCTSTR lpszText );		// ë§í’ì„ ì— ì˜í•œ ëŒ€ì‚¬ ì¶œë ¥
 	BOOL			DoFakeEquip( const EQUIP_INFO & rEquipInfo, BOOL bEquip, int nPart, CModelObject* pModel = NULL ); // for Fake
 	void			RenderGauge( LPDIRECT3DDEVICE9 pd3dDevice, int nValue );
 	void			RenderTurboGauge( LPDIRECT3DDEVICE9 pd3dDevice, DWORD nColor, int nValue, int nMaxValue );
@@ -1647,9 +1648,9 @@ public:
 	void			RenderFlag( int nType );
 	void			RenderCasting( LPDIRECT3DDEVICE9 pd3dDevice );
 	void			RenderCtrlCasting( LPDIRECT3DDEVICE9 pd3dDevice );
-#if __VER >= 10 // __LEGEND	//	9Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
+#if __VER >= 10 // __LEGEND	//	9ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
 	void			RenderSkillCasting( LPDIRECT3DDEVICE9 pd3dDevice );
-#endif	//__LEGEND	//	9Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
+#endif	//__LEGEND	//	9ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
 	void			RenderPVPCount( LPDIRECT3DDEVICE9 pd3dDevice );
 	void			RenderQuestEmoticon( LPDIRECT3DDEVICE9 pd3dDevice );
 	void			RenderGuildNameLogo( LPDIRECT3DDEVICE9 pd3dDevice, CD3DFont* pFont, DWORD dwColor );
@@ -1691,7 +1692,7 @@ private:
 	void			ProcessTarget();
 #endif // __CLIENT
 
-	BOOL			DropItem( CMover* pAttacker );		// Á×¾î¼­ ¶³¾îÆ®¸®´Â µå¶ø.
+	BOOL			DropItem( CMover* pAttacker );		// ì£½ì–´ì„œ ë–¨ì–´íŠ¸ë¦¬ëŠ” ë“œë.
 	void			EnforcedGhostCorr();
 	void			ApproachGhostAngle();
 	void			OnArriveAtPos();
@@ -1735,22 +1736,22 @@ public:
 };
 
 
-// À¯Àú»óÅÂ ¾Ë¾Æº½
+// ìœ ì €ìƒíƒœ ì•Œì•„ë´„
 inline	BOOL CMover::IsMode( DWORD dwMode ) 
 { 
 #ifdef __HACK_0516
 	switch( dwMode )
 	{
-		case MATCHLESS_MODE:		// ¹«Àû »óÅÂ
-		case ONEKILL_MODE:		// ÃÊÇÊ »óÅÂ
-		case MATCHLESS2_MODE:	// ¹«Àû »óÅÂ2
+		case MATCHLESS_MODE:		// ë¬´ì  ìƒíƒœ
+		case ONEKILL_MODE:		// ì´ˆí•„ ìƒíƒœ
+		case MATCHLESS2_MODE:	// ë¬´ì  ìƒíƒœ2
 			if( m_dwAuthorization == AUTH_GENERAL )
 				return FALSE;
 			break;
 	}
 #endif	// __HACK_0516
-	if( (dwMode & TRANSPARENT_MODE) )	// Åõ¸íÈ­¸¦ °Ë»çÇÏ·¯ µé¾î¿ÔÀ»¶§
-		if( GetAdjParam(DST_CHRSTATE) & CHS_INVISIBILITY )	// ¸¶¹ıÅõ¸íÈ­°¡ °É·È´Â°¡?
+	if( (dwMode & TRANSPARENT_MODE) )	// íˆ¬ëª…í™”ë¥¼ ê²€ì‚¬í•˜ëŸ¬ ë“¤ì–´ì™”ì„ë•Œ
+		if( GetAdjParam(DST_CHRSTATE) & CHS_INVISIBILITY )	// ë§ˆë²•íˆ¬ëª…í™”ê°€ ê±¸ë ¸ëŠ”ê°€?
 			return TRUE;
 	return ( ( m_dwMode & dwMode ) == dwMode ) ? TRUE : FALSE; 
 }	
@@ -1765,7 +1766,7 @@ inline BOOL CMover::IsFly()
 #ifdef _DEBUG
 	if( IsNPC() )
 	{
-		Error( _T( "CMover::IsFly : NPC´Â IsFly()¸¦ »ç¿ëÇÏ¸é ¾ÈµÈ´Ù. IsFlyingNPC()¸¦ »ç¿ëÇÏ¼Å! %s" ), m_szName );
+		Error( _T( "CMover::IsFly : NPCëŠ” IsFly()ë¥¼ ì‚¬ìš©í•˜ë©´ ì•ˆëœë‹¤. IsFlyingNPC()ë¥¼ ì‚¬ìš©í•˜ì…”! %s" ), m_szName );
 		return FALSE;
 	}
 #endif
@@ -1782,7 +1783,7 @@ inline int	CMover::DoAttackMelee( OBJID idTarget, OBJMSG dwMsg, DWORD dwItemID )
 }
 
 #if !defined(__WORLDSERVER)
-inline int CMover::IsSteal( OBJID idTaget )		// id·Î °Ë»çÇÏ´Â ¹öÀü.
+inline int CMover::IsSteal( OBJID idTaget )		// idë¡œ ê²€ì‚¬í•˜ëŠ” ë²„ì „.
 {
 	CMover *pTarget = prj.GetMover( idTaget );
 	if( IsInvalidObj(pTarget) )		
@@ -1792,7 +1793,7 @@ inline int CMover::IsSteal( OBJID idTaget )		// id·Î °Ë»çÇÏ´Â ¹öÀü.
 }
 #endif	// __WORLDSERVER
 
-// ¾×¼Ç ¸Å½ÃÁö¸¦ º¸³¿ ; °´Ã¼ÀÇ ¿òÁ÷ÀÓÀ» ¸Å½ÃÁö·Î Á¦¾îÇÔ 
+// ì•¡ì…˜ ë§¤ì‹œì§€ë¥¼ ë³´ëƒ„ ; ê°ì²´ì˜ ì›€ì§ì„ì„ ë§¤ì‹œì§€ë¡œ ì œì–´í•¨ 
 inline int CMover::SendActMsg( OBJMSG dwMsg, int nParam1, int nParam2, int nParam3, int nParam4 ) 	
 {	
 	if( m_pActMover )	
@@ -1801,7 +1802,7 @@ inline int CMover::SendActMsg( OBJMSG dwMsg, int nParam1, int nParam2, int nPara
 		return 0;
 }
 
-//raiders.2006.11.28	 tradeµ·À» °è»ê¿¡ Æ÷ÇÔÇÏ´ø °ÍÀ» Á¦°Å
+//raiders.2006.11.28	 tradeëˆì„ ê³„ì‚°ì— í¬í•¨í•˜ë˜ ê²ƒì„ ì œê±°
 inline int CMover::GetGold()
 {
 	int nGold = m_dwGold;
