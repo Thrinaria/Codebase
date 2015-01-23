@@ -53,6 +53,7 @@ public:
 	void	OnQueryPVendorItem( CAr & ar, DPID dpidCache, DPID dpidUser, LPBYTE lpBuf, u_long uBufSize );
 	void	OnBuyPVendorItem( CAr & ar, DPID dpidCache, DPID dpidUser, LPBYTE lpBuf, u_long uBufSize );
 	void	OnEnchant( CAr & ar, DPID dpidCache, DPID dpidUser, LPBYTE lpBuf, u_long uBufSize);
+	void	OnUpdateJob( CAr & ar, DPID dpidCache, DPID dpidUser, LPBYTE, u_long );
 #if __VER >= 14 // __SMELT_SAFETY
 	void	OnSmeltSafety( CAr & ar, DPID dpidCache, DPID dpidUser, LPBYTE lpBuf, u_long uBufSize);
 #endif // __SMELT_SAFETY
@@ -303,9 +304,9 @@ public:
 	void	OnQueryStopCollecting( CAr & ar, DPID dpidCache, DPID dpidUser, LPBYTE lpBuf, u_long uBufSize );
 #endif	// __SYS_COLLECTING
 
-#if __VER >= 10 // __LEGEND	//	9Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
+#if __VER >= 10 // __LEGEND	//	9ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
 	void OnLegendSkillStart( CAr & ar, DPID dpidCache, DPID dpidUser, LPBYTE lpBuf, u_long uBufSize );
-#endif	//__LEGEND	//	9Â÷ Àü½Â½Ã½ºÅÛ	Neuz, World, Trans
+#endif	//__LEGEND	//	9ì°¨ ì „ìŠ¹ì‹œìŠ¤í…œ	Neuz, World, Trans
 	
 #if __VER >= 9 // __CSC_VER9_2
 	void OnModifyStatus( CAr & ar, DPID dpidCache, DPID dpidUser, LPBYTE lpBuf, u_long uBufSize );
@@ -323,18 +324,18 @@ public:
 	void OnGC1to1TeleportToStage( CAr & ar, DPID dpidCache, DPID dpidUser, LPBYTE lpBuf, u_long uBufSize );
 #endif // __GUILD_COMBAT_1TO1
 
-#if __VER >= 11 // __MA_VER11_04	// ±æµå Ã¢°í ·Î±× ±â´É world,database,neuz
+#if __VER >= 11 // __MA_VER11_04	// ê¸¸ë“œ ì°½ê³  ë¡œê·¸ ê¸°ëŠ¥ world,database,neuz
 	void OnQueryGuildBankLogList( CAr & ar, DPID dpidCache, DPID dpidUser, LPBYTE lpBuf, u_long uBufSize );
-#endif //__MA_VER11_04	// ±æµå Ã¢°í ·Î±× ±â´É world,database,neuz
-#if __VER >= 11 // __MA_VER11_05	// ÄÉ¸¯ÅÍ ºÀÀÎ °Å·¡ ±â´É world,database,neuz
+#endif //__MA_VER11_04	// ê¸¸ë“œ ì°½ê³  ë¡œê·¸ ê¸°ëŠ¥ world,database,neuz
+#if __VER >= 11 // __MA_VER11_05	// ì¼€ë¦­í„° ë´‰ì¸ ê±°ë˜ ê¸°ëŠ¥ world,database,neuz
 	void OnSealCharReq( CAr & ar, DPID dpidCache, DPID dpidUser, LPBYTE lpBuf, u_long uBufSize );
 	void OnSealCharConmReq( CAr & ar, DPID dpidCache, DPID dpidUser, LPBYTE lpBuf, u_long uBufSize );
 	void OnSealCharGetReq( CAr & ar, DPID dpidCache, DPID dpidUser, LPBYTE lpBuf, u_long uBufSize );
-#endif // __MA_VER11_05	// ÄÉ¸¯ÅÍ ºÀÀÎ °Å·¡ ±â´É world,database,neuz
-#if __VER >= 13 // __HONORABLE_TITLE			// ´ŞÀÎ
+#endif // __MA_VER11_05	// ì¼€ë¦­í„° ë´‰ì¸ ê±°ë˜ ê¸°ëŠ¥ world,database,neuz
+#if __VER >= 13 // __HONORABLE_TITLE			// ë‹¬ì¸
 	void OnHonorListReq( CAr & ar, DPID dpidCache, DPID dpidUser, LPBYTE lpBuf, u_long uBufSize );
 	void OnHonorChangeReq( CAr & ar, DPID dpidCache, DPID dpidUser, LPBYTE lpBuf, u_long uBufSize );
-#endif	// __HONORABLE_TITLE			// ´ŞÀÎ
+#endif	// __HONORABLE_TITLE			// ë‹¬ì¸
 #ifdef __NPC_BUFF
 	void OnNPCBuff( CAr & ar, DPID dpidCache, DPID dpidUser, LPBYTE lpBuf, u_long uBufSize );
 #endif // __NPC_BUFF
@@ -350,7 +351,7 @@ public:
 	void OnSecretRoomTenderView( CAr & ar, DPID dpidCache, DPID dpidUser, LPBYTE lpBuf, u_long uBufSize );
 	void OnTeleportSecretRoomDungeon( CAr & ar, DPID dpidCache, DPID dpidUser, LPBYTE lpBuf, u_long uBufSize );
 
-	BOOL IsInviteAbleGuild( CUser* pUser );	//±æµå¿ø º¯°æ°¡´ÉÇÑ ±æµåÀÎ°¡?(ÃÊ´ë ¹× Å»Åğ)
+	BOOL IsInviteAbleGuild( CUser* pUser );	//ê¸¸ë“œì› ë³€ê²½ê°€ëŠ¥í•œ ê¸¸ë“œì¸ê°€?(ì´ˆëŒ€ ë° íƒˆí‡´)
 #endif // __SECRET_ROOM
 
 #if __VER >= 12 // __TAX
@@ -391,8 +392,8 @@ private:
 	void	OnLordSkillUse( CAr & ar, DPID dpidCache, DPID dpidUser, LPBYTE lpBuf, u_long uBufSize );
 #endif	// __LORA
 #if __VER >= 12 // __PET_0519
-	void	OnTransformItem( CAr & ar, DPID dpidCache, DPID dpidUser, LPBYTE, u_long );		// ¾Ëº¯È¯ ÇÚµé·¯
-	void	OnPickupPetAwakeningCancel( CAr & ar, DPID dpidCache, DPID dpidUser, LPBYTE, u_long );		// ÇÈ¾÷Æê °¢¼º Ãë¼Ò
+	void	OnTransformItem( CAr & ar, DPID dpidCache, DPID dpidUser, LPBYTE, u_long );		// ì•Œë³€í™˜ í•¸ë“¤ëŸ¬
+	void	OnPickupPetAwakeningCancel( CAr & ar, DPID dpidCache, DPID dpidUser, LPBYTE, u_long );		// í”½ì—…í« ê°ì„± ì·¨ì†Œ
 #endif	// __PET_0519
 
 #if __VER >= 12 // __MOD_TUTORIAL
@@ -463,9 +464,9 @@ private:
 #endif // __CAMPUS
 
 
-	//	mulcom	BEGIN100405	°¢¼º º¸È£ÀÇ µÎ·ç¸¶¸®
+	//	mulcom	BEGIN100405	ê°ì„± ë³´í˜¸ì˜ ë‘ë£¨ë§ˆë¦¬
 	void	OnItemSelectAwakeningValue( CAr & ar, DPID dpidCache, DPID dpidUser, LPBYTE, u_long );
-	//	mulcom	END100405	°¢¼º º¸È£ÀÇ µÎ·ç¸¶¸®
+	//	mulcom	END100405	ê°ì„± ë³´í˜¸ì˜ ë‘ë£¨ë§ˆë¦¬
 
 
 #ifdef __GUILD_HOUSE_MIDDLE
@@ -496,7 +497,7 @@ private:
 #endif //__PETFILTER
 
 private:
-	DPID	m_dpidCache;		// Ä³½¬¼­¹ö DPID
+	DPID	m_dpidCache;		// ìºì‰¬ì„œë²„ DPID
 };
 
 
