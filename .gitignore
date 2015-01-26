@@ -73,7 +73,7 @@ ipch/
 Ankh.NoLoad
 
 #MonoDevelop
-
+all/all.ncb
 *.pidb
 *.userprefs
 
