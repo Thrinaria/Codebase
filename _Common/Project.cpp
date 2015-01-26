@@ -122,9 +122,9 @@
 
 extern	CWorldMng	g_WorldMng;
 
-FLOAT	CProject::m_fItemDropRate = 1.0f;		// 몬스터 아이템 드롭률
-FLOAT	CProject::m_fGoldDropRate = 1.0f;		// 몬스터 페냐 드롭률
-FLOAT	CProject::m_fMonsterExpRate = 1.0f;		// 몬스터 경험치룰
+FLOAT	CProject::m_fItemDropRate = 10.0f;		// 몬스터 아이템 드롭률
+FLOAT	CProject::m_fGoldDropRate = 10.0f;		// 몬스터 페냐 드롭률
+FLOAT	CProject::m_fMonsterExpRate = 10.0f;		// 몬스터 경험치룰
 FLOAT	CProject::m_fMonsterHitRate = 1.0f;		// 몬스터 공격률
 FLOAT	CProject::m_fShopCost = 1.0f;			// 상점가격
 FLOAT	CProject::m_fSkillExpRate = 1.0f;		
