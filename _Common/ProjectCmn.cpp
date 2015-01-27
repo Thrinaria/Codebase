@@ -222,6 +222,8 @@ BOOL CProject::LoadPropMover( LPCTSTR lpszFileName )
 
 		pProperty->dwHideLevel			= scanner.GetNumber();
 		pProperty->fSpeed				= scanner.GetFloat();
+		if( pProperty->dwAI == AII_PET )
+			pProperty->fSpeed = (pProperty->fSpeed * 3.0f); //3x pickup pet speed
 		pProperty->dwShelter			= scanner.GetNumber();
 		pProperty->dwFlying				= scanner.GetNumber();
 		pProperty->dwJumpIng			= scanner.GetNumber();
