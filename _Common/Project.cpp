@@ -828,7 +828,7 @@ void CProject::SetGlobal( UINT type, float fValue )
 #endif	// __THA_0808
 }
 
-/*void CProject::ReadConstant( CScript& script )
+void CProject::ReadConstant( CScript& script )
 {
 	do 
 	{
@@ -836,12 +836,12 @@ void CProject::SetGlobal( UINT type, float fValue )
 		if( script.Token == "itemDropRate" )
 		{	
 			script.GetToken();// bypass '='
-			SetGlobal( GAME_RATE_ITEMDROP, script.GetFloat() );
+			SetGlobal( GAME_RATE_ITEMDROP, m_fItemDropRate );
 		}
 		else if( script.Token == "monsterExpRate" )
 		{	
 			script.GetToken();// bypass '='
-			SetGlobal( GAME_RATE_MONSTEREXP, script.GetFloat() );
+			SetGlobal( GAME_RATE_MONSTEREXP, m_fMonsterExpRate );
 		}
 		else if( script.Token == "monsterHitRate" )
 		{	
@@ -851,7 +851,7 @@ void CProject::SetGlobal( UINT type, float fValue )
 		else if( script.Token == "goldDropRate" )
 		{	
 			script.GetToken();// bypass '='
-			SetGlobal( GAME_RATE_GOLDDROP, script.GetFloat() );
+			SetGlobal( GAME_RATE_GOLDDROP, m_fGoldDropRate );
 		}
 		else if( script.Token == "dwVagSP" )
 		{
@@ -871,7 +871,7 @@ void CProject::SetGlobal( UINT type, float fValue )
 	} 
 	while( script.tok != FINISHED && *script.token != '}' );
 }
-*/
+
 BOOL CProject::LoadConstant( LPCTSTR lpszFileName )
 {
 	CScript script;
