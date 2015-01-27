@@ -828,7 +828,7 @@ void CProject::SetGlobal( UINT type, float fValue )
 #endif	// __THA_0808
 }
 
-void CProject::ReadConstant( CScript& script )
+/*void CProject::ReadConstant( CScript& script )
 {
 	do 
 	{
@@ -871,7 +871,7 @@ void CProject::ReadConstant( CScript& script )
 	} 
 	while( script.tok != FINISHED && *script.token != '}' );
 }
-
+*/
 BOOL CProject::LoadConstant( LPCTSTR lpszFileName )
 {
 	CScript script;
