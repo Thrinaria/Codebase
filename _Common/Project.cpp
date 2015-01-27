@@ -122,9 +122,9 @@
 
 extern	CWorldMng	g_WorldMng;
 
-FLOAT	CProject::m_fItemDropRate = 10.0f;		// 몬스터 아이템 드롭률
-FLOAT	CProject::m_fGoldDropRate = 10.0f;		// 몬스터 페냐 드롭률
-FLOAT	CProject::m_fMonsterExpRate = 10.0f;		// 몬스터 경험치룰
+FLOAT	CProject::m_fItemDropRate = 1.0f;		// 몬스터 아이템 드롭률
+FLOAT	CProject::m_fGoldDropRate = 1.0f;		// 몬스터 페냐 드롭률
+FLOAT	CProject::m_fMonsterExpRate = 1.0f;		// 몬스터 경험치룰
 FLOAT	CProject::m_fMonsterHitRate = 1.0f;		// 몬스터 공격률
 FLOAT	CProject::m_fShopCost = 1.0f;			// 상점가격
 FLOAT	CProject::m_fSkillExpRate = 1.0f;		
@@ -836,12 +836,12 @@ void CProject::ReadConstant( CScript& script )
 		if( script.Token == "itemDropRate" )
 		{	
 			script.GetToken();// bypass '='
-			SetGlobal( GAME_RATE_ITEMDROP, m_fItemDropRate );
+			SetGlobal( GAME_RATE_ITEMDROP, script.GetFloat() );
 		}
 		else if( script.Token == "monsterExpRate" )
 		{	
 			script.GetToken();// bypass '='
-			SetGlobal( GAME_RATE_MONSTEREXP, m_fMonsterExpRate );
+			SetGlobal( GAME_RATE_MONSTEREXP, script.GetFloat() );
 		}
 		else if( script.Token == "monsterHitRate" )
 		{	
@@ -851,7 +851,7 @@ void CProject::ReadConstant( CScript& script )
 		else if( script.Token == "goldDropRate" )
 		{	
 			script.GetToken();// bypass '='
-			SetGlobal( GAME_RATE_GOLDDROP, m_fGoldDropRate );
+			SetGlobal( GAME_RATE_GOLDDROP, script.GetFloat() );
 		}
 		else if( script.Token == "dwVagSP" )
 		{
@@ -2845,7 +2845,7 @@ BOOL CProject::LoadPropMoverEx( LPCTSTR szFileName )
 					Error( "%s : %s가 defineItem.h에 정의되지 않았음", szFileName, script.token );
 				ASSERT( di.dwIndex != 0 );
 				script.GetToken();	// ,
-				di.dwProbability	= script.GetNumber();	// probability
+				di.dwProbability	= script.GetNumber();	// probability BOOKMARK
 				script.GetToken();	// ,
 				di.dwLevel	= script.GetNumber();	// level
 				script.GetToken();	// ,
