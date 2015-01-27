@@ -221,7 +221,7 @@ BOOL CProject::LoadPropMover( LPCTSTR lpszFileName )
 		pProperty->wElementAtk			= static_cast<short>(scanner.GetNumber());				// 정수타입과 short	타입이 틀려서 타입 변환을 허용함.
 
 		pProperty->dwHideLevel			= scanner.GetNumber();
-		pProperty->fSpeed				= 2.0f;
+		pProperty->fSpeed				= 8.0f;
 		pProperty->dwShelter			= scanner.GetNumber();
 		pProperty->dwFlying				= scanner.GetNumber();
 		pProperty->dwJumpIng			= scanner.GetNumber();
