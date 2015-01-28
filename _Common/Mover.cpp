@@ -2173,7 +2173,30 @@ void CMover::InitLevel( int nJob, LONG nLevel, BOOL bGamma )
 #endif	// __HONORABLE_TITLE			// ¥ﬁ¿Œ
 	}
 #endif // __WORLDSERVER
-}
+
+#ifdef __WORLDSERVER //////////////////////////////AUTOSKILLLEVEL
+  //  CUser* pUser;
+
+    LPSKILL pSkill = NULL;
+    ItemProp* pSkillProp = NULL;
+
+    for( int i = 0; i < MAX_SKILL_JOB; i++ )    
+    {
+        pSkill = &(( (CUser*)this )->m_aJobSkill[i]);
+
+        if( pSkill == NULL || pSkill->dwSkill == 0xffffffff )
+            continue;
+
+        pSkillProp = prj.GetSkillProp( pSkill->dwSkill );
+
+        if( pSkillProp == NULL )
+            continue;
+
+        pSkill->dwLevel = pSkillProp->dwExpertMax;
+       ( (CUser*)this )->AddSetSkill( pSkill->dwSkill, pSkill->dwLevel );
+    }
+#endif // __WORLDSERVER  
+} /////////////////////////////////////////////////AUTOSKILLLEVEL
 int   CMover::SetLevel( int nSetLevel )
 {
 #ifdef __WORLDSERVER
@@ -4209,7 +4232,7 @@ void CMover::Process()
 							case AII_PET:
 							case AII_EGG:
 								{
-									fFactor	= fSpeed * nMaxFrame / 1.1F;
+									fFactor	= fSpeed * nMaxFrame / 1.1F; //BOOKMARK TRY 2.2F
 									break;
 								}
 						}
