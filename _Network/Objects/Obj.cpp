@@ -640,7 +640,7 @@ BOOL CItemElem::IsPierceAble( DWORD dwTargetItemKind3, BOOL bSize )
 		|| GetProp()->dwItemKind2 == IK2_WEAPON_MAGIC
 		)
 	{	
-		if(GetProp()->dwHanded != HD_TWO)
+		if(GetProp()->dwPierce == 10)
 		{
 			if( nPiercedSize <= MAX_PIERCING_WEAPON )
 			{
