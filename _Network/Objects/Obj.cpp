@@ -634,21 +634,33 @@ BOOL CItemElem::IsPierceAble( DWORD dwTargetItemKind3, BOOL bSize )
 				return TRUE;
 		}
 	}
-
+/////////////////////////////////////////////////////////////////////////////////////////
 	else if( GetProp()->dwItemKind3 == IK3_SHIELD
 		|| GetProp()->dwItemKind2 == IK2_WEAPON_DIRECT
 		|| GetProp()->dwItemKind2 == IK2_WEAPON_MAGIC
 		)
-	{
-		if( nPiercedSize <= MAX_PIERCING_WEAPON )
+	{	
+		if(GetProp()->dwHanded != HD_TWO)
 		{
-			if( dwTargetItemKind3 == NULL_ID )
-				return TRUE;
-			else if( dwTargetItemKind3 == IK3_SOCKETCARD2 )
-				return TRUE;
+			if( nPiercedSize <= MAX_PIERCING_WEAPON )
+			{
+				if( dwTargetItemKind3 == NULL_ID )
+					return TRUE;
+				else if( dwTargetItemKind3 == IK3_SOCKETCARD2 )
+					return TRUE;
+			}
+		}
+		else {
+			if( nPiercedSize <= MAX_PIERCING )
+			{
+				if( dwTargetItemKind3 == NULL_ID )
+					return TRUE;
+				else if( dwTargetItemKind3 == IK3_SOCKETCARD2 )
+					return TRUE;
+			}
 		}
 	}
-
+/////////////////////////////////////////////////////////////////////////////////////////
 	return FALSE;
 }
 #endif // __EXT_PIERCING
