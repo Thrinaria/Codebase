@@ -992,9 +992,9 @@ public:
 	void            InitLevelRebirth( int nJob, LONG nLevel, BOOL bGamma = TRUE ) ;
 #endif
 	void			InitLevel( int nJob, LONG nLevel, BOOL bGamma = TRUE );			// ∞¥√º∏¶ nLevel∑Œ πŸ≤„¡‹
-#ifdef __JOBCHANGER
+
 	void			InitLevelPumbaaa( int nJob, LONG nLevel, BOOL bGamma = TRUE ) ;
-#endif // __JOBCHANGER	
+
 	void			ProcessAniSpeed();
 	void			AllocShopInventory( LPCHARACTER pCharacter );
 	BOOL			IsVendorNPC();
