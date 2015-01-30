@@ -3113,7 +3113,7 @@ int CMover::GetFatiguePointPercent( int nPercent )
 	FP Recovery : 회복속도	PC/NPC : 휴식(정지)시 5초에 한번씩 회복하며 휴식하지 않는 상황에서는 12초에 한번씩 회복함 - AddFpRecoveryTime
 
   */
-int CMover::GetHPRecovery()//BOOKMARK
+int CMover::GetHPRecovery()
 {
 	float fFactor = 1.0f;
 	if( IsPlayer() )
