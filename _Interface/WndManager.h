@@ -93,6 +93,10 @@
 #include "WndColosseum.h"
 #endif	// __COLOSSEUM
 
+#ifdef __JOBCHANGER
+#include "WndChangeJobEx.h"
+#endif // __JOBCHANGER
+
 typedef CMap<DWORD, DWORD, void *, void *> CMapDWordToPtr;
 
 
@@ -642,6 +646,10 @@ public:
 	CWndColosseumStartReady1*	m_pColosseumStartReady1;
 	CWndColosseumStartReady2*	m_pColosseumStartReady2;
 #endif // __COLOSSEUM
+
+#ifdef __JOBCHANGER
+	CWndJobChangeEx*			m_pJobChangeEx;
+#endif // __JOBCHANGER
 
 	void OpenQuestItemInfo(CWndBase* pWndParent = NULL, CItemBase* pItemBase = NULL);
 	void ChangeQuestItemInfo( CItemBase* pItemBase = NULL );

@@ -1,7 +1,3 @@
-//add this to project Neuz
-
-
-
 #include "StdAfx.h"
 #include "WndChangeJobEx.h"
 #include "DPClient.h"
