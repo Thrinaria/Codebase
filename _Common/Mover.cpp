@@ -2500,7 +2500,7 @@ void CMover::ReStateOneLow( int nKind )
 }
 #endif // __ADD_RESTATE_LOW
 
-
+#ifdef __JOBCHANGER
 void CMover::InitLevelPumbaaa( int nJob, LONG nLevel, BOOL bGamma )
 {
 #ifdef __WORLDSERVER
@@ -2668,7 +2668,7 @@ void CMover::InitLevelPumbaaa( int nJob, LONG nLevel, BOOL bGamma )
 	}
 #endif // __WORLDSERVER
 	}
-
+#endif // __JOBCHANGER
 
 #ifdef __WORLDSERVER
 
