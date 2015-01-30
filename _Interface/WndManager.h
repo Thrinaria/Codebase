@@ -65,7 +65,7 @@
 #ifdef __HELP_BUG_FIX
 #include "WndHelp.h"
 #endif //__HELP_BUG_FIX
-#include "WndChangeJobEx.h"
+
 #if __VER >= 13 // __RAINBOW_RACE
 #include "WndRainbowRace.h"
 #endif //__RAINBOW_RACE
@@ -93,7 +93,7 @@
 #include "WndColosseum.h"
 #endif	// __COLOSSEUM
 
-
+#include "WndChangeJobEx.h"
 
 
 typedef CMap<DWORD, DWORD, void *, void *> CMapDWordToPtr;
@@ -518,7 +518,6 @@ public:
 #endif //__EXT_ENCHANT
 
 	CWndReSkillWarning*			  m_pWndReSkillWarning;	
-	CWndJobChangeEx*			  m_pJobChangeEx;
 	CWndFontEdit*				  m_pWndFontEdit;
 
 	CWndPartyChangeName* m_pWndPartyChangeName;
@@ -647,6 +646,8 @@ public:
 	CWndColosseumStartReady2*	m_pColosseumStartReady2;
 #endif // __COLOSSEUM
 
+
+	CWndJobChangeEx*			m_pJobChangeEx;
 
 
 	void OpenQuestItemInfo(CWndBase* pWndParent = NULL, CItemBase* pItemBase = NULL);
