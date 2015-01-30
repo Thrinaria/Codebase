@@ -563,10 +563,6 @@ CDPSrvr::CDPSrvr()
 	ON_MSG( PACKETTYPE_COLOSSEUM, OnColosseum );
 #endif // __COLOSSEUM
 
-#ifdef __JOBCHANGER
-	ON_MSG( PACKETTYPE_UPDATE_JOB, OnUpdateJob );
-#endif // __JOBCHANGER
-
 #ifdef __NEW_ITEM_VARUNA
 	ON_MSG( PACKETTYPE_BARUNA, OnBaruna );
 #endif // __NEW_ITEM_VARUNA
@@ -12743,38 +12739,6 @@ void CDPSrvr::OnColosseum( CAr & ar, DPID dpidCache, DPID dpidUser, LPBYTE lpBuf
 	}
 }
 #endif // __COLOSSEUM
-
-#ifdef __JOBCHANGER
-void CDPSrvr::OnUpdateJob( CAr & ar, DPID dpidCache, DPID dpidUser, LPBYTE, u_long )
-{
-    try
-    {
-        CUser* pUser = g_UserMng.GetUser( dpidCache, dpidUser );
-        
-        if( IsValidObj( pUser ) == TRUE )
-        {
-			int nJob, nLevel;
-            ar >> nJob >> nLevel;
-			if( pUser->m_nJob >= nJob )
-				return;
-			if( nJob < MAX_EXPERT && pUser->m_nLevel != 15 )
-				return;
-			else if( nJob >= MAX_EXPERT && nJob < MAX_PROFESSIONAL && pUser->m_nLevel != 60 )
-				return;
-			else if( nJob >= MAX_PROFESSIONAL && nJob < MAX_HERO && pUser->m_nLevel != 120 && pUser->GetExpPercent() != 9999 ) 
-				return;
-			else if( nJob >= MAX_HERO && pUser->m_nLevel != 129 && pUser->GetExpPercent() != 9999 )
-				return;
-
-			pUser->InitLevelPumbaaa( nJob, nLevel, TRUE );
-		}
-    }
-    catch(...)
-    {
-        Error("Exception caught in File %s on line %d", __FILE__, __LINE__);
-    }
-}
-#endif // __JOBCHANGER
 
 #ifdef __PETFILTER
 void CDPSrvr::OnSetPetfilter( CAr & ar, DPID dpidCache, DPID dpidUser, LPBYTE lpBuf, u_long uBufSize )

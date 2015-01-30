@@ -1159,12 +1159,6 @@
 				RelativePath="WebCtrl.h">
 			</File>
 			<File
-				RelativePath=".\WndChangeJobEx.cpp">
-			</File>
-			<File
-				RelativePath=".\WndChangeJobEx.h">
-			</File>
-			<File
 				RelativePath="..\_Interface\WndQuizEvent.cpp">
 				<FileConfiguration
 					Name="NoGameguard|Win32">
