@@ -31,6 +31,7 @@
 #define	__FASHION_COMBINE
 #define __NEW_WEAPON_GLOW
 #define __COLOSSEUM
+#define __JOBCHANGER
 #endif // __VER >= 17
 
 #define __INVISIBLE_FIX

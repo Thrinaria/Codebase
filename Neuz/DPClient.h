@@ -1245,6 +1245,10 @@ public:
 	void	OnColosseumEndMatch( CAr & ar );
 #endif // __COLOSSEUM
 
+#ifdef __JOBCHANGER
+	void	UpdateJob( int nJob, int nLevel );
+#endif // __JOBCHANGER
+
 #ifdef __NEW_ITEM_VARUNA
 	void	SendBaruna( BYTE nState, DWORD dwItem01,  DWORD dwItem02 = NULL_ID,  DWORD dwItem03 = NULL_ID,  DWORD dwItem04 = NULL_ID );
 	void	OnActivateBarunaPet( CAr & ar );

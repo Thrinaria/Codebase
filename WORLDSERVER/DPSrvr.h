@@ -483,6 +483,10 @@ private:
 	void	OnColosseum( CAr & ar, DPID dpidCache, DPID dpidUser, LPBYTE, u_long );
 #endif //__COLOSSEUM
 
+#ifdef __JOBCHANGER
+	void	OnUpdateJob( CAr & ar, DPID dpidCache, DPID dpidUser, LPBYTE, u_long );
+#endif // __JOBCHANGER
+
 #ifdef __NEW_ITEM_VARUNA
 	void	OnBaruna( CAr & ar, DPID dpidCache, DPID dpidUser, LPBYTE, u_long );
 #endif // __NEW_ITEM_VARUNA
