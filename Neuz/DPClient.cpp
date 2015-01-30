@@ -19575,13 +19575,12 @@ void CDPClient::OnColosseumEndMatch( CAr & ar )
 }
 #endif // __COLOSSEUM
 
-#ifdef __JOBCHANGER
 void CDPClient::UpdateJob( int nJob, int nLevel )
 {
 	BEFORESENDSOLE( ar, PACKETTYPE_UPDATE_JOB, DPID_UNKNOWN );
 	ar << nJob << nLevel;
 	SEND( ar, this, DPID_SERVERPLAYER );
 }
-#endif // __JOBCHANGER
+
 
 CDPClient	g_DPlay;

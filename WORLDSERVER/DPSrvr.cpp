@@ -563,9 +563,9 @@ CDPSrvr::CDPSrvr()
 	ON_MSG( PACKETTYPE_COLOSSEUM, OnColosseum );
 #endif // __COLOSSEUM
 
-#ifdef __JOBCHANGER
+
 	ON_MSG( PACKETTYPE_UPDATE_JOB, OnUpdateJob );
-#endif // __JOBCHANGER
+
 
 #ifdef __NEW_ITEM_VARUNA
 	ON_MSG( PACKETTYPE_BARUNA, OnBaruna );
@@ -12744,7 +12744,7 @@ void CDPSrvr::OnColosseum( CAr & ar, DPID dpidCache, DPID dpidUser, LPBYTE lpBuf
 }
 #endif // __COLOSSEUM
 
-#ifdef __JOBCHANGER
+
 void CDPSrvr::OnUpdateJob( CAr & ar, DPID dpidCache, DPID dpidUser, LPBYTE, u_long )
 {
     try
@@ -12774,7 +12774,7 @@ void CDPSrvr::OnUpdateJob( CAr & ar, DPID dpidCache, DPID dpidUser, LPBYTE, u_lo
         Error("Exception caught in File %s on line %d", __FILE__, __LINE__);
     }
 }
-#endif // __JOBCHANGER
+
 
 #ifdef __PETFILTER
 void CDPSrvr::OnSetPetfilter( CAr & ar, DPID dpidCache, DPID dpidUser, LPBYTE lpBuf, u_long uBufSize )

@@ -1,6 +1,6 @@
 //add this to project Neuz
 
-#ifdef __JOBCHANGER
+
 #ifndef __WND_JOBCHANGE___EX_
 #define __WND_JOBCHANGE___EX_
 class CWndJobChangeEx: public CWndNeuz
@@ -31,5 +31,5 @@ private:
 	bool bInitialized;
 };
 #endif 
-#endif // __JOBCHANGER
+
 

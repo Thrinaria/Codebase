@@ -24,7 +24,7 @@
 #if __VER >= 17
 #define __NEW_WEAPON_GLOW
 #define __COLOSSEUM
-#define __JOBCHANGER
+
 #define __BAHARA_AGGRO_SYSTEM
 #endif // __VER >= 17
 
